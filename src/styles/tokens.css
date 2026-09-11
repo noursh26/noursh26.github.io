@@ -1,0 +1,156 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Nour Aldeen Shehadea — brand tokens.
+   Values are taken verbatim from the exact-logo brand kit (03-COLOUR).
+   Signal Cyan is the single accent; Deep Ink is the dark ground;
+   Cloud is the light ground; Warm Spark stays under 5% of any frame.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@font-face{font-family:"Manrope";src:url("/assets/fonts/Manrope-400.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/assets/fonts/Manrope-600.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/assets/fonts/Manrope-700.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Alexandria";src:url("/assets/fonts/Alexandria-400.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alexandria";src:url("/assets/fonts/Alexandria-800.ttf") format("truetype");font-weight:800;font-style:normal;font-display:swap}
+
+:root{
+  /* Signal cyan — the single brand accent. cyan-500 is the logo colour. */
+  --cyan-100:#E3FAFF;
+  --cyan-200:#C4F4FF;
+  --cyan-300:#9BEEFF;
+  --cyan-400:#7BEAFF;
+  --cyan-500:#5CE7FF;   /* BRAND */
+  --cyan-600:#2ECFEC;
+  --cyan-700:#12AFCF;
+
+  /* Deep ink — the brand's dark ground. */
+  --ink-400:#3E7C9B;
+  --ink-500:#2A5D77;
+  --ink-600:#0E3345;
+  --ink-700:#0B2938;
+  --ink-800:#09222E;
+  --ink-900:#071923;    /* BRAND deep ink */
+
+  /* Cloud / mist — the light side of the brand. */
+  --sage-200:#C9DCE6;
+  --sage-300:#9DBDCB;
+  --paper-000:#FFFFFF;
+  --paper-050:#F7FAFC;
+  --paper-100:#E8F3F7;  /* BRAND mist */
+
+  --warm-500:#FFB455;   /* Warm spark — max 5% of any composition */
+  --blue-500:#315FF4;   /* Direction blue — links & interaction */
+
+  --status-success:#2ECFEC;
+  --status-warning:#FFB455;
+  --status-danger:#F4504C;
+
+  /* Scale aliases so component styles keep working after the rebrand. */
+  --green-100:var(--cyan-100);
+  --green-200:var(--cyan-200);
+  --green-300:var(--cyan-300);
+  --green-400:var(--cyan-400);
+  --green-500:var(--cyan-500);
+  --green-600:var(--cyan-600);
+  --green-700:var(--cyan-700);
+  --teal-400:var(--ink-400);
+  --teal-500:var(--ink-500);
+  --teal-600:var(--ink-600);
+  --teal-700:var(--ink-700);
+  --teal-800:var(--ink-800);
+  --teal-900:var(--ink-900);
+
+  /* ── Semantic ─────────────────────────────────────────────────────────── */
+  --surface-page:var(--paper-100);
+  --surface-card:var(--paper-000);
+  --surface-ink:var(--teal-900);
+  --surface-dark:var(--teal-700);
+  --surface-dark-alt:var(--teal-800);
+  --surface-accent:var(--green-500);
+  --surface-accent-soft:var(--green-100);
+  --surface-raised-on-dark:rgba(255,255,255,.04);
+  --surface-scrim:rgba(7,25,35,.72);
+
+  --text-heading:var(--teal-900);
+  --text-body:#12384B;
+  --text-muted:#54778A;
+  --text-accent:var(--green-600);
+  --text-on-dark:var(--paper-100);
+  --text-on-dark-muted:rgba(247,250,252,.68);
+  --text-on-accent:var(--teal-900);
+
+  --border-subtle:rgba(7,25,35,.10);
+  --border-strong:rgba(7,25,35,.22);
+  --border-accent:var(--cyan-500);
+  --border-on-dark:rgba(247,250,252,.16);
+  --border-on-dark-strong:rgba(247,250,252,.34);
+
+  --focus-ring:var(--cyan-500);
+  --focus-ring-on-dark:var(--cyan-400);
+
+  --scrim-bottom:linear-gradient(180deg,rgba(7,25,35,0) 0%,rgba(7,25,35,.55) 55%,rgba(7,25,35,.92) 100%);
+  --scrim-start:linear-gradient(90deg,rgba(7,25,35,.92) 0%,rgba(7,25,35,.55) 45%,rgba(7,25,35,0) 100%);
+
+  /* ── Type ─────────────────────────────────────────────────────────────── */
+  --font-core:"Manrope","Alexandria",system-ui,"Segoe UI",sans-serif;
+
+  --weight-regular:400; --weight-medium:600; --weight-semibold:600; --weight-bold:700;
+
+  --text-2xs:11px; --text-xs:12px; --text-sm:14px; --text-base:16px; --text-md:18px;
+  --text-lg:20px; --text-xl:24px; --text-2xl:30px; --text-3xl:38px; --text-4xl:48px;
+  --text-5xl:60px; --text-6xl:76px;
+
+  --leading-tight:1.08; --leading-snug:1.22; --leading-normal:1.5; --leading-relaxed:1.75;
+  --tracking-wide:.08em; --tracking-wider:.18em; --tracking-tight:-.02em; --tracking-none:0;
+  /* Optical sizing: the larger the type, the tighter it must be set, or a
+     display line reads loose next to the same face at body size. */
+  --tracking-display:-.038em;   /* 60px and up   */
+  --tracking-head:-.028em;      /* 30–60px       */
+  --tracking-sub:-.015em;       /* 20–30px       */
+
+  /* ── Space ────────────────────────────────────────────────────────────── */
+  --space-1:4px;  --space-2:8px;  --space-3:12px; --space-4:16px; --space-5:20px;
+  --space-6:24px; --space-8:32px; --space-10:40px;--space-12:48px;--space-16:64px;
+  --space-20:80px;--space-24:96px;--space-32:128px;--space-40:160px;
+
+  /* One vertical rhythm for the whole page, so no two sections breathe at a
+     different rate. */
+  --section-y:clamp(6rem,11vh,10rem);
+  --section-y-tight:clamp(4rem,7vh,6rem);
+  --gutter:var(--space-6);
+  --gutter-lg:var(--space-16);
+  --container:1240px;
+  --shell:min(calc(100vw - (var(--gutter) * 2)), var(--container));
+
+  /* ── Shape ────────────────────────────────────────────────────────────── */
+  --radius-xs:4px; --radius-sm:8px;  --radius-md:12px; --radius-lg:16px;
+  --radius-xl:24px; --radius-2xl:32px; --radius-pill:999px;
+  --radius-card:var(--radius-lg);
+  --radius-media:var(--radius-xl);
+  --rule:1px solid var(--border-subtle);
+  --rule-on-dark:1px solid var(--border-on-dark);
+
+  /* ── Elevation ────────────────────────────────────────────────────────── */
+  --shadow-xs:0 1px 2px rgba(7,25,35,.06);
+  --shadow-sm:0 2px 8px rgba(7,25,35,.06);
+  --shadow-md:0 8px 24px rgba(7,25,35,.08);
+  --shadow-lg:0 20px 48px rgba(7,25,35,.12);
+  --shadow-accent-glow:0 8px 28px rgba(92,231,255,.28);
+  --inset-hairline:inset 0 0 0 1px rgba(247,250,252,.12);
+  --blur-glass:14px;
+
+  /* ── Motion ───────────────────────────────────────────────────────────── */
+  --dur-instant:80ms; --dur-fast:160ms; --dur-base:240ms; --dur-slow:420ms;
+  --dur-reveal:720ms;
+  /* cinematic extensions — same easing family, longer arcs */
+  --dur-cinema:1200ms; --dur-cinema-long:1800ms;
+
+  --ease-standard:cubic-bezier(.2,0,.2,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease-in-out:cubic-bezier(.4,0,.2,1);
+  --transition-hover:background-color var(--dur-fast) var(--ease-in-out),color var(--dur-fast) var(--ease-in-out),border-color var(--dur-fast) var(--ease-in-out),box-shadow var(--dur-base) var(--ease-out),transform var(--dur-fast) var(--ease-out);
+  --press-scale:.98;
+  --reveal-travel:24px;
+}
+
+@media (min-width:900px){
+  :root{ --gutter:var(--gutter-lg); }
+}
