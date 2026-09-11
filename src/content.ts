@@ -207,7 +207,7 @@ export const contact = {
   kicker: 'Your next move',
   title: 'Start with a message.',
   text: 'Tell me what you are building. I will tell you how I would approach it.',
-  email: 'nour2006alasfour@gmail.com',
+  email: 'nour@nour.email',
   cta: 'Email me',
   github: 'https://github.com/noursh26',
   site: 'https://noursh.pro',
