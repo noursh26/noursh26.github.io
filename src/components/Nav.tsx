@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced } from '../lib/motion'
 import { scrollTo } from '../lib/useLenis'
-import { nav, contact } from '../content'
+import { useContent, useLang } from '../i18n'
 
 /** The header is deliberately almost nothing: the wordmark and one word. No
  *  ground, no blur, no rule, no counters — it floats over whatever is behind it
@@ -11,6 +11,8 @@ export function Nav() {
   const [open, setOpen] = useState(false)
   const header = useRef<HTMLElement>(null)
   const overlay = useRef<HTMLDivElement>(null)
+  const { nav, contact, ui } = useContent()
+  const { lang, setLang } = useLang()
 
   /* Invert over light grounds so two white marks never sit on paper.
      Measured live rather than through a ScrollTrigger start/end pair: the
@@ -82,21 +84,31 @@ export function Nav() {
           <img className="nav__logo-ink" src="assets/brand/lockup-en.png" alt="" aria-hidden="true" />
         </a>
 
-        <button
-          className={`nav__menu ${open ? 'is-open' : ''}`}
-          type="button"
-          aria-expanded={open}
-          aria-controls="menu-overlay"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? 'Close' : 'Menu'}
-        </button>
+        <div className="nav__actions">
+          <button
+            className="nav__menu nav__lang"
+            type="button"
+            lang={lang === 'en' ? 'ar' : 'en'}
+            onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
+          >
+            {ui.langSwitch}
+          </button>
+          <button
+            className={`nav__menu ${open ? 'is-open' : ''}`}
+            type="button"
+            aria-expanded={open}
+            aria-controls="menu-overlay"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? ui.menuClose : ui.menuOpen}
+          </button>
+        </div>
       </header>
 
       <div className="menu" id="menu-overlay" ref={overlay}>
-        <nav className="menu__nav" aria-label="Menu">
+        <nav className="menu__nav" aria-label={ui.menuAria}>
           {nav.map((item) => (
-            <a className="menu__link" key={item.id} href={`#${item.id}`} onClick={go(item.id)} data-cursor="Go">
+            <a className="menu__link" key={item.id} href={`#${item.id}`} onClick={go(item.id)} data-cursor={ui.goCursor}>
               <em>{item.no}</em>
               <span>{item.label}</span>
             </a>
@@ -104,16 +116,16 @@ export function Nav() {
         </nav>
         <div className="menu__meta">
           <div>
-            <span className="kicker">Get in touch</span>
+            <span className="kicker">{ui.getInTouch}</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
             <a href={contact.github} target="_blank" rel="noreferrer noopener">github.com/noursh26</a>
           </div>
           <div>
-            <span className="kicker">Based</span>
+            <span className="kicker">{ui.based}</span>
             <p>{contact.location.split(' — ')[0]}<br />{contact.location.split(' — ')[1]}</p>
           </div>
           <a className="btn btn--accent menu__cta" href="#invitation" onClick={go('invitation')}>
-            <span>Start a conversation <i className="arrow">↗</i></span>
+            <span>{ui.startConversation} <i className="arrow">↗</i></span>
           </a>
         </div>
       </div>

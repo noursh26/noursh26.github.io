@@ -15,10 +15,21 @@ import { Principles } from './components/Principles'
 import { Difference } from './components/Difference'
 import { Invitation } from './components/Invitation'
 import { Closing } from './components/Closing'
+import { useContent } from './i18n'
 
 export default function App() {
   const root = useRef<HTMLDivElement>(null)
-  const [entered, setEntered] = useState(false)
+  const { ui } = useContent()
+  /* A language switch reloads the page with np:instant set — skip the door
+     and put the reader back where they were once the pins re-measure. */
+  const instant = useRef(sessionStorage.getItem('np:instant') === '1')
+  const pendingY = useRef<number | null>(null)
+  if (instant.current && pendingY.current === null) {
+    sessionStorage.removeItem('np:instant')
+    pendingY.current = Number(sessionStorage.getItem('np:scrollY') || 0)
+    sessionStorage.removeItem('np:scrollY')
+  }
+  const [entered, setEntered] = useState(instant.current)
 
   useLenis(entered)
 
@@ -40,20 +51,25 @@ export default function App() {
   // fonts and lazy images have landed.
   useEffect(() => {
     if (!entered) return
-    const refresh = () => ScrollTrigger.refresh()
+    const refresh = () => {
+      ScrollTrigger.refresh()
+      if (pendingY.current !== null) window.scrollTo(0, pendingY.current)
+    }
     const t = window.setTimeout(refresh, 400)
     document.fonts?.ready.then(refresh).catch(() => {})
     window.addEventListener('load', refresh)
+    const t2 = window.setTimeout(() => { pendingY.current = null }, 1200)
     return () => {
       window.clearTimeout(t)
+      window.clearTimeout(t2)
       window.removeEventListener('load', refresh)
     }
   }, [entered])
 
   return (
     <div className="site" ref={root}>
-      <a className="skip-link" href="#main">Skip to content</a>
-      <Preloader onDone={onLoaded} />
+      <a className="skip-link" href="#main">{ui.skipLink}</a>
+      {!instant.current && <Preloader onDone={onLoaded} />}
       <Cursor />
 
       <div className="rail" aria-hidden="true"><span className="rail__fill" /></div>

@@ -1,11 +1,12 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap, ScrollTrigger, reduced, clamp } from '../lib/motion'
-import { marquee } from '../content'
+import { useContent } from '../i18n'
 
 /** A band that runs on its own, then reads scroll velocity: faster and skewed
  *  while you move, settling the moment you stop. Reference: refokus / fantik. */
 export function Marquee() {
   const root = useRef<HTMLDivElement>(null)
+  const { marquee } = useContent()
 
   useLayoutEffect(() => {
     const el = root.current

@@ -1,12 +1,13 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap, maskLines, revealOnScroll, reduced, fine } from '../lib/motion'
-import { difference } from '../content'
+import { useContent } from '../i18n'
 
 /** A list of claims separated by hairlines — the design system's own pattern.
  *  On a fine pointer, the row under the cursor floats its photograph beside it. */
 export function Difference() {
   const root = useRef<HTMLElement>(null)
   const preview = useRef<HTMLDivElement>(null)
+  const { difference } = useContent()
 
   useLayoutEffect(() => {
     const el = root.current

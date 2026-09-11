@@ -243,3 +243,33 @@ export const contact = {
   site: 'https://noursh.pro',
   location: 'Al-Qatifa, Syria — remote worldwide',
 }
+
+/* Chrome and microcopy — the strings that live in components rather than
+   sections. */
+export const ui = {
+  docTitle: 'Nour Aldeen Shehadea — Code with direction.',
+  preloaderWord: 'Code with direction.',
+  skipLink: 'Skip to content',
+  menuOpen: 'Menu',
+  menuClose: 'Close',
+  menuAria: 'Menu',
+  langSwitch: 'عربي',
+  getInTouch: 'Get in touch',
+  based: 'Based',
+  explore: 'Explore',
+  startConversation: 'Start a conversation',
+  seeTheCode: 'See the code on GitHub',
+  scrollCue: 'Scroll to the profile',
+  statementAria: 'Where we begin',
+  dialAria: 'A dial of six working sessions',
+  valuesAria: 'Our values',
+  goCursor: 'Go',
+  yours: 'Yours',
+  turning: 'Turning…',
+  spinDial: 'Turn the dial',
+  mailtoSubject: 'Project inquiry — {prize}',
+  mailtoBody: 'I turned the dial and it stopped on {prize}.\n\nWhat I am building:\nTimeline:\n',
+  footerLine: ['Your product.', 'Built and shipped.'],
+  copyright: '© {year} NOUR ALDEEN SHEHADEA · AL-QATIFA',
+  tagline: 'Code with direction. كود له وجهة.',
+}

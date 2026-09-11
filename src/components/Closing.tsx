@@ -1,10 +1,11 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap, maskLines, revealOnScroll, magnetic, reduced } from '../lib/motion'
 import { scrollTo } from '../lib/useLenis'
-import { contact, nav } from '../content'
+import { useContent } from '../i18n'
 
 export function Closing() {
   const root = useRef<HTMLElement>(null)
+  const { contact, nav, ui } = useContent()
   const cta = useRef<HTMLAnchorElement>(null)
   const mark = useRef<HTMLImageElement>(null)
 
@@ -62,7 +63,7 @@ export function Closing() {
               <span data-magnetic-inner>{contact.cta} <i className="arrow">↗</i></span>
             </a>
             <a className="closing__alt" href={contact.github} target="_blank" rel="noreferrer noopener">
-              See the code on GitHub <i className="arrow">↗</i>
+              {ui.seeTheCode} <i className="arrow">↗</i>
             </a>
           </div>
         </div>
@@ -71,21 +72,21 @@ export function Closing() {
       <footer className="footer">
         <div className="shell footer__top">
           <img className="footer__mark" src="assets/brand/lockup-en-reversed.png" alt="Nour Aldeen Shehadea" ref={mark} />
-          <p className="footer__line">Your product.<br />Built and shipped.</p>
+          <p className="footer__line">{ui.footerLine[0]}<br />{ui.footerLine[1]}</p>
         </div>
 
         <div className="shell footer__grid">
           <div>
-            <span className="kicker">Get in touch</span>
+            <span className="kicker">{ui.getInTouch}</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>
             <a href={contact.github} target="_blank" rel="noreferrer noopener">github.com/noursh26</a>
           </div>
           <div>
-            <span className="kicker">Based</span>
+            <span className="kicker">{ui.based}</span>
             <p>{contact.location}</p>
           </div>
           <div>
-            <span className="kicker">Explore</span>
+            <span className="kicker">{ui.explore}</span>
             {nav.slice(0, 4).map((item) => (
               <a key={item.id} href={`#${item.id}`} onClick={go(item.id)}>{item.label}</a>
             ))}
@@ -93,8 +94,8 @@ export function Closing() {
         </div>
 
         <div className="shell footer__bottom">
-          <span>© {new Date().getFullYear()} NOUR ALDEEN SHEHADEA · AL-QATIFA</span>
-          <span>Code with direction. كود له وجهة.</span>
+          <span>{ui.copyright.replace('{year}', String(new Date().getFullYear()))}</span>
+          <span>{ui.tagline}</span>
         </div>
       </footer>
     </>

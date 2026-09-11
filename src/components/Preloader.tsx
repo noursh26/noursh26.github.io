@@ -1,12 +1,15 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap, reduced } from '../lib/motion'
 import { preloadAll } from '../lib/preload'
+import { useContent, useLang } from '../i18n'
 
 /** The door. It reports a real percentage of bytes pulled down and only opens
  *  once every asset is in the cache and the type has loaded — so nothing on the
  *  page ever appears mid-download. Reference: fantasy.co / refokus openings. */
 export function Preloader({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null)
+  const { ui } = useContent()
+  const { lang } = useLang()
   const count = useRef<HTMLSpanElement>(null)
   const bar = useRef<HTMLSpanElement>(null)
   const shown = useRef(0)      // what the counter is currently displaying
@@ -98,8 +101,9 @@ export function Preloader({ onDone }: { onDone: () => void }) {
       <div className="preloader__inner">
         <img className="preloader__mark" src="assets/brand/mark-reversed.png" alt="" />
         <p className="preloader__word">
-          {'Code with direction.'.split('').map((c, i) => (
-            <span key={i}>{c === ' ' ? ' ' : c}</span>
+          {/* Arabic splits by word — per-letter spans would break joining. */}
+          {(lang === 'ar' ? ui.preloaderWord.split(' ') : ui.preloaderWord.split('')).map((c, i, a) => (
+            <span key={i}>{lang === 'ar' && i < a.length - 1 ? c + ' ' : c === ' ' ? ' ' : c}</span>
           ))}
         </p>
         <div className="preloader__meter">

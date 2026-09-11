@@ -1,9 +1,9 @@
 import { useCallback, useLayoutEffect, useRef, useState } from 'react'
 import { gsap, Draggable, maskLines, revealOnScroll, reduced, magnetic } from '../lib/motion'
-import { invitation, contact } from '../content'
+import { invitation as enInvitation } from '../content'
+import { useContent } from '../i18n'
 
-const PRIZES = invitation.prizes
-const N = PRIZES.length
+const N = enInvitation.prizes.length
 const SEG = 360 / N
 const CX = 200, CY = 200, R = 188
 
@@ -24,6 +24,8 @@ function wedge(a0: number, a1: number, r = R) {
 export function Invitation() {
   const root = useRef<HTMLElement>(null)
   const wheel = useRef<SVGGElement>(null)
+  const { invitation, contact, ui } = useContent()
+  const PRIZES = invitation.prizes
   const spinBtn = useRef<HTMLButtonElement>(null)
   const rotation = useRef(0)
   const spinning = useRef(false)
@@ -141,7 +143,7 @@ export function Invitation() {
 
   const prize = result === null ? null : PRIZES[result]
   const mailto = prize
-    ? `mailto:${contact.email}?subject=${encodeURIComponent(`Project inquiry — ${prize.label}`)}&body=${encodeURIComponent(`I turned the dial and it stopped on ${prize.label}.\n\nWhat I am building:\nTimeline:\n`)}`
+    ? `mailto:${contact.email}?subject=${encodeURIComponent(ui.mailtoSubject.replace('{prize}', prize.label))}&body=${encodeURIComponent(ui.mailtoBody.replace('{prize}', prize.label))}`
     : `mailto:${contact.email}`
 
   return (
@@ -160,7 +162,7 @@ export function Invitation() {
           <div className="invite__result" role="status" aria-live="polite">
             {prize ? (
               <>
-                <span className="kicker">Yours</span>
+                <span className="kicker">{ui.yours}</span>
                 <h3 className="h3">{prize.label}</h3>
                 <p>{prize.detail}</p>
                 <div className="invite__result-actions">
@@ -171,7 +173,7 @@ export function Invitation() {
                 </div>
               </>
             ) : (
-              <p className="invite__placeholder">{turning ? 'Turning…' : invitation.hint}</p>
+              <p className="invite__placeholder">{turning ? ui.turning : invitation.hint}</p>
             )}
           </div>
         </div>
@@ -180,7 +182,7 @@ export function Invitation() {
           <span className="invite__needle" aria-hidden="true" />
           <span className="invite__pulse" aria-hidden="true" />
 
-          <svg viewBox="0 0 400 400" className="invite__svg" role="img" aria-label="A dial of six working sessions">
+          <svg viewBox="0 0 400 400" className="invite__svg" role="img" aria-label={ui.dialAria}>
             <g ref={wheel} className="invite__rotor" style={{ transformOrigin: '200px 200px' }}>
               <circle cx={CX} cy={CY} r={R + 6} className="invite__rim" />
               {PRIZES.map((p, i) => {
@@ -223,7 +225,7 @@ export function Invitation() {
             onClick={spin}
             disabled={turning}
           >
-            <span data-magnetic-inner>{turning ? 'Turning…' : 'Turn the dial'}</span>
+            <span data-magnetic-inner>{turning ? ui.turning : ui.spinDial}</span>
           </button>
         </div>
       </div>

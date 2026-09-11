@@ -20,5 +20,7 @@ export const FONT_FACES = [
   '600 1rem "Manrope"',
   '700 1rem "Manrope"',
   '400 1rem "Alexandria"',
+  '600 1rem "Alexandria"',
+  '700 1rem "Alexandria"',
   '800 1rem "Alexandria"',
 ]

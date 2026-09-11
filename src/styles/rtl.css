@@ -1,0 +1,30 @@
+/* Arabic mode. html[dir="rtl"] flips the flow-based layout by itself — this
+   file carries only what direction alone cannot fix. */
+
+/* Alexandria leads; Manrope stays for the Latin fragments it contains
+   (numerals, product names, URLs). */
+html[dir="rtl"]{
+  --font-core:"Alexandria","Manrope",system-ui,"Segoe UI",sans-serif;
+}
+
+/* Arabic glyphs must not be tracked — negative and wide spacing alike break
+   joining. Kickers, headings and buttons all carry letter-spacing. */
+html[dir="rtl"] *{letter-spacing:0}
+html[dir="rtl"] .display,
+html[dir="rtl"] .h2,
+html[dir="rtl"] .h3{line-height:1.15}
+
+/* Arabic is wider than the Latin display lines — ease the hero down a step. */
+html[dir="rtl"] .display--xl{font-size:clamp(2.5rem,8.6vw,7.4rem);line-height:1.04}
+
+/* Arrows and directional hover moves read the other way round in RTL. */
+html[dir="rtl"] .arrow{display:inline-block;transform:scaleX(-1)}
+html[dir="rtl"] .menu__link:hover span{transform:translateX(-14px)}
+html[dir="rtl"] .dx__cta:hover .arrow{transform:translateX(-3px) scaleX(-1)}
+html[dir="rtl"] .difference-row.is-hot .difference-row__title{transform:translateX(-14px)}
+html[dir="rtl"] .difference-row__arrow{transform:translateX(8px) scaleX(-1)}
+
+/* The language switch sits beside Menu in the header. */
+.nav__actions{display:flex;align-items:center;gap:var(--space-5)}
+.nav__lang{min-inline-size:2.6ch;text-align:center}
+html[dir="rtl"] .nav__lang{--font-core:"Manrope",system-ui,sans-serif;font-family:var(--font-core)}

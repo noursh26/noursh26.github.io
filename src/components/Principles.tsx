@@ -1,12 +1,13 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap, ScrollTrigger, revealOnScroll, reduced } from '../lib/motion'
-import { principles } from '../content'
+import { useContent } from '../i18n'
 
 /** Four claims, delivered one at a time. The line that owns the screen is lit;
  *  the others sit back. Then the values band runs the opposite way to the top
  *  marquee, so the page reads as a mechanism. */
 export function Principles() {
   const root = useRef<HTMLElement>(null)
+  const { principles, ui } = useContent()
 
   useLayoutEffect(() => {
     const el = root.current
@@ -67,7 +68,7 @@ export function Principles() {
         </div>
       </div>
 
-      <div className="values" aria-label="Our values">
+      <div className="values" aria-label={ui.valuesAria}>
         <div className="values__track">
           {values.map((v, i) => <span key={`${v}-${i}`}>{v}<i aria-hidden="true">✦</i></span>)}
         </div>

@@ -2,12 +2,13 @@ import { useLayoutEffect, useRef } from 'react'
 import { gsap, reduced, fine } from '../lib/motion'
 import { scrollTo } from '../lib/useLenis'
 import { DirectionField } from './fx/DirectionField'
-import { hero } from '../content'
+import { useContent } from '../i18n'
 
 /** Three lines and a film. Nothing else carries its weight at this size, so
  *  nothing else is here. */
 export function Hero({ start }: { start: boolean }) {
   const root = useRef<HTMLElement>(null)
+  const { hero, ui } = useContent()
 
   useLayoutEffect(() => {
     const el = root.current
@@ -69,7 +70,7 @@ export function Hero({ start }: { start: boolean }) {
         className="hero__cue"
         type="button"
         onClick={() => scrollTo('#profile')}
-        aria-label="Scroll to the profile"
+        aria-label={ui.scrollCue}
       >
         <svg viewBox="0 0 100 100" aria-hidden="true">
           <circle className="cue-base" cx="50" cy="50" r="48" />

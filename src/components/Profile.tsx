@@ -1,10 +1,10 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
 import { scrollTo } from '../lib/useLenis'
-import { profile } from '../content'
+import { profile as enProfile } from '../content'
+import { useContent } from '../i18n'
 
-const PANELS = profile.panels
-const N = PANELS.length
+const N = enProfile.panels.length
 
 /** Full-screen symptom panels. The stage pins; scrolling swaps a full-bleed
  *  photograph and the claim over it. Lines already shown leave upward, lines
@@ -13,6 +13,8 @@ const N = PANELS.length
 export function Profile() {
   const root = useRef<HTMLElement>(null)
   const stage = useRef<HTMLDivElement>(null)
+  const { profile } = useContent()
+  const PANELS = profile.panels
   const [active, setActive] = useState(0)
   const activeRef = useRef(0)
 

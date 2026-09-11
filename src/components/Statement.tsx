@@ -1,15 +1,14 @@
 import { useLayoutEffect, useRef } from 'react'
 import { gsap, reduced } from '../lib/motion'
 
-import { statement } from '../content'
-
-const LINES = statement.lines
+import { useContent } from '../i18n'
 
 /** The film opens. A framed clip grows to full bleed as you scroll while the
  *  claim assembles over it, line by line. Reference: fantasy.co / instrument
  *  full-bleed transitions. */
 export function Statement() {
   const root = useRef<HTMLElement>(null)
+  const { statement, ui } = useContent()
 
   useLayoutEffect(() => {
     const el = root.current
@@ -46,7 +45,7 @@ export function Statement() {
   }, [])
 
   return (
-    <section className="statement" ref={root} aria-label="Where we begin">
+    <section className="statement" ref={root} aria-label={ui.statementAria}>
       <div className="statement__stage">
         <div className="statement__frame">
           <div className="statement__media is-placeholder">
@@ -57,7 +56,7 @@ export function Statement() {
 
         <div className="statement__copy shell">
           <h2 className="statement__title">
-            {LINES.map((line) => (
+            {statement.lines.map((line) => (
               <span className="statement__line" key={line}><span>{line}</span></span>
             ))}
           </h2>

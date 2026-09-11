@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
-import { method } from '../content'
+import { method as enMethod } from '../content'
+import { useContent } from '../i18n'
 
-const STEPS = method.steps
-const N = STEPS.length
+const N = enMethod.steps.length
 
 /* How the pinned range is spent.
 
@@ -78,6 +78,8 @@ function plateau(dealP: number) {
 export function Method() {
   const root = useRef<HTMLElement>(null)
   const stage = useRef<HTMLDivElement>(null)
+  const { method } = useContent()
+  const STEPS = method.steps
   const [active, setActive] = useState(0)
   const [started, setStarted] = useState(false)
   const activeRef = useRef(0)

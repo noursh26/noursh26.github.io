@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced, clamp, fine } from '../lib/motion'
-import { build } from '../content'
+import { build as enBuild } from '../content'
+import { useContent } from '../i18n'
 
-const UNITS = build.units
-const N = UNITS.length
+const N = enBuild.units.length
 
 /* Geometry of the imaginary dial.
    The hub sits just off the left edge; only the right half of the wheel is ever
@@ -43,6 +43,8 @@ const lerp = (a: number, b: number, t: number) => a + (b - a) * t
 export function BuildDial() {
   const root = useRef<HTMLElement>(null)
   const stage = useRef<HTMLDivElement>(null)
+  const { build } = useContent()
+  const UNITS = build.units
   const [active, setActive] = useState(0)
   const [started, setStarted] = useState(false)
   const activeRef = useRef(0)

@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
-import { work } from '../content'
+import { work as enWork } from '../content'
+import { useContent } from '../i18n'
 
-const ITEMS = work.items
-const N = ITEMS.length
+const N = enWork.items.length
 
 /* Same rhythm as the deck in section 02: a rest on every whole step, and the
    move itself in a short window so a scroll cannot stop halfway through it. */
@@ -56,6 +56,8 @@ function plateau(p: number) {
 export function WorkRail() {
   const root = useRef<HTMLElement>(null)
   const stage = useRef<HTMLDivElement>(null)
+  const { work } = useContent()
+  const ITEMS = work.items
   const [active, setActive] = useState(0)
   const [started, setStarted] = useState(false)
   const activeRef = useRef(0)
@@ -195,7 +197,9 @@ return () => st.kill()
         <div className="wk__claims">
           {ITEMS.map((item, i) => (
             <h3 className={'wk-claim ' + state(i)} key={item.no} aria-hidden={i !== active}>
-              <span>{item.title}</span>
+              {/* Product names stay Latin in Arabic mode — keep the terminal
+                  full stop on the end of the line, not the start. */}
+              <span dir="ltr">{item.title}</span>
             </h3>
           ))}
         </div>
