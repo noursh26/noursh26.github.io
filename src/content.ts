@@ -126,17 +126,17 @@ export const work = {
   items: [
     {
       no: '01', title: 'Estratijiya AI.',
-      text: 'Multi-tenant SaaS giving every company an AI customer-service agent — from the data layer to the chat.',
+      text: 'Multi-tenant SaaS giving every company an AI customer-service agent — widget, WhatsApp, Telegram, on a RAG knowledge base.',
       image: 'assets/work/w4-estratijiya.webp',
     },
     {
       no: '02', title: 'SalesFlow AI.',
-      text: 'B2B SaaS: an AI agent handling customer conversations in real time — Laravel, Livewire, Reverb, Claude API.',
+      text: 'A multi-tenant sales CRM run by AI agents — leads, deals, quotes, and live channels in one dashboard.',
       image: 'assets/work/w1-salesflow.webp',
     },
     {
       no: '03', title: 'Relinka.',
-      text: 'A multi-company encrypted archive with a Drive-like interface and an AI layer that classifies and extracts.',
+      text: 'A multi-tenant encrypted archive — Drive-like storage, AI classification and extraction, semantic search, and an MCP endpoint for agents.',
       image: 'assets/work/w7-relinka.webp',
     },
     {
@@ -151,12 +151,12 @@ export const work = {
     },
     {
       no: '06', title: 'm3aak.com.',
-      text: 'A marketplace with a digital wallet, live chat, and PWA support — in a fully Arabic RTL interface.',
+      text: 'A multi-role e-commerce platform — stores, digital wallets, and orders with live delivery tracking, fully RTL.',
       image: 'assets/work/w2-m3aak.webp',
     },
     {
       no: '07', title: 'Almustfa.',
-      text: 'An end-to-end management system for courses and training centers — REST API, React front end, Android app.',
+      text: 'An end-to-end system for Quran memorization circles — recitation logging, gamified points, and a reward market with QR student cards.',
       image: 'assets/work/w10-almustfa.webp',
     },
     {
@@ -166,12 +166,12 @@ export const work = {
     },
     {
       no: '09', title: 'WISP.',
-      text: 'A full ISP management system — subscriptions, billing and collection on a REST API with a React dashboard.',
+      text: 'A full ISP operations system — subscriptions, billing, installs, maintenance, inventory, accounting, and payroll.',
       image: 'assets/work/w12-wisp.webp',
     },
     {
       no: '10', title: 'NIRSO.',
-      text: 'A modular operations system built in three independent units that plug into one another.',
+      text: 'The internal operations system for Petravex — one central identity, projects and automation, and a document archive.',
       image: 'assets/work/w13-nirso.webp',
     },
     {
@@ -180,12 +180,7 @@ export const work = {
       image: 'assets/work/w3-arkani.webp',
     },
     {
-      no: '12', title: 'Qasioun TV.',
-      text: 'Live TV, series and movies for Android — a Flutter app backed by a Laravel API.',
-      image: 'assets/work/w5-qasioun.webp',
-    },
-    {
-      no: '13', title: 'Maash.art.',
+      no: '12', title: 'Maash.art.',
       text: 'A cinematic, bilingual portfolio for a master furniture draftsman — scroll and it draws itself.',
       image: 'assets/work/w6-maash.webp',
     },
