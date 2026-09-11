@@ -5,9 +5,10 @@ import { useContent } from '../i18n'
 
 const N = enWork.items.length
 
-/* Same rhythm as the deck in section 02: a rest on every whole step, and the
-   move itself in a short window so a scroll cannot stop halfway through it. */
-const HOLD = 0.56
+/* Same rhythm as the deck in section 02 — but a scroll should always be doing
+   something visible: most of each step moves, and the settled rest is a beat,
+   not the majority of the stroke. */
+const HOLD = 0.28
 
 /* The strip does not begin already running. It opens on the first picture
    pushing in, with the neighbours sliding to their places at either side, so
@@ -76,6 +77,7 @@ export function WorkRail() {
       let geo = geometry(window.innerWidth, window.innerHeight)
 
       const place = (p: number) => {
+        box.style.setProperty('--p', p.toFixed(4))
         const enter = easeOut(clamp(p / LEAD, 0, 1))
         const cursor = plateau(clamp((p - LEAD) / (1 - LEAD), 0, 1))
 
@@ -142,7 +144,7 @@ export function WorkRail() {
       const st = ScrollTrigger.create({
         trigger: el,
         start: 'top top',
-        end: () => '+=' + window.innerHeight * (N * 1.1),
+        end: () => '+=' + window.innerHeight * (N * 0.85),
         pin: box,
         pinSpacing: true,
         scrub: 0.7,
@@ -193,6 +195,11 @@ return () => st.kill()
           <i aria-hidden="true" />
           <span className="kicker">{work.kicker}</span>
         </p>
+
+        <div className="wk__progress" aria-hidden="true"><i /></div>
+        <span className="wk__count" aria-hidden="true">
+          {String(active + 1).padStart(2, '0')} / {String(N).padStart(2, '0')}
+        </span>
 
         <div className="wk__claims">
           {ITEMS.map((item, i) => (

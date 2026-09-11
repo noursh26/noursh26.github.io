@@ -27,7 +27,7 @@ export function Profile() {
       const st = ScrollTrigger.create({
         trigger: el,
         start: 'top top',
-        end: () => `+=${window.innerHeight * N}`,
+        end: () => `+=${window.innerHeight * N * 0.8}`,
         pin: box,
         pinSpacing: true,
         scrub: 0.5,
@@ -40,6 +40,7 @@ export function Profile() {
           ease: 'power2.inOut',
         },
         onUpdate: (self) => {
+          box.style.setProperty('--p', self.progress.toFixed(4))
           const idx = clamp(Math.round(self.progress * (N - 1)), 0, N - 1)
           if (idx !== activeRef.current) {
             activeRef.current = idx
@@ -77,6 +78,11 @@ return () => st.kill()
           <i aria-hidden="true" />
           <span className="kicker">{profile.kicker}</span>
         </p>
+
+        <div className="dx__progress" aria-hidden="true"><i /></div>
+        <span className="dx__count" aria-hidden="true">
+          {String(active + 1).padStart(2, '0')} / {String(N).padStart(2, '0')}
+        </span>
 
         <div className="dx__titles">
           {PANELS.map((p, i) => (

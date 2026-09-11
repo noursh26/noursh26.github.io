@@ -1010,3 +1010,27 @@
 }
 .wk__overline.is-on{opacity:1;transform:none}
 
+
+/* ── pinned-stage scroll feedback ──────────────────────────────────────────
+   A hairline across the top of the stage that fills with the pin, and an
+   index saying where the sequence is — so a scroll is never blind. */
+.dx__progress,.mv__progress,.wk__progress{
+  position:absolute;z-index:40;
+  inset-block-start:0;inset-inline:0;block-size:2px;
+  background:rgba(247,250,252,.16);
+}
+.dx__progress i,.mv__progress i,.wk__progress i{
+  display:block;block-size:100%;background:var(--cyan-500);
+  transform:scaleX(var(--p,0));transform-origin:left;
+}
+html[dir="rtl"] .dx__progress i,
+html[dir="rtl"] .mv__progress i,
+html[dir="rtl"] .wk__progress i{transform-origin:right}
+
+.dx__count,.mv__count,.wk__count{
+  position:absolute;z-index:40;direction:ltr;unicode-bidi:isolate;
+  inset-block-start:calc(var(--space-24) + var(--space-2));
+  inset-inline-end:max(var(--gutter),calc((100vw - var(--container)) / 2 + var(--gutter)));
+  font:var(--weight-medium) var(--text-xs)/1 var(--font-core);
+  letter-spacing:var(--tracking-wider);color:var(--cyan-400);
+}

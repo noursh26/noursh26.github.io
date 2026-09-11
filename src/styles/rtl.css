@@ -10,12 +10,28 @@ html[dir="rtl"]{
 /* Arabic glyphs must not be tracked — negative and wide spacing alike break
    joining. Kickers, headings and buttons all carry letter-spacing. */
 html[dir="rtl"] *{letter-spacing:0}
+/* Arabic glyphs are taller than Latin — ascenders, diacritics and descenders
+   fill more of the em, so the Latin measures would stack the lines on top of
+   each other. */
 html[dir="rtl"] .display,
 html[dir="rtl"] .h2,
-html[dir="rtl"] .h3{line-height:1.15}
+html[dir="rtl"] .h3{line-height:1.34}
+html[dir="rtl"] .statement__title,
+html[dir="rtl"] .dx-title__line > span,
+html[dir="rtl"] .mv-claim > span,
+html[dir="rtl"] .wk-claim > span,
+html[dir="rtl"] .principle span{line-height:1.34}
+
+/* The line reveal masks only pad 0.05–0.08em under the baseline — enough for
+   Latin, but it clips ي/ج/ح descenders. Give them room. */
+html[dir="rtl"] .hero__line,
+html[dir="rtl"] .statement__line,
+html[dir="rtl"] .dx-title__line,
+html[dir="rtl"] .mv-claim,
+html[dir="rtl"] .wk-claim{padding-block-end:.24em}
 
 /* Arabic is wider than the Latin display lines — ease the hero down a step. */
-html[dir="rtl"] .display--xl{font-size:clamp(2.5rem,8.6vw,7.4rem);line-height:1.04}
+html[dir="rtl"] .display--xl{font-size:clamp(2.5rem,8.6vw,7.4rem);line-height:1.22}
 
 /* Arrows and directional hover moves read the other way round in RTL. */
 html[dir="rtl"] .arrow{display:inline-block;transform:scaleX(-1)}

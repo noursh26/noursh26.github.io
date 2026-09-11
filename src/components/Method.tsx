@@ -13,7 +13,9 @@ const N = enMethod.steps.length
          itself happens in the remainder, which keeps the transition short
          enough that a scroll can't easily stop halfway through it.          */
 const LEAD = 0.13
-const HOLD = 0.58
+/* A scroll should always be doing something visible: most of each step now
+   moves, and the settled rest is a beat, not the majority of the stroke. */
+const HOLD = 0.3
 
 /* Deck geometry. The stack lives on the right at card size; the move being read
    is not a card at all — it is the whole section, full bleed, with the claim
@@ -106,6 +108,7 @@ export function Method() {
       const handOff = (): Slot => ({ x: geo.hx, y: geo.hy, s: geo.hs, z: 220 })
 
       const place = (p: number) => {
+        box.style.setProperty('--p', p.toFixed(4))
         const enter = easeOut(clamp(p / LEAD, 0, 1))
         const cursor = plateau(clamp((p - LEAD) / (1 - LEAD), 0, 1))
         const slide = (1 - enter) * geo.off
@@ -165,7 +168,7 @@ export function Method() {
       const st = ScrollTrigger.create({
         trigger: el,
         start: 'top top',
-        end: () => '+=' + window.innerHeight * (N * 1.25),
+        end: () => '+=' + window.innerHeight * (N * 0.9),
         pin: box,
         pinSpacing: true,
         scrub: 0.7,
@@ -222,6 +225,11 @@ return () => st.kill()
           <i aria-hidden="true" />
           <span className="kicker">{method.kicker}</span>
         </p>
+
+        <div className="mv__progress" aria-hidden="true"><i /></div>
+        <span className="mv__count" aria-hidden="true">
+          {String(active + 1).padStart(2, '0')} / {String(N).padStart(2, '0')}
+        </span>
 
         <div className="mv__claims">
           {STEPS.map((step, i) => (
