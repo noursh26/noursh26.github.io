@@ -125,32 +125,67 @@ export const work = {
   lede: 'Real products. Real users. Real uptime.',
   items: [
     {
-      no: '01', title: 'SalesFlow AI.',
-      text: 'Multi-tenant B2B SaaS: an AI agent that handles customer conversations in real time — Laravel, Livewire, Reverb, Claude API.',
+      no: '01', title: 'Estratijiya AI.',
+      text: 'Multi-tenant SaaS giving every company an AI customer-service agent — from the data layer to the chat.',
+      image: 'assets/work/w4-estratijiya.webp',
+    },
+    {
+      no: '02', title: 'SalesFlow AI.',
+      text: 'B2B SaaS: an AI agent handling customer conversations in real time — Laravel, Livewire, Reverb, Claude API.',
       image: 'assets/work/w1-salesflow.webp',
     },
     {
-      no: '02', title: 'm3aak.com.',
+      no: '03', title: 'Relinka.',
+      text: 'A multi-company encrypted archive with a Drive-like interface and an AI layer that classifies and extracts.',
+      image: 'assets/work/w7-relinka.webp',
+    },
+    {
+      no: '04', title: 'Fahrast AI.',
+      text: 'An Arabic platform aggregating thousands of books and manuscripts inside an intelligent reading and search environment.',
+      image: 'assets/work/w8-fahrast.webp',
+    },
+    {
+      no: '05', title: 'Alkhyr.',
+      text: 'A complete platform for charity work — campaigns, beneficiaries, subscriptions, printed cards, the whole operation.',
+      image: 'assets/work/w9-alkhyr.webp',
+    },
+    {
+      no: '06', title: 'm3aak.com.',
       text: 'A marketplace with a digital wallet, live chat, and PWA support — in a fully Arabic RTL interface.',
       image: 'assets/work/w2-m3aak.webp',
     },
     {
-      no: '03', title: 'Arkani.',
+      no: '07', title: 'Almustfa.',
+      text: 'An end-to-end management system for courses and training centers — REST API, React front end, Android app.',
+      image: 'assets/work/w10-almustfa.webp',
+    },
+    {
+      no: '08', title: 'Global Football AI.',
+      text: 'Professional football education, AI performance analysis and certifications — web platform and Android app.',
+      image: 'assets/work/w11-gfaa.webp',
+    },
+    {
+      no: '09', title: 'WISP.',
+      text: 'A full ISP management system — subscriptions, billing and collection on a REST API with a React dashboard.',
+      image: 'assets/work/w12-wisp.webp',
+    },
+    {
+      no: '10', title: 'NIRSO.',
+      text: 'A modular operations system built in three independent units that plug into one another.',
+      image: 'assets/work/w13-nirso.webp',
+    },
+    {
+      no: '11', title: 'Arkani.',
       text: 'A Muslim companion app in Flutter: prayer times, adhkar, mosque finder, push notifications.',
       image: 'assets/work/w3-arkani.webp',
     },
     {
-      no: '04', title: 'Estratijiya AI.',
-      text: 'An AI agent platform for a growth consultancy — the machine behind the methodology.',
-      image: 'assets/work/w4-estratijiya.webp',
-    },
-    {
-      no: '05', title: 'Qasioun TV.',
+      no: '12', title: 'Qasioun TV.',
       text: 'Live TV, series and movies for Android — a Flutter app backed by a Laravel API.',
       image: 'assets/work/w5-qasioun.webp',
     },
     {
-      no: '06', title: 'Maash.art.',
+      no: '13', title: 'Maash.art.',
       text: 'A cinematic, bilingual portfolio for a master furniture draftsman — scroll and it draws itself.',
       image: 'assets/work/w6-maash.webp',
     },
