@@ -5,7 +5,7 @@
 export const nav = [
   { id: 'profile', label: 'The profile', no: '01' },
   { id: 'method', label: 'How I work', no: '02' },
-  { id: 'build', label: 'What I build', no: '03' },
+  { id: 'build', label: 'What I ship', no: '03' },
   { id: 'work', label: 'Selected work', no: '04' },
   { id: 'principles', label: 'Principles', no: '05' },
   { id: 'difference', label: 'Why me', no: '06' },
@@ -13,18 +13,18 @@ export const nav = [
 ]
 
 export const hero = {
-  lines: ['Software that works,', 'built end to end,', 'by Nour Aldeen.'],
+  lines: ['AI products that ship,', 'built end to end,', 'by Nour Aldeen.'],
   cue: 'Read the profile',
 }
 
 export const marquee = [
-  'Laravel 12.',
-  'Livewire 3.',
-  'Flutter.',
-  'MySQL. Redis.',
+  'AI Agents.',
+  'RAG Pipelines.',
+  'Full-Stack.',
+  'DevOps.',
   'Docker. CI/CD.',
+  'Any framework.',
   'Claude API.',
-  'Tailwind CSS.',
   'Arabic RTL, first class.',
 ]
 
@@ -36,14 +36,14 @@ export const profile = {
   panels: [
     {
       no: '01',
-      title: ['First-year engineer,', 'already shipping.'],
-      text: 'A computer engineering student who prefers production code to lecture slides.',
+      title: ['Product engineer,', 'not a code vendor.'],
+      text: 'I ship AI-powered products end to end — outcomes, not tickets.',
       image: 'assets/profile/p1-engineer.webp',
     },
     {
       no: '02',
-      title: ['Full-stack,', 'for real.'],
-      text: 'Laravel backends, Livewire front ends, Flutter apps — and the VPS they all run on.',
+      title: ['Any stack.', 'One owner.'],
+      text: 'Laravel, Next.js, NestJS, React, Flutter — the right tool for the product, and the server it runs on.',
       image: 'assets/profile/p2-fullstack.webp',
     },
     {
@@ -54,8 +54,8 @@ export const profile = {
     },
     {
       no: '04',
-      title: ['AI inside', 'the workflow.'],
-      text: 'Claude-powered features inside the products — and AI-assisted delivery around them.',
+      title: ['AI in production,', 'not in slides.'],
+      text: 'Agents, RAG, and LLM features running for real users — measured and monitored.',
       image: 'assets/profile/p4-ai.webp',
     },
     {
@@ -99,22 +99,22 @@ export const method = {
 }
 
 export const statement = {
-  lines: ['I write software', 'the way it should', 'be built — measured,', 'and meant to last.'],
-  foot: 'Discovery before code, deployment as part of the job. The order is a condition, not a preference.',
+  lines: ['I build AI products', 'the way they should', 'be built — measured,', 'and meant to last.'],
+  foot: 'Discovery before code, production as the only demo. The order is a condition, not a preference.',
 }
 
 export const build = {
   no: '03',
-  kicker: 'What I build',
+  kicker: 'What I ship',
   /* On the dial the picture does the talking: a name and a single line each. */
   units: [
-    { no: '01', name: 'SaaS Platforms',     line: 'Multi-tenant products that bill and scale.', image: 'assets/units/unit-saas.webp' },
-    { no: '02', name: 'Mobile Apps',        line: 'Flutter apps that feel native.',             image: 'assets/units/unit-mobile.webp' },
-    { no: '03', name: 'APIs & Backends',    line: 'The layer everything else stands on.',       image: 'assets/units/unit-api.webp' },
-    { no: '04', name: 'Dashboards',         line: 'Admin panels people actually use.',          image: 'assets/units/unit-dashboard.webp' },
-    { no: '05', name: 'Landing Pages',      line: 'First impressions that convert.',            image: 'assets/units/unit-landing.webp' },
-    { no: '06', name: 'AI Agents',          line: 'Products with a brain wired in.',            image: 'assets/units/unit-ai.webp' },
-    { no: '07', name: 'E-commerce',         line: 'Stores, wallets, and checkout that closes.', image: 'assets/units/unit-commerce.webp' },
+    { no: '01', name: 'AI Agents',          line: 'Products with a brain wired in.',          image: 'assets/units/unit-ai.webp' },
+    { no: '02', name: 'SaaS Platforms',     line: 'Multi-tenant products that bill and scale.', image: 'assets/units/unit-saas.webp' },
+    { no: '03', name: 'Mobile Apps',        line: 'Flutter apps that feel native.',             image: 'assets/units/unit-mobile.webp' },
+    { no: '04', name: 'APIs & Backends',    line: 'The layer everything else stands on.',       image: 'assets/units/unit-api.webp' },
+    { no: '05', name: 'Dashboards',         line: 'Admin panels people actually use.',          image: 'assets/units/unit-dashboard.webp' },
+    { no: '06', name: 'E-commerce',         line: 'Stores, wallets, and checkout that closes.', image: 'assets/units/unit-commerce.webp' },
+    { no: '07', name: 'Landing Pages',      line: 'First impressions that convert.',            image: 'assets/units/unit-landing.webp' },
   ],
 }
 
@@ -194,8 +194,8 @@ export const principles = {
   lines: [
     'Every product is a system.',
     'Every system should be measured.',
+    'AI ships to production, or it does not ship.',
     'Every interface should read naturally — in both directions.',
-    'Every build should survive its first deploy.',
   ],
   values: ['Clarity', 'Craft', 'Ownership', 'Momentum', 'Reliability', 'Honesty'],
 }
@@ -207,9 +207,9 @@ export const difference = {
   rows: [
     { title: 'End to end, actually.', text: 'Schema to deploy to DNS — nothing in between is yours to carry.', image: 'assets/difference/d1-endtoend.webp' },
     { title: 'Two languages, first class.', text: 'Arabic RTL and English LTR, designed as equals.', image: 'assets/difference/d2-bilingual.webp' },
-    { title: 'AI inside, not bolted on.', text: 'Claude API features where they return value — and AI tooling in how I deliver.', image: 'assets/difference/d3-ai.webp' },
+    { title: 'AI that earns production.', text: 'Agents, RAG, and automation where they return value — measured, monitored, owned.', image: 'assets/difference/d3-ai.webp' },
     { title: 'Design that ships.', text: 'Interfaces built to the standard of the sites you admire, not the default admin template.', image: 'assets/difference/d4-design.webp' },
-    { title: 'Ops included.', text: 'Docker, CI, and the server it runs on come with the build.', image: 'assets/difference/d5-ops.webp' },
+    { title: 'Ops is the job.', text: 'Docker, CI, networks, and the server it runs on — uptime is part of the deliverable.', image: 'assets/difference/d5-ops.webp' },
     { title: 'A number before. A number after.', text: 'Progress measured in shipped commits and working features.', image: 'assets/difference/d6-measure.webp' },
   ],
 }
@@ -226,7 +226,7 @@ export const invitation = {
     { label: 'Landing Page', detail: 'A first impression that converts — designed, built, and deployed.' },
     { label: 'Rescue Mission', detail: 'A project that stalled, audited and put back on its feet.' },
     { label: 'Automation', detail: 'The manual work inside your business, turned into a system.' },
-    { label: 'Retainer', detail: 'A steady pair of hands on your product, month after month.' },
+    { label: 'AI Pilot', detail: 'A two-week paid pilot — an AI feature shipped into your product, measured.' },
   ],
   claim: 'Start the conversation',
   again: 'Turn again',
@@ -236,7 +236,7 @@ export const contact = {
   no: '08',
   kicker: 'Your next move',
   title: 'Start with a message.',
-  text: 'Tell me what you are building. I will tell you how I would approach it.',
+  text: 'Tell me what you are building. I will tell you how I would ship it.',
   email: 'nour@nour.email',
   cta: 'Email me',
   github: 'https://github.com/noursh26',
@@ -247,8 +247,8 @@ export const contact = {
 /* Chrome and microcopy — the strings that live in components rather than
    sections. */
 export const ui = {
-  docTitle: 'Nour Aldeen Shehadea — Code with direction.',
-  preloaderWord: 'Code with direction.',
+  docTitle: 'Nour Aldeen Shehadea — AI products, shipped.',
+  preloaderWord: 'Products with direction.',
   skipLink: 'Skip to content',
   menuOpen: 'Menu',
   menuClose: 'Close',
@@ -271,5 +271,5 @@ export const ui = {
   mailtoBody: 'I turned the dial and it stopped on {prize}.\n\nWhat I am building:\nTimeline:\n',
   footerLine: ['Your product.', 'Built and shipped.'],
   copyright: '© {year} NOUR ALDEEN SHEHADEA · AL-QATIFA',
-  tagline: 'Code with direction. كود له وجهة.',
+  tagline: 'Products with direction. منتَج له وجهة.',
 }

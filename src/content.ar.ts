@@ -5,7 +5,7 @@
 export const nav = [
   { id: 'profile', label: 'عني', no: '01' },
   { id: 'method', label: 'كيف بشتغل', no: '02' },
-  { id: 'build', label: 'شو ببني', no: '03' },
+  { id: 'build', label: 'شو بشحن', no: '03' },
   { id: 'work', label: 'شغلي', no: '04' },
   { id: 'principles', label: 'بشو بؤمن', no: '05' },
   { id: 'difference', label: 'ليش أنا', no: '06' },
@@ -13,19 +13,19 @@ export const nav = [
 ]
 
 export const hero = {
-  lines: ['برامج بتشتغل،', 'من الألف للياء،', 'على إيد نور الدين.'],
+  lines: ['منتجات ذكاء اصطناعي بتنشحن،', 'من الألف للياء،', 'على إيد نور الدين.'],
   cue: 'اقرأ عني',
 }
 
 /* Stack names stay Latin — they are product names, not copy. */
 export const marquee = [
-  'Laravel 12.',
-  'Livewire 3.',
-  'Flutter.',
-  'MySQL. Redis.',
+  'وكلاء AI.',
+  'خطوط RAG.',
+  'فل ستاك.',
+  'DevOps.',
   'Docker. CI/CD.',
+  'أي فريمورك.',
   'Claude API.',
-  'Tailwind CSS.',
   'عربي RTL، من أساسو.',
 ]
 
@@ -35,14 +35,14 @@ export const profile = {
   panels: [
     {
       no: '01',
-      title: ['طالب سنة أولى،', 'وبشحن متل المحترفين.'],
-      text: 'بدرس هندسة حاسوب، بس بفضّل الكود اللي بينزل إنتاج على شرايح المحاضرات.',
+      title: ['مهندس منتجات،', 'مو بيّاع كود.'],
+      text: 'بشحن منتجات ذكاء اصطناعي من الأول للآخر — نتائج، مو تذاكر.',
       image: 'assets/profile/p1-engineer.webp',
     },
     {
       no: '02',
-      title: ['فل ستاك،', 'وعالطبيعة.'],
-      text: 'باك إند بـ Laravel، واجهات Livewire، تطبيقات Flutter — والسيرفر اللي كله شغال عليه.',
+      title: ['أي ستاك.', 'مالك واحد.'],
+      text: 'Laravel وNext.js وNestJS وReact وFlutter — الأداة الصح للمنتج، والسيرفر اللي شغال عليه.',
       image: 'assets/profile/p2-fullstack.webp',
     },
     {
@@ -53,8 +53,8 @@ export const profile = {
     },
     {
       no: '04',
-      title: ['ذكاء اصطناعي', 'جوا الشغل.'],
-      text: 'ميزات Claude جوا المنتج نفسو — والتسليم حولها مدعوم ذكاء اصطناعي كمان.',
+      title: ['ذكاء اصطناعي بالإنتاج،', 'مو بالشرايح.'],
+      text: 'وكلاء وRAG وميزات LLM شغالة لمستخدمين حقيقيين — بتنقاس وبتتراقب.',
       image: 'assets/profile/p4-ai.webp',
     },
     {
@@ -98,21 +98,21 @@ export const method = {
 }
 
 export const statement = {
-  lines: ['بكتب البرامج', 'متل ما لازم', 'تنبني — مدروسة،', 'ومعمولة لتعيش.'],
-  foot: 'الفهم قبل الكود، والنشر جزء من المهمة. الترتيب شرط، مو تفضيل.',
+  lines: ['ببني منتجات ذكاء اصطناعي', 'متل ما لازم', 'تنبني — مدروسة،', 'ومعمولة لتعيش.'],
+  foot: 'الفهم قبل الكود، والإنتاج هو العرض الوحيد. الترتيب شرط، مو تفضيل.',
 }
 
 export const build = {
   no: '03',
-  kicker: 'شو ببني',
+  kicker: 'شو بشحن',
   units: [
-    { no: '01', name: 'منصات SaaS',       line: 'منتجات متعددة الشركات بتفوتر وبتكبّر.',    image: 'assets/units/unit-saas.webp' },
-    { no: '02', name: 'تطبيقات موبايل',    line: 'تطبيقات Flutter بتحسها طبيعية.',            image: 'assets/units/unit-mobile.webp' },
-    { no: '03', name: 'واجهات وباك إند',   line: 'الطبقة اللي كل شي واقف عليها.',            image: 'assets/units/unit-api.webp' },
-    { no: '04', name: 'لوحات إدارة',       line: 'لوحات العالم بتستخدمها فعلاً.',            image: 'assets/units/unit-dashboard.webp' },
-    { no: '05', name: 'صفحات هبوط',        line: 'انطباع أول بيحوّل.',                      image: 'assets/units/unit-landing.webp' },
-    { no: '06', name: 'وكلاء AI',          line: 'منتجات فيها عقل جواتها.',                  image: 'assets/units/unit-ai.webp' },
-    { no: '07', name: 'تجارة إلكترونية',   line: 'متاجر ومحافظ ودفع بيكمّل الصفقة.',        image: 'assets/units/unit-commerce.webp' },
+    { no: '01', name: 'وكلاء AI',          line: 'منتجات فيها عقل جواتها.',              image: 'assets/units/unit-ai.webp' },
+    { no: '02', name: 'منصات SaaS',        line: 'منتجات متعددة الشركات بتفوتر وبتكبّر.', image: 'assets/units/unit-saas.webp' },
+    { no: '03', name: 'تطبيقات موبايل',    line: 'تطبيقات Flutter بتحسها طبيعية.',        image: 'assets/units/unit-mobile.webp' },
+    { no: '04', name: 'واجهات وباك إند',   line: 'الطبقة اللي كل شي واقف عليها.',        image: 'assets/units/unit-api.webp' },
+    { no: '05', name: 'لوحات إدارة',       line: 'لوحات العالم بتستخدمها فعلاً.',        image: 'assets/units/unit-dashboard.webp' },
+    { no: '06', name: 'تجارة إلكترونية',   line: 'متاجر ومحافظ ودفع بيكمّل الصفقة.',    image: 'assets/units/unit-commerce.webp' },
+    { no: '07', name: 'صفحات هبوط',        line: 'انطباع أول بيحوّل.',                  image: 'assets/units/unit-landing.webp' },
   ],
 }
 
@@ -192,8 +192,8 @@ export const principles = {
   lines: [
     'كل منتج نظام.',
     'وكل نظام لازم ينقاس.',
+    'الذكاء الاصطناعي بينشحن للإنتاج، أو ما بينشحن.',
     'وكل واجهة لازم تتقرى طبيعي — بالاتجاهين.',
-    'وكل بناء لازم يعيش بعد أول نشر.',
   ],
   values: ['وضوح', 'إتقان', 'ملكية', 'زخم', 'موثوقية', 'صدق'],
 }
@@ -205,9 +205,9 @@ export const difference = {
   rows: [
     { title: 'من الأول للآخر، فعلاً.', text: 'من السكيما للنشر للـ DNS — ولا شي بيناتهم رح ينزل عليك.', image: 'assets/difference/d1-endtoend.webp' },
     { title: 'لغتين، اتنيناتن أصليات.', text: 'عربي RTL وإنجليزي LTR، متصممين ند لند.', image: 'assets/difference/d2-bilingual.webp' },
-    { title: 'AI جوا، مو ملزوق فوق.', text: 'ميزات Claude API وين ما بترجع قيمة — وأدوات ذكاء بكيفية التسليم.', image: 'assets/difference/d3-ai.webp' },
+    { title: 'ذكاء اصطناعي بيستاهل الإنتاج.', text: 'وكلاء وRAG وأتمتة وين ما بترجع قيمة — بتنقاس وبتتراقب وبتتملّك.', image: 'assets/difference/d3-ai.webp' },
     { title: 'تصميم بينشحن.', text: 'واجهات بمستوى المواقع اللي بتعجبك، مو قالب اللوحات الجاهز.', image: 'assets/difference/d4-design.webp' },
-    { title: 'التشغيل جزء من الصفقة.', text: 'Docker والـ CI والسيرفر اللي بيشغّل كل شي — بييجوا مع البناء.', image: 'assets/difference/d5-ops.webp' },
+    { title: 'التشغيل هو الشغل.', text: 'Docker والـ CI والشبكات والسيرفر اللي مشغّل كل شي — الـ uptime جزء من التسليم.', image: 'assets/difference/d5-ops.webp' },
     { title: 'رقم قبل. رقم بعد.', text: 'التقدم بينقاس بالكوميتات المشحونة والميزات الشغالة.', image: 'assets/difference/d6-measure.webp' },
   ],
 }
@@ -224,7 +224,7 @@ export const invitation = {
     { label: 'صفحة هبوط', detail: 'انطباع أول بيحوّل — متصممة ومبنية ومنشورة.' },
     { label: 'مهمة إنقاذ', detail: 'مشروع واقف — بنراجعو ومنرجعو يمشي على رجليه.' },
     { label: 'أتمتة', detail: 'الشغل اليدوي جوا شغلك، بيتحوّل لنظام.' },
-    { label: 'عقد شهري', detail: 'إيدين ثابتين على منتجك، شهر ورا شهر.' },
+    { label: 'تجربة AI مدفوعة', detail: 'أسبوعان مدفوعان — ميزة ذكاء اصطناعي بتنشحن جوا منتجك، وبتنقاس.' },
   ],
   claim: 'افتح الحديث',
   again: 'دوّر مرة تانية',
@@ -234,7 +234,7 @@ export const contact = {
   no: '08',
   kicker: 'خطوتك الجاية',
   title: 'بلّش برسالة.',
-  text: 'خبرني شو عم تبني، وبرجعلك بكيف رح اشتغل عليه.',
+  text: 'خبرني شو عم تبني، وبرجعلك بكيف رح شحّنو.',
   email: 'nour@nour.email',
   cta: 'راسلني',
   github: 'https://github.com/noursh26',
@@ -243,8 +243,8 @@ export const contact = {
 }
 
 export const ui = {
-  docTitle: 'نور الدين شحادة — كود له وجهة.',
-  preloaderWord: 'كود له وجهة.',
+  docTitle: 'نور الدين شحادة — منتجات ذكاء اصطناعي، مشحونة.',
+  preloaderWord: 'منتَج له وجهة.',
   skipLink: 'روح للمحتوى',
   menuOpen: 'القائمة',
   menuClose: 'سكّر',
@@ -267,5 +267,5 @@ export const ui = {
   mailtoBody: 'دوّرت القرص ووقف على {prize}.\n\nشو عم ببني:\nالتوقيت:\n',
   footerLine: ['منتجك.', 'مبني ومشحون.'],
   copyright: '© {year} نور الدين شحادة · القطيفة',
-  tagline: 'كود له وجهة. Code with direction.',
+  tagline: 'منتَج له وجهة. Products with direction.',
 }
