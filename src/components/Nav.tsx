@@ -36,9 +36,15 @@ export function Nav() {
       if (next !== ink) { ink = next; el.classList.toggle('is-ink', next) }
     }
 
-    const st = ScrollTrigger.create({ onUpdate: check, onRefresh: check })
+    window.addEventListener('scroll', check, { passive: true })
+    window.addEventListener('resize', check)
+    ScrollTrigger.addEventListener('refresh', check)
     check()
-    return () => st.kill()
+    return () => {
+      window.removeEventListener('scroll', check)
+      window.removeEventListener('resize', check)
+      ScrollTrigger.removeEventListener('refresh', check)
+    }
   }, [])
 
   useLayoutEffect(() => {
@@ -69,7 +75,9 @@ export function Nav() {
     if (!open) return
     getLenis()?.stop()
     const first = overlay.current?.querySelector<HTMLAnchorElement>('a')
-    first?.focus({ preventScroll: true })
+    // Let the visibility update paint before moving focus, including the
+    // instant reduced-motion path where GSAP can sleep between frames.
+    const focusTimer = window.setTimeout(() => first?.focus({ preventScroll: true }), 100)
     const keys = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { setOpen(false); toggle.current?.focus(); return }
       if (e.key !== 'Tab') return
@@ -84,6 +92,7 @@ export function Nav() {
     }
     window.addEventListener('keydown', keys)
     return () => {
+      window.clearTimeout(focusTimer)
       getLenis()?.start()
       document.body.classList.remove('is-locked')
       window.removeEventListener('keydown', keys)
