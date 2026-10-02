@@ -23,6 +23,40 @@ export const reduced = () =>
 export const fine = () =>
   typeof window !== 'undefined' && window.matchMedia('(pointer: fine)').matches
 
+/** Animate a progress value, rather than reading raw scroll progress. Numeric
+ * scrub only smooths an attached animation; standalone onUpdate callbacks
+ * otherwise jump on each wheel event. One engine owns scroll, with no snapping. */
+export function pinnedSequence({
+  trigger, stage, screens, render, prepare,
+}: {
+  trigger: HTMLElement
+  stage: HTMLElement
+  screens: number
+  render: (progress: number) => void
+  prepare?: () => void
+}) {
+  const progress = { value: 0 }
+  prepare?.()
+  render(0)
+  return gsap.to(progress, {
+    value: 1,
+    ease: 'none',
+    onUpdate: () => render(progress.value),
+    scrollTrigger: {
+      trigger,
+      start: 'top top',
+      end: () => `+=${stage.clientHeight * screens}`,
+      pin: stage,
+      pinSpacing: true,
+      scrub: 0.32,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      onRefreshInit: prepare,
+      onRefresh: () => { prepare?.(); render(progress.value) },
+    },
+  })
+}
+
 /** Split a heading into lines, each line wrapped in an overflow-hidden mask,
  *  then rise the lines in on scroll. This is the site's signature reveal. */
 export function maskLines(

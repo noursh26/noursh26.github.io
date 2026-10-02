@@ -62,7 +62,7 @@
 .invite__hub{fill:var(--teal-900);stroke:var(--green-500);stroke-width:1.5}
 
 .invite__needle{
-  position:absolute;inset-block-start:-6px;inset-inline-start:50%;
+  position:absolute;inset-block-start:-6px;left:50%;
   transform:translateX(-50%);z-index:4;
   inline-size:0;block-size:0;
   border-inline:11px solid transparent;
@@ -93,4 +93,3 @@
   .invite__seg text{font-size:18px}
   .invite__mark{inline-size:34px}
 }
-

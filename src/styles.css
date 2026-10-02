@@ -1,6 +1,7 @@
+@import "lenis/dist/lenis.css";
 @import "./styles/tokens.css";
 @import "./styles/base.css";
 @import "./styles/layout.css";
-@import "./styles/sections.css";
 @import "./styles/invite.css";
+@import "./styles/sections.css";
 @import "./styles/rtl.css";

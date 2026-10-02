@@ -216,7 +216,7 @@ export function Invitation() {
             <circle cx={CX} cy={CY} r="46" className="invite__hub" />
           </svg>
 
-          <img className="invite__mark" src="assets/brand/mark-primary.png" alt="" aria-hidden="true" />
+          <img className="invite__mark" src="assets/brand/mark-reversed.png" alt="" aria-hidden="true" />
 
           <button
             className="invite__spin btn btn--accent"

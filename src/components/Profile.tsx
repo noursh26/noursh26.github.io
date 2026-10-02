@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
+import { gsap, pinnedSequence, reduced, clamp, pointerDrift } from '../lib/motion'
 import { scrollTo } from '../lib/useLenis'
 import { profile as enProfile } from '../content'
 import { useContent } from '../i18n'
@@ -24,24 +24,11 @@ export function Profile() {
     if (!el || !box || reduced()) return
 
     const ctx = gsap.context(() => {
-      const st = ScrollTrigger.create({
-        trigger: el,
-        start: 'top top',
-        end: () => `+=${window.innerHeight * N * 0.8}`,
-        pin: box,
-        pinSpacing: true,
-        scrub: 0.5,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        snap: {
-          snapTo: 1 / (N - 1),
-          duration: { min: 0.2, max: 0.6 },
-          delay: 0.04,
-          ease: 'power2.inOut',
-        },
-        onUpdate: (self) => {
-          box.style.setProperty('--p', self.progress.toFixed(4))
-          const idx = clamp(Math.round(self.progress * (N - 1)), 0, N - 1)
+      pinnedSequence({
+        trigger: el, stage: box, screens: N * 0.7,
+        render: (progress) => {
+          box.style.setProperty('--p', progress.toFixed(4))
+          const idx = clamp(Math.round(progress * (N - 1)), 0, N - 1)
           if (idx !== activeRef.current) {
             activeRef.current = idx
             setActive(idx)
@@ -49,7 +36,6 @@ export function Profile() {
         },
       })
 
-return () => st.kill()
     }, el)
 
     const media = el.querySelector<HTMLElement>('.dx__media')
@@ -67,7 +53,7 @@ return () => st.kill()
         <div className="dx__media" aria-hidden="true">
           {PANELS.map((p, i) => (
             <figure className={`dx-shot ${state(i)}`} key={p.no}>
-              <img src={p.image} alt="" decoding="async" />
+              <img src={p.image} alt="" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" />
             </figure>
           ))}
         </div>
@@ -118,7 +104,7 @@ return () => st.kill()
       <div className="dx__fallback">
         {PANELS.map((p) => (
           <article key={p.no}>
-            <img src={p.image} alt="" decoding="async" />
+            <img src={p.image} alt="" loading="lazy" decoding="async" />
             <div>
               <span className="numeral">{p.no}</span>
               <h3>{p.title.join(' ')}</h3>
