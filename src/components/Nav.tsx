@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced } from '../lib/motion'
-import { scrollTo } from '../lib/useLenis'
+import { getLenis, scrollTo } from '../lib/useLenis'
 import { useContent, useLang } from '../i18n'
 
 /** The header is deliberately almost nothing: the wordmark and one word. No
@@ -11,6 +11,8 @@ export function Nav() {
   const [open, setOpen] = useState(false)
   const header = useRef<HTMLElement>(null)
   const overlay = useRef<HTMLDivElement>(null)
+  const toggle = useRef<HTMLButtonElement>(null)
+  const navigationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const { nav, contact, ui } = useContent()
   const { lang, setLang } = useLang()
 
@@ -34,9 +36,15 @@ export function Nav() {
       if (next !== ink) { ink = next; el.classList.toggle('is-ink', next) }
     }
 
-    const st = ScrollTrigger.create({ onUpdate: check, onRefresh: check })
+    window.addEventListener('scroll', check, { passive: true })
+    window.addEventListener('resize', check)
+    ScrollTrigger.addEventListener('refresh', check)
     check()
-    return () => st.kill()
+    return () => {
+      window.removeEventListener('scroll', check)
+      window.removeEventListener('resize', check)
+      ScrollTrigger.removeEventListener('refresh', check)
+    }
   }, [])
 
   useLayoutEffect(() => {
@@ -51,9 +59,8 @@ export function Nav() {
     const tl = gsap.timeline()
 
     if (open) {
-      gsap.set(el, { pointerEvents: 'auto' })
-      tl.set(el, { autoAlpha: 1 })
-        .fromTo(el, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 0.85, ease: 'brand' })
+      gsap.set(el, { pointerEvents: 'auto', autoAlpha: 1 })
+      tl.fromTo(el, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 0.85, ease: 'brand' })
         .fromTo(links, { yPercent: 118 }, { yPercent: 0, duration: 0.9, ease: 'brand', stagger: 0.06 }, '-=0.5')
         .fromTo(meta, { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.6, ease: 'brand', stagger: 0.06 }, '-=0.5')
     } else {
@@ -65,21 +72,46 @@ export function Nav() {
   }, [open])
 
   useEffect(() => {
-    const esc = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
-    window.addEventListener('keydown', esc)
-    return () => window.removeEventListener('keydown', esc)
-  }, [])
+    if (!open) return
+    getLenis()?.stop()
+    const first = overlay.current?.querySelector<HTMLAnchorElement>('a')
+    // Let the visibility update paint before moving focus, including the
+    // instant reduced-motion path where GSAP can sleep between frames.
+    const focusTimer = window.setTimeout(() => first?.focus({ preventScroll: true }), 100)
+    const keys = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { setOpen(false); toggle.current?.focus(); return }
+      if (e.key !== 'Tab') return
+      const controls = [
+        ...Array.from(overlay.current?.querySelectorAll<HTMLElement>('a, button') ?? []),
+        toggle.current,
+      ].filter((control): control is HTMLElement => control !== null)
+      const index = controls.indexOf(document.activeElement as HTMLElement)
+      const next = (index + (e.shiftKey ? -1 : 1) + controls.length) % controls.length
+      e.preventDefault()
+      controls[next]?.focus()
+    }
+    window.addEventListener('keydown', keys)
+    return () => {
+      window.clearTimeout(focusTimer)
+      getLenis()?.start()
+      document.body.classList.remove('is-locked')
+      window.removeEventListener('keydown', keys)
+    }
+  }, [open])
+
+  useEffect(() => () => window.clearTimeout(navigationTimer.current), [])
 
   const go = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault()
     setOpen(false)
-    window.setTimeout(() => scrollTo(`#${id}`), open ? 420 : 0)
+    window.clearTimeout(navigationTimer.current)
+    navigationTimer.current = window.setTimeout(() => scrollTo(`#${id}`), open && !reduced() ? 420 : 0)
   }
 
   return (
     <>
       <header className="nav" ref={header}>
-        <a className="nav__logo" href="#top" onClick={go('top')} aria-label="Nour Aldeen Shehadea — home">
+        <a className="nav__logo" href="#top" onClick={go('top')} aria-label="Nour Aldeen Shehadea — home" tabIndex={open ? -1 : undefined}>
           <img className="nav__logo-light" src="assets/brand/lockup-en-reversed.png" alt="Nour Aldeen Shehadea" />
           <img className="nav__logo-ink" src="assets/brand/lockup-en.png" alt="" aria-hidden="true" />
         </a>
@@ -89,6 +121,7 @@ export function Nav() {
             className="nav__menu nav__lang"
             type="button"
             lang={lang === 'en' ? 'ar' : 'en'}
+            tabIndex={open ? -1 : undefined}
             onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
           >
             {ui.langSwitch}
@@ -98,6 +131,7 @@ export function Nav() {
             type="button"
             aria-expanded={open}
             aria-controls="menu-overlay"
+            ref={toggle}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? ui.menuClose : ui.menuOpen}
@@ -105,7 +139,7 @@ export function Nav() {
         </div>
       </header>
 
-      <div className="menu" id="menu-overlay" ref={overlay}>
+      <div className="menu" id="menu-overlay" ref={overlay} inert={!open} role="dialog" aria-modal={open || undefined} aria-label={ui.menuAria}>
         <nav className="menu__nav" aria-label={ui.menuAria}>
           {nav.map((item) => (
             <a className="menu__link" key={item.id} href={`#${item.id}`} onClick={go(item.id)} data-cursor={ui.goCursor}>

@@ -18,6 +18,7 @@ export function DirectionField({ density = 46 }: { density?: number }) {
     let w = 0, h = 0, dpr = 1
     let cols = 0, rows = 0, gap = 0
     let raf = 0, t = 0
+    let visible = true
 
     // pointer target + the eased value the ticks actually follow
     const target = { x: 0.62, y: 0.4, active: 0 }
@@ -46,8 +47,10 @@ export function DirectionField({ density = 46 }: { density?: number }) {
     const away = () => { target.active = 0 }
 
     const draw = () => {
-      raf = requestAnimationFrame(draw)
-      t += slow ? 0.0015 : 0.006
+      raf = 0
+      if (!visible || document.hidden) return
+      if (!slow) raf = requestAnimationFrame(draw)
+      t += slow ? 0 : 0.006
 
       eased.x = lerp(eased.x, target.x, 0.075)
       eased.y = lerp(eased.y, target.y, 0.075)
@@ -84,7 +87,7 @@ export function DirectionField({ density = 46 }: { density?: number }) {
           const alpha = 0.1 + near * 0.5 * eased.active
           const grow = 1 + near * 0.7 * eased.active
 
-          ctx.strokeStyle = `rgba(100,216,147,${alpha.toFixed(3)})`
+          ctx.strokeStyle = `rgba(92,231,255,${alpha.toFixed(3)})`
           ctx.lineWidth = 1
           ctx.beginPath()
           ctx.moveTo(x - Math.cos(a) * len * grow, y - Math.sin(a) * len * grow)
@@ -97,14 +100,29 @@ export function DirectionField({ density = 46 }: { density?: number }) {
     resize()
     const ro = new ResizeObserver(resize)
     ro.observe(cv)
-    window.addEventListener('pointermove', point, { passive: true })
-    window.addEventListener('pointerdown', point, { passive: true })
-    window.addEventListener('pointerleave', away)
-    raf = requestAnimationFrame(draw)
+    const resume = () => {
+      cancelAnimationFrame(raf)
+      raf = requestAnimationFrame(draw)
+    }
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting
+      if (visible) resume()
+      else cancelAnimationFrame(raf)
+    })
+    io.observe(cv)
+    if (!slow) {
+      window.addEventListener('pointermove', point, { passive: true })
+      window.addEventListener('pointerdown', point, { passive: true })
+      window.addEventListener('pointerleave', away)
+    }
+    document.addEventListener('visibilitychange', resume)
+    resume()
 
     return () => {
       cancelAnimationFrame(raf)
       ro.disconnect()
+      io.disconnect()
+      document.removeEventListener('visibilitychange', resume)
       window.removeEventListener('pointermove', point)
       window.removeEventListener('pointerdown', point)
       window.removeEventListener('pointerleave', away)

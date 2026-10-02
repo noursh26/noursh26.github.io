@@ -33,6 +33,13 @@ html[dir="rtl"] .wk-claim{padding-block-end:.24em}
 /* Arabic is wider than the Latin display lines — ease the hero down a step. */
 html[dir="rtl"] .display--xl{font-size:clamp(2.5rem,8.6vw,7.4rem);line-height:1.22}
 
+html[dir="rtl"] .hero__title.display--xl{font-size:clamp(1.8rem,6.1vw,5.5rem);line-height:1.4}
+html[dir="rtl"] .menu__link span{line-height:1.4}
+@media (max-width:640px){
+  html[dir="rtl"] .hero__title.display--xl{font-size:clamp(1.55rem,6.6vw,2.6rem)}
+  html[dir="rtl"] .dx-title__line > span{font-size:clamp(1.6rem,6.8vw,2.5rem)}
+}
+
 /* Arrows and directional hover moves read the other way round in RTL. */
 html[dir="rtl"] .arrow{display:inline-block;transform:scaleX(-1)}
 html[dir="rtl"] .menu__link:hover span{transform:translateX(-14px)}

@@ -3,9 +3,7 @@ import { gsap, reduced } from '../lib/motion'
 import { preloadAll } from '../lib/preload'
 import { useContent, useLang } from '../i18n'
 
-/** The door. It reports a real percentage of bytes pulled down and only opens
- *  once every asset is in the cache and the type has loaded — so nothing on the
- *  page ever appears mid-download. Reference: fantasy.co / refokus openings. */
+/** The door reports first-screen asset readiness, with a bounded wait. */
 export function Preloader({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null)
   const { ui } = useContent()
@@ -26,16 +24,19 @@ export function Preloader({ onDone }: { onDone: () => void }) {
     const el = root.current
     if (!el) return
     let raf = 0
+    let cancelled = false
+    let exit: gsap.core.Timeline | undefined
     let ctx: gsap.Context | undefined
 
     const open = () => {
+      if (cancelled) return
       document.body.classList.remove('is-loading')
       if (reduced()) {
         gsap.set(el, { autoAlpha: 0, pointerEvents: 'none' })
         onDone()
         return
       }
-      gsap.timeline({
+      exit = gsap.timeline({
         onComplete: () => {
           onDone()
           gsap.set(el, { pointerEvents: 'none', visibility: 'hidden' })
@@ -53,8 +54,8 @@ export function Preloader({ onDone }: { onDone: () => void }) {
 
     if (reduced()) {
       // no counted sequence, but still wait for the assets
-      preloadAll(() => {}).then(open)
-      return
+      preloadAll(() => {}, lang).then(open)
+      return () => { cancelled = true }
     }
 
     ctx = gsap.context(() => {
@@ -82,16 +83,19 @@ export function Preloader({ onDone }: { onDone: () => void }) {
     }
     raf = requestAnimationFrame(chase)
 
-    preloadAll((f) => { target.current = f }).then(() => {
+    preloadAll((f) => { if (!cancelled) target.current = f }, lang).then(() => {
+      if (cancelled) return
       target.current = 1
       finished.current = true
     })
 
     return () => {
+      cancelled = true
       cancelAnimationFrame(raf)
+      exit?.kill()
       ctx?.revert()
     }
-  }, [onDone])
+  }, [onDone, lang])
 
   return (
     <div className="preloader" ref={root} aria-hidden="true">

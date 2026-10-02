@@ -13,7 +13,7 @@ export const nav = [
 ]
 
 export const hero = {
-  lines: ['AI products that ship,', 'built end to end,', 'by Nour Aldeen.'],
+  lines: ['AI products.', 'Built end to end.', 'By Nour Aldeen.'],
   cue: 'Read the profile',
 }
 
@@ -36,32 +36,32 @@ export const profile = {
   panels: [
     {
       no: '01',
-      title: ['Product engineer,', 'not a code vendor.'],
-      text: 'I ship AI-powered products end to end — outcomes, not tickets.',
+      title: ['Your product.', 'My responsibility.'],
+      text: 'I turn product ideas into working software — from architecture and interface to deployment and ongoing care.',
       image: 'assets/profile/p1-engineer.webp',
     },
     {
       no: '02',
-      title: ['Any stack.', 'One owner.'],
-      text: 'Laravel, Next.js, NestJS, React, Flutter — the right tool for the product, and the server it runs on.',
+      title: ['The right stack.', 'One technical partner.'],
+      text: 'Laravel, Next.js, NestJS, React, or Flutter. I choose the stack around your users, constraints, and plans for growth.',
       image: 'assets/profile/p2-fullstack.webp',
     },
     {
       no: '03',
       title: ['Arabic-native,', 'English-fluent.'],
-      text: 'RTL interfaces and Arabic products built first-class, never as an afterthought.',
+      text: 'Arabic and English interfaces designed together, with native reading flow, clear typography, and careful RTL support.',
       image: 'assets/profile/p3-arabic.webp',
     },
     {
       no: '04',
-      title: ['AI in production,', 'not in slides.'],
-      text: 'Agents, RAG, and LLM features running for real users — measured and monitored.',
+      title: ['AI with purpose.', 'Built for real use.'],
+      text: 'Agents, retrieval, and LLM features connected to real workflows, with evaluation and monitoring built in.',
       image: 'assets/profile/p4-ai.webp',
     },
     {
       no: '05',
       title: ['Remote, async,', 'accountable.'],
-      text: 'Working from Al-Qatifa, Syria — for clients anywhere. Progress you can read in the repo.',
+      text: 'Based in Al-Qatifa, Syria. Working remotely with clear priorities, reviewable changes, and visible progress.',
       image: 'assets/profile/p5-remote.webp',
     },
   ],
@@ -72,26 +72,26 @@ export const profile = {
 export const method = {
   no: '02',
   kicker: 'How I work',
-  title: 'Four moves. One connected system.',
+  title: 'From first conversation to a working product.',
   steps: ([
     {
-      no: '01', title: 'I listen.',
-      text: 'The project starts from the outcome, not the feature list. We ask why until we reach it.',
+      no: '01', title: 'Understand.',
+      text: 'We define who the product serves, what it needs to solve, and what a successful first release looks like.',
       image: 'assets/method/m1-listen.webp',
     },
     {
-      no: '02', title: 'I architect.',
-      text: 'Schema, tenancy, queues, deploy target — decided before the first line of code.',
+      no: '02', title: 'Plan.',
+      text: 'I map the data, integrations, access rules, and deployment path, so the foundation supports what comes next.',
       image: 'assets/method/m2-architect.webp',
     },
     {
-      no: '03', title: 'I build.',
-      text: 'In small, reviewable commits. You watch the product grow, not a status report.',
+      no: '03', title: 'Build.',
+      text: 'Small, reviewable releases keep the work visible. You can try the product and give feedback as it takes shape.',
       image: 'assets/method/m3-build.webp',
     },
     {
-      no: '04', title: 'I ship and stay.',
-      text: 'DNS to Docker to the last bugfix — the work ends when it runs, not when it demos.',
+      no: '04', title: 'Launch. Support.',
+      text: 'I handle deployment, check the live experience, and help resolve the issues that only real use reveals.',
       image: 'assets/method/m4-ship.webp',
     },
   ] as { no: string; title: string; text: string; image: string; crop?: Record<string, string> }[]),
@@ -99,8 +99,8 @@ export const method = {
 }
 
 export const statement = {
-  lines: ['I build AI products', 'the way they should', 'be built — measured,', 'and meant to last.'],
-  foot: 'Discovery before code, production as the only demo. The order is a condition, not a preference.',
+  lines: ['A clear purpose.', 'A thoughtful build.', 'A product ready', 'for the real world.'],
+  foot: 'Understand the problem. Build the right foundation. Learn from the product once people use it.',
 }
 
 export const build = {
@@ -108,21 +108,21 @@ export const build = {
   kicker: 'What I ship',
   /* On the dial the picture does the talking: a name and a single line each. */
   units: [
-    { no: '01', name: 'AI Agents',          line: 'Products with a brain wired in.',          image: 'assets/units/unit-ai.webp' },
-    { no: '02', name: 'SaaS Platforms',     line: 'Multi-tenant products that bill and scale.', image: 'assets/units/unit-saas.webp' },
-    { no: '03', name: 'Mobile Apps',        line: 'Flutter apps that feel native.',             image: 'assets/units/unit-mobile.webp' },
-    { no: '04', name: 'APIs & Backends',    line: 'The layer everything else stands on.',       image: 'assets/units/unit-api.webp' },
-    { no: '05', name: 'Dashboards',         line: 'Admin panels people actually use.',          image: 'assets/units/unit-dashboard.webp' },
-    { no: '06', name: 'E-commerce',         line: 'Stores, wallets, and checkout that closes.', image: 'assets/units/unit-commerce.webp' },
-    { no: '07', name: 'Landing Pages',      line: 'First impressions that convert.',            image: 'assets/units/unit-landing.webp' },
+    { no: '01', name: 'AI Agents',          line: 'Agents and retrieval connected to your workflows.',          image: 'assets/units/unit-ai.webp' },
+    { no: '02', name: 'SaaS Platforms',     line: 'Tenancy, subscriptions, and a foundation for growth.', image: 'assets/units/unit-saas.webp' },
+    { no: '03', name: 'Mobile Apps',        line: 'Considered Flutter experiences for everyday use.',             image: 'assets/units/unit-mobile.webp' },
+    { no: '04', name: 'APIs & Backends',    line: 'Reliable data, permissions, and integrations.',       image: 'assets/units/unit-api.webp' },
+    { no: '05', name: 'Dashboards',         line: 'Clear views of complex day-to-day operations.',          image: 'assets/units/unit-dashboard.webp' },
+    { no: '06', name: 'E-commerce',         line: 'Connected storefronts, orders, wallets, and checkout.', image: 'assets/units/unit-commerce.webp' },
+    { no: '07', name: 'Landing Pages',      line: 'A clear story and a purposeful path to contact.',            image: 'assets/units/unit-landing.webp' },
   ],
 }
 
 export const work = {
   no: '04',
   kicker: 'Selected work',
-  title: 'What actually shipped.',
-  lede: 'Real products. Real users. Real uptime.',
+  title: 'Ideas turned into working products.',
+  lede: 'AI platforms, business systems, and Arabic-first experiences.',
   items: [
     {
       no: '01', title: 'Estratijiya AI.',
@@ -131,17 +131,17 @@ export const work = {
     },
     {
       no: '02', title: 'SalesFlow AI.',
-      text: 'A multi-tenant sales CRM run by AI agents — leads, deals, quotes, and live channels in one dashboard.',
+      text: 'A sales workspace connecting leads, deals, quotes, and live channels, with AI agents supporting the workflow across tenants.',
       image: 'assets/work/w1-salesflow.webp',
     },
     {
       no: '03', title: 'Relinka.',
-      text: 'A multi-tenant encrypted archive — Drive-like storage, AI classification and extraction, semantic search, and an MCP endpoint for agents.',
+      text: 'An encrypted document workspace with AI classification, data extraction, semantic search, and MCP access for connected agents.',
       image: 'assets/work/w7-relinka.webp',
     },
     {
       no: '04', title: 'Fahrast AI.',
-      text: 'An Arabic platform aggregating thousands of books and manuscripts inside an intelligent reading and search environment.',
+      text: 'An Arabic reading and research platform bringing books and manuscripts into one environment for intelligent search and discovery.',
       image: 'assets/work/w8-fahrast.webp',
     },
     {
@@ -185,7 +185,7 @@ export const work = {
       image: 'assets/work/w6-maash.webp',
     },
   ],
-  close: 'And all of this — shipped solo. From one laptop.',
+  close: 'One technical partner, from the first decision to the live product.',
 }
 
 export const principles = {
@@ -193,9 +193,9 @@ export const principles = {
   kicker: 'What I believe',
   lines: [
     'Every product is a system.',
-    'Every system should be measured.',
-    'AI ships to production, or it does not ship.',
-    'Every interface should read naturally — in both directions.',
+    'Useful feedback guides the next release.',
+    'AI should solve a practical problem.',
+    'Good interfaces read naturally in both directions.',
   ],
   values: ['Clarity', 'Craft', 'Ownership', 'Momentum', 'Reliability', 'Honesty'],
 }
@@ -203,14 +203,14 @@ export const principles = {
 export const difference = {
   no: '06',
   kicker: 'Why me',
-  title: 'Built for the work after the brief.',
+  title: 'A partner for the whole product.',
   rows: [
-    { title: 'End to end, actually.', text: 'Schema to deploy to DNS — nothing in between is yours to carry.', image: 'assets/difference/d1-endtoend.webp' },
-    { title: 'Two languages, first class.', text: 'Arabic RTL and English LTR, designed as equals.', image: 'assets/difference/d2-bilingual.webp' },
-    { title: 'AI that earns production.', text: 'Agents, RAG, and automation where they return value — measured, monitored, owned.', image: 'assets/difference/d3-ai.webp' },
-    { title: 'Design that ships.', text: 'Interfaces built to the standard of the sites you admire, not the default admin template.', image: 'assets/difference/d4-design.webp' },
-    { title: 'Ops is the job.', text: 'Docker, CI, networks, and the server it runs on — uptime is part of the deliverable.', image: 'assets/difference/d5-ops.webp' },
-    { title: 'A number before. A number after.', text: 'Progress measured in shipped commits and working features.', image: 'assets/difference/d6-measure.webp' },
+    { title: 'One point of ownership.', text: 'Architecture, interface, backend, and deployment stay connected through one technical partner.', image: 'assets/difference/d1-endtoend.webp' },
+    { title: 'Two languages. Equal care.', text: 'Arabic RTL and English LTR, designed as equals.', image: 'assets/difference/d2-bilingual.webp' },
+    { title: 'AI with a clear role.', text: 'Agents, RAG, and automation are chosen for a specific workflow, with quality and operating cost in view.', image: 'assets/difference/d3-ai.webp' },
+    { title: 'Care in every interface.', text: 'Readable layouts, responsive behavior, and deliberate interactions make the product easier to use.', image: 'assets/difference/d4-design.webp' },
+    { title: 'Deployment is part of delivery.', text: 'Docker, CI/CD, and server configuration are part of the build, alongside the code they keep running.', image: 'assets/difference/d5-ops.webp' },
+    { title: 'Progress you can review.', text: 'Small releases, working features, and clear priorities give you something concrete to review.', image: 'assets/difference/d6-measure.webp' },
   ],
 }
 
@@ -218,12 +218,12 @@ export const invitation = {
   no: '07',
   kicker: 'Start here',
   title: 'One turn. One conversation.',
-  lede: 'Not sure where to start? Turn the dial — whatever it stops on is a reasonable first step. Claim it and we begin there.',
+  lede: 'Explore a starting point with the dial, then tell me what you need. We will choose the right scope together.',
   hint: 'Drag the dial, or press to turn it.',
   prizes: [
-    { label: 'Discovery Call', detail: '30 minutes on what you are trying to build, and whether I am the right hands for it.' },
+    { label: 'Discovery Call', detail: 'A 30-minute conversation about your idea, priorities, and whether we are a good fit.' },
     { label: 'MVP Build', detail: 'The smallest version of the product that can carry real users.' },
-    { label: 'Landing Page', detail: 'A first impression that converts — designed, built, and deployed.' },
+    { label: 'Landing Page', detail: 'A focused page that explains your offer and makes the next step clear — designed, built, and deployed.' },
     { label: 'Rescue Mission', detail: 'A project that stalled, audited and put back on its feet.' },
     { label: 'Automation', detail: 'The manual work inside your business, turned into a system.' },
     { label: 'AI Pilot', detail: 'A two-week paid pilot — an AI feature shipped into your product, measured.' },
@@ -236,11 +236,11 @@ export const contact = {
   no: '08',
   kicker: 'Your next move',
   title: 'Start with a message.',
-  text: 'Tell me what you are building. I will tell you how I would ship it.',
+  text: 'Share your idea, the challenge, and your timeline. We can map out a practical next step.',
   email: 'nour@nour.email',
   cta: 'Email me',
   github: 'https://github.com/noursh26',
-  site: 'https://noursh.pro',
+  site: 'https://nourx.tech',
   location: 'Al-Qatifa, Syria — remote worldwide',
 }
 
@@ -264,12 +264,12 @@ export const ui = {
   dialAria: 'A dial of six working sessions',
   valuesAria: 'Our values',
   goCursor: 'Go',
-  yours: 'Yours',
+  yours: 'A starting point',
   turning: 'Turning…',
   spinDial: 'Turn the dial',
   mailtoSubject: 'Project inquiry — {prize}',
   mailtoBody: 'I turned the dial and it stopped on {prize}.\n\nWhat I am building:\nTimeline:\n',
   footerLine: ['Your product.', 'Built and shipped.'],
   copyright: '© {year} NOUR ALDEEN SHEHADEA · AL-QATIFA',
-  tagline: 'Products with direction. منتَج له وجهة.',
+  tagline: 'Products with direction. منتجات لها وجهة.',
 }

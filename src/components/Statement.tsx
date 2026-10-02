@@ -49,7 +49,7 @@ export function Statement() {
       <div className="statement__stage">
         <div className="statement__frame">
           <div className="statement__media is-placeholder">
-            <img src="assets/generated/statement-path.webp" alt="" />
+            <img src="assets/generated/statement-path.webp" alt="" loading="lazy" decoding="async" />
           </div>
           <div className="statement__veil" aria-hidden="true" />
         </div>

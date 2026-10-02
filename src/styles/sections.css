@@ -680,7 +680,7 @@
 .difference-row.is-hot .difference-row__arrow{opacity:1;transform:none}
 
 .preview{
-  position:fixed;inset-block-start:0;inset-inline-start:0;z-index:80;
+  position:fixed;top:0;left:0;z-index:80;
   inline-size:clamp(220px,20vw,300px);aspect-ratio:4/5;pointer-events:none;
   border-radius:var(--radius-media);overflow:hidden;
 }
@@ -1033,4 +1033,32 @@ html[dir="rtl"] .wk__progress i{transform-origin:right}
   inset-inline-end:max(var(--gutter),calc((100vw - var(--container)) / 2 + var(--gutter)));
   font:var(--weight-medium) var(--text-xs)/1 var(--font-core);
   letter-spacing:var(--tracking-wider);color:var(--cyan-400);
+}
+
+/* Keep the cinematic composition, with enough room for actual copy in both
+   languages. Grid layers reserve the tallest description instead of letting
+   absolute text spill into the action below it. */
+.hero__title.display--xl{font-size:clamp(2.5rem,7.7vw,7.4rem);line-height:1.08}
+/* Scroll geometry is measured from the physical left edge in both languages. */
+.mv-card,.wk-thumb,.dial-cell{left:0;right:auto}
+.dx__texts,.mv__lines,.wk__lines{display:grid;min-block-size:0}
+.dx-text,.mv-line,.wk-line{position:relative;grid-area:1 / 1}
+.dx-title__no > span,.dx-title__line > span,
+.mv-claim > span,.wk-claim > span{transition-duration:.6s}
+.dx-title.is-on .dx-title__line > span{transition-delay:calc(.14s + .06s * var(--i,0))}
+.mv-claim.is-on > span,.wk-claim.is-on > span{transition-delay:.14s}
+.dx-text,.mv-line,.wk-line{transition-duration:.5s}
+.dx-text.is-on,.mv-line.is-on,.wk-line.is-on{transition-delay:.2s}
+.dx-shot{transition-duration:.7s}
+.dx-shot img{transition-duration:1.1s}
+
+@media (max-width:640px){
+  .hero__title.display--xl{font-size:clamp(2rem,8.4vw,3.4rem)}
+  .hero{padding-block:7rem}
+  .dx__count,.mv__count,.wk__count{inset-block-start:calc(var(--space-20) + var(--space-2))}
+  .dx__overline,.mv__overline,.wk__overline{justify-content:flex-start;inset-inline-start:var(--gutter);inset-inline-end:6rem}
+  .dx__titles{inset-block-start:30%}
+  .dx-title__line > span{font-size:clamp(1.8rem,7.6vw,2.8rem)}
+  .mv__lines,.wk__lines{inset-block-end:var(--space-8)}
+  .dx-text,.mv-line,.wk-line{font-size:1rem;line-height:1.65}
 }

@@ -13,11 +13,9 @@ export function useLenis(enabled: boolean) {
     if (!enabled || reduced()) return
 
     const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t: number) => 1 - Math.pow(1 - t, 3.4),
+      lerp: 0.12,
       smoothWheel: true,
       syncTouch: false,
-      touchMultiplier: 1.6,
     })
     lenisInstance = lenis
 
@@ -38,6 +36,15 @@ export function scrollTo(target: string) {
   const el = document.querySelector(target)
   if (!el) return
   const lenis = getLenis()
-  if (lenis) lenis.scrollTo(el as HTMLElement, { offset: 0, duration: 1.5 })
-  else el.scrollIntoView({ behavior: 'smooth' })
+  const complete = () => {
+    if (el instanceof HTMLElement) {
+      if (!el.hasAttribute('tabindex')) el.tabIndex = -1
+      el.focus({ preventScroll: true })
+    }
+  }
+  if (lenis) lenis.scrollTo(el as HTMLElement, { duration: 1.1, onComplete: complete })
+  else {
+    el.scrollIntoView({ behavior: reduced() ? 'instant' : 'smooth' })
+    complete()
+  }
 }
