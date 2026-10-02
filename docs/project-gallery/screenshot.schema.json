@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Actual project screenshot",
+  "type": "object",
+  "required": [
+    "project",
+    "file",
+    "thumbnail",
+    "device",
+    "width",
+    "height",
+    "label",
+    "repository",
+    "revision",
+    "route",
+    "capturedAt",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "file": {
+      "type": "string",
+      "pattern": "^/assets/projects/"
+    },
+    "thumbnail": {
+      "type": "string",
+      "pattern": "^/assets/projects/"
+    },
+    "device": {
+      "enum": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 320
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 320
+    },
+    "label": {
+      "type": "object",
+      "required": [
+        "ar",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "ar": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capturedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "provenance": {
+      "enum": [
+        "original-site",
+        "original-seeder",
+        "local-demo-records",
+        "original-ui-local-api-fixtures",
+        "original-ui-local-demo-repository"
+      ]
+    }
+  }
+}
