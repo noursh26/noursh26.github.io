@@ -44,7 +44,7 @@ export function Closing() {
     <>
       <section className="closing" id="contact" ref={root}>
         <div className="closing__media is-placeholder" aria-hidden="true">
-          <img src="assets/generated/closing-path.webp" alt="" />
+          <img src="assets/generated/closing-path.webp" alt="" loading="lazy" decoding="async" />
         </div>
         <div className="closing__scrim" aria-hidden="true" />
 

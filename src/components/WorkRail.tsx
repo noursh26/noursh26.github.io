@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
+import { gsap, pinnedSequence, reduced, clamp, pointerDrift } from '../lib/motion'
 import { work as enWork } from '../content'
 import { useContent } from '../i18n'
 
@@ -13,7 +13,7 @@ const HOLD = 0.28
 /* The strip does not begin already running. It opens on the first picture
    pushing in, with the neighbours sliding to their places at either side, so
    the section arrives rather than cutting straight to its first frame. */
-const LEAD = 0.12
+const LEAD = 0.035
 
 type Geo = {
   cx: number; cy: number     // centre of the strip
@@ -60,9 +60,9 @@ export function WorkRail() {
   const { work } = useContent()
   const ITEMS = work.items
   const [active, setActive] = useState(0)
-  const [started, setStarted] = useState(false)
+  const [started, setStarted] = useState(true)
   const activeRef = useRef(0)
-  const startedRef = useRef(false)
+  const startedRef = useRef(true)
 
   useLayoutEffect(() => {
     const el = root.current
@@ -74,11 +74,11 @@ export function WorkRail() {
       const frames = gsap.utils.toArray<HTMLElement>('.wk-frame')
       if (!thumbs.length) return
 
-      let geo = geometry(window.innerWidth, window.innerHeight)
+      let geo = geometry(window.innerWidth, box.clientHeight)
 
       const place = (p: number) => {
         box.style.setProperty('--p', p.toFixed(4))
-        const enter = easeOut(clamp(p / LEAD, 0, 1))
+        const enter = 0.65 + 0.35 * easeOut(clamp(p / LEAD, 0, 1))
         const cursor = plateau(clamp((p - LEAD) / (1 - LEAD), 0, 1))
 
         thumbs.forEach((thumb, i) => {
@@ -134,37 +134,15 @@ export function WorkRail() {
       }
 
       const applyGeo = () => {
-        geo = geometry(window.innerWidth, window.innerHeight)
+        geo = geometry(window.innerWidth, box.clientHeight)
         box.style.setProperty('--thumb-w', geo.w + 'px')
         box.style.setProperty('--thumb-h', geo.h + 'px')
       }
 
-      const stops = Array.from({ length: N }, (_, i) => LEAD + (1 - LEAD) * (i / (N - 1)))
-
-      const st = ScrollTrigger.create({
-        trigger: el,
-        start: 'top top',
-        end: () => '+=' + window.innerHeight * (N * 0.85),
-        pin: box,
-        pinSpacing: true,
-        scrub: 0.7,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        snap: {
-          snapTo: stops,
-          duration: { min: 0.3, max: 0.8 },
-          delay: 0.02,
-          ease: 'power2.inOut',
-        },
-        onRefreshInit: applyGeo,
-        onUpdate: (self) => place(self.progress),
-        onRefresh: (self) => { applyGeo(); place(self.progress) },
+      pinnedSequence({
+        trigger: el, stage: box, screens: N * 0.7,
+        prepare: applyGeo, render: place,
       })
-
-      applyGeo()
-      place(0)
-
-return () => st.kill()
     }, el)
 
     const media = el.querySelector<HTMLElement>('.wk__full')
@@ -173,7 +151,7 @@ return () => st.kill()
     return () => { stopDrift?.(); ctx.revert() }
   }, [])
 
-  /* Nothing is legible until the strip has arrived. */
+  /* The first project is readable on arrival. */
   const state = (i: number) =>
     !started ? 'is-next' : i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
 
@@ -184,7 +162,7 @@ return () => st.kill()
         <div className="wk__full" aria-hidden="true">
           {ITEMS.map((item) => (
             <figure className="wk-frame" key={item.no}>
-              <img src={item.image} alt="" decoding="async" />
+              <img src={item.image} alt="" loading="lazy" decoding="async" />
             </figure>
           ))}
         </div>
@@ -221,7 +199,7 @@ return () => st.kill()
         <div className="wk__strip" aria-hidden="true">
           {ITEMS.map((item) => (
             <figure className="wk-thumb" key={item.no}>
-              <img src={item.image} alt="" decoding="async" />
+              <img src={item.image} alt="" loading="lazy" decoding="async" />
               <span className="wk-thumb__tint" />
             </figure>
           ))}
@@ -234,7 +212,7 @@ return () => st.kill()
       <div className="wk__fallback">
         {ITEMS.map((item) => (
           <article key={item.no}>
-            <img src={item.image} alt="" decoding="async" />
+            <img src={item.image} alt="" loading="lazy" decoding="async" />
             <div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>

@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger, reduced, clamp, pointerDrift } from '../lib/motion'
+import { gsap, pinnedSequence, reduced, clamp, pointerDrift } from '../lib/motion'
 import { method as enMethod } from '../content'
 import { useContent } from '../i18n'
 
@@ -12,7 +12,7 @@ const N = enMethod.steps.length
    HOLD  the share of each step spent resting on the settled state. The move
          itself happens in the remainder, which keeps the transition short
          enough that a scroll can't easily stop halfway through it.          */
-const LEAD = 0.13
+const LEAD = 0.08
 /* A scroll should always be doing something visible: most of each step now
    moves, and the settled rest is a beat, not the majority of the stroke. */
 const HOLD = 0.3
@@ -83,9 +83,9 @@ export function Method() {
   const { method } = useContent()
   const STEPS = method.steps
   const [active, setActive] = useState(0)
-  const [started, setStarted] = useState(false)
+  const [started, setStarted] = useState(true)
   const activeRef = useRef(0)
-  const startedRef = useRef(false)
+  const startedRef = useRef(true)
 
   useLayoutEffect(() => {
     const el = root.current
@@ -97,7 +97,7 @@ export function Method() {
       const frames = gsap.utils.toArray<HTMLElement>('.mv-frame')
       if (!cards.length) return
 
-      let geo = geometry(window.innerWidth, window.innerHeight)
+      let geo = geometry(window.innerWidth, box.clientHeight)
 
       const stackSlot = (k: number): Slot => ({
         x: geo.sx + k * geo.dx,
@@ -109,7 +109,7 @@ export function Method() {
 
       const place = (p: number) => {
         box.style.setProperty('--p', p.toFixed(4))
-        const enter = easeOut(clamp(p / LEAD, 0, 1))
+        const enter = 0.65 + 0.35 * easeOut(clamp(p / LEAD, 0, 1))
         const cursor = plateau(clamp((p - LEAD) / (1 - LEAD), 0, 1))
         const slide = (1 - enter) * geo.off
 
@@ -157,38 +157,15 @@ export function Method() {
       }
 
       const applyGeo = () => {
-        geo = geometry(window.innerWidth, window.innerHeight)
+        geo = geometry(window.innerWidth, box.clientHeight)
         box.style.setProperty('--card-w', geo.w + 'px')
         box.style.setProperty('--card-h', geo.h + 'px')
       }
 
-      // one resting point per step, at the head of each plateau
-      const stops = Array.from({ length: N }, (_, i) => LEAD + (1 - LEAD) * (i / (N - 1)))
-
-      const st = ScrollTrigger.create({
-        trigger: el,
-        start: 'top top',
-        end: () => '+=' + window.innerHeight * (N * 0.9),
-        pin: box,
-        pinSpacing: true,
-        scrub: 0.7,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        snap: {
-          snapTo: stops,
-          duration: { min: 0.3, max: 0.8 },
-          delay: 0.02,
-          ease: 'power2.inOut',
-        },
-        onRefreshInit: applyGeo,
-        onUpdate: (self) => place(self.progress),
-        onRefresh: (self) => { applyGeo(); place(self.progress) },
+      pinnedSequence({
+        trigger: el, stage: box, screens: N * 0.75,
+        prepare: applyGeo, render: place,
       })
-
-      applyGeo()
-      place(0)
-
-return () => st.kill()
     }, el)
 
     const media = el.querySelector<HTMLElement>('.mv__full')
@@ -197,7 +174,7 @@ return () => st.kill()
     return () => { stopDrift?.(); ctx.revert() }
   }, [])
 
-  /* Before the deck has arrived nothing is showing at all. */
+  /* Keep the first step legible as the deck arrives. */
   const state = (i: number) =>
     !started ? 'is-next' : i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
 
@@ -212,7 +189,7 @@ return () => st.kill()
                 src={step.image}
                 alt=""
                
-                decoding="async"
+                loading="lazy" decoding="async"
                 style={step.crop as React.CSSProperties | undefined}
               />
             </figure>
@@ -254,7 +231,7 @@ return () => st.kill()
                   src={step.image}
                   alt=""
                  
-                  decoding="async"
+                  loading="lazy" decoding="async"
                   style={step.crop as React.CSSProperties | undefined}
                 />
               </span>
@@ -271,7 +248,7 @@ return () => st.kill()
       <div className="mv__fallback">
         {STEPS.map((step) => (
           <article key={step.no}>
-            <img src={step.image} alt="" decoding="async" />
+            <img src={step.image} alt="" loading="lazy" decoding="async" />
             <div>
               <h3>{step.title}</h3>
               <p>{step.text}</p>

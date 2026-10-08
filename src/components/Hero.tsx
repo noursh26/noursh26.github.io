@@ -50,7 +50,7 @@ export function Hero({ start }: { start: boolean }) {
   return (
     <section className="hero" id="top" ref={root}>
       <div className="hero__media is-placeholder" aria-hidden="true">
-        <img src="assets/generated/hero-path.webp" alt="" />
+        <img src="assets/generated/hero-path.webp" alt="" fetchPriority="high" />
       </div>
       <div className="hero__scrim" aria-hidden="true" />
       <DirectionField />

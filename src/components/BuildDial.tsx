@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { gsap, ScrollTrigger, reduced, clamp, fine } from '../lib/motion'
+import { gsap, pinnedSequence, reduced, clamp, fine } from '../lib/motion'
 import { build as enBuild } from '../content'
 import { useContent } from '../i18n'
 
@@ -17,7 +17,7 @@ const RAD = Math.PI / 180
 /* The section opens holding the pose the one before it ended on — a single
    picture filling the frame — and contracts out of it into the dial. Nothing
    cuts; the visitor should feel they are still inside the same shot. */
-const LEAD = 0.14
+const LEAD = 0.08
 const OPEN_SCALE = 1.85
 
 type Geo = { hx: number; hy: number; r: number; size: number; mobile: boolean }
@@ -64,7 +64,7 @@ export function BuildDial() {
         return
       }
 
-      let geo = geometry(window.innerWidth, window.innerHeight)
+      let geo = geometry(window.innerWidth, box.clientHeight)
 
       /** Place every unit for a given scroll progress. */
       const place = (p: number) => {
@@ -74,7 +74,7 @@ export function BuildDial() {
         // the pose the section opens on: the first picture, centred, filling
         // the frame — the same shape the previous section ended holding
         const ox = window.innerWidth / 2 - geo.size / 2
-        const oy = window.innerHeight / 2 - geo.size / 2
+        const oy = box.clientHeight / 2 - geo.size / 2
 
         cells.forEach((cell, i) => {
           // negative is above the hub, positive below: a unit swings down into
@@ -128,39 +128,16 @@ export function BuildDial() {
         }
       }
 
-      // one resting point per division, after the opening contraction
-      const stops = Array.from({ length: N }, (_, i) => LEAD + (1 - LEAD) * (i / (N - 1)))
-
-      const st = ScrollTrigger.create({
-        trigger: el,
-        start: 'top top',
-        end: () => `+=${window.innerHeight * (N * 1.05)}`,
-        pin: box,
-        pinSpacing: true,
-        scrub: 0.65,
-        anticipatePin: 1,
-        invalidateOnRefresh: true,
-        // detents: the dial settles on a division rather than resting between
-        // two, so one unit always owns the centre of the screen
-        snap: {
-          snapTo: stops,
-          duration: { min: 0.25, max: 0.7 },
-          delay: 0.04,
-          ease: 'power2.inOut',
-        },
-        onRefreshInit: () => { geo = geometry(window.innerWidth, window.innerHeight) },
-        onUpdate: (self) => place(self.progress),
-        onRefresh: (self) => {
-          geo = geometry(window.innerWidth, window.innerHeight)
-          box.style.setProperty('--cell', `${geo.size}px`)
-          place(self.progress)
-        },
+      const applyGeo = () => {
+        geo = geometry(window.innerWidth, box.clientHeight)
+        box.style.setProperty('--cell', `${geo.size}px`)
+      }
+      pinnedSequence({
+        trigger: el, stage: box, screens: N * 0.75,
+        prepare: applyGeo, render: place,
       })
 
-      box.style.setProperty('--cell', `${geo.size}px`)
-      place(0)
-
-// pointer tilt on the active photograph
+      // Pointer tilt on the active photograph.
       if (fine()) {
         const tilt = (e: PointerEvent) => {
           const cell = box.querySelector<HTMLElement>('.dial-cell.is-active .dial-cell__photo')
@@ -177,8 +154,6 @@ export function BuildDial() {
         window.addEventListener('pointermove', tilt, { passive: true })
         return () => window.removeEventListener('pointermove', tilt)
       }
-
-      return () => st.kill()
     }, el)
 
     return () => ctx.revert()
@@ -203,7 +178,7 @@ export function BuildDial() {
           {UNITS.map((u, i) => (
             <div className={`dial-cell ${i === active ? 'is-active' : ''}`} key={u.no}>
               <div className="dial-cell__photo">
-                <img src={u.image} alt="" decoding="async" />
+                <img src={u.image} alt="" loading="lazy" decoding="async" />
                 <span className="dial-cell__tint" />
               </div>
             </div>
@@ -223,7 +198,7 @@ export function BuildDial() {
       <ul className="build__fallback shell">
         {UNITS.map((u) => (
           <li key={u.no}>
-            <img src={u.image} alt="" decoding="async" />
+            <img src={u.image} alt="" loading="lazy" decoding="async" />
             <div>
               <h3 className="h3">{u.name}</h3>
               <p>{u.line}</p>
