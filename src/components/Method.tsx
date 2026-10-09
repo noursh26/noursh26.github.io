@@ -83,9 +83,7 @@ export function Method() {
   const { method } = useContent()
   const STEPS = method.steps
   const [active, setActive] = useState(0)
-  const [started, setStarted] = useState(true)
   const activeRef = useRef(0)
-  const startedRef = useRef(true)
 
   useLayoutEffect(() => {
     const el = root.current
@@ -149,11 +147,7 @@ export function Method() {
           activeRef.current = idx
           setActive(idx)
         }
-        const on = enter > 0.55
-        if (on !== startedRef.current) {
-          startedRef.current = on
-          setStarted(on)
-        }
+
       }
 
       const applyGeo = () => {
@@ -176,7 +170,7 @@ export function Method() {
 
   /* Keep the first step legible as the deck arrives. */
   const state = (i: number) =>
-    !started ? 'is-next' : i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
+    i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
 
   return (
     <section className="mv" id="method" ref={root}>

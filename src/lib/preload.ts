@@ -9,9 +9,9 @@ export async function preloadAll(onProgress: Progress, lang: 'en' | 'ar'): Promi
   const images = Array.from(document.querySelectorAll<HTMLImageElement>(
     '.hero img, .nav img, .preloader img, .dx-shot:first-child img',
   ))
-  const family = lang === 'ar' ? 'Alexandria' : 'Manrope'
+  const families = lang === 'ar' ? ['Alexandria', 'Manrope'] : ['Manrope', 'Alexandria']
   const fontJobs = document.fonts
-    ? [400, 600, 700].map(weight => document.fonts.load(`${weight} 1rem "${family}"`).catch(() => {}))
+    ? families.flatMap(family => [400, 600, 700].map(weight => document.fonts.load(`${weight} 1rem "${family}"`).catch(() => {})))
     : []
   const total = images.length + fontJobs.length || 1
   let done = 0

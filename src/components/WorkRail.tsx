@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { gsap, pinnedSequence, reduced, clamp, pointerDrift } from '../lib/motion'
 import { work as enWork } from '../content'
-import { useContent } from '../i18n'
+import { useContent, useLang } from '../i18n'
 
 const N = enWork.items.length
 
@@ -58,11 +58,10 @@ export function WorkRail() {
   const root = useRef<HTMLElement>(null)
   const stage = useRef<HTMLDivElement>(null)
   const { work } = useContent()
+  const { lang } = useLang()
   const ITEMS = work.items
   const [active, setActive] = useState(0)
-  const [started, setStarted] = useState(true)
   const activeRef = useRef(0)
-  const startedRef = useRef(true)
 
   useLayoutEffect(() => {
     const el = root.current
@@ -126,11 +125,7 @@ export function WorkRail() {
           activeRef.current = idx
           setActive(idx)
         }
-        const on = enter > 0.55
-        if (on !== startedRef.current) {
-          startedRef.current = on
-          setStarted(on)
-        }
+
       }
 
       const applyGeo = () => {
@@ -153,7 +148,7 @@ export function WorkRail() {
 
   /* The first project is readable on arrival. */
   const state = (i: number) =>
-    !started ? 'is-next' : i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
+    i === active ? 'is-on' : i < active ? 'is-past' : 'is-next'
 
   return (
     <section className="wk" id="work" ref={root}>
@@ -162,13 +157,15 @@ export function WorkRail() {
         <div className="wk__full" aria-hidden="true">
           {ITEMS.map((item) => (
             <figure className="wk-frame" key={item.no}>
-              <img src={item.image} alt="" loading="lazy" decoding="async" />
+              <img className="wk-frame__backdrop" src={item.image} alt="" loading="lazy" decoding="async" />
+              <img className="wk-frame__screen" src={item.image} alt="" loading="lazy" decoding="async" />
+              <img className="wk-frame__phone" src={item.mobile} alt="" loading="lazy" decoding="async" />
             </figure>
           ))}
         </div>
         <div className="wk__scrim" aria-hidden="true" />
 
-        <p className={'wk__overline ' + (started ? 'is-on' : '')}>
+        <p className="wk__overline is-on">
           <span className="numeral">{work.no}</span>
           <i aria-hidden="true" />
           <span className="kicker">{work.kicker}</span>
@@ -205,7 +202,7 @@ export function WorkRail() {
           ))}
         </div>
 
-        
+        <div className="wk__links"><a href={ITEMS[active].href}>{lang === 'ar' ? 'تفاصيل المشروع والشاشات' : 'Project story & screens'} <span aria-hidden="true">↗</span></a><a href="/projects/">{lang === 'ar' ? 'كل المشاريع — 33' : 'All 33 projects'} <span aria-hidden="true">↗</span></a></div>
       </div>
 
       {/* Reduced motion: the strip laid out flat. */}
@@ -215,11 +212,12 @@ export function WorkRail() {
             <img src={item.image} alt="" loading="lazy" decoding="async" />
             <div>
               <h3>{item.title}</h3>
-              <p>{item.text}</p>
+              <p>{item.text}</p><a className="wk__fallback-link" href={item.href}>{lang === 'ar' ? 'تفاصيل المشروع' : 'Explore project'} ↗</a>
             </div>
           </article>
         ))}
       </div>
+      <div className="work-catalog-callout"><p>{lang === 'ar' ? 'المزيد من المنتجات، والمزيد من التفاصيل.' : 'More products. More of the thinking behind them.'}</p><a href="/projects/">{lang === 'ar' ? 'استكشف معرض المشاريع الكامل' : 'Explore the complete project directory'} <span aria-hidden="true">↗</span></a></div>
     </section>
   )
 }

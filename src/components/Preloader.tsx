@@ -13,6 +13,7 @@ export function Preloader({ onDone }: { onDone: () => void }) {
   const shown = useRef(0)      // what the counter is currently displaying
   const target = useRef(0)     // what the download says it should be
   const finished = useRef(false)
+  const opened = useRef(false)
 
   // Scroll stays locked while the door is shut.
   useLayoutEffect(() => {
@@ -23,6 +24,12 @@ export function Preloader({ onDone }: { onDone: () => void }) {
   useEffect(() => {
     const el = root.current
     if (!el) return
+    if (opened.current) {
+      document.body.classList.remove('is-loading')
+      gsap.set(el, { autoAlpha: 0, pointerEvents: 'none', visibility: 'hidden' })
+      onDone()
+      return
+    }
     let raf = 0
     let cancelled = false
     let exit: gsap.core.Timeline | undefined
@@ -30,6 +37,7 @@ export function Preloader({ onDone }: { onDone: () => void }) {
 
     const open = () => {
       if (cancelled) return
+      opened.current = true
       document.body.classList.remove('is-loading')
       if (reduced()) {
         gsap.set(el, { autoAlpha: 0, pointerEvents: 'none' })

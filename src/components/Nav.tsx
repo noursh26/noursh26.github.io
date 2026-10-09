@@ -12,6 +12,7 @@ export function Nav() {
   const header = useRef<HTMLElement>(null)
   const overlay = useRef<HTMLDivElement>(null)
   const toggle = useRef<HTMLButtonElement>(null)
+  const wasOpen = useRef(false)
   const navigationTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const { nav, contact, ui } = useContent()
   const { lang, setLang } = useLang()
@@ -72,18 +73,27 @@ export function Nav() {
   }, [open])
 
   useEffect(() => {
+    if (open) wasOpen.current = true
+    else if (wasOpen.current) {
+      wasOpen.current = false
+      toggle.current?.focus()
+    }
+  }, [open])
+
+  useEffect(() => {
     if (!open) return
     getLenis()?.stop()
     const first = overlay.current?.querySelector<HTMLAnchorElement>('a')
     // Let the visibility update paint before moving focus, including the
     // instant reduced-motion path where GSAP can sleep between frames.
-    const focusTimer = window.setTimeout(() => first?.focus({ preventScroll: true }), 100)
+    const focusTimer = window.setTimeout(() => {
+      if (document.activeElement === toggle.current || document.activeElement === document.body) first?.focus({ preventScroll: true })
+    }, 100)
     const keys = (e: KeyboardEvent) => {
       if (e.key === 'Escape') { setOpen(false); toggle.current?.focus(); return }
       if (e.key !== 'Tab') return
       const controls = [
         ...Array.from(overlay.current?.querySelectorAll<HTMLElement>('a, button') ?? []),
-        toggle.current,
       ].filter((control): control is HTMLElement => control !== null)
       const index = controls.indexOf(document.activeElement as HTMLElement)
       const next = (index + (e.shiftKey ? -1 : 1) + controls.length) % controls.length
@@ -129,6 +139,8 @@ export function Nav() {
           <button
             className={`nav__menu ${open ? 'is-open' : ''}`}
             type="button"
+            aria-hidden={open || undefined}
+            tabIndex={open ? -1 : undefined}
             aria-expanded={open}
             aria-controls="menu-overlay"
             ref={toggle}
@@ -140,6 +152,7 @@ export function Nav() {
       </header>
 
       <div className="menu" id="menu-overlay" ref={overlay} inert={!open} role="dialog" aria-modal={open || undefined} aria-label={ui.menuAria}>
+        <button className="menu__close" type="button" onClick={() => { setOpen(false); toggle.current?.focus() }}>{ui.menuClose}</button>
         <nav className="menu__nav" aria-label={ui.menuAria}>
           {nav.map((item) => (
             <a className="menu__link" key={item.id} href={`#${item.id}`} onClick={go(item.id)} data-cursor={ui.goCursor}>
@@ -148,7 +161,7 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <div className="menu__meta">
+        <div className="menu__meta"><a className="menu__catalog" href="/projects/">{lang === 'ar' ? 'معرض المشاريع الكامل ↗' : 'Full project directory ↗'}</a>
           <div>
             <span className="kicker">{ui.getInTouch}</span>
             <a href={`mailto:${contact.email}`}>{contact.email}</a>

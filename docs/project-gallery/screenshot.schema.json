@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Original interface capture provenance",
+  "type": "object",
+  "required": [
+    "project",
+    "file",
+    "thumbnail",
+    "device",
+    "width",
+    "height",
+    "label",
+    "labelEn",
+    "repo",
+    "revision",
+    "revisionKind",
+    "sourceSha256",
+    "route",
+    "capturedAt",
+    "fixture"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "file": {
+      "type": "string",
+      "pattern": "^/assets/projects/"
+    },
+    "thumbnail": {
+      "type": "string",
+      "pattern": "^/assets/projects/"
+    },
+    "device": {
+      "enum": [
+        "desktop",
+        "mobile"
+      ]
+    },
+    "width": {
+      "type": "integer",
+      "minimum": 320
+    },
+    "height": {
+      "type": "integer",
+      "minimum": 320
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1
+    },
+    "labelEn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repo": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revisionKind": {
+      "const": "local-source-snapshot"
+    },
+    "sourceSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capturedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fixture": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

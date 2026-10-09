@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { gsap, ScrollTrigger, reduced } from './lib/motion'
-import { useLenis } from './lib/useLenis'
+import { scrollTo, useLenis } from './lib/useLenis'
 import { Preloader } from './components/Preloader'
 import { Cursor } from './components/Cursor'
 import { Nav } from './components/Nav'
@@ -24,6 +24,7 @@ export default function App() {
      and put the reader back where they were once the pins re-measure. */
   const instant = useRef(sessionStorage.getItem('np:instant') === '1')
   const pendingY = useRef<number | null>(null)
+  const initialAnchor = useRef(window.location.hash.slice(1))
   if (instant.current && pendingY.current === null) {
     sessionStorage.removeItem('np:instant')
     pendingY.current = Number(sessionStorage.getItem('np:scrollY') || 0)
@@ -55,7 +56,16 @@ export default function App() {
       ScrollTrigger.refresh()
       if (pendingY.current !== null) window.scrollTo(0, pendingY.current)
     }
-    const t = window.setTimeout(refresh, 400)
+    const t = window.setTimeout(() => {
+      refresh()
+      // Direct links from project pages arrive while the loading gate is
+      // locked. Resolve their anchor after the pinned sections settle.
+      const id = initialAnchor.current
+      initialAnchor.current = ''
+      if (pendingY.current === null && id && document.getElementById(id)) {
+        scrollTo(`#${CSS.escape(id)}`)
+      }
+    }, 400)
     document.fonts?.ready.then(refresh).catch(() => {})
     window.addEventListener('load', refresh)
     const t2 = window.setTimeout(() => { pendingY.current = null }, 1200)
