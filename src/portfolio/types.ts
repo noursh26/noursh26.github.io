@@ -1,5 +1,6 @@
 export type Copy = { ar: string; en: string }
-export type Category = 'business' | 'ai' | 'mobile' | 'commerce' | 'brand' | 'developer'
+export type Category =
+  'business' | 'ai' | 'mobile' | 'commerce' | 'brand' | 'developer'
 export type Project = {
   id: string
   name: string
@@ -14,6 +15,14 @@ export type Project = {
   flow: Copy[]
   stack: string[]
   palette: { background: string; foreground: string; accent: string }
+  presentation: {
+    composition: string
+    rhythm: 'sequence' | 'tiles' | 'panels'
+    desktopCover: number
+    mobileCover: number
+    radius: number
+    tilt: number
+  }
   layout: 'workspace' | 'editorial' | 'mobile' | 'commerce' | 'developer'
 }
 export type Shot = {
@@ -25,7 +34,11 @@ export type Shot = {
   height: number
   label: string
   labelEn: string
+}
+export type ScreenshotProvenance = Shot & {
   repo: string
+  revisionKind: 'local-source-snapshot'
+  sourceSha256: string
   revision: string
   route: string
   capturedAt: string

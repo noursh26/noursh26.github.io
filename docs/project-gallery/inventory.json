@@ -1,12 +1,12 @@
 {
-  "version": 1,
-  "status": "in-progress",
-  "source": "GitHub inventory and original application demo runs; revalidated 2026-10-09",
+  "version": 2,
+  "status": "complete-implementation",
+  "source": "Original repository interfaces, isolated local demonstration runs and synthetic API/database fixtures; reviewed 2026-10-09",
   "minimumScreenshots": {
     "desktop": 10,
     "mobile": 10
   },
-  "screenshotsUploaded": false,
+  "screenshotsUploaded": true,
   "projects": [
     {
       "id": "accountant",
@@ -18,93 +18,12 @@
         "desktop": 15,
         "mobile": 15
       },
-      "publishedScreenshots": 0,
-      "provenance": "original Nest/Next application with original demonstration seed in local Postgres",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "nirso",
-      "name": "NIRSO",
-      "repositories": [
-        "NIRSO"
+      "publishedScreenshots": 30,
+      "provenance": [
+        "original Nest/Next application with original demonstration seed in local Postgres; native development indicator disabled"
       ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "estratijiya-ai",
-      "name": "Estratijiya AI",
-      "repositories": [
-        "estratijiya-ai-platform"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "zero-os",
-      "name": "Zero OS",
-      "repositories": [
-        "Estratijiya"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "relinka",
-      "name": "Relinka",
-      "repositories": [
-        "relinka"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "salesflow",
-      "name": "SalesFlow",
-      "repositories": [
-        "salesflow"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "fahrast",
-      "name": "فهرست",
-      "repositories": [
-        "fahrast"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
+      "caseStudyStatus": "complete",
+      "route": "/projects/accountant/"
     },
     {
       "id": "almustfa",
@@ -119,9 +38,29 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original application with synthetic local demonstration records",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/almustfa/"
+    },
+    {
+      "id": "alkhyr",
+      "name": "الخير",
+      "repositories": [
+        "alkhyr"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original charity interface with synthetic local campaigns, beneficiaries and donations; mobile sidebar defaults corrected locally"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/alkhyr/"
     },
     {
       "id": "lego",
@@ -134,239 +73,12 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original customer portal with PresentationDemoSeeder synthetic records",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "m3aak",
-      "name": "معاك",
-      "repositories": [
-        "m3aak"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original customer portal with its local opt-in presentation demo authentication and synthetic presentation seeder"
       ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "warid",
-      "name": "Warid B2B",
-      "repositories": [
-        "WaridB2B"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "alkhyr",
-      "name": "الخير",
-      "repositories": [
-        "alkhyr"
-      ],
-      "capturedLocally": {
-        "desktop": 10,
-        "mobile": 10
-      },
-      "publishedScreenshots": 0,
-      "provenance": "original application with synthetic local demonstration records",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "omar",
-      "name": "Omar",
-      "repositories": [
-        "omar"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "mosapqa",
-      "name": "مسابقة",
-      "repositories": [
-        "mosapqa"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "safqa",
-      "name": "Safka Plus",
-      "repositories": [
-        "safkablus"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "umzuge",
-      "name": "Umzüge",
-      "repositories": [
-        "umzuge"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "dwiptech",
-      "name": "DWIP Tech",
-      "repositories": [
-        "dwiptech"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "globalfootball",
-      "name": "Global Football AI",
-      "repositories": [
-        "gfaa-web",
-        "gfaa-android",
-        "globalfootballai-landing"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "farahidi",
-      "name": "الفراهيدي",
-      "repositories": [
-        "farahidi-api",
-        "farahidi-app"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "wisp",
-      "name": "WISP",
-      "repositories": [
-        "WISP-backend",
-        "WISP-frontend"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "foxtech",
-      "name": "FoxTech",
-      "repositories": [
-        "fox-api",
-        "fox-web"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "qasioun",
-      "name": "Qasioun",
-      "repositories": [
-        "Qasioun"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "qasioun-tv",
-      "name": "Qasioun TV",
-      "repositories": [
-        "qasioun-tv"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "arkani",
-      "name": "أركاني",
-      "repositories": [
-        "arkan",
-        "arkani"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "fulus",
-      "name": "فلوس",
-      "repositories": [
-        "Fulus"
-      ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
+      "caseStudyStatus": "complete",
+      "route": "/projects/lego/"
     },
     {
       "id": "masaref",
@@ -378,23 +90,12 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original Flutter interface; local in-memory synthetic repository, web Material text inheritance compatibility fix",
-      "caseStudyStatus": "incomplete"
-    },
-    {
-      "id": "ail",
-      "name": "AiL",
-      "repositories": [
-        "ail"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Flutter interface; local in-memory synthetic repository, web Material text inheritance compatibility fix"
       ],
-      "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
-      },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
+      "caseStudyStatus": "complete",
+      "route": "/projects/masaref/"
     },
     {
       "id": "bolupinar",
@@ -406,9 +107,12 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/bolupinar/"
     },
     {
       "id": "horizonai",
@@ -420,9 +124,12 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/horizonai/"
     },
     {
       "id": "maash",
@@ -435,9 +142,12 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/maash/"
     },
     {
       "id": "petravex",
@@ -449,9 +159,393 @@
         "desktop": 10,
         "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/petravex/"
+    },
+    {
+      "id": "zero-os",
+      "name": "Zero OS",
+      "repositories": [
+        "Estratijiya"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/zero-os/"
+    },
+    {
+      "id": "omar",
+      "name": "Omar",
+      "repositories": [
+        "omar"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/omar/"
+    },
+    {
+      "id": "mosapqa",
+      "name": "مسابقة",
+      "repositories": [
+        "mosapqa"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Livewire interface with synthetic local data and a local mobile overflow fix"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/mosapqa/"
+    },
+    {
+      "id": "safqa",
+      "name": "Safka Plus",
+      "repositories": [
+        "safkablus"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/safqa/"
+    },
+    {
+      "id": "umzuge",
+      "name": "Umzüge",
+      "repositories": [
+        "umzuge"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/umzuge/"
+    },
+    {
+      "id": "dwiptech",
+      "name": "DWIP Tech",
+      "repositories": [
+        "dwiptech"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Laravel interface with synthetic local data and a local mobile layout compatibility fix"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/dwiptech/"
+    },
+    {
+      "id": "qasioun",
+      "name": "Qasioun",
+      "repositories": [
+        "Qasioun"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/qasioun/"
+    },
+    {
+      "id": "fahrast",
+      "name": "فهرست",
+      "repositories": [
+        "fahrast"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/fahrast/"
+    },
+    {
+      "id": "nirso",
+      "name": "NIRSO",
+      "repositories": [
+        "NIRSO"
+      ],
+      "capturedLocally": {
+        "desktop": 15,
+        "mobile": 15
+      },
+      "publishedScreenshots": 30,
+      "provenance": [
+        "original Next.js work application with its local PostgreSQL synthetic seed and a scoped local demo session"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/nirso/"
+    },
+    {
+      "id": "estratijiya-ai",
+      "name": "Estratijiya AI",
+      "repositories": [
+        "estratijiya-ai-platform"
+      ],
+      "capturedLocally": {
+        "desktop": 15,
+        "mobile": 15
+      },
+      "publishedScreenshots": 30,
+      "provenance": [
+        "original Next.js dashboard with local PostgreSQL/pgvector schema, synthetic records and signed local Better Auth session; external AI, channel delivery and meeting services not exercised"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/estratijiya-ai/"
+    },
+    {
+      "id": "relinka",
+      "name": "Relinka",
+      "repositories": [
+        "relinka"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original React document-workspace interface with synthetic local API fixtures; external document processing and AI services are not exercised"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/relinka/"
+    },
+    {
+      "id": "salesflow",
+      "name": "SalesFlow",
+      "repositories": [
+        "salesflow"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/salesflow/"
+    },
+    {
+      "id": "m3aak",
+      "name": "معاك",
+      "repositories": [
+        "m3aak"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Laravel marketplace with synthetic local records, illustrative Unsplash product photos and local mobile layout compatibility fixes; not actual offers"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/m3aak/"
+    },
+    {
+      "id": "warid",
+      "name": "Warid B2B",
+      "repositories": [
+        "WaridB2B"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Laravel wholesale admin; newly generated synthetic SQLite records and opt-in local presentation session; original production SQL dump is not imported"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/warid/"
+    },
+    {
+      "id": "globalfootball",
+      "name": "Global Football AI",
+      "repositories": [
+        "gfaa-web",
+        "gfaa-android",
+        "globalfootballai-landing"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/globalfootball/"
+    },
+    {
+      "id": "farahidi",
+      "name": "الفراهيدي",
+      "repositories": [
+        "farahidi-api",
+        "farahidi-app"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original application with synthetic local demonstration records"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/farahidi/"
+    },
+    {
+      "id": "wisp",
+      "name": "WISP",
+      "repositories": [
+        "WISP-backend",
+        "WISP-frontend"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original React interface with isolated local API fixtures and synthetic demo authentication; no live backend or router connection"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/wisp/"
+    },
+    {
+      "id": "foxtech",
+      "name": "FoxTech",
+      "repositories": [
+        "fox-api",
+        "fox-web"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original React interface with isolated local API fixtures and synthetic demo authentication; no live backend or router connection"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/foxtech/"
+    },
+    {
+      "id": "qasioun-tv",
+      "name": "Qasioun TV",
+      "repositories": [
+        "qasioun-tv"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Flutter media browser with synthetic catalog, opt-out update response and local font fallback; no external streams are played"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/qasioun-tv/"
+    },
+    {
+      "id": "arkani",
+      "name": "أركاني",
+      "repositories": [
+        "arkan",
+        "arkani"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Flutter interface with synthetic local API fixtures and simulated location; prayer times and reading content are demonstration data",
+        "original Flutter UI with isolated demonstration API responses; sample reading content is explicitly illustrative"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/arkani/"
+    },
+    {
+      "id": "fulus",
+      "name": "فلوس",
+      "repositories": [
+        "Fulus"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Flutter UI and original synthetic demo seed; local SQLite WASM adapter for browser execution"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/fulus/"
+    },
+    {
+      "id": "ail",
+      "name": "AiL",
+      "repositories": [
+        "ail"
+      ],
+      "capturedLocally": {
+        "desktop": 10,
+        "mobile": 10
+      },
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original AiL v0.9 compiler and native HTTP demo; generated HTML examples and synthetic task interactions, not an invented editor"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/ail/"
     },
     {
       "id": "estratijiya",
@@ -462,12 +556,15 @@
         "estratijya-auth"
       ],
       "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
+        "desktop": 10,
+        "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original site; existing site copy and illustrative content are not claimed as verified client results"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/estratijiya/"
     },
     {
       "id": "yallabook",
@@ -477,12 +574,15 @@
         "YallaBookFront"
       ],
       "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
+        "desktop": 10,
+        "mobile": 10
       },
-      "publishedScreenshots": 0,
-      "provenance": "pending",
-      "caseStudyStatus": "incomplete"
+      "publishedScreenshots": 20,
+      "provenance": [
+        "original Next.js booking interface with synthetic isolated API fixtures; payments, SMS and external provider delivery are not exercised"
+      ],
+      "caseStudyStatus": "complete",
+      "route": "/projects/yallabook/"
     }
   ],
   "excluded": [
@@ -516,5 +616,8 @@
       "reason": "Fork; not selected as an original standalone product"
     }
   ],
-  "updatedAt": "2026-10-09"
+  "updatedAt": "2026-10-09T05:12:47.319806+00:00",
+  "totalScreenshots": 690,
+  "projectCount": 33,
+  "publication": "Committed gallery assets on feature/project-case-studies; production deployment follows merging PR #3 into main."
 }

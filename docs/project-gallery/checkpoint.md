@@ -1,4 +1,4 @@
-> Historical checkpoint from 2026-10-02. See [current task status](../../TASK_STATUS.md) for corrected capture counts, recovered file locations, and uploaded implementation status.
+> Historical checkpoint. The implementation is now complete: 33 case studies and 690 captures. See [current task status](../../TASK_STATUS.md). Statements below describe the earlier interrupted session and are not current.
 
 # Project gallery implementation checkpoint
 

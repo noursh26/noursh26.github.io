@@ -45,14 +45,14 @@ export function pinnedSequence({
     scrollTrigger: {
       trigger,
       start: 'top top',
-      end: () => `+=${stage.clientHeight * screens}`,
+      end: () => `+=${Math.max(stage.clientHeight, 1) * Math.max(screens, 0.1)}`,
       pin: stage,
       pinSpacing: true,
       scrub: 0.32,
       anticipatePin: 1,
       invalidateOnRefresh: true,
       onRefreshInit: prepare,
-      onRefresh: () => { prepare?.(); render(progress.value) },
+      onRefresh: () => render(progress.value),
     },
   })
 }

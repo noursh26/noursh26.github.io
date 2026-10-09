@@ -42,9 +42,12 @@ export function scrollTo(target: string) {
       el.focus({ preventScroll: true })
     }
   }
-  if (lenis) lenis.scrollTo(el as HTMLElement, { duration: 1.1, onComplete: complete })
+  complete()
+  if (lenis) {
+    lenis.resize()
+    lenis.scrollTo(el as HTMLElement, { duration: 1.1 })
+  }
   else {
     el.scrollIntoView({ behavior: reduced() ? 'instant' : 'smooth' })
-    complete()
   }
 }

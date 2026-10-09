@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Actual project screenshot",
+  "title": "Original interface capture provenance",
   "type": "object",
   "required": [
     "project",
@@ -10,11 +10,14 @@
     "width",
     "height",
     "label",
-    "repository",
+    "labelEn",
+    "repo",
     "revision",
+    "revisionKind",
+    "sourceSha256",
     "route",
     "capturedAt",
-    "provenance"
+    "fixture"
   ],
   "additionalProperties": false,
   "properties": {
@@ -45,30 +48,27 @@
       "minimum": 320
     },
     "label": {
-      "type": "object",
-      "required": [
-        "ar",
-        "en"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "ar": {
-          "type": "string",
-          "minLength": 1
-        },
-        "en": {
-          "type": "string",
-          "minLength": 1
-        }
-      }
+      "type": "string",
+      "minLength": 1
     },
-    "repository": {
+    "labelEn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repo": {
       "type": "string",
       "minLength": 1
     },
     "revision": {
       "type": "string",
-      "pattern": "^[a-f0-9]{40}$"
+      "minLength": 1
+    },
+    "revisionKind": {
+      "const": "local-source-snapshot"
+    },
+    "sourceSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
     },
     "route": {
       "type": "string",
@@ -76,16 +76,11 @@
     },
     "capturedAt": {
       "type": "string",
-      "format": "date-time"
+      "minLength": 1
     },
-    "provenance": {
-      "enum": [
-        "original-site",
-        "original-seeder",
-        "local-demo-records",
-        "original-ui-local-api-fixtures",
-        "original-ui-local-demo-repository"
-      ]
+    "fixture": {
+      "type": "string",
+      "minLength": 1
     }
   }
 }

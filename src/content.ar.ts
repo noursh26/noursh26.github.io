@@ -122,66 +122,102 @@ export const work = {
   lede: 'منصات ذكاء اصطناعي وأنظمة أعمال وتجارب تبدأ بالعربية.',
   items: [
     {
-      no: '01', title: 'Estratijiya AI.',
-      text: 'منصة SaaS متعددة الشركات تربط وكلاء خدمة العملاء بقاعدة معرفة RAG، عبر الموقع وواتساب وتيليغرام.',
-      image: 'assets/work/w4-estratijiya.webp',
+        "no": "01",
+        "title": "Estratijiya AI.",
+        "text": "منصة لإدارة محادثات العملاء والمعرفة والمساعدين والقنوات، مع تحليلات وفريق وحملات وميزانيات استخدام لكل مساحة.",
+        "image": "/assets/projects/estratijiya-ai/desktop-01.webp",
+        "mobile": "/assets/projects/estratijiya-ai/mobile-01.webp",
+        "href": "/projects/estratijiya-ai/"
     },
     {
-      no: '02', title: 'SalesFlow AI.',
-      text: 'مساحة مبيعات تجمع العملاء المحتملين والصفقات وعروض الأسعار وقنوات التواصل، مع وكلاء AI لدعم سير العمل.',
-      image: 'assets/work/w1-salesflow.webp',
+        "no": "02",
+        "title": "SalesFlow.",
+        "text": "نظام مبيعات يجمع جهات الاتصال والفرص ومراحل البيع والمحادثات وعروض الأسعار، مع إعدادات للمساعد والقنوات والتحليلات.",
+        "image": "/assets/projects/salesflow/desktop-02.webp",
+        "mobile": "/assets/projects/salesflow/mobile-02.webp",
+        "href": "/projects/salesflow/"
     },
     {
-      no: '03', title: 'Relinka.',
-      text: 'مساحة مستندات مشفّرة تضم تصنيفاً واستخراج بيانات بالذكاء الاصطناعي، وبحثاً دلالياً، ووصول MCP للوكلاء.',
-      image: 'assets/work/w7-relinka.webp',
+        "no": "03",
+        "title": "Relinka.",
+        "text": "مساحة عربية للمستندات والمجلدات والمشاركة والبحث، مع واجهات للجداول الذكية وهيكل الأرشيف وإدارة مفاتيح التكامل.",
+        "image": "/assets/projects/relinka/desktop-01.webp",
+        "mobile": "/assets/projects/relinka/mobile-01.webp",
+        "href": "/projects/relinka/"
     },
     {
-      no: '04', title: 'Fahrast AI.',
-      text: 'منصة عربية للقراءة والبحث تجمع الكتب والمخطوطات في بيئة واحدة للاكتشاف والبحث الذكي.',
-      image: 'assets/work/w8-fahrast.webp',
+        "no": "04",
+        "title": "فهرست.",
+        "text": "منصة عربية للكتب والمؤلفين والرواة، تضم مكتبة شخصية ورفوفاً ورفع الكتب واستوديو بحث وواجهات إدارة.",
+        "image": "/assets/projects/fahrast/desktop-01.webp",
+        "mobile": "/assets/projects/fahrast/mobile-01.webp",
+        "href": "/projects/fahrast/"
     },
     {
-      no: '05', title: 'Alkhyr.',
-      text: 'منصة لإدارة العمل الخيري تجمع الحملات والمستفيدين والاشتراكات والبطاقات المطبوعة في نظام واحد.',
-      image: 'assets/work/w9-alkhyr.webp',
+        "no": "05",
+        "title": "الخير.",
+        "text": "إدارة للعمل الخيري تجمع الحملات والمتبرعين والمستفيدين وحركات التبرع والمصروفات ضمن سجلات قابلة للمراجعة.",
+        "image": "/assets/projects/alkhyr/desktop-01.webp",
+        "mobile": "/assets/projects/alkhyr/mobile-01.webp",
+        "href": "/projects/alkhyr/"
     },
     {
-      no: '06', title: 'm3aak.com.',
-      text: 'منصة تجارة إلكترونية متعددة الأدوار، تجمع المتاجر والمحافظ الرقمية والطلبات وتتبع التوصيل، بواجهة عربية RTL.',
-      image: 'assets/work/w2-m3aak.webp',
+        "no": "06",
+        "title": "معاك.",
+        "text": "منصة عربية تجمع المنتجات والمتاجر والوجبات والخدمات، مع حسابات للمشتري ومساحات تشغيل للبائع والمطعم والتوصيل.",
+        "image": "/assets/projects/m3aak/desktop-01.webp",
+        "mobile": "/assets/projects/m3aak/mobile-01.webp",
+        "href": "/projects/m3aak/"
     },
     {
-      no: '07', title: 'Almustfa.',
-      text: 'نظام لإدارة الحلقات القرآنية، يربط سجل التسميع بالنقاط التحفيزية وسوق المكافآت وبطاقات QR للطلاب.',
-      image: 'assets/work/w10-almustfa.webp',
+        "no": "07",
+        "title": "المصطفى.",
+        "text": "منصة عربية لإدارة حلقات تحفيظ القرآن: الطلاب والتسميع والحضور والأنشطة والنقاط وبرامج الدورة في تجربة مترابطة.",
+        "image": "/assets/projects/almustfa/desktop-01.webp",
+        "mobile": "/assets/projects/almustfa/mobile-01.webp",
+        "href": "/projects/almustfa/"
     },
     {
-      no: '08', title: 'Global Football AI.',
-      text: 'منصة ويب وتطبيق أندرويد للتعليم الكروي وتحليل الأداء بالذكاء الاصطناعي وإصدار الشهادات.',
-      image: 'assets/work/w11-gfaa.webp',
+        "no": "08",
+        "title": "Global Football AI.",
+        "text": "واجهة تعريف وتسجيل لأكاديمية كرة قدم، تعرض مسارات اللاعبين والمدربين والعضوية والتحليل، مع أساس حساب مستخدم وتطبيق Android.",
+        "image": "/assets/projects/globalfootball/desktop-01.webp",
+        "mobile": "/assets/projects/globalfootball/mobile-01.webp",
+        "href": "/projects/globalfootball/"
     },
     {
-      no: '09', title: 'WISP.',
-      text: 'نظام تشغيل لمزوّد إنترنت يجمع الاشتراكات والفوترة والتركيب والصيانة والمخزون والمحاسبة والرواتب.',
-      image: 'assets/work/w12-wisp.webp',
+        "no": "09",
+        "title": "WISP.",
+        "text": "واجهة تشغيل WISP لإدارة مشتركي الإنترنت والاشتراكات والتركيبات والصيانة والمخزون والمصروفات والسجلات المحاسبية.",
+        "image": "/assets/projects/wisp/desktop-01.webp",
+        "mobile": "/assets/projects/wisp/mobile-01.webp",
+        "href": "/projects/wisp/"
     },
     {
-      no: '10', title: 'NIRSO.',
-      text: 'نظام العمليات الداخلي لشركة Petravex، بهوية مركزية وإدارة للمشاريع والأتمتة وأرشفة المستندات.',
-      image: 'assets/work/w13-nirso.webp',
+        "no": "10",
+        "title": "NIRSO.",
+        "text": "مساحة تعاون لتنظيم المشاريع والمهام في قوائم ولوحات وتقويم، مع التخطيط والوقت والأهداف وأعباء الفريق.",
+        "image": "/assets/projects/nirso/desktop-01.webp",
+        "mobile": "/assets/projects/nirso/mobile-01.webp",
+        "href": "/projects/nirso/"
     },
     {
-      no: '11', title: 'Arkani.',
-      text: 'تطبيق Flutter يضم مواقيت الصلاة والأذكار والبحث عن المساجد والإشعارات في تجربة واحدة.',
-      image: 'assets/work/w3-arkani.webp',
+        "no": "11",
+        "title": "أركاني.",
+        "text": "تطبيق عربي يجمع مواقيت الصلاة واختيار الموقع والأذكار والقراءة والمساجد القريبة، مع اهتمام بحجم النص وتجربة الجوال.",
+        "image": "/assets/projects/arkani/desktop-01.webp",
+        "mobile": "/assets/projects/arkani/mobile-01.webp",
+        "href": "/projects/arkani/"
     },
     {
-      no: '12', title: 'Maash.art.',
-      text: 'معرض أعمال سينمائي ثنائي اللغة لرسّام أثاث، تتكشّف فيه الرسومات مع التمرير.',
-      image: 'assets/work/w6-maash.webp',
-    },
-  ],
+        "no": "12",
+        "title": "Maash.",
+        "text": "معرض أعمال لمحمد أنور شحادة، متخصص في مخططات الأثاث والنجارة، يربط AutoCAD وSketchUp بمراحل التصنيع.",
+        "image": "/assets/projects/maash/desktop-01.webp",
+        "mobile": "/assets/projects/maash/mobile-01.webp",
+        "href": "/projects/maash/"
+    }
+],
   close: 'شريك تقني واحد، من أول قرار إلى المنتج المنشور.',
 }
 

@@ -31,8 +31,8 @@ export function LangProvider({ children }: { children: ReactNode }) {
          Draggable dial re-measures against the new direction and copy instead
          of unmounting DOM it no longer owns. The scroll position and a flag to
          skip the door survive the reload so it lands where the reader was. */
-      sessionStorage.setItem('np:instant', '1')
-      sessionStorage.setItem('np:scrollY', String(window.scrollY))
+      if (window.location.pathname === '/') sessionStorage.setItem('np:instant', '1')
+      if (window.location.pathname === '/') sessionStorage.setItem('np:scrollY', String(window.scrollY))
       history.scrollRestoration = 'manual'
       window.location.reload()
       return
@@ -44,7 +44,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
     const c = DICTS[lang]
     document.documentElement.lang = lang
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr'
-    document.title = c.ui.docTitle
+    if (window.location.pathname === '/') document.title = c.ui.docTitle
     /* Re-measure the pinned sections once the new direction and copy have
        painted — pin distances are viewport-based, so a plain refresh is all
        the layout needs. */

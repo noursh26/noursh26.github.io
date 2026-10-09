@@ -125,66 +125,102 @@ export const work = {
   lede: 'AI platforms, business systems, and Arabic-first experiences.',
   items: [
     {
-      no: '01', title: 'Estratijiya AI.',
-      text: 'Multi-tenant SaaS giving every company an AI customer-service agent — widget, WhatsApp, Telegram, on a RAG knowledge base.',
-      image: 'assets/work/w4-estratijiya.webp',
+        "no": "01",
+        "title": "Estratijiya AI.",
+        "text": "A platform for customer conversations, knowledge, agents and channels, with analytics, teams, campaigns and usage budgets per workspace.",
+        "image": "/assets/projects/estratijiya-ai/desktop-01.webp",
+        "mobile": "/assets/projects/estratijiya-ai/mobile-01.webp",
+        "href": "/projects/estratijiya-ai/"
     },
     {
-      no: '02', title: 'SalesFlow AI.',
-      text: 'A sales workspace connecting leads, deals, quotes, and live channels, with AI agents supporting the workflow across tenants.',
-      image: 'assets/work/w1-salesflow.webp',
+        "no": "02",
+        "title": "SalesFlow.",
+        "text": "A sales system connecting contacts, leads, pipelines, conversations and quotes, with agent, channel and analytics settings.",
+        "image": "/assets/projects/salesflow/desktop-02.webp",
+        "mobile": "/assets/projects/salesflow/mobile-02.webp",
+        "href": "/projects/salesflow/"
     },
     {
-      no: '03', title: 'Relinka.',
-      text: 'An encrypted document workspace with AI classification, data extraction, semantic search, and MCP access for connected agents.',
-      image: 'assets/work/w7-relinka.webp',
+        "no": "03",
+        "title": "Relinka.",
+        "text": "An Arabic document workspace for folders, sharing and search, with smart collection, archive blueprint and integration-key interfaces.",
+        "image": "/assets/projects/relinka/desktop-01.webp",
+        "mobile": "/assets/projects/relinka/mobile-01.webp",
+        "href": "/projects/relinka/"
     },
     {
-      no: '04', title: 'Fahrast AI.',
-      text: 'An Arabic reading and research platform bringing books and manuscripts into one environment for intelligent search and discovery.',
-      image: 'assets/work/w8-fahrast.webp',
+        "no": "04",
+        "title": "فهرست.",
+        "text": "An Arabic books, authors and narrators platform with a personal library, shelves, uploads, research studio and management interfaces.",
+        "image": "/assets/projects/fahrast/desktop-01.webp",
+        "mobile": "/assets/projects/fahrast/mobile-01.webp",
+        "href": "/projects/fahrast/"
     },
     {
-      no: '05', title: 'Alkhyr.',
-      text: 'A complete platform for charity work — campaigns, beneficiaries, subscriptions, printed cards, the whole operation.',
-      image: 'assets/work/w9-alkhyr.webp',
+        "no": "05",
+        "title": "الخير.",
+        "text": "A charity operations workspace for campaigns, donors, beneficiaries, donations and expenses, with records that can be reviewed together.",
+        "image": "/assets/projects/alkhyr/desktop-01.webp",
+        "mobile": "/assets/projects/alkhyr/mobile-01.webp",
+        "href": "/projects/alkhyr/"
     },
     {
-      no: '06', title: 'm3aak.com.',
-      text: 'A multi-role e-commerce platform — stores, digital wallets, and orders with live delivery tracking, fully RTL.',
-      image: 'assets/work/w2-m3aak.webp',
+        "no": "06",
+        "title": "معاك.",
+        "text": "An Arabic marketplace for products, stores, meals and services, with buyer accounts and seller, restaurant and delivery workspaces.",
+        "image": "/assets/projects/m3aak/desktop-01.webp",
+        "mobile": "/assets/projects/m3aak/mobile-01.webp",
+        "href": "/projects/m3aak/"
     },
     {
-      no: '07', title: 'Almustfa.',
-      text: 'An end-to-end system for Quran memorization circles — recitation logging, gamified points, and a reward market with QR student cards.',
-      image: 'assets/work/w10-almustfa.webp',
+        "no": "07",
+        "title": "المصطفى.",
+        "text": "An Arabic platform for Quran learning circles, connecting students, recitations, attendance, activities, points and programme organisation.",
+        "image": "/assets/projects/almustfa/desktop-01.webp",
+        "mobile": "/assets/projects/almustfa/mobile-01.webp",
+        "href": "/projects/almustfa/"
     },
     {
-      no: '08', title: 'Global Football AI.',
-      text: 'Professional football education, AI performance analysis and certifications — web platform and Android app.',
-      image: 'assets/work/w11-gfaa.webp',
+        "no": "08",
+        "title": "Global Football AI.",
+        "text": "A football academy landing and registration interface presenting player, coach, membership and analysis journeys, with account foundations and an Android app.",
+        "image": "/assets/projects/globalfootball/desktop-01.webp",
+        "mobile": "/assets/projects/globalfootball/mobile-01.webp",
+        "href": "/projects/globalfootball/"
     },
     {
-      no: '09', title: 'WISP.',
-      text: 'A full ISP operations system — subscriptions, billing, installs, maintenance, inventory, accounting, and payroll.',
-      image: 'assets/work/w12-wisp.webp',
+        "no": "09",
+        "title": "WISP.",
+        "text": "WISP operations interface for internet subscribers, subscriptions, installations, maintenance, inventory, expenses and accounting records.",
+        "image": "/assets/projects/wisp/desktop-01.webp",
+        "mobile": "/assets/projects/wisp/mobile-01.webp",
+        "href": "/projects/wisp/"
     },
     {
-      no: '10', title: 'NIRSO.',
-      text: 'The internal operations system for Petravex — one central identity, projects and automation, and a document archive.',
-      image: 'assets/work/w13-nirso.webp',
+        "no": "10",
+        "title": "NIRSO.",
+        "text": "A collaboration workspace for projects and tasks across lists, boards and calendars, with planning, time, goals and workload.",
+        "image": "/assets/projects/nirso/desktop-01.webp",
+        "mobile": "/assets/projects/nirso/mobile-01.webp",
+        "href": "/projects/nirso/"
     },
     {
-      no: '11', title: 'Arkani.',
-      text: 'A Muslim companion app in Flutter: prayer times, adhkar, mosque finder, push notifications.',
-      image: 'assets/work/w3-arkani.webp',
+        "no": "11",
+        "title": "أركاني.",
+        "text": "An Arabic app bringing prayer times, location, dhikr, reading and nearby mosques together, with readable typography and mobile focus.",
+        "image": "/assets/projects/arkani/desktop-01.webp",
+        "mobile": "/assets/projects/arkani/mobile-01.webp",
+        "href": "/projects/arkani/"
     },
     {
-      no: '12', title: 'Maash.art.',
-      text: 'A cinematic, bilingual portfolio for a master furniture draftsman — scroll and it draws itself.',
-      image: 'assets/work/w6-maash.webp',
-    },
-  ],
+        "no": "12",
+        "title": "Maash.",
+        "text": "A portfolio for Mohammad Anwar Shehadae, a furniture and joinery draftsman, connecting AutoCAD and SketchUp work to fabrication.",
+        "image": "/assets/projects/maash/desktop-01.webp",
+        "mobile": "/assets/projects/maash/mobile-01.webp",
+        "href": "/projects/maash/"
+    }
+],
   close: 'One technical partner, from the first decision to the live product.',
 }
 
