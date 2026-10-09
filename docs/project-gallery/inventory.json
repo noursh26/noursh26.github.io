@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "status": "complete-implementation",
+  "status": "complete",
   "source": "Original repository interfaces, isolated local demonstration runs and synthetic API/database fixtures; reviewed 2026-10-09",
   "minimumScreenshots": {
     "desktop": 10,
@@ -616,8 +616,15 @@
       "reason": "Fork; not selected as an original standalone product"
     }
   ],
-  "updatedAt": "2026-10-09T05:12:47.319806+00:00",
+  "updatedAt": "2026-10-09T07:50:50.274958+00:00",
   "totalScreenshots": 690,
   "projectCount": 33,
-  "publication": "Committed gallery assets on feature/project-case-studies; production deployment follows merging PR #3 into main."
+  "publication": "Published at https://nourx.tech after merging PR #3. GitHub Pages deployment succeeded and all 33 project routes were verified live.",
+  "release": {
+    "pullRequest": 3,
+    "implementationMergeSha": "71e002b20290ae78d1409af93039d52b59f37060",
+    "deploymentRun": 37901027275,
+    "url": "https://nourx.tech/projects/",
+    "verifiedAt": "2026-10-09T07:49:48.555Z"
+  }
 }
