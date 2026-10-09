@@ -1,3 +1,5 @@
+> Historical checkpoint from 2026-10-02. See [current task status](../../TASK_STATUS.md) for corrected capture counts, recovered file locations, and uploaded implementation status.
+
 # Project gallery implementation checkpoint
 
 **Status: incomplete. The gallery is not ready to publish.**

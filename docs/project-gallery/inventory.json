@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "status": "blocked-environment-unavailable",
-  "source": "GitHub repository inventory and local application runs on 2026-10-02",
+  "status": "in-progress",
+  "source": "GitHub inventory and original application demo runs; revalidated 2026-10-09",
   "minimumScreenshots": {
     "desktop": 10,
     "mobile": 10
@@ -19,7 +19,7 @@
         "mobile": 15
       },
       "publishedScreenshots": 0,
-      "provenance": "original-seeder",
+      "provenance": "original Nest/Next application with original demonstration seed in local Postgres",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -120,7 +120,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "original-seeder-and-local-demo-records",
+      "provenance": "original application with synthetic local demonstration records",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -131,11 +131,11 @@
         "lego-mobile"
       ],
       "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
+        "desktop": 10,
+        "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "pending",
+      "provenance": "original customer portal with PresentationDemoSeeder synthetic records",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -177,7 +177,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "local-demo-records",
+      "provenance": "original application with synthetic local demonstration records",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -289,11 +289,11 @@
         "WISP-frontend"
       ],
       "capturedLocally": {
-        "desktop": 10,
-        "mobile": 10
+        "desktop": 0,
+        "mobile": 0
       },
       "publishedScreenshots": 0,
-      "provenance": "original-ui-local-api-fixtures",
+      "provenance": "pending",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -304,11 +304,11 @@
         "fox-web"
       ],
       "capturedLocally": {
-        "desktop": 10,
-        "mobile": 10
+        "desktop": 0,
+        "mobile": 0
       },
       "publishedScreenshots": 0,
-      "provenance": "original-ui-local-api-fixtures",
+      "provenance": "pending",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -375,11 +375,11 @@
         "masaref"
       ],
       "capturedLocally": {
-        "desktop": 0,
-        "mobile": 0
+        "desktop": 10,
+        "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "pending",
+      "provenance": "original Flutter interface; local in-memory synthetic repository, web Material text inheritance compatibility fix",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -407,7 +407,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "original-site",
+      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -421,7 +421,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "original-site",
+      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -436,7 +436,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "original-site",
+      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -450,7 +450,7 @@
         "mobile": 10
       },
       "publishedScreenshots": 0,
-      "provenance": "original-site",
+      "provenance": "original site; existing site copy and illustrative content are not claimed as verified client results",
       "caseStudyStatus": "incomplete"
     },
     {
@@ -515,5 +515,6 @@
       ],
       "reason": "Fork; not selected as an original standalone product"
     }
-  ]
+  ],
+  "updatedAt": "2026-10-09"
 }
