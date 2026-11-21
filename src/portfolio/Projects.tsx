@@ -9,6 +9,8 @@ import {
   projectCover,
 } from './data'
 import type { Project, Shot } from './types'
+import { SiteHeader } from '../components/SiteHeader'
+import { SiteFooter } from '../components/SiteFooter'
 import './projects.css'
 
 function accentInk(hex: string) {
@@ -43,61 +45,17 @@ function Arrow({ back = false }: { back?: boolean }) {
   )
 }
 
-function Header({ directory = false }: { directory?: boolean }) {
-  const { lang, setLang } = useLang()
-  return (
-    <header className="projects-header">
-      <a
-        href="/"
-        aria-label={
-          lang === 'ar' ? 'نور الدين — الرئيسية' : 'Nour Aldeen — home'
-        }
-      >
-        <img
-          src="/assets/brand/lockup-en-reversed.png"
-          alt="Nour Aldeen Shehadea"
-          width="160"
-          height="55"
-        />
-      </a>
-      <nav aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>
-        <a href="/">{lang === 'ar' ? 'الرئيسية' : 'Home'}</a>
-        <a href="/projects/" aria-current={directory ? 'page' : undefined}>
-          {lang === 'ar' ? 'المشاريع' : 'Projects'}
-        </a>
-      </nav>
-      <button
-        className="project-language"
-        onClick={() => setLang(lang === 'ar' ? 'en' : 'ar')}
-        lang={lang === 'ar' ? 'en' : 'ar'}
-      >
-        {lang === 'ar' ? 'EN' : 'عربي'}
-      </button>
-    </header>
-  )
-}
-
-function Footer() {
+function ProjectCta() {
   const { lang } = useLang()
   return (
-    <footer className="projects-footer">
-      <div>
-        <h2>
-          {lang === 'ar'
-            ? 'عندك فكرة تستحق البناء؟'
-            : 'An idea worth building?'}
-        </h2>
-        <p>
-          {lang === 'ar'
-            ? 'لنحوّلها إلى منتج حقيقي معاً.'
-            : 'Let’s turn it into a working product.'}
-        </p>
+    <section className="project-cta">
+      <div className="wrap project-cta__inner">
+        <h2>{lang === 'ar' ? 'عندك فكرة تستحق البناء؟' : 'Have something to build?'}</h2>
+        <a className="btn btn--primary" href="/#contact">
+          {lang === 'ar' ? 'تواصل معي' : 'Get in touch'}
+        </a>
       </div>
-      <a href="/#invitation">
-        {lang === 'ar' ? 'تواصل معي' : 'Start a conversation'}
-        <Arrow />
-      </a>
-    </footer>
+    </section>
   )
 }
 
@@ -158,7 +116,7 @@ function ProjectPreview({
           )}
         </div>
         <div className="project-preview__copy">
-          <h2 dir="auto">{project.name}</h2>
+          <h2><bdi>{project.name}</bdi></h2>
           <p>{project.summary[lang]}</p>
           <span className="project-preview__open">
             {lang === 'ar' ? 'تفاصيل المشروع' : 'Explore project'}
@@ -193,20 +151,10 @@ export function ProjectsDirectory() {
       <a className="skip-link" href="#projects-main">
         {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
       </a>
-      <Header directory />
+      <SiteHeader page="projects" />
       <main id="projects-main">
         <section className="projects-intro">
-          <h1>
-            {lang === 'ar' ? (
-              <>
-                منتجات لها <em>قصة.</em>
-              </>
-            ) : (
-              <>
-                Products with <em>a story.</em>
-              </>
-            )}
-          </h1>
+          <h1>{lang === 'ar' ? 'كل المشاريع.' : 'All projects.'}</h1>
           <p>
             {lang === 'ar'
               ? 'من أنظمة الأعمال إلى تطبيقات الحياة اليومية. استكشف الفكرة، التفاصيل، والشاشات الفعلية لكل مشروع.'
@@ -286,7 +234,8 @@ export function ProjectsDirectory() {
           )}
         </section>
       </main>
-      <Footer />
+      <ProjectCta />
+      <SiteFooter />
     </div>
   )
 }
@@ -470,7 +419,7 @@ function Gallery({ project }: { project: Project }) {
         onKeyDown={(e) => {
           if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
             e.preventDefault()
-            step(e.key === 'ArrowRight' ? 1 : -1)
+            step((e.key === 'ArrowRight') !== (lang === 'ar') ? 1 : -1)
           }
         }}
       >
@@ -525,7 +474,7 @@ export function ProjectCase({ id }: { id: string }) {
   if (!project)
     return (
       <div className="projects-site">
-        <Header />
+        <SiteHeader page="case" />
         <main className="project-not-found">
           <h1>{lang === 'ar' ? 'المشروع غير موجود.' : 'Project not found.'}</h1>
           <a href="/projects/">
@@ -533,7 +482,8 @@ export function ProjectCase({ id }: { id: string }) {
             <Arrow />
           </a>
         </main>
-        <Footer />
+        <ProjectCta />
+      <SiteFooter />
       </div>
     )
   const shots = projectShots(id)
@@ -557,12 +507,12 @@ export function ProjectCase({ id }: { id: string }) {
       <a className="skip-link" href="#case-main">
         {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
       </a>
-      <Header />
+      <SiteHeader page="case" />
       <nav
         className="case-nav"
         aria-label={lang === 'ar' ? 'محتويات المشروع' : 'Project contents'}
       >
-        <strong dir="auto">{project.name}</strong>
+        <strong><bdi>{project.name}</bdi></strong>
         <div>
           <a href="#overview">{lang === 'ar' ? 'الفكرة' : 'Overview'}</a>
           <a href="#screens">{lang === 'ar' ? 'الشاشات' : 'Screens'}</a>
@@ -576,8 +526,8 @@ export function ProjectCase({ id }: { id: string }) {
               <Arrow back />
               {lang === 'ar' ? 'كل المشاريع' : 'All projects'}
             </a>
-            <p className="case-product-name" dir="auto">
-              {project.name}
+            <p className="case-product-name">
+              <bdi>{project.name}</bdi>
             </p>
             <h1>{project.headline[lang]}</h1>
             <p>{project.summary[lang]}</p>
@@ -722,13 +672,14 @@ export function ProjectCase({ id }: { id: string }) {
           <a href={projectHref(next.id)}>
             <span>
               {lang === 'ar' ? 'المشروع التالي' : 'Next project'}
-              <strong dir="auto">{next.name}</strong>
+              <strong><bdi>{next.name}</bdi></strong>
             </span>
             <Arrow />
           </a>
         </nav>
       </main>
-      <Footer />
+      <ProjectCta />
+      <SiteFooter />
     </div>
   )
 }

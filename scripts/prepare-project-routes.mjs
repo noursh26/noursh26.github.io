@@ -21,9 +21,9 @@ const escape = (s) =>
 const entries = [
   {
     route: '/',
-    title: 'Nour Aldeen Shehadea — AI products, shipped.',
+    title: 'Nour Aldeen Shehadea — Product engineer',
     description:
-      'AI agents, SaaS platforms, business systems, and Arabic-first interfaces, built from architecture to launch.',
+      'Business systems, mobile apps and AI features, designed, built and deployed in Arabic and English.',
     image: '/assets/brand/lockup-en-reversed.png',
     name: 'Nour Aldeen Shehadea',
   },
@@ -31,7 +31,7 @@ const entries = [
     route: '/projects/',
     title: 'Projects — Nour Aldeen Shehadea',
     description:
-      'Explore 25 product stories and 530 original interface captures, with desktop and mobile demonstration data.',
+      'Explore 23 product stories and 490 original interface captures, with desktop and mobile demonstration data.',
     image: shots[0].file,
     name: 'Projects',
   },

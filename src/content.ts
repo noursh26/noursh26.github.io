@@ -1,295 +1,107 @@
-/* All page copy in one place. Voice rules from the design system:
-   short declarative sentences, terminal full stops, numbered sections,
-   no superlatives, no emoji, no exclamation marks. */
+/* All home-page copy. Voice: plain, specific, first person. No slogans,
+   no superlatives, no claims the work on this page does not show. */
 
 export const nav = [
-  { id: 'profile', label: 'The profile', no: '01' },
-  { id: 'method', label: 'How I work', no: '02' },
-  { id: 'build', label: 'What I ship', no: '03' },
-  { id: 'work', label: 'Selected work', no: '04' },
-  { id: 'principles', label: 'Principles', no: '05' },
-  { id: 'difference', label: 'Why me', no: '06' },
-  { id: 'invitation', label: 'Start a project', no: '07' },
+  { id: 'work', label: 'Work' },
+  { id: 'build', label: 'What I build' },
+  { id: 'approach', label: 'Approach' },
+  { id: 'about', label: 'About' },
 ]
 
 export const hero = {
-  lines: ['AI products.', 'Built end to end.', 'By Nour Aldeen.'],
-  cue: 'Read the profile',
+  eyebrow: 'Nour Aldeen Shehadea · Product engineer',
+  title: ['I build software', 'people use every day.'],
+  lede: 'Business systems, mobile apps and AI features — designed, built and deployed by one engineer, in Arabic and English.',
+  primary: 'See the work',
+  secondary: 'Get in touch',
 }
 
-export const marquee = [
-  'AI Agents.',
-  'RAG Pipelines.',
-  'Full-Stack.',
-  'DevOps.',
-  'Docker. CI/CD.',
-  'Any framework.',
-  'Claude API.',
-  'Arabic RTL, first class.',
+export const deck = {
+  label: 'Real screens from products I built',
+  hint: 'Drag or swipe to browse',
+  prev: 'Previous screen',
+  next: 'Next screen',
+  open: 'Open {name}',
+}
+
+export const facts = [
+  { value: '23', label: 'products in the gallery' },
+  { value: '490', label: 'real screens captured' },
+  { value: '2', label: 'languages, designed together' },
+  { value: '1', label: 'engineer, design to deploy' },
 ]
 
-/* The diagnosis section becomes the personal profile: five full-screen panels,
-   one claim each, the photograph carrying the weight. */
-export const profile = {
-  no: '01',
-  kicker: 'The profile',
-  panels: [
-    {
-      no: '01',
-      title: ['Your product.', 'My responsibility.'],
-      text: 'I turn product ideas into working software — from architecture and interface to deployment and ongoing care.',
-      image: 'assets/profile/p1-engineer.webp',
-    },
-    {
-      no: '02',
-      title: ['The right stack.', 'One technical partner.'],
-      text: 'Laravel, Next.js, NestJS, React, or Flutter. I choose the stack around your users, constraints, and plans for growth.',
-      image: 'assets/profile/p2-fullstack.webp',
-    },
-    {
-      no: '03',
-      title: ['Arabic-native,', 'English-fluent.'],
-      text: 'Arabic and English interfaces designed together, with native reading flow, clear typography, and careful RTL support.',
-      image: 'assets/profile/p3-arabic.webp',
-    },
-    {
-      no: '04',
-      title: ['AI with purpose.', 'Built for real use.'],
-      text: 'Agents, retrieval, and LLM features connected to real workflows, with evaluation and monitoring built in.',
-      image: 'assets/profile/p4-ai.webp',
-    },
-    {
-      no: '05',
-      title: ['Remote, async,', 'accountable.'],
-      text: 'Based in Al-Qatifa, Syria. Working remotely with clear priorities, reviewable changes, and visible progress.',
-      image: 'assets/profile/p5-remote.webp',
-    },
-  ],
-  cta: 'See how I work',
-  ctaTarget: 'method',
-}
-
-export const method = {
-  no: '02',
-  kicker: 'How I work',
-  title: 'From first conversation to a working product.',
-  steps: ([
-    {
-      no: '01', title: 'Understand.',
-      text: 'We define who the product serves, what it needs to solve, and what a successful first release looks like.',
-      image: 'assets/method/m1-listen.webp',
-    },
-    {
-      no: '02', title: 'Plan.',
-      text: 'I map the data, integrations, access rules, and deployment path, so the foundation supports what comes next.',
-      image: 'assets/method/m2-architect.webp',
-    },
-    {
-      no: '03', title: 'Build.',
-      text: 'Small, reviewable releases keep the work visible. You can try the product and give feedback as it takes shape.',
-      image: 'assets/method/m3-build.webp',
-    },
-    {
-      no: '04', title: 'Launch. Support.',
-      text: 'I handle deployment, check the live experience, and help resolve the issues that only real use reveals.',
-      image: 'assets/method/m4-ship.webp',
-    },
-  ] as { no: string; title: string; text: string; image: string; crop?: Record<string, string> }[]),
-  hint: 'Scroll to deal the cards',
-}
-
-export const statement = {
-  lines: ['A clear purpose.', 'A thoughtful build.', 'A product ready', 'for the real world.'],
-  foot: 'Understand the problem. Build the right foundation. Learn from the product once people use it.',
+export const work = {
+  eyebrow: 'Selected work',
+  title: 'Products, not mockups.',
+  lede: 'Every screen here comes from the running application with demonstration data.',
+  all: 'All 23 projects',
+  view: 'View project',
 }
 
 export const build = {
-  no: '03',
-  kicker: 'What I ship',
-  /* On the dial the picture does the talking: a name and a single line each. */
-  units: [
-    { no: '01', name: 'AI Agents',          line: 'Agents and retrieval connected to your workflows.',          image: 'assets/units/unit-ai.webp' },
-    { no: '02', name: 'SaaS Platforms',     line: 'Tenancy, subscriptions, and a foundation for growth.', image: 'assets/units/unit-saas.webp' },
-    { no: '03', name: 'Mobile Apps',        line: 'Considered Flutter experiences for everyday use.',             image: 'assets/units/unit-mobile.webp' },
-    { no: '04', name: 'APIs & Backends',    line: 'Reliable data, permissions, and integrations.',       image: 'assets/units/unit-api.webp' },
-    { no: '05', name: 'Dashboards',         line: 'Clear views of complex day-to-day operations.',          image: 'assets/units/unit-dashboard.webp' },
-    { no: '06', name: 'E-commerce',         line: 'Connected storefronts, orders, wallets, and checkout.', image: 'assets/units/unit-commerce.webp' },
-    { no: '07', name: 'Landing Pages',      line: 'A clear story and a purposeful path to contact.',            image: 'assets/units/unit-landing.webp' },
-  ],
-}
-
-export const work = {
-  no: '04',
-  kicker: 'Selected work',
-  title: 'Ideas turned into working products.',
-  lede: 'AI platforms, business systems, and Arabic-first experiences.',
+  eyebrow: 'What I build',
+  title: 'From the database to the last pixel.',
   items: [
-    {
-        "no": "01",
-        "title": "Estratijiya AI.",
-        "text": "A platform for customer conversations, knowledge, agents and channels, with analytics, teams, campaigns and usage budgets per workspace.",
-        "image": "/assets/projects/estratijiya-ai/desktop-01.webp",
-        "mobile": "/assets/projects/estratijiya-ai/mobile-01.webp",
-        "href": "/projects/estratijiya-ai/"
-    },
-    {
-        "no": "02",
-        "title": "SalesFlow.",
-        "text": "A sales system connecting contacts, leads, pipelines, conversations and quotes, with agent, channel and analytics settings.",
-        "image": "/assets/projects/salesflow/desktop-02.webp",
-        "mobile": "/assets/projects/salesflow/mobile-02.webp",
-        "href": "/projects/salesflow/"
-    },
-    {
-        "no": "03",
-        "title": "Relinka.",
-        "text": "An Arabic document workspace for folders, sharing and search, with smart collection, archive blueprint and integration-key interfaces.",
-        "image": "/assets/projects/relinka/desktop-01.webp",
-        "mobile": "/assets/projects/relinka/mobile-01.webp",
-        "href": "/projects/relinka/"
-    },
-    {
-        "no": "04",
-        "title": "فهرست.",
-        "text": "An Arabic books, authors and narrators platform with a personal library, shelves, uploads, research studio and management interfaces.",
-        "image": "/assets/projects/fahrast/desktop-01.webp",
-        "mobile": "/assets/projects/fahrast/mobile-01.webp",
-        "href": "/projects/fahrast/"
-    },
-    {
-        "no": "05",
-        "title": "معاك.",
-        "text": "An Arabic marketplace for products, stores, meals and services, with buyer accounts and seller, restaurant and delivery workspaces.",
-        "image": "/assets/projects/m3aak/desktop-01.webp",
-        "mobile": "/assets/projects/m3aak/mobile-01.webp",
-        "href": "/projects/m3aak/"
-    },
-    {
-        "no": "06",
-        "title": "المصطفى.",
-        "text": "A phone-first platform for Quran memorisation circles: quick recitation entry, daily programs with streaks and levels, halaqa rankings, and it works offline.",
-        "image": "/assets/projects/almustfa/desktop-01.webp",
-        "mobile": "/assets/projects/almustfa/mobile-01.webp",
-        "href": "/projects/almustfa/"
-    },
-    {
-        "no": "07",
-        "title": "WISP.",
-        "text": "WISP operations interface for internet subscribers, subscriptions, installations, maintenance, inventory, expenses and accounting records.",
-        "image": "/assets/projects/wisp/desktop-01.webp",
-        "mobile": "/assets/projects/wisp/mobile-01.webp",
-        "href": "/projects/wisp/"
-    },
-    {
-        "no": "08",
-        "title": "NIRSO.",
-        "text": "A collaboration workspace for projects and tasks across lists, boards and calendars, with planning, time, goals and workload.",
-        "image": "/assets/projects/nirso/desktop-01.webp",
-        "mobile": "/assets/projects/nirso/mobile-01.webp",
-        "href": "/projects/nirso/"
-    },
-    {
-        "no": "09",
-        "title": "أركاني.",
-        "text": "An Arabic app bringing prayer times, location, dhikr, reading and nearby mosques together, with readable typography and mobile focus.",
-        "image": "/assets/projects/arkani/desktop-01.webp",
-        "mobile": "/assets/projects/arkani/mobile-01.webp",
-        "href": "/projects/arkani/"
-    },
-    {
-        "no": "10",
-        "title": "Maash.",
-        "text": "A portfolio for Mohammad Anwar Shehadae, a furniture and joinery draftsman, connecting AutoCAD and SketchUp work to fabrication.",
-        "image": "/assets/projects/maash/desktop-01.webp",
-        "mobile": "/assets/projects/maash/mobile-01.webp",
-        "href": "/projects/maash/"
-    }
-],
-  close: 'One technical partner, from the first decision to the live product.',
-}
-
-export const principles = {
-  no: '05',
-  kicker: 'What I believe',
-  lines: [
-    'Every product is a system.',
-    'Useful feedback guides the next release.',
-    'AI should solve a practical problem.',
-    'Good interfaces read naturally in both directions.',
-  ],
-  values: ['Clarity', 'Craft', 'Ownership', 'Momentum', 'Reliability', 'Honesty'],
-}
-
-export const difference = {
-  no: '06',
-  kicker: 'Why me',
-  title: 'A partner for the whole product.',
-  rows: [
-    { title: 'One point of ownership.', text: 'Architecture, interface, backend, and deployment stay connected through one technical partner.', image: 'assets/difference/d1-endtoend.webp' },
-    { title: 'Two languages. Equal care.', text: 'Arabic RTL and English LTR, designed as equals.', image: 'assets/difference/d2-bilingual.webp' },
-    { title: 'AI with a clear role.', text: 'Agents, RAG, and automation are chosen for a specific workflow, with quality and operating cost in view.', image: 'assets/difference/d3-ai.webp' },
-    { title: 'Care in every interface.', text: 'Readable layouts, responsive behavior, and deliberate interactions make the product easier to use.', image: 'assets/difference/d4-design.webp' },
-    { title: 'Deployment is part of delivery.', text: 'Docker, CI/CD, and server configuration are part of the build, alongside the code they keep running.', image: 'assets/difference/d5-ops.webp' },
-    { title: 'Progress you can review.', text: 'Small releases, working features, and clear priorities give you something concrete to review.', image: 'assets/difference/d6-measure.webp' },
+    { title: 'Business systems', text: 'Accounting, operations and CRM workspaces where every number can be traced to its record.' },
+    { title: 'Mobile apps', text: 'Flutter and React apps for everyday use, including offline work and Android releases.' },
+    { title: 'AI features', text: 'Agents, retrieval and assistants wired into a real workflow, with cost and quality in view.' },
+    { title: 'APIs and backends', text: 'Laravel and NestJS services with clear permissions, tenancy and integrations.' },
+    { title: 'Arabic-first interfaces', text: 'Right-to-left layouts and typography designed as carefully as the English.' },
+    { title: 'Deployment', text: 'Docker, CI/CD and servers set up as part of the build, not after it.' },
   ],
 }
 
-export const invitation = {
-  no: '07',
-  kicker: 'Start here',
-  title: 'One turn. One conversation.',
-  lede: 'Explore a starting point with the dial, then tell me what you need. We will choose the right scope together.',
-  hint: 'Drag the dial, or press to turn it.',
-  prizes: [
-    { label: 'Discovery Call', detail: 'A 30-minute conversation about your idea, priorities, and whether we are a good fit.' },
-    { label: 'MVP Build', detail: 'The smallest version of the product that can carry real users.' },
-    { label: 'Landing Page', detail: 'A focused page that explains your offer and makes the next step clear — designed, built, and deployed.' },
-    { label: 'Rescue Mission', detail: 'A project that stalled, audited and put back on its feet.' },
-    { label: 'Automation', detail: 'The manual work inside your business, turned into a system.' },
-    { label: 'AI Pilot', detail: 'A two-week paid pilot — an AI feature shipped into your product, measured.' },
+export const approach = {
+  eyebrow: 'Approach',
+  title: 'Small releases you can try.',
+  steps: [
+    { title: 'Understand', text: 'Who uses it, what they need to get done, and what a good first release looks like.' },
+    { title: 'Plan', text: 'Data, roles, integrations and the deployment path, so the foundation holds what comes next.' },
+    { title: 'Build', text: 'Working features in short cycles. You use the product while it takes shape.' },
+    { title: 'Ship and support', text: 'I deploy it, watch it in real use, and fix what only real use reveals.' },
   ],
-  claim: 'Start the conversation',
-  again: 'Turn again',
+}
+
+export const about = {
+  eyebrow: 'About',
+  title: 'One person responsible for the whole product.',
+  paragraphs: [
+    'I’m Nour Aldeen, a product engineer based in Al-Qatifa, Syria. I take products from an idea to a running system: the data model, the interface, the API and the server it runs on.',
+    'Most of what I build is used in Arabic first, so right-to-left is never an afterthought. I work remotely, in small reviewable steps, and I stay with a product after launch.',
+  ],
+  facts: [
+    { k: 'Based in', v: 'Al-Qatifa, Syria' },
+    { k: 'Works', v: 'Remotely, worldwide' },
+    { k: 'Languages', v: 'Arabic, English' },
+    { k: 'Stack', v: 'Laravel · React · Next.js · NestJS · Flutter' },
+  ],
 }
 
 export const contact = {
-  no: '08',
-  kicker: 'Your next move',
-  title: 'Start with a message.',
-  text: 'Share your idea, the challenge, and your timeline. We can map out a practical next step.',
+  eyebrow: 'Contact',
+  title: 'Have something to build?',
+  lede: 'Tell me what it is, who it’s for and when you need it. I reply to every message.',
   email: 'nour@nour.email',
-  cta: 'Email me',
+  copy: 'Copy email',
+  copied: 'Copied',
   github: 'https://github.com/noursh26',
-  site: 'https://nourx.tech',
-  location: 'Al-Qatifa, Syria — remote worldwide',
+  githubLabel: 'GitHub',
 }
 
-/* Chrome and microcopy — the strings that live in components rather than
-   sections. */
 export const ui = {
-  docTitle: 'Nour Aldeen Shehadea — AI products, shipped.',
-  preloaderWord: 'Products with direction.',
+  docTitle: 'Nour Aldeen Shehadea — Product engineer',
   skipLink: 'Skip to content',
-  menuOpen: 'Menu',
-  menuClose: 'Close',
-  menuAria: 'Menu',
-  langSwitch: 'عربي',
-  getInTouch: 'Get in touch',
-  based: 'Based',
-  explore: 'Explore',
-  startConversation: 'Start a conversation',
-  seeTheCode: 'See the code on GitHub',
-  scrollCue: 'Scroll to the profile',
-  statementAria: 'Where we begin',
-  dialAria: 'A dial of six working sessions',
-  valuesAria: 'Our values',
-  goCursor: 'Go',
-  yours: 'A starting point',
-  turning: 'Turning…',
-  spinDial: 'Turn the dial',
-  mailtoSubject: 'Project inquiry — {prize}',
-  mailtoBody: 'I turned the dial and it stopped on {prize}.\n\nWhat I am building:\nTimeline:\n',
-  footerLine: ['Your product.', 'Built and shipped.'],
-  copyright: '© {year} NOUR ALDEEN SHEHADEA · AL-QATIFA',
-  tagline: 'Products with direction. منتجات لها وجهة.',
+  home: 'Home',
+  projects: 'Projects',
+  contact: 'Contact',
+  menu: 'Menu',
+  close: 'Close',
+  mainNav: 'Main',
+  langSwitch: 'العربية',
+  langSwitchShort: 'ع',
+  langLabel: 'اقرأ بالعربية',
+  name: 'Nour Aldeen',
+  copyright: '© {year} Nour Aldeen Shehadea',
+  location: 'Al-Qatifa, Syria',
 }

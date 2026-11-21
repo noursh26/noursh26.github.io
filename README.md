@@ -1,10 +1,10 @@
 # Nour Aldeen Shehadea — Portfolio
 
-Personal portfolio site. Code with direction. كود له وجهة.
+Personal portfolio site. Product engineer — business systems, mobile apps and AI features, in Arabic and English.
 
 ## Stack
 
-React 19 · Vite · TypeScript · GSAP 3 · Lenis
+React 19 · Vite · TypeScript · plain CSS (no animation libraries)
 
 ## Develop
 
