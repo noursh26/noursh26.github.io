@@ -155,14 +155,6 @@ export const work = {
     },
     {
         "no": "05",
-        "title": "الخير.",
-        "text": "إدارة للعمل الخيري تجمع الحملات والمتبرعين والمستفيدين وحركات التبرع والمصروفات ضمن سجلات قابلة للمراجعة.",
-        "image": "/assets/projects/alkhyr/desktop-01.webp",
-        "mobile": "/assets/projects/alkhyr/mobile-01.webp",
-        "href": "/projects/alkhyr/"
-    },
-    {
-        "no": "06",
         "title": "معاك.",
         "text": "منصة عربية تجمع المنتجات والمتاجر والوجبات والخدمات، مع حسابات للمشتري ومساحات تشغيل للبائع والمطعم والتوصيل.",
         "image": "/assets/projects/m3aak/desktop-01.webp",
@@ -170,23 +162,15 @@ export const work = {
         "href": "/projects/m3aak/"
     },
     {
-        "no": "07",
+        "no": "06",
         "title": "المصطفى.",
-        "text": "منصة عربية لإدارة حلقات تحفيظ القرآن: الطلاب والتسميع والحضور والأنشطة والنقاط وبرامج الدورة في تجربة مترابطة.",
+        "text": "منصة للهاتف أولاً لحلقات تحفيظ القرآن: تسجيل سريع للتسميع، برنامج يومي بتتابع ومستويات، ترتيب للحلقات، وبتشتغل بدون نت.",
         "image": "/assets/projects/almustfa/desktop-01.webp",
         "mobile": "/assets/projects/almustfa/mobile-01.webp",
         "href": "/projects/almustfa/"
     },
     {
-        "no": "08",
-        "title": "Global Football AI.",
-        "text": "واجهة تعريف وتسجيل لأكاديمية كرة قدم، تعرض مسارات اللاعبين والمدربين والعضوية والتحليل، مع أساس حساب مستخدم وتطبيق Android.",
-        "image": "/assets/projects/globalfootball/desktop-01.webp",
-        "mobile": "/assets/projects/globalfootball/mobile-01.webp",
-        "href": "/projects/globalfootball/"
-    },
-    {
-        "no": "09",
+        "no": "07",
         "title": "WISP.",
         "text": "واجهة تشغيل WISP لإدارة مشتركي الإنترنت والاشتراكات والتركيبات والصيانة والمخزون والمصروفات والسجلات المحاسبية.",
         "image": "/assets/projects/wisp/desktop-01.webp",
@@ -194,7 +178,7 @@ export const work = {
         "href": "/projects/wisp/"
     },
     {
-        "no": "10",
+        "no": "08",
         "title": "NIRSO.",
         "text": "مساحة تعاون لتنظيم المشاريع والمهام في قوائم ولوحات وتقويم، مع التخطيط والوقت والأهداف وأعباء الفريق.",
         "image": "/assets/projects/nirso/desktop-01.webp",
@@ -202,7 +186,7 @@ export const work = {
         "href": "/projects/nirso/"
     },
     {
-        "no": "11",
+        "no": "09",
         "title": "أركاني.",
         "text": "تطبيق عربي يجمع مواقيت الصلاة واختيار الموقع والأذكار والقراءة والمساجد القريبة، مع اهتمام بحجم النص وتجربة الجوال.",
         "image": "/assets/projects/arkani/desktop-01.webp",
@@ -210,7 +194,7 @@ export const work = {
         "href": "/projects/arkani/"
     },
     {
-        "no": "12",
+        "no": "10",
         "title": "Maash.",
         "text": "معرض أعمال لمحمد أنور شحادة، متخصص في مخططات الأثاث والنجارة، يربط AutoCAD وSketchUp بمراحل التصنيع.",
         "image": "/assets/projects/maash/desktop-01.webp",
