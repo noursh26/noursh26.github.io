@@ -158,14 +158,6 @@ export const work = {
     },
     {
         "no": "05",
-        "title": "الخير.",
-        "text": "A charity operations workspace for campaigns, donors, beneficiaries, donations and expenses, with records that can be reviewed together.",
-        "image": "/assets/projects/alkhyr/desktop-01.webp",
-        "mobile": "/assets/projects/alkhyr/mobile-01.webp",
-        "href": "/projects/alkhyr/"
-    },
-    {
-        "no": "06",
         "title": "معاك.",
         "text": "An Arabic marketplace for products, stores, meals and services, with buyer accounts and seller, restaurant and delivery workspaces.",
         "image": "/assets/projects/m3aak/desktop-01.webp",
@@ -173,23 +165,15 @@ export const work = {
         "href": "/projects/m3aak/"
     },
     {
-        "no": "07",
+        "no": "06",
         "title": "المصطفى.",
-        "text": "An Arabic platform for Quran learning circles, connecting students, recitations, attendance, activities, points and programme organisation.",
+        "text": "A phone-first platform for Quran memorisation circles: quick recitation entry, daily programs with streaks and levels, halaqa rankings, and it works offline.",
         "image": "/assets/projects/almustfa/desktop-01.webp",
         "mobile": "/assets/projects/almustfa/mobile-01.webp",
         "href": "/projects/almustfa/"
     },
     {
-        "no": "08",
-        "title": "Global Football AI.",
-        "text": "A football academy landing and registration interface presenting player, coach, membership and analysis journeys, with account foundations and an Android app.",
-        "image": "/assets/projects/globalfootball/desktop-01.webp",
-        "mobile": "/assets/projects/globalfootball/mobile-01.webp",
-        "href": "/projects/globalfootball/"
-    },
-    {
-        "no": "09",
+        "no": "07",
         "title": "WISP.",
         "text": "WISP operations interface for internet subscribers, subscriptions, installations, maintenance, inventory, expenses and accounting records.",
         "image": "/assets/projects/wisp/desktop-01.webp",
@@ -197,7 +181,7 @@ export const work = {
         "href": "/projects/wisp/"
     },
     {
-        "no": "10",
+        "no": "08",
         "title": "NIRSO.",
         "text": "A collaboration workspace for projects and tasks across lists, boards and calendars, with planning, time, goals and workload.",
         "image": "/assets/projects/nirso/desktop-01.webp",
@@ -205,7 +189,7 @@ export const work = {
         "href": "/projects/nirso/"
     },
     {
-        "no": "11",
+        "no": "09",
         "title": "أركاني.",
         "text": "An Arabic app bringing prayer times, location, dhikr, reading and nearby mosques together, with readable typography and mobile focus.",
         "image": "/assets/projects/arkani/desktop-01.webp",
@@ -213,7 +197,7 @@ export const work = {
         "href": "/projects/arkani/"
     },
     {
-        "no": "12",
+        "no": "10",
         "title": "Maash.",
         "text": "A portfolio for Mohammad Anwar Shehadae, a furniture and joinery draftsman, connecting AutoCAD and SketchUp work to fabrication.",
         "image": "/assets/projects/maash/desktop-01.webp",

@@ -88,78 +88,82 @@
     "name": "المصطفى",
     "repos": [
       "almustfa",
-      "almostfa-react",
-      "almostfa_app",
-      "almostfa-pos"
+      "almostfa-react"
     ],
     "category": "business",
     "layout": "workspace",
     "palette": {
-      "background": "#edf4ff",
-      "foreground": "#132a4e",
-      "accent": "#4267e8"
+      "background": "#F6F2EA",
+      "foreground": "#1C1A16",
+      "accent": "#17654F"
     },
     "headline": {
-      "ar": "متابعة الحلقات، بتفاصيل تصنع التقدم.",
-      "en": "Learning circles, with progress in view."
+      "ar": "الحلقة كلها، من هاتف واحد.",
+      "en": "A whole memorisation circle, run from one phone."
     },
     "summary": {
-      "ar": "منصة عربية لإدارة حلقات تحفيظ القرآن: الطلاب والتسميع والحضور والأنشطة والنقاط وبرامج الدورة في تجربة مترابطة.",
-      "en": "An Arabic platform for Quran learning circles, connecting students, recitations, attendance, activities, points and programme organisation."
+      "ar": "منصة عربية للهاتف أولاً لإدارة حلقات تحفيظ القرآن: يسجّل الأستاذ التسميع والنقاط والحضور في ثوانٍ، ويتابع الطالب برنامجه اليومي ومستواه وسباق الأسبوع، ويراجع المشرف كل ذلك، حتى دون اتصال.",
+      "en": "A phone-first Arabic platform for Quran memorisation circles: teachers record recitations, points and attendance in seconds, students follow a daily program with levels and a weekly race, and supervisors review it all, even offline."
     },
     "problem": {
-      "ar": "متابعة الحفظ لا تقتصر على نتيجة تسميع واحدة؛ الأستاذ يحتاج إلى سياق الطالب وحضوره ونشاطه واستمراره. توزيع هذه المتابعة على سجلات منفصلة يجعل مراجعة تقدم الحلقة أصعب.",
-      "en": "Recitation results alone do not describe a student’s progress. Teachers also need attendance, activity and continuity in context. Separate records make a learning circle harder to review."
+      "ar": "يسجّل الأستاذ التسميع وهو واقف في حلقة المسجد، والهاتف بيد واحدة، وغالباً على اتصال ضعيف. الأوراق والجداول المتفرقة تُضيّع السياق: من سمّع ماذا، ومن غاب، ومن انقطع عن برنامجه اليومي.",
+      "en": "Teachers record recitations standing in a mosque circle, phone in one hand, often on a weak connection. Paper sheets and scattered spreadsheets lose the context: who recited what, who has been absent, who stopped keeping up with their daily program."
     },
     "solution": {
-      "ar": "يجمع المشروع سجل الطالب مع متابعة التسميع والنقاط والأنشطة، ويربط الطلاب بهيكل الدورة والحلقات. تمنح لوحة المتابعة مدخلاً سريعاً للعمل اليومي، ثم تسمح الشاشات المتخصصة بمراجعة التفاصيل.",
-      "en": "The platform connects student records with recitations, points and activities, organised through programme and circle structure. An overview supports daily work while specialised screens expose the underlying detail."
+      "ar": "سلة إضافة سريعة تتيح للأستاذ اختيار الطلاب وتسجيل التسميع والنقاط والحضور ببضع لمسات. للطالب برنامج يومي بتتابع ومستويات وأوسمة وسباق أسبوعي، وللكادر لوحة برنامج ومراجعة يومية وأسبوعية وترتيب للحلقات وسجل لكل حركة. التنقل والأدوار والقواعد تأتي من الخادم، فيتصرف تطبيق الويب ونسخة أندرويد بالطريقة نفسها.",
+      "en": "A quick-add basket lets a teacher pick students and record recitations, points and attendance in a few taps. Students get a daily program with streaks, levels, badges and a weekly race; staff get a program board, daily and weekly reviews, halaqa rankings and a ledger of every record. Navigation, roles and rules come from the server, so the web app and the Android build behave the same."
     },
     "challenge": {
-      "ar": "تعدد أدوار الإدارة والأساتذة يفرض وضوح الصلاحيات وسياق الحلقة. لهذا تتوزع التجربة بين واجهة إدارية وتطبيقات مرافقة، وتُلتقط الصور من تشغيل محلي للواجهة الأصلية بطلاب وسجلات تجريبية.",
-      "en": "Administrator and teacher roles require clear permissions and circle context. The product includes management and companion interfaces; the gallery shows the original local UI with synthetic students and records."
+      "ar": "قد يكون الشخص نفسه أستاذاً في حلقة وطالباً في أخرى، لذلك تُعرض كل شاشة على تسجيل واحد بصلاحياته، وكل دور تعليمي تسجيل مستقل في كل حلقة. تُحفظ العمليات دون اتصال وتُرسل لاحقاً، وتُعزل بيانات كل جهة، وتحافظ حدود النقاط اليومية والنقل ومركز سلامة البيانات على دقة الأرقام. الصور ملتقطة من بيانات تجريبية مدمجة في التطبيق.",
+      "en": "One person can teach in one circle and study in another, so every screen renders against a single enrollment with its own permissions, and each teaching role is its own enrollment per halaqa. Writes queue offline and replay later, tenant data is isolated, and daily point limits, transfers and a data-integrity workbench keep the numbers trustworthy. Captures use the app's own synthetic fixtures."
     },
     "features": [
       {
-        "ar": "قوائم الطلاب وملفاتهم ضمن الهيكل التعليمي للدورة.",
-        "en": "Student records organised within the programme hierarchy."
+        "ar": "سلة إضافة سريعة: اختر الطلاب وسجّل التسميع والنقاط والحضور دفعة واحدة.",
+        "en": "A quick-add basket: pick students and record recitations, points and attendance in one pass."
       },
       {
-        "ar": "تسجيل ومراجعة التسميع دون فقدان سياق الطالب.",
-        "en": "Recitation tracking with the student’s context intact."
+        "ar": "برنامج يومي للطالب بتتابع ومستويات وأوسمة وسباق أسبوعي.",
+        "en": "A daily student program with streaks, levels, badges and a weekly race."
       },
       {
-        "ar": "نظام نقاط وترتيب يساعد على قراءة التقدم والمشاركة.",
-        "en": "Points and rankings for reviewing participation and progress."
+        "ar": "لوحة برنامج للكادر مع مراجعة يومية وأسبوعية في نافذة واحدة.",
+        "en": "A staff program board with daily and weekly review in one sheet."
       },
       {
-        "ar": "أنشطة وبرامج يومية تعطي المتابعة بُعداً يتجاوز التسميع.",
-        "en": "Activities and daily programmes beyond recitation alone."
+        "ar": "لوحة الحلقات وترتيبها، مع توزيع الطلاب والأساتذة بالسحب.",
+        "en": "A halaqa board and rankings, with drag-to-assign students and teachers."
       },
       {
-        "ar": "إدارة الحلقات والمستويات وهيكل الدورة من واجهات مخصصة.",
-        "en": "Dedicated interfaces for circles, levels and programme structure."
+        "ar": "سجل واحد للنقاط والتسميع والأنشطة، مع فلاتر وتقويم.",
+        "en": "One ledger for points, recitations and activities, with filters and a calendar."
+      },
+      {
+        "ar": "تطبيق ويب يعمل دون اتصال ونسخة أندرويد من الشيفرة نفسها، بوضعين فاتح وداكن.",
+        "en": "An offline-first PWA and Android app from one codebase, in light and dark."
       }
     ],
     "flow": [
       {
-        "ar": "حدد الدورة أو الحلقة وراجع الطلاب المرتبطين بها.",
-        "en": "Choose a programme or circle and review its students."
+        "ar": "افتح الحلقة واختر الطلاب من سلة الإضافة السريعة.",
+        "en": "Open the circle and pick students in the quick-add basket."
       },
       {
-        "ar": "سجّل المتابعة اليومية من تسميع وحضور وأنشطة.",
-        "en": "Record daily recitations, attendance and activities."
+        "ar": "سجّل التسميع والنقاط والحضور، وتُزامَن حين يعود الاتصال.",
+        "en": "Record recitations, points and attendance; they sync when the connection returns."
       },
       {
-        "ar": "ارجع إلى النقاط والتقارير لتحديد من يحتاج دعماً إضافياً.",
-        "en": "Use points and reports to identify students who need additional support."
+        "ar": "راجع لوحة البرنامج والترتيب لتعرف من يحتاج دعماً.",
+        "en": "Review the program board and rankings to see who needs support."
       }
     ],
     "stack": [
       "Laravel",
-      "Livewire",
-      "React",
-      "Flutter"
+      "React 19",
+      "TanStack Query",
+      "Tailwind CSS",
+      "Capacitor",
+      "MariaDB"
     ],
     "presentation": {
       "composition": "community",
@@ -167,89 +171,6 @@
       "desktopCover": 1,
       "mobileCover": 1,
       "radius": 20,
-      "tilt": 0
-    }
-  },
-  {
-    "id": "alkhyr",
-    "name": "الخير",
-    "repos": [
-      "alkhyr"
-    ],
-    "category": "business",
-    "layout": "workspace",
-    "palette": {
-      "background": "#eef9f3",
-      "foreground": "#173e31",
-      "accent": "#24885e"
-    },
-    "headline": {
-      "ar": "من التبرع إلى أثر يمكن تتبّعه.",
-      "en": "Follow a donation through the work."
-    },
-    "summary": {
-      "ar": "إدارة للعمل الخيري تجمع الحملات والمتبرعين والمستفيدين وحركات التبرع والمصروفات ضمن سجلات قابلة للمراجعة.",
-      "en": "A charity operations workspace for campaigns, donors, beneficiaries, donations and expenses, with records that can be reviewed together."
-    },
-    "problem": {
-      "ar": "تحتاج المؤسسة إلى ربط التمويل بالحملة والمستفيد والمصروف، بدل الاكتفاء برقم إجمالي للتبرعات. تعدد الجهات والسجلات يجعل دقة المتابعة والتوثيق جزءاً أساسياً من العمل اليومي.",
-      "en": "Charities need to connect funding with its campaign, beneficiary and expenses rather than relying on a donation total. Multiple stakeholders make recordkeeping part of everyday operations."
-    },
-    "solution": {
-      "ar": "يضع المشروع الحملات وقوائم المستفيدين والمتبرعين بجانب عمليات التبرع والصرف. يمكن الانتقال من النظرة العامة إلى السجلات التفصيلية، مع بيانات عرض محلية تم إنشاؤها خصيصاً للمعرض.",
-      "en": "Campaigns, beneficiary and donor lists sit alongside donation and expense operations. The overview leads into detailed records; gallery data was created specifically for a local demonstration."
-    },
-    "challenge": {
-      "ar": "الجانب المهم في التصميم هو فهم العلاقة بين الأشخاص والحملات والحركات المالية دون كشف بيانات حقيقية. اللقطات تعرض أسماء وحالات وأرقاماً تجريبية، ولا تمثل حجم نشاط مؤسسة فعلية.",
-      "en": "The design challenge is explaining relationships between people, campaigns and money without exposing real records. Names, cases and amounts in these captures are synthetic and do not describe an organisation’s actual activity."
-    },
-    "features": [
-      {
-        "ar": "تنظيم الحملات وربطها بعمليات التمويل.",
-        "en": "Campaign organisation connected to funding operations."
-      },
-      {
-        "ar": "إدارة ملفات المستفيدين في مساحة مستقلة.",
-        "en": "A dedicated area for beneficiary records."
-      },
-      {
-        "ar": "قوائم المتبرعين وبيانات التواصل التجريبية في العرض.",
-        "en": "Donor lists with synthetic contact details in the demonstration."
-      },
-      {
-        "ar": "توثيق التبرعات والمصروفات بدلاً من الاكتفاء بالملخص.",
-        "en": "Donation and expense records beyond summary totals."
-      },
-      {
-        "ar": "لوحات وقوائم تسمح بالانتقال بين الحالة العامة والتفاصيل.",
-        "en": "Overview and list interfaces that connect the big picture to individual records."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "أنشئ حملة وحدد نطاق المتابعة المرتبط بها.",
-        "en": "Create a campaign and define its operational context."
-      },
-      {
-        "ar": "أضف المستفيدين والمتبرعين وسجّل الحركات ذات الصلة.",
-        "en": "Add beneficiaries and donors, then record related transactions."
-      },
-      {
-        "ar": "راجع التمويل والمصروفات من الواجهات التفصيلية.",
-        "en": "Review funding and expenses through their detailed interfaces."
-      }
-    ],
-    "stack": [
-      "Laravel",
-      "Livewire",
-      "PHP"
-    ],
-    "presentation": {
-      "composition": "impact",
-      "rhythm": "sequence",
-      "desktopCover": 7,
-      "mobileCover": 7,
-      "radius": 12,
       "tilt": 0
     }
   },
@@ -501,85 +422,6 @@
     }
   },
   {
-    "id": "horizonai",
-    "name": "Horizon AI",
-    "repos": [
-      "horizonai"
-    ],
-    "category": "brand",
-    "layout": "editorial",
-    "palette": {
-      "background": "#141b32",
-      "foreground": "#f1f4ff",
-      "accent": "#9b93ff"
-    },
-    "headline": {
-      "ar": "هوية رقمية تتحدث لغة الذكاء الاصطناعي.",
-      "en": "A digital identity for an AI brand."
-    },
-    "summary": {
-      "ar": "موقع علامة Horizon AI: عرض للخدمات والرؤية والمحتوى التعريفي، مع مشاهد واجهة توضيحية ضمن الموقع الأصلي.",
-      "en": "The Horizon AI brand website presents services, vision and company content, including illustrative interface scenes embedded in the original site."
-    },
-    "problem": {
-      "ar": "تقديم خدمة تقنية معقدة يتطلب لغة بصرية واضحة تساعد الزائر على فهم العرض قبل الدخول في التفاصيل.",
-      "en": "Presenting a technical service requires a clear visual language before visitors dive into its detail."
-    },
-    "solution": {
-      "ar": "يستخدم الموقع الأصلي الصور والتسلسل الطباعي وتقسيم الأقسام لشرح العرض. اللقطات مأخوذة من أقسام وحالات عرض فعلية للموقع، وليست تصاميم بديلة مولّدة للمعرض.",
-      "en": "The original website uses imagery, typography and section sequencing to explain its offer. These captures show actual sections and presentation states, not alternative generated interfaces."
-    },
-    "challenge": {
-      "ar": "الحفاظ على توازن الصورة والنص عبر الكمبيوتر والجوال هو محور التجربة. وصف المشروع هنا يوثق الموقع نفسه؛ الأرقام التسويقية الموجودة في مصدره لا تُقدّم كقياسات مستقلة لنتائج العملاء.",
-      "en": "The central challenge is balancing imagery and text on desktop and mobile. This story documents the website itself; marketing numbers in the source are not presented as independently measured client outcomes."
-    },
-    "features": [
-      {
-        "ar": "قصة تعريفية للعلامة والخدمات التي يعرضها الموقع.",
-        "en": "Brand narrative and the services presented by the site."
-      },
-      {
-        "ar": "تدرج بصري بين التعريف والتفاصيل والتواصل.",
-        "en": "A visual sequence from introduction to detail and contact."
-      },
-      {
-        "ar": "مشهد لوحة توضيحي داخل الموقع؛ ليس إثباتاً لمنصة تحليلات تشغيلية.",
-        "en": "An embedded illustrative dashboard scene; it is not evidence of an operational analytics product."
-      },
-      {
-        "ar": "تجربة متجاوبة في الكمبيوتر والجوال.",
-        "en": "Responsive desktop and mobile presentation."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "ابدأ من العرض الرئيسي لفهم هوية الموقع.",
-        "en": "Start with the main presentation to understand the brand."
-      },
-      {
-        "ar": "تصفح الأقسام والتفاصيل التي تشرح العرض.",
-        "en": "Browse the sections explaining the offer."
-      },
-      {
-        "ar": "انتقل إلى دعوة التواصل عندما تتضح لك التفاصيل.",
-        "en": "Follow the contact action once the detail is clear."
-      }
-    ],
-    "stack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "presentation": {
-      "composition": "command",
-      "rhythm": "sequence",
-      "desktopCover": 1,
-      "mobileCover": 1,
-      "radius": 8,
-      "tilt": -1
-    }
-  },
-  {
     "id": "maash",
     "name": "Maash",
     "repos": [
@@ -735,90 +577,6 @@
       "desktopCover": 1,
       "mobileCover": 1,
       "radius": 0,
-      "tilt": 0
-    }
-  },
-  {
-    "id": "zero-os",
-    "name": "Zero OS",
-    "repos": [
-      "Estratijiya"
-    ],
-    "category": "business",
-    "layout": "workspace",
-    "palette": {
-      "background": "#18192c",
-      "foreground": "#f3f2ff",
-      "accent": "#b0a6fc"
-    },
-    "headline": {
-      "ar": "المهام والفريق والمالية، في سياق واحد.",
-      "en": "Tasks, people and finance in one context."
-    },
-    "summary": {
-      "ar": "نظام تشغيل للأعمال يجمع مساحات العمل والمهام والمستندات والوقت، مع وحدات الموارد البشرية والمالية في واجهة عربية.",
-      "en": "A business workspace connecting workspaces, tasks, documents and time with HR and finance modules in an Arabic interface."
-    },
-    "problem": {
-      "ar": "تعمل فرق المشاريع على المهام، وتتابع الإدارة الوقت والموظفين والفواتير. حين تنفصل هذه الأدوات، تضيع العلاقة بين العمل الجاري والموارد اللازمة لإنجازه.",
-      "en": "Project teams track tasks while management follows time, people and invoices. Disconnected tools make the relationship between work and its resources difficult to see."
-    },
-    "solution": {
-      "ar": "ينظّم المشروع العمل في مساحات وقوائم، ويضع المتابعة الشخصية والمستندات والتسجيل الزمني بجانب وحدات الموظفين والحضور والفواتير. الصور تبيّن الأجزاء العاملة من هذا المسار ببيانات Seeder محلية.",
-      "en": "The product organises work into workspaces and lists, bringing personal tasks, documents and time alongside employees, attendance and invoices. Captures show functioning areas using a local demo seeder."
-    },
-    "challenge": {
-      "ar": "توسيع النظام إلى مجالات إدارية مختلفة يحتاج حدوداً واضحة بين الوحدات وصلاحيات الأدوار. العرض هنا يركز على الشاشات التي تم تشغيلها والتحقق منها؛ لا يدل على اكتمال جميع الوحدات الواردة في المستودع.",
-      "en": "Expanding into several administrative domains requires clear module boundaries and role permissions. This demonstration focuses on screens that were run and checked; it does not imply every repository module is complete."
-    },
-    "features": [
-      {
-        "ar": "مساحات عمل تربط المشاريع والفرق والقوائم.",
-        "en": "Workspaces connecting projects, teams and task lists."
-      },
-      {
-        "ar": "مهام شخصية ومتابعة تفاصيل العمل الجاري.",
-        "en": "Personal tasks and ongoing work detail."
-      },
-      {
-        "ar": "مستندات وتسجيل وقت ضمن السياق التشغيلي.",
-        "en": "Documents and time tracking within the workspace."
-      },
-      {
-        "ar": "قوائم موظفين وحضور لتنظيم متابعة الفريق.",
-        "en": "Employee and attendance interfaces for team operations."
-      },
-      {
-        "ar": "نظرة مالية وفواتير مرتبطة بإدارة الأعمال.",
-        "en": "Finance overview and invoices for business management."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "نظّم المشروع داخل مساحة العمل المناسبة.",
-        "en": "Organise a project in the appropriate workspace."
-      },
-      {
-        "ar": "تابع المهام والمستندات والوقت خلال التنفيذ.",
-        "en": "Follow tasks, documents and time during delivery."
-      },
-      {
-        "ar": "راجع أثر العمل على الفريق والفواتير من وحدات الإدارة.",
-        "en": "Review people and invoice activity through management modules."
-      }
-    ],
-    "stack": [
-      "Laravel",
-      "Livewire",
-      "Tailwind CSS",
-      "PHP"
-    ],
-    "presentation": {
-      "composition": "command",
-      "rhythm": "tiles",
-      "desktopCover": 1,
-      "mobileCover": 1,
-      "radius": 3,
       "tilt": 0
     }
   },
@@ -985,164 +743,6 @@
       "desktopCover": 1,
       "mobileCover": 1,
       "radius": 12,
-      "tilt": 0
-    }
-  },
-  {
-    "id": "safqa",
-    "name": "Safka Plus",
-    "repos": [
-      "safkablus"
-    ],
-    "category": "commerce",
-    "layout": "commerce",
-    "palette": {
-      "background": "#eaf0ff",
-      "foreground": "#283960",
-      "accent": "#e3a856"
-    },
-    "headline": {
-      "ar": "تفاصيل التوريد قبل قرار المشاركة.",
-      "en": "Sourcing detail before participation."
-    },
-    "summary": {
-      "ar": "موقع لإدارة وعرض حملات التوريد والفرص، يشرح مراحلها وتكاليفها ويجمع الشركاء والوسطاء والمحتوى الإرشادي.",
-      "en": "A website for sourcing campaigns and opportunities, presenting stages and costs alongside partners, intermediaries and introductory guidance."
-    },
-    "problem": {
-      "ar": "الفرصة المعروضة تحتاج سياقاً: ما مراحلها، وما تكلفتها، وكيف تُشرح للزائر الجديد؟ عرض عنوان ورقم فقط لا يكفي لفهم العملية.",
-      "en": "An opportunity needs context: its stages, costs and how it is explained to a new visitor. A title and a number alone do not make the process understandable."
-    },
-    "solution": {
-      "ar": "يفصل المشروع بين العرض العام وإدارة الحملات والمحتوى. تتوفر صفحات إرشادية للزائر، بينما تدير الخلفية الحملات والشركاء والوسطاء والصفحات من شاشات مستقلة.",
-      "en": "The project separates public presentation from campaign and content management. Visitors get introductory guidance while management screens organise campaigns, partners, intermediaries and pages."
-    },
-    "challenge": {
-      "ar": "الأرقام في العرض تخص حملات مصطنعة، ولا تمثل توصية استثمارية أو عوائد محققة. يركز التنفيذ على تنظيم المعلومات وتسلسل المراحل والتكاليف، مع إدارة محتوى قابلة للتحديث.",
-      "en": "Amounts in this demonstration belong to synthetic campaigns and do not represent investment advice or achieved returns. The implementation focuses on information, stage and cost structure, with editable content."
-    },
-    "features": [
-      {
-        "ar": "عرض حملات ومراحل وتفاصيل تكلفة.",
-        "en": "Campaign presentation with stages and cost detail."
-      },
-      {
-        "ar": "دليل للمبتدئين يشرح سياق المشاركة.",
-        "en": "An introductory guide explaining participation."
-      },
-      {
-        "ar": "إدارة الشركاء والوسطاء من الخلفية.",
-        "en": "Partner and intermediary management."
-      },
-      {
-        "ar": "محرر صفحات وإعدادات للمحتوى العام.",
-        "en": "Page editing and public-content settings."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "استكشف الحملات وافهم تفاصيل كل فرصة.",
-        "en": "Explore campaigns and understand each opportunity’s detail."
-      },
-      {
-        "ar": "راجع دليل المبتدئين والمراحل والتكاليف.",
-        "en": "Read the introductory guide, stages and costs."
-      },
-      {
-        "ar": "حدّث الحملات والمحتوى من لوحة الإدارة.",
-        "en": "Update campaigns and content through management screens."
-      }
-    ],
-    "stack": [
-      "Laravel",
-      "Livewire",
-      "Bootstrap"
-    ],
-    "presentation": {
-      "composition": "market",
-      "rhythm": "panels",
-      "desktopCover": 2,
-      "mobileCover": 2,
-      "radius": 10,
-      "tilt": 0
-    }
-  },
-  {
-    "id": "umzuge",
-    "name": "Umzüge",
-    "repos": [
-      "umzuge"
-    ],
-    "category": "brand",
-    "layout": "editorial",
-    "palette": {
-      "background": "#f1f3fa",
-      "foreground": "#222f52",
-      "accent": "#697be7"
-    },
-    "headline": {
-      "ar": "خدمات النقل، من التعريف إلى الطلب.",
-      "en": "Moving services, from introduction to enquiry."
-    },
-    "summary": {
-      "ar": "موقع لخدمات النقل بالألمانية، مع لوحة إدارة للخدمات والأسعار والمعرض وآراء العملاء ومحتوى الموقع.",
-      "en": "A German moving-services website with management for services, pricing, gallery, testimonials and site content."
-    },
-    "problem": {
-      "ar": "يريد الزائر معرفة الخدمة وحدودها وكيفية التواصل، بينما يحتاج صاحب العمل إلى تحديث المحتوى والأسعار دون تعديل الواجهة في كل مرة.",
-      "en": "Visitors need to understand the service and how to enquire; the business needs to update content and pricing without editing the interface each time."
-    },
-    "solution": {
-      "ar": "يربط الموقع واجهة عامة بأقسام الخدمات والتواصل مع لوحة إدارة للمحتوى. يمكن مراجعة الأسعار والخدمات والمعرض من الخلفية، ثم رؤية التغييرات ضمن العرض العام.",
-      "en": "A public service and contact presentation connects to a content-management area. Pricing, services and gallery content are managed separately from their public presentation."
-    },
-    "challenge": {
-      "ar": "تنظيم المحتوى لموقع خدمة محلية يتطلب وضوحاً في اللغة والتواصل وتجربة الجوال. عناصر العرض والشهادات الموجودة في النسخة التجريبية ليست توثيقاً لعمليات نقل أو شهادات عملاء تم التحقق منها.",
-      "en": "A local-service website needs clear language, contact and mobile browsing. Demonstration content and testimonials are not independently verified customer statements or moving jobs."
-    },
-    "features": [
-      {
-        "ar": "واجهة عامة تعرض الخدمة وتوجه إلى التواصل.",
-        "en": "A public presentation leading visitors towards an enquiry."
-      },
-      {
-        "ar": "إدارة الخدمات ووصفها من الخلفية.",
-        "en": "Service content managed through the admin interface."
-      },
-      {
-        "ar": "شاشات أسعار ومعرض وآراء عملاء.",
-        "en": "Pricing, gallery and testimonial management screens."
-      },
-      {
-        "ar": "إعدادات محتوى الموقع والحساب الإداري.",
-        "en": "Website content and administrator account settings."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "تصفح الخدمات والأسعار من الموقع العام.",
-        "en": "Browse services and pricing on the public website."
-      },
-      {
-        "ar": "انتقل إلى نموذج التواصل لإرسال استفسار.",
-        "en": "Open the contact form to make an enquiry."
-      },
-      {
-        "ar": "أدر محتوى العرض من لوحة الإدارة.",
-        "en": "Manage presentation content through the admin area."
-      }
-    ],
-    "stack": [
-      "Laravel",
-      "PHP",
-      "Bootstrap"
-    ],
-    "presentation": {
-      "composition": "service",
-      "rhythm": "sequence",
-      "desktopCover": 1,
-      "mobileCover": 1,
-      "radius": 16,
       "tilt": 0
     }
   },
@@ -1880,90 +1480,6 @@
     }
   },
   {
-    "id": "globalfootball",
-    "name": "Global Football AI",
-    "repos": [
-      "gfaa-web",
-      "gfaa-android",
-      "globalfootballai-landing"
-    ],
-    "category": "brand",
-    "layout": "editorial",
-    "palette": {
-      "background": "#f4f7e7",
-      "foreground": "#243924",
-      "accent": "#87ba44"
-    },
-    "headline": {
-      "ar": "فكرة أكاديمية كرة قدم، بواجهة تشجّع الاستكشاف.",
-      "en": "A football academy concept built for exploration."
-    },
-    "summary": {
-      "ar": "واجهة تعريف وتسجيل لأكاديمية كرة قدم، تعرض مسارات اللاعبين والمدربين والعضوية والتحليل، مع أساس حساب مستخدم وتطبيق Android.",
-      "en": "A football academy landing and registration interface presenting player, coach, membership and analysis journeys, with account foundations and an Android app."
-    },
-    "problem": {
-      "ar": "تحتاج فكرة الأكاديمية الرقمية إلى شرح واضح لما سيجده اللاعب أو المدرب، ثم دعوة بسيطة للانضمام. سرد الخدمات وحده لا يوضح كيف تتصل مسارات التعلم والتحليل والمتابعة.",
-      "en": "A digital academy needs to explain what players and coaches will find, then offer a clear way to join. A service list alone does not connect learning, analysis and progress journeys."
-    },
-    "solution": {
-      "ar": "تقسم الواجهة القصة إلى أقسام للاعبين والمدربين والشهادات والتحليل والعضوية والرحلة. تُستخدم هوية مرحة وألوان رياضية ومكونات واضحة لتقريب الفكرة، مع صفحات دخول وتسجيل ولوحة أولية.",
-      "en": "The interface tells its story through players, coaches, certificates, analysis, membership and journey sections. A playful sports identity and clear components communicate the idea, supported by sign-in, registration and an initial dashboard."
-    },
-    "challenge": {
-      "ar": "التمييز بين عرض الفكرة والخدمة المكتملة أساسي هنا: أقسام التحليل والشهادات تشرح الاتجاه المقصود. اللقطات تعرض الواجهات الموجودة؛ لا تثبت وجود نظام تحليل فيديو أو دورات أو إصدار شهادات يعمل بالكامل.",
-      "en": "This case distinguishes the product concept from completed services: analysis and certificate sections communicate the intended direction. Captures show existing interfaces; they do not verify a complete video analysis, course or certificate issuing system."
-    },
-    "features": [
-      {
-        "ar": "أقسام تعريف مخصصة للاعب والمدرب.",
-        "en": "Dedicated player and coach introduction sections."
-      },
-      {
-        "ar": "عرض بصري لمسار العضوية والرحلة والمكافآت.",
-        "en": "Visual membership, journey and reward presentation."
-      },
-      {
-        "ar": "صفحات تسجيل ودخول وأساس لوحة حساب.",
-        "en": "Registration, sign-in and initial account dashboard."
-      },
-      {
-        "ar": "واجهة React يمكن تقديمها كتطبيق Android عبر Capacitor.",
-        "en": "A React interface with a Capacitor Android presentation."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "استكشف فكرة الأكاديمية والمسار الذي يناسبك.",
-        "en": "Explore the academy concept and your intended path."
-      },
-      {
-        "ar": "راجع العضوية والرحلة والميزات المعروضة.",
-        "en": "Review membership, journey and presented features."
-      },
-      {
-        "ar": "انتقل إلى التسجيل وبداية تجربة الحساب.",
-        "en": "Continue to registration and the initial account experience."
-      }
-    ],
-    "stack": [
-      "React",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "Capacitor",
-      "i18next"
-    ],
-    "presentation": {
-      "composition": "pitch",
-      "rhythm": "panels",
-      "desktopCover": 1,
-      "mobileCover": 1,
-      "radius": 18,
-      "tilt": 0
-    }
-  },
-  {
     "id": "farahidi",
     "name": "الفراهيدي",
     "repos": [
@@ -2210,86 +1726,6 @@
     }
   },
   {
-    "id": "qasioun-tv",
-    "name": "Qasioun TV",
-    "repos": [
-      "qasioun-tv"
-    ],
-    "category": "mobile",
-    "layout": "mobile",
-    "palette": {
-      "background": "#111b35",
-      "foreground": "#eef3ff",
-      "accent": "#579aff"
-    },
-    "headline": {
-      "ar": "المحتوى أمامك. البحث والمفضلة قريبان.",
-      "en": "Browse content with search and favourites close by."
-    },
-    "summary": {
-      "ar": "تطبيق Flutter لتصفح القنوات والأفلام والمسلسلات، مع تصنيفات وبحث ومفضلة وصفحات تفاصيل ودعم.",
-      "en": "A Flutter app for channels, movies and series, with categories, search, favourites, detail and support interfaces."
-    },
-    "problem": {
-      "ar": "القوائم الطويلة للمحتوى تحتاج أكثر من أسماء متتابعة. يريد المستخدم تصنيفاً سريعاً وطريقة للعودة إلى ما اختاره، ثم الانتقال إلى تفاصيل السلسلة والحلقات.",
-      "en": "Long content catalogs need more than consecutive titles. Users want quick categories, a way back to saved content and series/episode detail."
-    },
-    "solution": {
-      "ar": "ينظم التطبيق التصفح في تبويبات للبث والمكتبة والمفضلة والدعم، مع مرشحات وبحث داخل القوائم. يعرض تفاصيل السلسلة وحلقاتها ضمن واجهة داكنة تحافظ على التركيز على المحتوى.",
-      "en": "The app organises browsing into live, library, favourite and support tabs, with filtering and search. Series and episode details sit in a dark interface focused on content."
-    },
-    "challenge": {
-      "ar": "الواجهة تحتاج التعامل مع تحديثات التطبيق ومصادر الكتالوج وانقطاع الشبكة. الصور تستخدم كتالوجاً مصطنعاً داخل التطبيق الأصلي، مع توافق الخطوط في المتصفح؛ لم يُشغّل بث خارجي أو تُختبر خدمات المحتوى الفعلية.",
-      "en": "The interface handles app updates, catalog sources and network fallback. Captures use a synthetic catalog in the original app with browser font compatibility; external streams and actual content services were not exercised."
-    },
-    "features": [
-      {
-        "ar": "تبويبات مستقلة للبث والمكتبة والمفضلة والدعم.",
-        "en": "Separate live, library, favourite and support tabs."
-      },
-      {
-        "ar": "تصفية وتصنيف وبحث داخل كتالوج المحتوى.",
-        "en": "Catalog filtering, categories and search."
-      },
-      {
-        "ar": "عرض تفاصيل المسلسلات وقوائم الحلقات.",
-        "en": "Series detail and episode lists."
-      },
-      {
-        "ar": "إعداد تحديثات التطبيق وبدائل بيانات محلية.",
-        "en": "App update handling and local data fallback."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "اختر التبويب وصنّف المحتوى الذي تريد تصفحه.",
-        "en": "Choose a tab and filter the catalog."
-      },
-      {
-        "ar": "استخدم البحث أو احفظ اختيارك في المفضلة.",
-        "en": "Search or save a favourite."
-      },
-      {
-        "ar": "افتح تفاصيل السلسلة وراجع قائمة الحلقات.",
-        "en": "Open series detail and review episodes."
-      }
-    ],
-    "stack": [
-      "Flutter",
-      "Dart",
-      "HTTP",
-      "Cached Network Image"
-    ],
-    "presentation": {
-      "composition": "cinema",
-      "rhythm": "sequence",
-      "desktopCover": 8,
-      "mobileCover": 8,
-      "radius": 18,
-      "tilt": 0
-    }
-  },
-  {
     "id": "arkani",
     "name": "أركاني",
     "repos": [
@@ -2449,87 +1885,6 @@
       "desktopCover": 1,
       "mobileCover": 1,
       "radius": 16,
-      "tilt": 0
-    }
-  },
-  {
-    "id": "ail",
-    "name": "AiL",
-    "repos": [
-      "ail"
-    ],
-    "category": "developer",
-    "layout": "developer",
-    "palette": {
-      "background": "#111922",
-      "foreground": "#e3edf4",
-      "accent": "#70b6ff"
-    },
-    "headline": {
-      "ar": "لغة صغيرة. أمثلة تعمل من المصدر.",
-      "en": "A compact language with runnable source examples."
-    },
-    "summary": {
-      "ar": "لغة ومترجم مبنيان بـRust، مع تشغيل أصلي وأمثلة HTTP وقوالب HTML ومحرك تنسيق وواجهات مولّدة من كود AiL.",
-      "en": "A Rust-based language/compiler with a native runtime, HTTP examples, HTML templates, a styling engine and interfaces generated from AiL code."
-    },
-    "problem": {
-      "ar": "تحتاج أدوات التطوير إلى أمثلة تثبت كيف يتحول الكود إلى نتيجة قابلة للتشغيل. وصف اللغة وحده لا يوضح علاقة القالب والتنسيق والمنطق بتطبيق يمكن تجربته.",
-      "en": "Developer tools need examples showing how code becomes runnable output. A language description alone cannot show how templates, styling and logic connect to a usable app."
-    },
-    "solution": {
-      "ar": "يعرض المشروع مترجماً وتشغيلاً أصلياً وأمثلة للقوالب والتنسيق. اللقطات مأخوذة من تطبيق المهام HTTP الأصلي والصفحات التي ولّدها المترجم، وتشمل الإضافة وتغيير الحالة والثيم والمكونات وشروط القالب.",
-      "en": "The project provides a compiler, native execution and template/styling examples. Captures show the original HTTP task app and compiler-generated pages, including task entry, state changes, themes, components and template conditions."
-    },
-    "challenge": {
-      "ar": "التحدي هو اتساق قواعد اللغة مع التشغيل والقوالب وتنسيق المخرجات. بُني مترجم النسخة المفحوصة محلياً، وطُبّق توافق بسيط على مثال قديم ليستخدم أسماء الدوال الحالية. الصور لأمثلة فعلية، ولا تعرض محرراً افتراضياً أو تدّعي قياسات أداء غير مختبرة.",
-      "en": "The challenge is consistency across language rules, runtime, templates and output styling. The inspected compiler was built locally, with a small compatibility adjustment to an older example. These are real examples, without an invented editor or unverified performance figures."
-    },
-    "features": [
-      {
-        "ar": "مترجم Rust وتشغيل أصلي لأمثلة اللغة.",
-        "en": "A Rust compiler and native example execution."
-      },
-      {
-        "ar": "تطبيق HTTP بسيط يضيف مهام ويغيّر حالتها.",
-        "en": "A native HTTP app that creates tasks and changes their state."
-      },
-      {
-        "ar": "قوالب HTML بشرط وتكرار وتهريب نصوص.",
-        "en": "HTML templates with conditions, iteration and escaping."
-      },
-      {
-        "ar": "محرك تنسيق يدعم الثيم والمكونات والتجاوب.",
-        "en": "A styling engine for themes, components and responsive output."
-      }
-    ],
-    "flow": [
-      {
-        "ar": "اكتب مثالاً باستخدام قواعد AiL وقوالبها.",
-        "en": "Write an example using AiL rules and templates."
-      },
-      {
-        "ar": "شغّل المترجم أو التنفيذ الأصلي لإنتاج التطبيق.",
-        "en": "Run the compiler or native runtime to produce the app."
-      },
-      {
-        "ar": "جرّب المخرجات والتفاعلات داخل المتصفح.",
-        "en": "Try generated output and interactions in the browser."
-      }
-    ],
-    "stack": [
-      "Rust",
-      "AiL",
-      "HTTP",
-      "HTML",
-      "CSS"
-    ],
-    "presentation": {
-      "composition": "terminal",
-      "rhythm": "tiles",
-      "desktopCover": 6,
-      "mobileCover": 6,
-      "radius": 4,
       "tilt": 0
     }
   },

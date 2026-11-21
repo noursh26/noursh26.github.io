@@ -5,9 +5,9 @@ const projects = JSON.parse(fs.readFileSync('src/portfolio/projects.json')),
   compact = JSON.parse(
     fs.readFileSync('src/portfolio/screenshots.compact.json'),
   )
-assert.equal(projects.length, 33)
-assert.equal(new Set(projects.map((p) => p.id)).size, 33)
-assert.equal(shots.length, 690)
+assert.equal(projects.length, 25)
+assert.equal(new Set(projects.map((p) => p.id)).size, 25)
+assert.equal(shots.length, 530)
 assert.equal(compact.length, shots.length)
 const files = new Set(),
   images = new Set()

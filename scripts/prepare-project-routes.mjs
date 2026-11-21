@@ -31,7 +31,7 @@ const entries = [
     route: '/projects/',
     title: 'Projects — Nour Aldeen Shehadea',
     description:
-      'Explore 33 product stories and 690 original interface captures, with desktop and mobile demonstration data.',
+      'Explore 25 product stories and 530 original interface captures, with desktop and mobile demonstration data.',
     image: shots[0].file,
     name: 'Projects',
   },
