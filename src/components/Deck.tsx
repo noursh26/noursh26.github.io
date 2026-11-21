@@ -9,7 +9,7 @@ import { ArrowLeft, ArrowRight } from './icons'
    projection), rubber-bands at the ends, settles on a critically damped
    spring, and can be grabbed again mid-flight from its on-screen position. */
 
-const DECK_IDS = ['almustfa', 'masaref', 'fahrast', 'fulus', 'accountant', 'arkani', 'maash', 'lego', 'relinka', 'bolupinar', 'salesflow', 'petravex']
+const DECK_IDS = ['almustfa', 'estratijiya-ai', 'fahrast', 'm3aak', 'accountant', 'arkani', 'maash', 'lego', 'relinka', 'bolupinar', 'salesflow', 'petravex']
 
 const project = (v: number, rate = 0.998) => ((v / 1000) * rate) / (1 - rate)
 const rubber = (over: number, dim: number, c = 0.55) => (over * dim * c) / (dim + c * Math.abs(over))
