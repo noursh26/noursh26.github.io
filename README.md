@@ -4,7 +4,9 @@ Personal portfolio site. Product engineer — business systems, mobile apps and 
 
 ## Stack
 
-React 19 · Vite · TypeScript · plain CSS (no animation libraries)
+React 19 · Vite · TypeScript · plain CSS · GSAP (ScrollTrigger, SplitText) · Phosphor icons · Geist and IBM Plex Sans Arabic
+
+All home-page motion lives in `src/story/useStoryMotion.ts`; copy for both languages in `src/story/content.ts`.
 
 ## Develop
 

@@ -3,9 +3,9 @@
 
 export const nav = [
   { id: 'work', label: 'Work' },
+  { id: 'about', label: 'About' },
   { id: 'build', label: 'What I build' },
   { id: 'approach', label: 'Approach' },
-  { id: 'about', label: 'About' },
 ]
 
 export const hero = {

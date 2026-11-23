@@ -9,9 +9,10 @@ a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
 h1,h2,h3,p,ul,ol,figure{margin:0}
 ul,ol{padding:0;list-style:none}
-::selection{background:color-mix(in srgb, var(--accent) 24%, transparent)}
+::selection{background:color-mix(in srgb, var(--signal) 45%, transparent)}
 
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:2px solid var(--link);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
 
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .skip-link{position:fixed;inset-inline-start:16px;top:-100px;z-index:200;background:var(--label);color:var(--bg);
@@ -42,7 +43,7 @@ html[lang="ar"] .t-lede{line-height:1.8}
 .btn--primary:hover{background:var(--accent-hover)}
 .btn--quiet{background:color-mix(in srgb, var(--label) 7%, transparent);color:var(--label)}
 .btn--quiet:hover{background:color-mix(in srgb, var(--label) 11%, transparent)}
-.link{color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:.35em}
+.link{color:var(--link);font-weight:600;display:inline-flex;align-items:center;gap:.35em}
 .link:hover{text-decoration:underline;text-underline-offset:.2em}
 .chev{width:.7em;height:.7em;flex:none;transition:transform .25s var(--ease)}
 a:hover > .chev, button:hover > .chev{transform:translateX(2px)}
