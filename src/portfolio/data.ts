@@ -4,7 +4,7 @@ import type { Category, Copy, Project, Shot } from './types'
 
 export const projects = rawProjects as Project[]
 export const screenshots = rawScreenshots as Shot[]
-export const projectHref = (id: string) => `/projects/${id}/`
+export { projectHref } from './paths'
 export const projectShots = (id: string) =>
   screenshots.filter((s) => s.project === id)
 export const categories: { id: Category | 'all'; label: Copy }[] = [

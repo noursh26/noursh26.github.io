@@ -2,9 +2,9 @@
 
 export const nav = [
   { id: 'work', label: 'الأعمال' },
+  { id: 'about', label: 'عني' },
   { id: 'build', label: 'ماذا أبني' },
   { id: 'approach', label: 'طريقة العمل' },
-  { id: 'about', label: 'عني' },
 ]
 
 export const hero = {
