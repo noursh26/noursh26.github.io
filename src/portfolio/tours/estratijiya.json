@@ -1,0 +1,259 @@
+{
+  "facts": [
+    {
+      "value": "4",
+      "label": {
+        "en": "method moves",
+        "ar": "خطوات منهج"
+      }
+    },
+    {
+      "value": "7",
+      "label": {
+        "en": "build divisions",
+        "ar": "أقسام بناء"
+      }
+    },
+    {
+      "value": "8",
+      "label": {
+        "en": "numbered sections",
+        "ar": "أقسام مرقّمة"
+      }
+    }
+  ],
+  "intro": {
+    "en": "A brand site for a strategy and delivery company, written to be read top to bottom. The visitor starts with a problem they recognise, sees the method and the work, and ends with a plain invitation to book a diagnosis.",
+    "ar": "موقع تعريفي لشركة استشارات وتنفيذ، كُتب ليُقرأ من الأعلى إلى الأسفل. يبدأ الزائر بمشكلة يعرفها، ثم يرى المنهج والأعمال، وينتهي بدعوة واضحة لحجز جلسة تشخيص."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "en": "Opening",
+        "ar": "المشهد الأول"
+      },
+      "title": {
+        "en": "One headline that ends on the name.",
+        "ar": "عنوان واحد ينتهي باسم الشركة."
+      },
+      "body": {
+        "en": "The page opens on a dark photograph of a curving road and a large headline that ends with the company name in green. There is no service list and no button, only a small arrow that asks you to scroll. Green is kept for the name, so it is the first thing the eye lands on.",
+        "ar": "الصفحة تبدأ بصورة داكنة لطريق منحنٍ وعنوان كبير ينتهي باسم الشركة بالأخضر. لا قائمة خدمات ولا أزرار، فقط سهم صغير يدعو إلى النزول. الأخضر مخصص للاسم وحده، فيكون أول ما تقع عليه العين."
+      },
+      "points": [
+        {
+          "en": "The photograph drifts as you scroll.",
+          "ar": "الصورة تنزاح ببطء أثناء التمرير."
+        },
+        {
+          "en": "A loading door shows a real percentage before it opens.",
+          "ar": "شاشة تحميل تعرض نسبة حقيقية قبل الدخول."
+        },
+        {
+          "en": "A thin progress rail runs down the page edge.",
+          "ar": "شريط تقدّم رفيع على حافة الصفحة."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-03",
+      "kicker": {
+        "en": "Method",
+        "ar": "المنهج"
+      },
+      "title": {
+        "en": "Four moves in one system.",
+        "ar": "أربع خطوات في نظام واحد."
+      },
+      "body": {
+        "en": "The explanation is four cards: we diagnose, plan, execute and measure. Each card is one photograph and two short sentences. On a phone one card is shown larger at a time, and the order stays the same.",
+        "ar": "يأتي الشرح في أربع بطاقات: نشخّص، نخطط، ننفذ، نقيس. كل بطاقة صورة وجملتان قصيرتان. على الهاتف تُعرض البطاقة الواحدة بحجم أكبر ويبقى الترتيب نفسه."
+      },
+      "points": [
+        {
+          "en": "The first card reads: we start from the cause, not from the request.",
+          "ar": "البطاقة الأولى تقول: نبدأ من السبب لا من الطلب."
+        },
+        {
+          "en": "The section pins, split into rests and short moves.",
+          "ar": "المقطع مثبّت ومقسّم إلى توقف وانتقال قصير."
+        },
+        {
+          "en": "Separate geometry below 900 pixels wide.",
+          "ar": "هندسة منفصلة للشاشات تحت 900 بكسل."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "en": "Statement",
+        "ar": "الرسالة"
+      },
+      "title": {
+        "en": "One sentence between two chapters.",
+        "ar": "جملة واحدة بين فصلين."
+      },
+      "body": {
+        "en": "After the method comes a pause: an architectural photograph and one large sentence about starting where the work cannot be seen. The green phrase is the idea. The small line beneath says the order is a condition, not a preference.",
+        "ar": "بعد المنهج لحظة هدوء: صورة معمارية وجملة كبيرة عن البدء من حيث لا يُرى العمل. الجزء الأخضر من الجملة هو الفكرة. السطر الصغير تحتها يقول إن الترتيب شرط وليس تفضيلاً."
+      },
+      "points": [
+        {
+          "en": "Lines rise from behind a mask as they enter.",
+          "ar": "الأسطر ترتفع من خلف قناع عند دخولها."
+        },
+        {
+          "en": "A thin green rule separates the line from its note.",
+          "ar": "خط أخضر رفيع يفصل الجملة عن ملاحظتها."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-05",
+      "kicker": {
+        "en": "Build",
+        "ar": "البناء"
+      },
+      "title": {
+        "en": "Seven divisions built inside the company.",
+        "ar": "سبعة أقسام تُبنى داخل الشركة."
+      },
+      "body": {
+        "en": "Studies and strategy, building the system, sales, marketing and brand, technology and AI, supervision and execution, and personal branding. Each division is a round photograph with one line of explanation.",
+        "ar": "الدراسات والاستراتيجية، وبناء المنظومة، والمبيعات، والتسويق والعلامة، والتقنية والذكاء الاصطناعي، والإشراف والتنفيذ، والعلامة الشخصية. كل قسم صورة دائرية وسطر واحد يشرحه."
+      },
+      "points": [
+        {
+          "en": "On desktop the photos swing along an arc while the stage pins.",
+          "ar": "على سطح المكتب تتحرك الصور على قوس بينما المشهد مثبّت."
+        },
+        {
+          "en": "A static list with no dial when reduced motion is set.",
+          "ar": "قائمة ثابتة بلا قرص عند تفعيل تقليل الحركة."
+        },
+        {
+          "en": "Short titles, one line of description each.",
+          "ar": "عناوين قصيرة وسطر وصف لكل قسم."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "en": "Work",
+        "ar": "الأعمال"
+      },
+      "title": {
+        "en": "What was delivered, six times.",
+        "ar": "ما أُنجز، في ست بطاقات."
+      },
+      "body": {
+        "en": "Six cards with titles that name the outcome: the foundation, five hiring stages, automated client management, decisions grounded in numbers, a sales funnel from zero, and identity with campaigns. Each text says what was done and promises nothing.",
+        "ar": "ست بطاقات بعناوين تسمّي النتيجة: الأساس، ومراحل التوظيف الخمس، وإدارة العملاء الآلية، وقرارات مبنية على الأرقام، وقمع مبيعات من الصفر، وهوية مع حملات. كل نص يقول ما نُفّذ دون وعود."
+      },
+      "points": [
+        {
+          "en": "A strip of previews advances, then one fills the screen.",
+          "ar": "شريط معاينات يتقدّم، ثم تملأ إحداها الشاشة."
+        },
+        {
+          "en": "Cards numbered 01 to 06.",
+          "ar": "بطاقات مرقّمة من 01 إلى 06."
+        },
+        {
+          "en": "On a phone the work sits in a single column.",
+          "ar": "على الهاتف تُعرض الأعمال في عمود واحد."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "en": "Difference",
+        "ar": "الاختلاف"
+      },
+      "title": {
+        "en": "Six points in one clean list.",
+        "ar": "ست نقاط في قائمة واحدة نظيفة."
+      },
+      "body": {
+        "en": "The heading \"Built for the work after the workshop\" leads six numbered rows, each a short claim with a smaller explanation on the far side. On a phone each row gains a small thumbnail.",
+        "ar": "العنوان \"مبني للعمل الذي يلي ورشة العمل\" يقود ست صفوف مرقّمة، كل صف ادعاء قصير وشرح أصغر في الطرف الآخر. على الهاتف يظهر في كل صف تصغير للصورة."
+      },
+      "points": [
+        {
+          "en": "Rows divided by hairlines instead of cards.",
+          "ar": "الصفوف مفصولة بخطوط رفيعة بدل البطاقات."
+        },
+        {
+          "en": "With a fine pointer, the hovered row floats its photo.",
+          "ar": "مع مؤشر دقيق، يرفع الصف المحوَّم عليه صورته."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-10",
+      "phone": "mobile-10",
+      "kicker": {
+        "en": "Contact",
+        "ar": "التواصل"
+      },
+      "title": {
+        "en": "Start with clarity.",
+        "ar": "ابدأ بوضوح."
+      },
+      "body": {
+        "en": "A quiet close over an image of a rising arrow: a heading, two sentences, a \"Book a diagnosis\" button that opens an email, and a smaller WhatsApp link. No form and no fields. One next step and one alternative.",
+        "ar": "خاتمة هادئة فوق صورة سهم صاعد: عنوان وجملتان وزر \"احجز تشخيصاً\" يفتح رسالة بريد، ورابط واتساب أصغر. لا نموذج ولا حقول. خطوة تالية واحدة وبديل واحد."
+      },
+      "points": [
+        {
+          "en": "The backdrop moves slower than the text.",
+          "ar": "الخلفية تتحرك أبطأ من النص."
+        },
+        {
+          "en": "Section 08, the last in the numbering.",
+          "ar": "القسم 08، آخر الأقسام المرقّمة."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "en": "Pinned scroll instead of separate pages",
+        "ar": "تمرير مثبّت بدل صفحات منفصلة"
+      },
+      "body": {
+        "en": "Diagnosis, method, build and work pin to the screen through ScrollTrigger, and scroll position decides what is shown. The distance is split into rests and short transitions so a scroll cannot stall halfway through a move.",
+        "ar": "التشخيص والمنهج والبناء والأعمال تُثبَّت على الشاشة عبر ScrollTrigger، وموضع التمرير يحدد ما يُعرض. المسافة مقسّمة إلى توقفات وانتقالات قصيرة حتى لا يتعطل التمرير في منتصف الحركة."
+      }
+    },
+    {
+      "title": {
+        "en": "A single smooth-scroll engine",
+        "ar": "محرّك تمرير واحد"
+      },
+      "body": {
+        "en": "Lenis runs off the GSAP ticker, so the two never fight over a frame. When the visitor prefers reduced motion, smooth scroll turns off and pinned sections fall back to a plain layout.",
+        "ar": "يعمل Lenis من مؤقّت GSAP نفسه، فلا يتنازعان على الإطار. عندما يفضّل الزائر تقليل الحركة يتوقف التمرير الناعم وتعود الأقسام المثبّتة إلى تخطيط عادي."
+      }
+    },
+    {
+      "title": {
+        "en": "One easing curve for the brand",
+        "ar": "منحنى حركة واحد للعلامة"
+      },
+      "body": {
+        "en": "The entrance curve is registered once as a named ease and every section uses it. Line-by-line heading reveals through SplitText are the site's signature.",
+        "ar": "منحنى الدخول مسجّل مرة واحدة باسم محدد وتستخدمه كل الأقسام. كشف العناوين سطراً سطراً عبر SplitText هو توقيع الموقع."
+      }
+    }
+  ]
+}

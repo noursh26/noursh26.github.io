@@ -1,0 +1,74 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "stat cards overlap their own text and the sparklines cross the descriptions; the layout leaves gaps"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "only three rows and the track column shows raw slugs such as grade9"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "subscription plans: not shown, payment flow is manual and ShamCashService::reconcile() is a placeholder"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "payment requests: not shown, payment flow is manual and ShamCashService::reconcile() is a placeholder"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "Filament table is wider than the 390px frame and scrolls sideways, so the table is cut off"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[2]; summary; flow[2]",
+      "text": "subscription plans and payment requests for operations",
+      "problem": "Only test rows (PW Audit ...) exist to show them. Sham Cash is manual: the student pays out of band and an admin approves; ShamCashService::reconcile() is a placeholder that throws.",
+      "fix": "remove the plans/payment-requests claim from features, summary and flow (EN: drop 'subscriptions and payment requests'; AR: احذف الاشتراكات وطلبات الدفع)"
+    },
+    {
+      "where": "projects.json features[0]",
+      "text": "students, sections, subjects and courses in a connected structure",
+      "problem": "Student list and sections captures are one-row / junk rows, so only courses, lessons and quizzes can be shown",
+      "fix": "reword to 'Courses, lessons and quizzes in a connected structure'"
+    }
+  ]
+}

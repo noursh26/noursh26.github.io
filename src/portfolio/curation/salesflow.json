@@ -1,0 +1,104 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "assistant home: English shortcut copy in the Arabic UI, empty session list, needs an AI provider key"
+    },
+    {
+      "file": "desktop-02",
+      "reason": "English filter labels (All Tags, Phone: Any, Email: Any) and English source badges (Whatsapp, Import, Web) in the Arabic UI"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "English status badges (New, Open, Won, Lost) hard-coded in the Arabic UI"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "no thread open (needs seeded chat messages, delivery depends on channel keys), not shown"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "English tabs in the Arabic UI, example.com website, business hours 06:00 PM to 09:00 AM"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "mostly English labels and nothing connected; channels not demonstrably working"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "analytics query fails on SQLite and the AI panel has nothing to show without provider keys"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "chat panel cut off by the sidebar, English shortcuts in the Arabic UI"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "sidebar rail takes a third of the phone width, table cut off, English filters"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "sidebar rail takes a third of the phone width, table cut off, English status badges"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "sidebar rail takes a third of the phone width, filters fill the screen, board column cut off"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "conversation list cut off, no thread open"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "sidebar rail takes a third of the phone width, product names cut off"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "sidebar rail takes a third of the phone width, quote sheet squeezed and overlapping text"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "English tabs in the Arabic UI, example.com website"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "English channel copy, counters of zero"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "analytics query fails on SQLite and the AI panel has nothing to show without provider keys"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[2]; summary; solution",
+      "text": "conversation inbox and agent/channel configuration",
+      "problem": "No open thread is shown; channel delivery (WhatsApp etc.) and the AI assistant need provider keys and are not demonstrated",
+      "fix": "remove the inbox/agent/channel claim"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "demonstration uses local databases / seeder; does not show WhatsApp delivery",
+      "problem": "talks about demo data and missing features",
+      "fix": "remove; keep only the in-progress label"
+    },
+    {
+      "where": "src/story/content.ts ~line 299",
+      "text": "Conversations, knowledge and agents with cost and quality in view: Estratijiya AI, Fahrast AI and SalesFlow",
+      "problem": "implies SalesFlow conversations and agents, which are not shown working",
+      "fix": "drop SalesFlow from that line"
+    },
+    {
+      "where": "old tour engineering[2]",
+      "text": "streaming AI assistant through the Anthropic SDK",
+      "problem": "route exists but no provider key and no working capture",
+      "fix": "removed from tour"
+    },
+    {
+      "where": "projects.json features[3]",
+      "text": "products, quotes and analytics",
+      "problem": "products list and quote sheet work and are shown; analytics are not shown (query fails on SQLite, AI panel needs provider keys)",
+      "fix": "say products and quotes only; drop analytics"
+    }
+  ]
+}

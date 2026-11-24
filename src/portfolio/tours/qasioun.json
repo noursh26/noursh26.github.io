@@ -1,0 +1,134 @@
+{
+  "facts": [
+    {
+      "value": "9",
+      "label": {
+        "ar": "باقات",
+        "en": "plans"
+      }
+    },
+    {
+      "value": "5",
+      "label": {
+        "ar": "مناطق تغطية",
+        "en": "coverage zones"
+      }
+    },
+    {
+      "value": "3",
+      "label": {
+        "ar": "أدوار",
+        "en": "roles"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "نظام عربي لمزوّد إنترنت صغير. تضبط الإدارة الباقات والمناطق، ثم تسجل المشتركين وتربط كل مشترك بباقته ومنطقته. الصلاحيات تحدد ما يراه كل دور.",
+    "en": "An Arabic system for a small internet service provider. Administrators set up plans and zones, then register subscribers and link each one to a plan and a zone. Permissions decide what each role can see."
+  },
+  "screens": [
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "المشتركون",
+        "en": "Subscribers"
+      },
+      "title": {
+        "ar": "سجل المشتركين مع باقاتهم.",
+        "en": "Subscriber records with their plans."
+      },
+      "body": {
+        "ar": "جدول بالاسم والرقم الوطني والهاتف والمنطقة والباقة واسم مستخدم PPPoE والحالة، من نشط إلى موقوف. فوقه بحث ومرشحات للحالة والمنطقة والباقة، وأزرار \"إضافة مشترك\" و\"استيراد IP\" و\"استيراد Excel\". لكل صف حذف وتعديل وإيقاف.",
+        "en": "A table with name and national ID, phone, zone, plan, PPPoE username and status, from active to suspended. Above it are search, filters for status, zone and plan, and buttons \"Add subscriber,\" \"Import IP\" and \"Import Excel.\" Each row offers delete, edit and suspend."
+      },
+      "points": [
+        {
+          "ar": "الاستيراد من Excel عبر PhpSpreadsheet.",
+          "en": "Excel import runs through PhpSpreadsheet."
+        },
+        {
+          "ar": "رابط الاسم يفتح صفحة المشترك بمعرّف UUID.",
+          "en": "The name links to a subscriber page keyed by UUID."
+        },
+        {
+          "ar": "على الهاتف يصبح كل مشترك بطاقة بأزرار إيقاف وتعديل وحذف.",
+          "en": "On a phone each subscriber is a card with suspend, edit and delete."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "kicker": {
+        "ar": "الإدارة",
+        "en": "Admin"
+      },
+      "title": {
+        "ar": "تسع باقات بسرعاتها وحدودها.",
+        "en": "Nine plans, with speeds and caps."
+      },
+      "body": {
+        "ar": "جدول للباقات من 2 إلى 50 ميغا: السرعة بالتحميل والرفع مثل 2/1 Mbps، والسعر الشهري بالليرة السورية، وسقف FUP بالغيغابايت أو \"غير محدود\"، وعدد المشتركين، والحالة. هذا الجدول يربط كل مشترك بسعره وسرعته.",
+        "en": "A table of plans from 2 to 50 Mbps: download and upload speed such as 2/1, monthly price in Syrian pounds, an FUP cap in gigabytes or \"unlimited,\" subscriber count and status. This table ties each subscriber to a price and a speed."
+      },
+      "points": [
+        {
+          "ar": "سرعة التحميل والرفع في عمود واحد.",
+          "en": "Download and upload speed in one column."
+        },
+        {
+          "ar": "عدد المشتركين لكل باقة يُحسب من العلاقة.",
+          "en": "Subscriber count per plan comes from the relation."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "الإدارة",
+        "en": "Admin"
+      },
+      "title": {
+        "ar": "خمس مناطق بلونها وعدد مشتركيها.",
+        "en": "Five zones, each with colour and count."
+      },
+      "body": {
+        "ar": "المركز والشمال والجنوب والغرب والشرق، لكل منطقة بطاقة بحرف ولون مميّزين وحالة \"نشطة\" وعدد المشتركين: 6 و5 و9 و6 و4. أزرار الحذف والتعديل على كل بطاقة. توزيع المشتركين على المناطق هو أساس ترتيب العمل الميداني.",
+        "en": "Centre, north, south, west and east. Each zone is a card with its own letter and colour, an \"active\" status and its subscriber count: 6, 5, 9, 6 and 4. Delete and edit buttons sit on every card. How subscribers spread across zones is the basis for planning field work."
+      },
+      "points": [
+        {
+          "ar": "المنطقة مرجع في المشترك.",
+          "en": "A zone is referenced from each subscriber."
+        },
+        {
+          "ar": "بحث بالاسم فوق البطاقات.",
+          "en": "A search by name above the cards."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "صلاحيات لكل مسار",
+        "en": "A permission on every route"
+      },
+      "body": {
+        "ar": "مجموعات المسارات محمية بـ can:*.view، والأدوار والصلاحيات من spatie/laravel-permission، تُزرع بـ RolesAndPermissionsSeeder. صفحة مصفوفة تعرض من يملك ماذا.",
+        "en": "Route groups are guarded by can:*.view, and roles and permissions come from spatie/laravel-permission, seeded by RolesAndPermissionsSeeder. A matrix page shows who holds what."
+      }
+    },
+    {
+      "title": {
+        "ar": "خدمات منفصلة عن الشاشات",
+        "en": "Services separate from screens"
+      },
+      "body": {
+        "ar": "قواعد التركيب والمخزون والاتصال بالروتر في InstallationService وStockService وMikroTikService. مكونات Livewire 3 تستدعيها فقط، فيبقى منطق العمل قابلاً للاختبار.",
+        "en": "Installation, stock and router rules live in InstallationService, StockService and MikroTikService. Livewire 3 components only call them, which keeps the business logic testable."
+      }
+    }
+  ]
+}

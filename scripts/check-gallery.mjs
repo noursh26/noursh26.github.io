@@ -1,3 +1,4 @@
+import { shownProjects } from './showcase.mjs'
 import fs from 'node:fs'
 import assert from 'node:assert/strict'
 const projects = JSON.parse(fs.readFileSync('src/portfolio/projects.json')),
@@ -5,9 +6,10 @@ const projects = JSON.parse(fs.readFileSync('src/portfolio/projects.json')),
   compact = JSON.parse(
     fs.readFileSync('src/portfolio/screenshots.compact.json'),
   )
-assert.equal(projects.length, 23)
-assert.equal(new Set(projects.map((p) => p.id)).size, 23)
-assert.equal(shots.length, 490)
+assert(projects.length >= 10)
+assert.equal(new Set(projects.map((p) => p.id)).size, projects.length)
+assert(projects.every((p) => ["flagship", "featured", "landing", "more"].includes(p.tier)), "every project needs a tier")
+assert(shots.length >= projects.length * 20)
 assert.equal(compact.length, shots.length)
 const files = new Set(),
   images = new Set()
@@ -47,7 +49,7 @@ for (let i = 0; i < shots.length; i++) {
   }
   for (const k of Object.keys(compact[i])) assert.equal(compact[i][k], s[k])
 }
-for (const p of projects) {
+for (const p of shownProjects(projects, shots)) {
   const file = `dist/projects/${p.id}/index.html`
   if (fs.existsSync('dist')) {
     const html = fs.readFileSync(file, 'utf8')

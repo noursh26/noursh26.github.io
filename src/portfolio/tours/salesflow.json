@@ -1,0 +1,160 @@
+{
+  "facts": [
+    {
+      "value": "3",
+      "label": {
+        "ar": "أدوار للفريق",
+        "en": "team roles"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "ar": "لغتان",
+        "en": "languages"
+      }
+    },
+    {
+      "value": "5",
+      "label": {
+        "ar": "حالات لعرض السعر",
+        "en": "quote statuses"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "نظام مبيعات لفريق صغير، ما زال قيد البناء، وهنا الأجزاء التي تعمل منه اليوم: مسار الفرص، وكتالوج المنتجات، وعروض الأسعار. كل مساحة عمل مستقلة بقاعدة بياناتها.",
+    "en": "A sales system for a small team, still in progress. This case shows the parts that work today: the lead pipeline, the product catalogue and quotes. Each workspace has its own database."
+  },
+  "screens": [
+    {
+      "desk": "desktop-04",
+      "kicker": {
+        "ar": "المبيعات",
+        "en": "Pipeline"
+      },
+      "title": {
+        "ar": "كل الفرص موزعة على مراحلها.",
+        "en": "Every lead sits in its stage."
+      },
+      "body": {
+        "ar": "لوحة بأعمدة للمراحل: جديد، تم التواصل، مؤهّل، عرض سعر. يعرض رأس كل عمود عدد الفرص ومجموع قيمتها، فعمود عرض سعر فيه ست فرص بقيمة 110,300 دولار. على كل بطاقة عنوان الفرصة واسم جهة الاتصال وقيمتها وعدد الأيام منذ إنشائها وأول حرف من اسم المسؤول.",
+        "en": "A board with one column per stage: New, Contacted, Qualified, Proposal. Each column header shows the lead count and the total value, so the Proposal column holds six leads worth USD 110,300. Each card carries the lead title, the contact, the value, the days since it was created and the owner's initial."
+      },
+      "points": [
+        {
+          "ar": "دائرة النقاط ملونة: أخضر من 71 فما فوق، وعنبري من 41.",
+          "en": "The score circle is coloured: green from 71, amber from 41."
+        },
+        {
+          "ar": "بحث وتصفية بالمسؤول وبنطاق التواريخ فوق اللوحة.",
+          "en": "Search and filters for owner and date range sit above the board."
+        },
+        {
+          "ar": "سحب البطاقة إلى عمود آخر ينقل الفرصة إلى تلك المرحلة.",
+          "en": "Dragging a card to another column moves the lead to that stage."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "kicker": {
+        "ar": "العروض",
+        "en": "Catalogue"
+      },
+      "title": {
+        "ar": "كتالوج المنتجات والخدمات.",
+        "en": "A catalogue of products and services."
+      },
+      "body": {
+        "ar": "جدول يضم الأنظمة والأجهزة وخدمات التركيب والتدريب والدعم، لكل منها اسم ووصف قصير ورمز SKU وسعر بالدولار وحالة نشط. فوق الجدول حقل بحث وزرّا منتج جديد واستيراد، وفي كل صف أيقونتا تعديل وحذف.",
+        "en": "A table of systems, hardware, installation, training and support. Each row has a name, a short description, an SKU, a dollar price and an active status. Above it are a search box and the New product and Import buttons, and each row has edit and delete icons."
+      },
+      "points": [
+        {
+          "ar": "رمز SKU يفصل الأنظمة OF والأجهزة HW والخدمات SV.",
+          "en": "SKU prefixes separate systems (OF), hardware (HW) and services (SV)."
+        },
+        {
+          "ar": "زر الاستيراد يقرأ المنتجات من ملف CSV.",
+          "en": "The Import button reads products from a CSV file."
+        },
+        {
+          "ar": "المنتج النشط وحده يظهر عند بناء عرض السعر.",
+          "en": "Only active products are offered when a quote is built."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "kicker": {
+        "ar": "العروض",
+        "en": "Quotes"
+      },
+      "title": {
+        "ar": "عرض سعر جاهز للعميل.",
+        "en": "A quote ready for the client."
+      },
+      "body": {
+        "ar": "معاينة العرض QT-2026-0001 تعرض الشركة والتاريخ وتاريخ الانتهاء، وبيانات العميل، ثم بنود من الكتالوج بالكمية والسعر والمجموع: ثمانية تراخيص فروع وثمانية أجهزة وثماني طابعات وأربعة أيام تركيب وجلستا تدريب. المجموع 16,900 دولار.",
+        "en": "The preview of quote QT-2026-0001 shows the company, issue and expiry dates, the client, then line items from the catalogue with quantity, price and total: eight branch licences, eight terminals, eight printers, four installation days and two training sessions. The total is USD 16,900."
+      },
+      "points": [
+        {
+          "ar": "المجاميع تُحسب من البنود، ومعها الخصم والضريبة.",
+          "en": "Totals are computed from the items, with discount and tax."
+        },
+        {
+          "ar": "زر العميل يفتح رابطاً عاماً بتوقيع خاص للعرض.",
+          "en": "The Client button opens a public link with its own token."
+        },
+        {
+          "ar": "للعرض خمس حالات من مسودة إلى مقبول أو مرفوض.",
+          "en": "A quote moves through five statuses, from draft to accepted or rejected."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "قاعدة بيانات لكل مساحة عمل",
+        "en": "A database per workspace"
+      },
+      "body": {
+        "ar": "تمنح حزمة stancl/tenancy كل مؤسسة قاعدة بياناتها. مسارات المنصة المركزية منفصلة عن مسارات المؤسسة، وتعمل نماذج المؤسسة على اتصالها الخاص.",
+        "en": "The stancl/tenancy package gives each business its own database. Central platform routes are separate from tenant routes, and tenant models run on a tenant connection."
+      }
+    },
+    {
+      "title": {
+        "ar": "مكوّن Livewire لكل شاشة",
+        "en": "One Livewire component per screen"
+      },
+      "body": {
+        "ar": "اللوحة والمنتجات وعروض الأسعار مكوّنات Livewire 4 على Laravel 13 مع Tailwind، بلا واجهة أمامية منفصلة. كل مسار يشير إلى مكوّن.",
+        "en": "The pipeline, products and quotes are Livewire 4 components on Laravel 13 with Tailwind. There is no separate front end, and each route points at a component."
+      }
+    },
+    {
+      "title": {
+        "ar": "سحب البطاقات عبر SortableJS",
+        "en": "Card dragging with SortableJS"
+      },
+      "body": {
+        "ar": "تستعمل لوحة المراحل مكتبة SortableJS، وعند إفلات البطاقة يستدعي المتصفح دالة moveCard في المكوّن لتحفظ المرحلة الجديدة.",
+        "en": "The pipeline board uses SortableJS. When a card is dropped, the browser calls the component's moveCard method, which saves the new stage."
+      }
+    },
+    {
+      "title": {
+        "ar": "مجاميع العرض من البنود",
+        "en": "Quote totals from line items"
+      },
+      "body": {
+        "ar": "عند حفظ أي بند أو حذفه يعيد النموذج حساب المجموع الفرعي والخصم والضريبة والإجمالي. ولكل عرض رمز عشوائي طويل يُستعمل في رابط العميل العام للقبول أو الرفض.",
+        "en": "Saving or deleting a line item makes the model recalculate subtotal, discount, tax and total. Each quote also gets a long random token, used in the public client link for accepting or rejecting."
+      }
+    }
+  ]
+}

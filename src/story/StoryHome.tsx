@@ -402,7 +402,8 @@ export default function StoryHome() {
     <div className="home" ref={root}>
       <a className="skip-link" href="#main">{content.ui.skipLink}</a>
       <SiteHeader page="home" />
-      <main id="main">
+      {/* Remount on language change: SplitText owns the heading text nodes. */}
+      <main id="main" key={lang}>
         <Hero />
         <Flagship />
         <More />

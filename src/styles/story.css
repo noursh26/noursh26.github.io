@@ -56,7 +56,11 @@ html[lang="ar"] .stack span{font-family:var(--font-ar)}
 [data-project="nirso"]{--tint:#f0eefb;--ink:#5b45c2}
 [data-project="lego"]{--tint:#e6f4f6;--ink:#0b7285}
 [data-project="fahrast"]{--tint:#0d1527;--ink:#d9bd85}
+[data-project="relinka"]{--tint:#edf3fb;--ink:#2f6bb8}
+[data-project="foxtech"]{--tint:#fcf1e8;--ink:#a8562b}
 @media (prefers-color-scheme: dark){
+  [data-project="relinka"]{--tint:#0b1422;--ink:#8fbaf0}
+  [data-project="foxtech"]{--tint:#1b110a;--ink:#f0a374}
   [data-project="almustfa"]{--tint:#0c1612;--ink:#74d3a6;--glow:rgba(116,211,166,.10)}
   [data-project="m3aak"]{--tint:#11132a;--ink:#a3abff}
   [data-project="estratijiya-ai"]{--tint:#08170f;--ink:#3fd39c}
@@ -257,6 +261,7 @@ html[dir="rtl"] .rail__progress span{transform-origin:right}
 .story__aside{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
 .story__intro{font-size:clamp(1.125rem, 1.5vw, 1.3125rem);line-height:1.6;color:var(--label-2);text-wrap:pretty}
 html[lang="ar"] .story__intro{line-height:1.95}
+.story__intro.is-reading{color:var(--label)}
 .story__facts{align-self:stretch;display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;margin-top:8px;padding-top:24px;border-top:1px solid var(--hairline)}
 .story__facts dt{font-size:.8125rem;color:var(--label-3)}
 .story__facts dd{margin:3px 0 0;font-weight:500}

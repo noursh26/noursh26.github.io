@@ -1,0 +1,132 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "conversations chart is a single point because the dashboard period is fixed to 24 hours"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "same single-point 24-hour chart, cards cut by the fold"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "customer table is clipped at the left edge on a phone"
+    },
+    {
+      "file": "desktop-04",
+      "reason": "analytics fed with hard-coded numbers tagged 'Placeholder', empty charts, mascot covering the chart"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "analytics tagged 'Placeholder', mascot over the controls"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "widget studio keeps its settings in page state only: nothing is saved and the embed code ignores them"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "widget studio keeps its settings in page state only: nothing is saved and the embed code ignores them"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "empty form: blank display name and logo, unlabeled English terms, cut at the bottom"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "empty form fields, mascot over the preview"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "channels page is static UI; no connected channel can be shown working"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "red error message, mascot over the text, no connected channel"
+    },
+    {
+      "file": "desktop-11",
+      "reason": "empty state: no campaigns, all counters zero"
+    },
+    {
+      "file": "mobile-11",
+      "reason": "empty state: no campaigns, all counters zero, mascot over a card"
+    },
+    {
+      "file": "desktop-12",
+      "reason": "empty state: no audiences"
+    },
+    {
+      "file": "mobile-12",
+      "reason": "empty state: no audiences"
+    },
+    {
+      "file": "desktop-13",
+      "reason": "empty state: no templates, mascot in the empty area"
+    },
+    {
+      "file": "mobile-13",
+      "reason": "empty state: no templates"
+    },
+    {
+      "file": "desktop-14",
+      "reason": "empty chat: only suggested prompts, no answer, agent shown as disconnected"
+    },
+    {
+      "file": "mobile-14",
+      "reason": "empty chat with a '2 errors' toast, mascot over the page"
+    },
+    {
+      "file": "desktop-15",
+      "reason": "empty meeting history, disabled start button, mascot over the list; no meetings route exists in the dashboard source"
+    },
+    {
+      "file": "mobile-15",
+      "reason": "meeting form with a disabled button and an overlapping field icon; no meetings route in the source"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[3], summary, solution; content.ts points[2]",
+      "text": "Analytics, usage, budgets and campaign/template interfaces",
+      "problem": "Analytics numbers are hard-coded and tagged 'Placeholder' in the UI (components/p7/reports-page.tsx); the campaigns page carries a placeholder approval card; usage, campaigns, audiences and templates were all empty or zero in the captures",
+      "fix": "remove 'analytics', 'campaigns' and 'templates'; keep only 'per-workspace usage logging' (usage table exists) or drop the feature"
+    },
+    {
+      "where": "tours/estratijiya-ai.json intro (old)",
+      "text": "customer questions through the website, WhatsApp, Instagram and Messenger",
+      "problem": "Backend has channel code only for Telegram and Messenger plus the website widget; WhatsApp and Instagram appear only as names in a connect-channel tool enum",
+      "fix": "'through its website widget, Telegram and Messenger' / 'عبر أداة المحادثة في الموقع وتيليجرام وماسنجر'"
+    },
+    {
+      "where": "tours/estratijiya-ai.json facts (old)",
+      "text": "3 meeting platforms",
+      "problem": "No meetings route or service found in the dashboard or backend source",
+      "fix": "remove"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "external AI, delivery and meeting services were not run",
+      "problem": "Discloses that AI, delivery and meetings were never run; also meetings are not in the source",
+      "fix": "reword without meetings; AI answers were not exercised in the captures"
+    },
+    {
+      "where": "content.ts lineup",
+      "text": "{ id: 'estratijiya-ai', shot: 'mobile-04' }",
+      "problem": "Home-page phone lineup uses mobile-04, now hidden (placeholder analytics with mascot)",
+      "fix": "replace the lineup entry or drop the project from the lineup"
+    },
+    {
+      "where": "content.ts estratijiya-ai card: desk 'desktop-04', phone 'mobile-04'",
+      "text": "home card screens",
+      "problem": "Both are hidden",
+      "fix": "no shown screen is left for this project: demote the card or recapture with seeded data"
+    },
+    {
+      "where": "directory.config.ts estratijiya-ai",
+      "text": "desk 02/05/04, phone 02/05/04",
+      "problem": "All hidden; check-tours reports them",
+      "fix": "remove the project from the directory until recaptured"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "facts": [
+    {
+      "value": "7",
+      "label": {
+        "en": "sections managed in admin",
+        "ar": "أقسام تُدار من الإدارة"
+      }
+    },
+    {
+      "value": "6",
+      "label": {
+        "en": "services",
+        "ar": "خدمات"
+      }
+    },
+    {
+      "value": "AR",
+      "label": {
+        "en": "page language, RTL",
+        "ar": "لغة الصفحة، RTL"
+      }
+    }
+  ],
+  "intro": {
+    "en": "An Arabic landing page for a technology company, read by someone looking for a developer or a product team. It moves from the offer to services, method and reasons to choose, then work, team and testimonials, and ends in a contact form that lands in the admin panel.",
+    "ar": "صفحة هبوط عربية لشركة تقنية، يقرؤها من يبحث عن مطوّر أو فريق منتج. تنتقل من العرض إلى الخدمات والمنهج وأسباب الاختيار، ثم الأعمال والفريق وآراء العملاء، وتنتهي بنموذج تواصل يصل إلى لوحة الإدارة."
+  },
+  "screens": [
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "en": "Services",
+        "ar": "الخدمات"
+      },
+      "title": {
+        "en": "Six services, one card each.",
+        "ar": "ست خدمات، بطاقة لكل خدمة."
+      },
+      "body": {
+        "en": "Web platforms, mobile apps, UX and UI, game development, AI, and operations support. Each card has a technology tag such as Laravel, Flutter or Unity, a description and three bullet points. Services are managed in the admin panel and ordered by a display field.",
+        "ar": "منصات الويب، وتطبيقات الهاتف، وتصميم التجربة والواجهات، وتطوير الألعاب، والذكاء الاصطناعي، ودعم التشغيل. لكل بطاقة وسم تقنية مثل Laravel أو Flutter أو Unity، ووصف وثلاث نقاط. تُدار الخدمات من لوحة الإدارة وتُرتَّب بحقل ترتيب."
+      },
+      "points": [
+        {
+          "en": "Each card's bullets are a highlights array on the record.",
+          "ar": "نقاط كل بطاقة مصفوفة مميزات في السجل نفسه."
+        },
+        {
+          "en": "Cards zoom in as they scroll into view.",
+          "ar": "تكبر البطاقات عند دخولها الشاشة."
+        },
+        {
+          "en": "Order comes from a display field set in the admin.",
+          "ar": "الترتيب من حقل عرض يُضبط في الإدارة."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-03",
+      "kicker": {
+        "en": "Capabilities",
+        "ar": "القدرات"
+      },
+      "title": {
+        "en": "From idea to launch, in four capabilities.",
+        "ar": "من الفكرة إلى الإطلاق، في أربع قدرات."
+      },
+      "body": {
+        "en": "The heading says the team designs the digital path from first idea to product launch. Below it are the capabilities: discovery and planning, design and experience, multi-platform development, and optimisation and growth. This section explains how the work runs before the page gives reasons to choose the company.",
+        "ar": "العنوان يقول إن الفريق يصمم المسار الرقمي من أول فكرة حتى إطلاق المنتج. تحته القدرات: الاستكشاف والتخطيط، والتصميم والتجربة، والتطوير متعدد المنصات، والتحسين والنمو. يشرح هذا القسم كيف يسير العمل قبل أن تعرض الصفحة أسباب اختيار الشركة."
+      },
+      "points": [
+        {
+          "en": "Each capability has an icon and a short description.",
+          "ar": "لكل قدرة أيقونة ووصف قصير."
+        },
+        {
+          "en": "This copy is fixed in the template, not read from the database.",
+          "ar": "هذا النص ثابت في القالب ولا يُقرأ من قاعدة البيانات."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "en": "Content from the database",
+        "ar": "المحتوى من قاعدة البيانات"
+      },
+      "body": {
+        "en": "Eight Eloquent models cover hero, services, why-us points, companies, projects, team, testimonials and contact messages, plus site settings. One invokable controller gathers them and passes them to a Blade template.",
+        "ar": "ثمانية نماذج Eloquent تغطي الهيرو والخدمات ونقاط لماذا نحن والشركات والمشاريع والفريق وآراء العملاء ورسائل التواصل، إضافة إلى إعدادات الموقع. متحكم واحد قابل للاستدعاء يجمعها ويمررها إلى قالب Blade."
+      }
+    },
+    {
+      "title": {
+        "en": "A guarded admin panel",
+        "ar": "لوحة إدارة محمية"
+      },
+      "body": {
+        "en": "Routes under /admin sit behind authentication with CRUD resources for every section, a message inbox and a settings page. Password change lives inside the panel.",
+        "ar": "مسارات /admin خلف المصادقة، مع موارد CRUD لكل قسم وصندوق رسائل وصفحة إعدادات. تغيير كلمة المرور داخل اللوحة نفسها."
+      }
+    },
+    {
+      "title": {
+        "en": "A contact form that stores every message",
+        "ar": "نموذج تواصل يحفظ كل رسالة"
+      },
+      "body": {
+        "en": "The form posts to a validated route that saves each message as new, with IP and user agent, and shows a success or error message. Messages are read in the admin inbox.",
+        "ar": "النموذج يرسل إلى مسار يتحقق من المدخلات ويحفظ كل رسالة بحالة جديدة مع عنوان IP والمتصفح، ويعرض رسالة نجاح أو خطأ. تُقرأ الرسائل في صندوق الإدارة."
+      }
+    },
+    {
+      "title": {
+        "en": "RTL and Cairo from the start",
+        "ar": "RTL وخط Cairo من البداية"
+      },
+      "body": {
+        "en": "The page is lang=ar and dir=rtl, set in Cairo on Bootstrap 5. The grid, icons and timelines all run from the right.",
+        "ar": "الصفحة lang=ar وdir=rtl بخط Cairo على Bootstrap 5. الشبكة والأيقونات والخطوط الزمنية كلها تبدأ من اليمين."
+      }
+    }
+  ]
+}

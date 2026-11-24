@@ -1,0 +1,309 @@
+{
+  "facts": [
+    {
+      "value": "4",
+      "label": {
+        "ar": "أقسام للتصفح",
+        "en": "browsing sections"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ar": "مساحات تشغيل: متجر ومطعم وتوصيل وإدارة",
+        "en": "workspaces: store, restaurant, delivery, admin"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "ar": "عملتان",
+        "en": "currencies"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "معاك سوق عربي محلي. يدخل الزائر فيتصفح المنتجات والمتاجر والوجبات والخدمات، ثم يفتح التفاصيل وينشئ حساباً ليتابع الطلب. وفي الخلفية يعمل البائع والمطعم وعامل التوصيل والمشرف من مساحات خاصة بهم.",
+    "en": "M3aak is a local Arabic marketplace. A visitor browses products, stores, meals and services, opens the detail, and creates an account to follow an order. Behind it, sellers, restaurants, delivery agents and admins each work from their own space."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "الرئيسية",
+        "en": "Home"
+      },
+      "title": {
+        "ar": "واجهة السوق.",
+        "en": "The marketplace front."
+      },
+      "body": {
+        "ar": "تفتح الصفحة بشريط بحث وأقسام رئيسية بأيقونات، ثم المتاجر وشريط إعلانات متحرك وشبكة منتجات. كل قسم يقود إلى صفحته.",
+        "en": "The page opens on a search bar and icon categories, then stores, a rotating banner and a product grid. Each section leads to its own page."
+      },
+      "points": [
+        {
+          "ar": "عشرة أقسام رئيسية بأيقونات",
+          "en": "Ten main categories with icons"
+        },
+        {
+          "ar": "شريط إعلانات بأربع شرائح",
+          "en": "A banner with four slides"
+        },
+        {
+          "ar": "تبديل الثيم والعملة من الشريط العلوي",
+          "en": "Theme and currency switches in the top bar"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "المنتجات",
+        "en": "Products"
+      },
+      "title": {
+        "ar": "كتالوج بالبحث والتصفية.",
+        "en": "A catalog with search and filters."
+      },
+      "body": {
+        "ar": "تظهر المنتجات بطاقات فيها الاسم والوصف والمتجر والمدينة والفئة والسعر بالليرة السورية. تظهر شارة الخصم حيث يوجد حسم.",
+        "en": "Products appear as cards with name, description, store, city, category and a price in Syrian pounds. A discount badge shows where a discount applies."
+      },
+      "points": [
+        {
+          "ar": "بحث وزر تصفية",
+          "en": "Search and a filter button"
+        },
+        {
+          "ar": "شارات خصم على المنتجات المخفّضة",
+          "en": "Discount badges on reduced items"
+        },
+        {
+          "ar": "زر إضافة إلى السلة في كل بطاقة",
+          "en": "An add-to-cart button on every card"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "البحث",
+        "en": "Search"
+      },
+      "title": {
+        "ar": "نتائج البحث بالاسم والوصف.",
+        "en": "Search by name and description."
+      },
+      "body": {
+        "ar": "البحث عن كلمة يطابق الأسماء والأوصاف وأسماء المتاجر. تبقى البطاقات نفسها ويظهر عدد النتائج فوقها.",
+        "en": "Searching a word matches names, descriptions and store names. The cards stay the same and the result count appears above them."
+      },
+      "points": [
+        {
+          "ar": "عدّاد للنتائج",
+          "en": "A result counter"
+        },
+        {
+          "ar": "مطابقة في الاسم والوصف والفئة",
+          "en": "Matches in name, description and category"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "المنتج",
+        "en": "Product"
+      },
+      "title": {
+        "ar": "صفحة تفاصيل المنتج.",
+        "en": "The product page."
+      },
+      "body": {
+        "ar": "تعرض الصفحة صورة المنتج والسعر والمخزون المتوفر وطريقة التوصيل، ثم الوصف والمواصفات. تحتها منتجات ذات صلة.",
+        "en": "The page shows the product image, price, stock left and delivery terms, then the description and specifications. Related products sit below."
+      },
+      "points": [
+        {
+          "ar": "شريط يبيّن المخزون المتاح",
+          "en": "A bar showing stock left"
+        },
+        {
+          "ar": "جدول مواصفات",
+          "en": "A specifications table"
+        },
+        {
+          "ar": "زر متابعة وأزرار مشاركة",
+          "en": "A favorite button and share buttons"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "ar": "المتاجر",
+        "en": "Stores"
+      },
+      "title": {
+        "ar": "دليل المتاجر.",
+        "en": "The store directory."
+      },
+      "body": {
+        "ar": "كل متجر بطاقة فيها اسمه ووصفه وعدد منتجاته والمعتمد منها وعدد الطلبات المسلّمة. يمكن البحث والترتيب وتغيير عدد البطاقات.",
+        "en": "Each store is a card with its name, description, product count, approved count and delivered orders. You can search, sort and change the page size."
+      },
+      "points": [
+        {
+          "ar": "بحث وترتيب",
+          "en": "Search and sort"
+        },
+        {
+          "ar": "ثلاثة أرقام لكل متجر",
+          "en": "Three numbers per store"
+        },
+        {
+          "ar": "زر عرض المنتجات",
+          "en": "A view-products button"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "متجر",
+        "en": "Store"
+      },
+      "title": {
+        "ar": "صفحة المتجر.",
+        "en": "A store page."
+      },
+      "body": {
+        "ar": "تجمع الصفحة اسم المتجر وصاحبه وتاريخ إنشائه وعدد منتجاته ومتابعيه وإجمالي مبيعاته المحسوب من الطلبات المسلّمة. تحتها منتجاته مع بحث وفرز.",
+        "en": "The page gathers the store name, owner, creation date, product and follower counts, and total sales computed from delivered orders. Its products sit below with search and sort."
+      },
+      "points": [
+        {
+          "ar": "متابعة المتجر ومشاركته",
+          "en": "Follow and share"
+        },
+        {
+          "ar": "المبيعات من الطلبات المسلّمة",
+          "en": "Sales from delivered orders"
+        },
+        {
+          "ar": "تصفية حسب الفئة",
+          "en": "Filter by category"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "الوجبات",
+        "en": "Meals"
+      },
+      "title": {
+        "ar": "صفحة الوجبات السريعة.",
+        "en": "The fast meals page."
+      },
+      "body": {
+        "ar": "تعرض الصفحة وجبات المطاعم فقط، بسعرها ومطعمها وفئتها. يغلق النظام الطلب عندما يكون المطعم خارج ساعات الدوام.",
+        "en": "The page lists restaurant meals only, with price, restaurant and category. Ordering is blocked when a restaurant is outside its opening hours."
+      },
+      "points": [
+        {
+          "ar": "بحث وترتيب",
+          "en": "Search and sort"
+        },
+        {
+          "ar": "حسم على بعض الوجبات",
+          "en": "Discounts on some meals"
+        },
+        {
+          "ar": "ساعات دوام لكل مطعم",
+          "en": "Opening hours per restaurant"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "phone": "mobile-07",
+      "kicker": {
+        "ar": "الخدمات",
+        "en": "Services"
+      },
+      "title": {
+        "ar": "خدمات محلية بفئات.",
+        "en": "Local services by category."
+      },
+      "body": {
+        "ar": "تبدأ الصفحة بفئات رئيسية بأيقونات، ثم خدمات رائجة وأخرى الأكثر طلباً. يعرض كل مزوّد خدمة اسمه وعنوان خدمته وعدد المشاهدات.",
+        "en": "The page starts with main categories and icons, then trending and most requested services. Each provider shows a name, a service title and a view count."
+      },
+      "points": [
+        {
+          "ar": "فئات وفئات فرعية",
+          "en": "Categories and subcategories"
+        },
+        {
+          "ar": "خدمات رائجة والأكثر طلباً",
+          "en": "Trending and most requested"
+        },
+        {
+          "ar": "لا تظهر الخدمة إلا مع اشتراك فعّال",
+          "en": "A service shows only with an active subscription"
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "Livewire لكل دور",
+        "en": "Livewire for every role"
+      },
+      "body": {
+        "ar": "تنقسم المكونات إلى مجلدات للإدارة والمتجر والمطعم والتوصيل والمحفظة. الصفحات تُرسم من الخادم، فلا توجد واجهة منفصلة تحتاج إلى API خاص بها.",
+        "en": "Components are grouped into folders for admin, store, restaurant, delivery and wallet. Pages render on the server, so there is no separate front end that needs its own API."
+      }
+    },
+    {
+      "title": {
+        "ar": "دورة حياة الطلب",
+        "en": "An order lifecycle"
+      },
+      "body": {
+        "ar": "يمر الطلب بالحالات: انتظار، تأكيد، تحضير، جاهز للتوصيل، في الطريق، ثم مُسلَّم. تلغي مهمة مجدولة الطلبات المنتهية.",
+        "en": "An order moves through pending, confirmed, preparing, ready for delivery, out for delivery and delivered. A scheduled job cancels expired orders."
+      }
+    },
+    {
+      "title": {
+        "ar": "إشعارات داخل الموقع وإشعارات ويب",
+        "en": "In-app and web push notifications"
+      },
+      "body": {
+        "ar": "يرسل النظام إشعارات داخل الموقع وإشعارات ويب بمفاتيح VAPID، وتجري الدفعات الكبيرة عبر مهام الطابور.",
+        "en": "The system sends in-app notifications and web push with VAPID keys, and bulk sends run as queued jobs."
+      }
+    },
+    {
+      "title": {
+        "ar": "عربي واتجاه من اليمين",
+        "en": "Arabic and right-to-left"
+      },
+      "body": {
+        "ar": "القوالب مضبوطة على lang=ar و dir=rtl، وتحدد الإعدادات العملة الافتراضية بين الليرة السورية والدولار.",
+        "en": "Layouts are set to lang=ar and dir=rtl, and settings define the default currency between Syrian pounds and US dollars."
+      }
+    }
+  ]
+}

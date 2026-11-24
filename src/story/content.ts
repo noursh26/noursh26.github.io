@@ -12,7 +12,7 @@ export type IconKey =
   | 'search' | 'store' | 'fork' | 'chats' | 'book' | 'chart'
   | 'kanban' | 'timer' | 'flow' | 'pool' | 'path' | 'wrench'
   | 'books' | 'sparkle' | 'bookmarks' | 'servers' | 'translate' | 'cloud'
-  | 'compass' | 'code'
+  | 'compass' | 'code' | 'folder' | 'table' | 'key' | 'wifi'
 
 export const hero = {
   eyebrow: t('Product engineer · Al-Qatifa, Syria', 'مهندس منتجات · القطيفة، سوريا'),
@@ -26,10 +26,10 @@ export const hero = {
   // Left to right as shown; pos 0 is the flagship in the middle.
   lineup: [
     { id: 'lego', shot: 'mobile-02', pos: -2 },
-    { id: 'estratijiya-ai', shot: 'mobile-04', pos: -1 },
+    { id: 'relinka', shot: 'mobile-01', pos: -1 },
     { id: 'almustfa', shot: 'mobile-05', pos: 0 },
-    { id: 'm3aak', shot: 'mobile-03', pos: 1 },
-    { id: 'fahrast', shot: 'mobile-01', pos: 2 },
+    { id: 'nirso', shot: 'mobile-03', pos: 1 },
+    { id: 'fahrast', shot: 'mobile-02', pos: 2 },
   ],
 }
 
@@ -40,14 +40,14 @@ export const flagship = {
   name: t('Almostfa', 'المصطفى'),
   title: t('A whole Quran circle, run from one phone.', 'حلقة تحفيظ كاملة، من هاتف واحد.'),
   intro: t(
-    'Teachers record recitations, points and attendance in seconds. Students follow a daily program and a weekly race. Supervisors see the whole picture — even without a connection.',
-    'يسجّل الأستاذ التسميع والنقاط والحضور في ثوانٍ. يتابع الطالب برنامجه اليومي وسباق الأسبوع. ويرى المشرف الصورة كاملة — حتى دون اتصال.',
+    'Teachers record recitations and points in seconds, even without a connection. Students follow a daily program and a weekly race. Supervisors see the whole picture.',
+    'يسجّل الأستاذ التسميع والنقاط في ثوانٍ، حتى دون اتصال. ويتابع الطالب برنامجه اليومي وسباق الأسبوع. ويرى المشرف الصورة كاملة.',
   ),
   facts: [
     { icon: 'offline' as IconKey, text: t('Works offline, syncs later', 'يعمل دون اتصال ويزامن لاحقاً') },
     { icon: 'devices' as IconKey, text: t('Web and Android from one codebase', 'ويب وأندرويد من شيفرة واحدة') },
     { icon: 'halfMoon' as IconKey, text: t('Light and dark', 'وضع فاتح وداكن') },
-    { icon: 'buildings' as IconKey, text: t('Each organisation’s data kept apart', 'بيانات كل جهة معزولة عن غيرها') },
+    { icon: 'buildings' as IconKey, text: t('Each course’s data kept apart', 'بيانات كل دورة معزولة عن غيرها') },
   ],
   steps: [
     {
@@ -98,7 +98,7 @@ export const flagship = {
   stack: ['Laravel', 'React 19', 'TanStack Query', 'Tailwind CSS', 'Capacitor', 'MariaDB'],
 }
 
-/* ── The next five, each on its own colour, sampled from its screens ── */
+/* ── The next six, each on its own colour, sampled from its screens ── */
 export type Panel = {
   id: string
   kind: T
@@ -116,65 +116,14 @@ export const more = {
   eyebrow: t('More products', 'منتجات أخرى'),
   title: t('From local markets to AI agents.', 'من الأسواق المحلية إلى وكلاء الذكاء الاصطناعي.'),
   lede: t(
-    '23 products and 490 screens, captured from the running apps with demonstration data. Five of them:',
-    '23 منتجاً و490 شاشة التُقطت من التطبيقات وهي تعمل، ببيانات تجريبية. هذه خمسة منها:',
+    '18 products and 175 screens, captured from the running apps with demonstration data. Six of them, in the order I’d show you:',
+    '18 منتجاً و175 شاشة التُقطت من التطبيقات وهي تعمل، ببيانات تجريبية. هذه ستة منها، بالترتيب الذي أعرضها به:',
   ),
   open: t('Case study', 'تفاصيل المشروع'),
   built: t('Built with', 'التقنيات'),
 }
 
 export const panels: Panel[] = [
-  {
-    id: 'm3aak', host: 'm3aak',
-    kind: t('Marketplace', 'سوق إلكتروني'),
-    name: t('M3aak', 'معاك'),
-    title: t('A local market, from discovery to order.', 'سوق محلي، من الاكتشاف حتى الطلب.'),
-    text: t(
-      'Products, stores, meals and services in one Arabic marketplace, with buyer accounts and room for sellers, restaurants and delivery to run their side.',
-      'منتجات ومتاجر ووجبات وخدمات في سوق عربي واحد، مع حسابات للمشترين ومساحات يدير منها البائع والمطعم والتوصيل أعمالهم.',
-    ),
-    desk: 'desktop-03', phone: 'mobile-03',
-    points: [
-      { icon: 'search', text: t('A searchable catalog with detailed product pages', 'كتالوج قابل للبحث وصفحات منتجات مفصلة') },
-      { icon: 'store', text: t('Store pages that keep the seller’s context', 'صفحات متاجر تحافظ على سياق البائع') },
-      { icon: 'fork', text: t('Separate paths for meals and local services', 'مسارات مستقلة للوجبات والخدمات المحلية') },
-    ],
-    stack: ['Laravel', 'Livewire', 'MariaDB'],
-  },
-  {
-    id: 'estratijiya-ai', host: 'estratijiya.ai',
-    kind: t('AI agent platform', 'منصة وكلاء ذكاء اصطناعي'),
-    name: t('Estratijiya AI', 'استراتيجيا AI'),
-    title: t('Every conversation, with the customer’s context.', 'كل محادثة، ومعها سياق العميل.'),
-    text: t(
-      'Customer conversations, knowledge sources, AI agents, channels and a chat widget — with analytics, team roles and a usage budget for every workspace.',
-      'محادثات العملاء ومصادر المعرفة ووكلاء الذكاء الاصطناعي والقنوات وأداة محادثة للموقع — مع تحليلات وأدوار للفريق وميزانية استخدام لكل مساحة.',
-    ),
-    desk: 'desktop-04', phone: 'mobile-04',
-    points: [
-      { icon: 'chats', text: t('An inbox linked to customer profiles and follow-ups', 'صندوق محادثات مرتبط بملفات العملاء والمتابعة') },
-      { icon: 'book', text: t('A knowledge library with vector search', 'مكتبة معرفة ببحث دلالي') },
-      { icon: 'chart', text: t('Analytics, cost and budget per workspace', 'تحليلات وتكلفة وميزانية لكل مساحة') },
-    ],
-    stack: ['Next.js', 'TypeScript', 'Drizzle', 'PostgreSQL', 'pgvector'],
-  },
-  {
-    id: 'nirso', host: 'nirso',
-    kind: t('Team workspace', 'مساحة عمل للفرق'),
-    name: t('NIRSO', 'نيرسو'),
-    title: t('A workspace that follows how the team works.', 'مساحة عمل تتبع طريقة عمل فريقك.'),
-    text: t(
-      'Projects and tasks as lists, boards, Gantt, calendars and tables — with planning, time tracking, goals, workload, forms and automations.',
-      'المشاريع والمهام كقوائم ولوحات ومخطط زمني وتقويم وجداول — مع التخطيط وتسجيل الوقت والأهداف وأعباء الفريق والنماذج والأتمتة.',
-    ),
-    desk: 'desktop-03', phone: 'mobile-01',
-    points: [
-      { icon: 'kanban', text: t('The same tasks in six views, one click apart', 'المهام نفسها بست طرق عرض، بضغطة واحدة') },
-      { icon: 'timer', text: t('Time tracking, goals and team workload', 'تسجيل الوقت والأهداف وأعباء الفريق') },
-      { icon: 'flow', text: t('Forms and automations inside every list', 'نماذج وأتمتة داخل كل قائمة') },
-    ],
-    stack: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-  },
   {
     id: 'lego', host: 'legodesigns',
     kind: t('Pool design app', 'تطبيق تصميم المسابح'),
@@ -196,18 +145,85 @@ export const panels: Panel[] = [
     id: 'fahrast', host: 'fahrast.ai',
     kind: t('AI library', 'مكتبة بالذكاء الاصطناعي'),
     name: t('Fahrast AI', 'فهرست AI'),
-    title: t('A library that connects knowledge to research.', 'مكتبة تصل المعرفة بالبحث.'),
+    title: t('The heritage library, catalogued and connected.', 'مكتبة التراث، مفهرسة ومترابطة.'),
     text: t(
-      'Books, authors and narrators of the Islamic heritage, a personal library with shelves, and an AI research studio for working with the sources.',
-      'كتب ومؤلفون ورواة من التراث الإسلامي، ومكتبة شخصية برفوف، واستوديو بحث بالذكاء الاصطناعي للعمل على المصادر.',
+      'A catalog of the Islamic heritage: books, authors and narrators, searchable and linked to each other, with a personal library for every reader.',
+      'فهرس للتراث الإسلامي: كتب ومؤلفون ورواة، قابلة للبحث ومترابطة، مع مكتبة شخصية لكل قارئ.',
+    ),
+    desk: 'desktop-02', phone: 'mobile-02',
+    points: [
+      { icon: 'books', text: t('A catalog of books, authors and narrators', 'كتالوج للكتب والمؤلفين والرواة') },
+      { icon: 'bookmarks', text: t('A personal library with shelves', 'مكتبة شخصية برفوف') },
+    ],
+    stack: ['Laravel', 'Livewire', 'MariaDB'],
+  },
+  {
+    id: 'nirso', host: 'nirso',
+    kind: t('Team workspace', 'مساحة عمل للفرق'),
+    name: t('NIRSO', 'نيرسو'),
+    title: t('A workspace that follows how the team works.', 'مساحة عمل تتبع طريقة عمل فريقك.'),
+    text: t(
+      'Projects and tasks as lists, boards, timelines, calendars and tables, with time tracking, goals, forms and automations built in.',
+      'المشاريع والمهام كقوائم ولوحات ومخطط زمني وتقويم وجداول، مع تسجيل الوقت والأهداف والنماذج والأتمتة.',
+    ),
+    desk: 'desktop-03', phone: 'mobile-01',
+    points: [
+      { icon: 'kanban', text: t('The same tasks in five views, one click apart', 'المهام نفسها بخمس طرق عرض، بضغطة واحدة') },
+      { icon: 'timer', text: t('Time tracking, goals and team workload', 'تسجيل الوقت والأهداف وأعباء الفريق') },
+      { icon: 'flow', text: t('Forms and automations inside every list', 'نماذج وأتمتة داخل كل قائمة') },
+    ],
+    stack: ['Next.js', 'TypeScript', 'Drizzle', 'PostgreSQL'],
+  },
+  {
+    id: 'relinka', host: 'relinka',
+    kind: t('Document workspace', 'مساحة مستندات'),
+    name: t('Relinka', 'ريلينكا'),
+    title: t('Connected files. A workspace you can understand.', 'ملفات مترابطة. مساحة يمكن فهمها.'),
+    text: t(
+      'An Arabic drive for a company’s folders and files, with every file encrypted, every workspace kept apart and a trash that can be undone.',
+      'مساحة عربية لمجلدات الشركة وملفاتها، كل ملف فيها مشفّر، وكل مساحة عمل معزولة عن غيرها، وسلة محذوفات يمكن التراجع عنها.',
+    ),
+    desk: 'desktop-01', phone: 'mobile-03',
+    points: [
+      { icon: 'folder', text: t('Folders, recent files and a trash with restore', 'مجلدات وملفات حديثة وسلة محذوفات مع الاستعادة') },
+      { icon: 'key', text: t('Every file encrypted with its own key', 'كل ملف مشفّر بمفتاحه الخاص') },
+      { icon: 'buildings', text: t('Four workspace roles, each company kept apart', 'أربعة أدوار في المساحة، وكل شركة معزولة عن غيرها') },
+    ],
+    stack: ['React', 'TypeScript', 'TanStack Router', 'Zod'],
+  },
+  {
+    id: 'estratijiya-ai', host: 'estratijiya.ai',
+    kind: t('AI agent platform', 'منصة وكلاء ذكاء اصطناعي'),
+    name: t('Estratijiya AI', 'استراتيجيا AI'),
+    title: t('Every conversation, with the customer’s context.', 'كل محادثة، ومعها سياق العميل.'),
+    text: t(
+      'Customer conversations next to the customer’s profile, a knowledge library the agent cites in its answers, team roles and a usage budget for every workspace.',
+      'محادثات العملاء بجانب ملف العميل، ومكتبة معرفة يستشهد بها الوكيل في إجاباته، وأدوار للفريق وميزانية استخدام لكل مساحة عمل.',
+    ),
+    desk: 'desktop-02', phone: 'mobile-02',
+    points: [
+      { icon: 'chats', text: t('An inbox linked to customer profiles and lead scores', 'صندوق محادثات مرتبط بملفات العملاء وتقييمهم') },
+      { icon: 'book', text: t('Answers that cite the knowledge library', 'إجابات تستشهد بمكتبة المعرفة') },
+      { icon: 'chart', text: t('Usage, cost and budget per workspace', 'الاستخدام والتكلفة والميزانية لكل مساحة') },
+    ],
+    stack: ['Next.js', 'TypeScript', 'Drizzle', 'PostgreSQL', 'pgvector'],
+  },
+  {
+    id: 'foxtech', host: 'foxtech',
+    kind: t('ISP operations', 'تشغيل مزود إنترنت'),
+    name: t('FoxTech', 'فوكس تك'),
+    title: t('Subscribers, teams and finance in one panel.', 'المشترك والفريق والمالية، في لوحة واحدة.'),
+    text: t(
+      'Everything an internet provider runs on: subscribers and plans, installations in the field, inventory across warehouses, expenses, payroll and books that balance.',
+      'كل ما يعمل عليه مزوّد الإنترنت: المشتركون والباقات، والتركيب في الميدان، والمخزون بين المستودعات، والمصروفات والرواتب، ودفاتر محاسبية متوازنة.',
     ),
     desk: 'desktop-01', phone: 'mobile-01',
     points: [
-      { icon: 'books', text: t('A catalog of books, authors and narrators', 'كتالوج للكتب والمؤلفين والرواة') },
-      { icon: 'sparkle', text: t('An AI research studio over the sources', 'استوديو بحث بالذكاء الاصطناعي على المصادر') },
-      { icon: 'bookmarks', text: t('A personal library, shelves and uploads', 'مكتبة شخصية ورفوف ورفع للكتب') },
+      { icon: 'wifi', text: t('Subscribers, plans and collections', 'المشتركون والباقات والتحصيل') },
+      { icon: 'wrench', text: t('Installation and maintenance queues', 'طوابير التركيب والصيانة') },
+      { icon: 'chart', text: t('Inventory, expenses and journal records', 'المخزون والمصروفات والقيود') },
     ],
-    stack: ['Laravel', 'Livewire', 'MariaDB'],
+    stack: ['React', 'TypeScript', 'Laravel', 'REST API'],
   },
 ]
 
@@ -216,12 +232,13 @@ export const landings = {
   eyebrow: t('Landing pages', 'صفحات الهبوط'),
   title: t('Brand sites, each with its own story.', 'مواقع تعريفية، لكل منها قصتها.'),
   lede: t('Designed and built from scratch, one story per brand.', 'مصممة ومبنية من الصفر، لكل علامة قصتها.'),
-  all: t('All 23 projects', 'كل المشاريع الـ23'),
+  all: t('All 18 projects', 'كل المشاريع الـ18'),
   items: [
     { id: 'estratijiya', shot: 'desktop-01', host: 'estratijiya', name: t('Estratijiya', 'استراتيجيا'), text: t('A cinematic brand story told in scroll scenes.', 'قصة علامة سينمائية تُروى بمشاهد التمرير.') },
     { id: 'petravex', shot: 'desktop-01', host: 'petravex', name: t('Petravex', 'بتراڤكس'), text: t('A UAE group, from building materials to fit-out.', 'مجموعة إماراتية، من مواد البناء حتى التجهيز.') },
-    { id: 'bolupinar', shot: 'desktop-01', host: 'bolupinar', name: t('Bolu Pınar', 'بولو بينار'), text: t('Turkish spring water, from the source to the table in Kuwait.', 'مياه ينابيع تركية، من المصدر حتى المائدة في الكويت.') },
+    { id: 'bolupinar', shot: 'desktop-03', host: 'bolupinar', name: t('Bolu Pınar', 'بولو بينار'), text: t('Turkish spring water, from the source to the table in Kuwait.', 'مياه ينابيع تركية، من المصدر حتى المائدة في الكويت.') },
     { id: 'maash', shot: 'desktop-01', host: 'maash', name: t('Maash', 'معاش'), text: t('A furniture draftsman’s portfolio, from sketch to cut-ready panels.', 'معرض مصمم أثاث، من الرسم حتى الألواح الجاهزة للقص.') },
+    { id: 'dwiptech', shot: 'desktop-02', host: 'dwiptech', name: t('DWIP Tech', 'DWIP Tech'), text: t('A technology studio, introduced on one page.', 'شركة تقنية تعرّف بنفسها في صفحة واحدة.') },
   ],
 }
 
@@ -260,8 +277,8 @@ export const story = {
       tag: t('Systems', 'الأنظمة'),
       title: t('Software that runs a business', 'برمجيات تدير عملاً كاملاً'),
       text: t(
-        'Accounting, ISP operations, wholesale and CRM — where every number has to trace back to its record.',
-        'محاسبة وتشغيل مزودي إنترنت وبيع بالجملة وإدارة عملاء — حيث يجب أن يعود كل رقم إلى سجله.',
+        'Accounting, ISP operations and team workspaces — where every number has to trace back to its record.',
+        'محاسبة وتشغيل مزودي إنترنت ومساحات عمل للفرق — حيث يجب أن يعود كل رقم إلى سجله.',
       ),
     },
     {
@@ -278,8 +295,8 @@ export const story = {
       tag: t('AI', 'الذكاء الاصطناعي'),
       title: t('Agents inside real workflows', 'وكلاء داخل سير عمل حقيقي'),
       text: t(
-        'Conversations, knowledge and agents with cost and quality in view — Estratijiya AI, Fahrast AI and SalesFlow.',
-        'محادثات ومعرفة ووكلاء مع حساب التكلفة والجودة — استراتيجيا AI وفهرست AI وSalesFlow.',
+        'AI that works inside the product and respects its permissions, like the NIRSO assistant that works with a team’s tasks over MCP.',
+        'ذكاء اصطناعي يعمل داخل المنتج ويحترم صلاحياته، مثل مساعد نيرسو الذي يتعامل مع مهام الفريق عبر MCP.',
       ),
     },
     {

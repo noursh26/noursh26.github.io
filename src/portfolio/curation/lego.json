@@ -1,0 +1,78 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-03",
+      "reason": "gradient placeholder icons instead of pool images; Next button disabled"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "gradient placeholder icons instead of pool images; Next button disabled"
+    },
+    {
+      "file": "desktop-04",
+      "reason": "empty form: blank select, empty textareas, two notes fields"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "empty form: blank select, empty textareas, two notes fields"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "empty form with browser-default radios and fieldset border; submit bar overlaps the footer"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "empty form with browser-default radios and fieldset border; submit bar overlaps the footer"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "product photos do not match the products (living-room sofas for a pool robot and LED lights); cards cut at the bottom"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "product photos do not match the products (living-room sofas for a pool robot and LED lights); cards cut at the bottom"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "one order row on an otherwise blank page"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "one order row on an otherwise blank page"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "shows a fake demo address and a referral code; no working feature on show"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "shows a fake demo address and a referral code; no working feature on show"
+    }
+  ],
+  "claims": [
+    {
+      "where": "tours/lego.json facts[2] (3 payment gateways)",
+      "text": "3 payment gateways",
+      "problem": "payments are hard-disabled: config/payments.php enabled=false, PaymentManager refuses checkout and webhooks, CardGateway is an empty stub. Options are display only and the team collects payment manually",
+      "fix": "remove (done in tour)"
+    },
+    {
+      "where": "tours/lego.json engineering[2] (Swappable payment gateways)",
+      "text": "card, Tabby and Tamara behind one interface, webhook signature verified",
+      "problem": "same: disabled by owner decision, card driver empty",
+      "fix": "remove (done in tour)"
+    },
+    {
+      "where": "tours/lego.json desktop-08 point",
+      "text": "A quote shows a price range, 178,000 to 158,000 AED",
+      "problem": "range is reversed (high first), looks like a bug",
+      "fix": "remove (done in tour)"
+    },
+    {
+      "where": "directory.config.ts lego",
+      "text": "desk desktop-07; phone mobile-03, mobile-07",
+      "problem": "screens are hidden",
+      "fix": "use desktop-02/01/06 and mobile-02/01/06"
+    }
+  ]
+}

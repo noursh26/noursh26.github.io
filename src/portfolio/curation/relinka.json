@@ -1,0 +1,50 @@
+{
+  "exclude": [
+    {
+      "file": "mobile-06",
+      "reason": "trash table overflows the 390px frame: the restore and delete column is pushed off the left edge (RTL table wider than its container)"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "empty state: smart tables need document extraction, which needs an AI provider key"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "empty state: smart tables need document extraction, which needs an AI provider key"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "start-interview button disabled: needs an AI provider key that is not configured"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "start-interview button disabled: needs an AI provider key that is not configured"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[2], summary, solution",
+      "text": "Collection, smart table and archive search interfaces",
+      "problem": "Folders, recent, starred, shared, trash, search by reference and integration keys now work and are shown; smart tables still need document extraction with an AI provider and stay hidden",
+      "fix": "remove; or reword to 'Folders, recent files, trash with restore, and encrypted storage per workspace' / 'مجلدات وأخيرة وسلة محذوفات مع استعادة وتخزين مشفّر لكل مساحة'"
+    },
+    {
+      "where": "projects.json features[3], flow[2], challenge",
+      "text": "Archive blueprint and integration-key configuration",
+      "problem": "The blueprint interview cannot start without an AI provider key (button disabled, none configured); the key list is empty",
+      "fix": "remove"
+    },
+    {
+      "where": "content.ts relinka text, points[1], points[2]",
+      "text": "smart collections, an archive blueprint and integration keys; Smart collections and archive search; Archive blueprints and integration keys",
+      "problem": "Same: depends on a missing AI integration",
+      "fix": "text: 'An Arabic drive: folders, recent files, trash with restore, and encrypted storage per workspace' / 'مساحة عربية للملفات: مجلدات وأخيرة وسلة محذوفات مع استعادة وتخزين مشفّر لكل مساحة'; drop points[1] and points[2]"
+    },
+    {
+      "where": "directory.config.ts relinka",
+      "text": "desk uses desktop-04, phone uses mobile-07",
+      "problem": "Both screens now show real content and may be used",
+      "fix": "no change needed; any shown screen is valid"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-04",
+      "reason": "timeline bars are tiny pills with clipped labels, most of the page empty"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "empty planner: no scheduled blocks, empty priorities and backlog"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "empty timesheet: zero hours every day"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "empty goals page"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "workload with no capacity set, one task each, mostly empty page"
+    },
+    {
+      "file": "desktop-11",
+      "reason": "empty inbox"
+    },
+    {
+      "file": "desktop-13",
+      "reason": "forms hub with all counters at 0 and an empty state"
+    },
+    {
+      "file": "desktop-14",
+      "reason": "automations: 'no rules yet'"
+    },
+    {
+      "file": "desktop-15",
+      "reason": "search page with no query and no results"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "timeline bars are tiny pills with clipped labels"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "calendar pills truncated to two letters"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "empty planner week, 'nothing scheduled' on every day"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "empty timesheet"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "empty goals page"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "workload with no capacity, nearly empty"
+    },
+    {
+      "file": "mobile-11",
+      "reason": "empty inbox"
+    },
+    {
+      "file": "mobile-13",
+      "reason": "forms hub with zeros and an empty state"
+    },
+    {
+      "file": "mobile-14",
+      "reason": "automations: 'no rules yet'"
+    },
+    {
+      "file": "mobile-15",
+      "reason": "empty search"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json stack and content.ts panels nirso stack",
+      "text": "Prisma",
+      "problem": "the repo uses Drizzle ORM (packages/db, drizzle-kit); there is no Prisma",
+      "fix": "replace Prisma with Drizzle"
+    },
+    {
+      "where": "content.ts panels nirso points[0]",
+      "text": "The same tasks in six views",
+      "problem": "five view renderers exist (list, board, calendar, table, gantt); other enum values (timeline, workload, activity, map, mind map) are declared but not rendered as views",
+      "fix": "EN: five views. AR: بخمس طرق عرض"
+    },
+    {
+      "where": "content.ts panels nirso text, projects.json features",
+      "text": "planning, time tracking, goals, workload, forms, automations",
+      "problem": "all implemented in source, but their captures are empty",
+      "fix": "keep text; screens hidden"
+    },
+    {
+      "where": "directory.config.ts nirso",
+      "text": "desk desktop-03, desktop-04, desktop-08; phone mobile-01, mobile-03, mobile-08",
+      "problem": "desktop-04, desktop-08 and mobile-08 are hidden",
+      "fix": "use desktop-03/02/06, mobile-01/03/06"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "grouping identity, HR and agent packages here",
+      "problem": "the work repo holds db, identity and relinka packages; hr and agent are sibling folders of C:/Projects/NIRSO",
+      "fix": "reword to identity and assistant packages, or drop"
+    }
+  ]
+}

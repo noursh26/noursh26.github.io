@@ -1,0 +1,46 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-09",
+      "reason": "the contact page is a static template: placeholder phone '+966 XX XXX XXXX', and its form posts nowhere"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "static contact template with a placeholder phone number and a form that posts nowhere"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "registration needs an SMS provider for phone verification, which was not run"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "registration needs an SMS provider for phone verification, which was not run"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[3]",
+      "text": "Buyer account and seller operation interfaces in the repository",
+      "problem": "Real in the repo (store, restaurant, delivery, admin routes) but no screen of them is captured; 'in the repository' reads as unverified",
+      "fix": "reword to 'Separate workspaces for stores, restaurants, delivery and admins' / 'مساحات منفصلة للمتاجر والمطاعم والتوصيل والإدارة' (source-verified)"
+    },
+    {
+      "where": "projects.json solution, challenge, tour facts",
+      "text": "mentions of payments and delivery; old tour fact '3 account types'",
+      "problem": "Payments and delivery were not run; the account-type count was not found in the source",
+      "fix": "drop the 3-account-types fact (done in the tour)"
+    },
+    {
+      "where": "tours/m3aak.json engineering (old)",
+      "text": "WhatsApp messages",
+      "problem": "A WhatsAppService exists but depends on an external provider that was not run",
+      "fix": "removed from the tour"
+    },
+    {
+      "where": "content.ts / directory.config.ts m3aak",
+      "text": "directory.config.ts m3aak desk 01/03/05, phone 01/03/05",
+      "problem": "All hidden; check-tours reports them. content.ts has no m3aak card",
+      "fix": "remove m3aak from the directory until recaptured with real data"
+    }
+  ]
+}

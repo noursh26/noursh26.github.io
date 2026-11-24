@@ -4,6 +4,12 @@ export type Category =
 export type Project = {
   id: string
   name: string
+  /** Where the project sits in the directory story, biggest first. */
+  tier: 'flagship' | 'featured' | 'landing' | 'more'
+  /** Shown as a small label: a side project still being built. */
+  status?: 'in-progress'
+  /** The product's own screens are dark; its pages follow. */
+  theme?: 'dark'
   category: Category
   repos: string[]
   summary: Copy
@@ -43,4 +49,18 @@ export type ScreenshotProvenance = Shot & {
   route: string
   capturedAt: string
   fixture: string
+}
+/** The walk-through on a case page: every screen, explained in order. */
+export type Tour = {
+  facts: { value: string; label: Copy }[]
+  intro: Copy
+  screens: {
+    desk?: string
+    phone?: string
+    kicker: Copy
+    title: Copy
+    body: Copy
+    points: Copy[]
+  }[]
+  engineering: { title: Copy; body: Copy }[]
 }

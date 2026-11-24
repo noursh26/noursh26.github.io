@@ -1,0 +1,149 @@
+{
+  "facts": [
+    {
+      "value": "2",
+      "label": {
+        "en": "languages, EN and AR",
+        "ar": "لغتان، إنجليزية وعربية"
+      }
+    },
+    {
+      "value": "5",
+      "label": {
+        "en": "chain steps",
+        "ar": "خطوات في السلسلة"
+      }
+    },
+    {
+      "value": "7",
+      "label": {
+        "en": "group activities",
+        "ar": "أنشطة للمجموعة"
+      }
+    }
+  ],
+  "intro": {
+    "en": "A site for a UAE group working across building materials, contracting, decor, fit-out, and import and export. A buyer or supplier should understand in two minutes what ties these companies together. The page is dark and gold, and it leans on serif type rather than lists.",
+    "ar": "موقع لمجموعة إماراتية تعمل في مواد البناء والمقاولات والديكور والتجهيز الداخلي والاستيراد والتصدير. يجب أن يفهم المشتري أو المورّد في دقيقتين ما يجمع هذه الشركات. الصفحة داكنة وذهبية وتعتمد على الخط ذي الزوائد بدل القوائم."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "en": "Opening",
+        "ar": "المشهد الأول"
+      },
+      "title": {
+        "en": "Three entry points from the first screen.",
+        "ar": "ثلاث بوابات من الشاشة الأولى."
+      },
+      "body": {
+        "en": "A dark photograph of a plant and a headline set in Cormorant: \"From stone, we build the future.\" Along the bottom are three entry points, buyer, supplier and someone looking for work. Each one takes the visitor down to the contact details.",
+        "ar": "صورة داكنة لمصنع وعنوان بخط Cormorant: \"من الحجر نبني المستقبل\". في الأسفل ثلاث بوابات: مشترٍ، ومورّد، وباحث عن عمل. كل بوابة تنزل بالزائر إلى بيانات التواصل."
+      },
+      "points": [
+        {
+          "en": "An EN / AR language switch in the top bar.",
+          "ar": "مبدّل لغة EN / AR في الشريط العلوي."
+        },
+        {
+          "en": "A single gold full stop is the only ornament in the headline.",
+          "ar": "نقطة ذهبية واحدة هي الزخرفة الوحيدة في العنوان."
+        },
+        {
+          "en": "A logo preloader whose curtain slides up.",
+          "ar": "شاشة تحميل بالشعار يرتفع ستارها للأعلى."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "en": "Value chain",
+        "ar": "سلسلة القيمة"
+      },
+      "title": {
+        "en": "Step one: the material.",
+        "ar": "الخطوة الأولى: المادة."
+      },
+      "body": {
+        "en": "\"From stone to skyline\" is a five-step story that changes in place. Step 01 is the material: a high-racked warehouse and a short note about choosing sources and testing samples. A \"01 / 05\" counter and a thin gold line say where you are in the journey.",
+        "ar": "\"من الحجر إلى الأفق\" قصة من خمس خطوات تتبدّل في مكانها. الخطوة 01 هي المادة: مستودع بأرفف عالية وملاحظة قصيرة عن اختيار المصادر وفحص العينات. عدّاد \"01 / 05\" وخط ذهبي رفيع يبيّنان موضعك في الرحلة."
+      },
+      "points": [
+        {
+          "en": "The step number is outlined only, large and quiet.",
+          "ar": "رقم الخطوة كبير وهادئ بخط خارجي فقط."
+        },
+        {
+          "en": "A caption under the photo names the stage.",
+          "ar": "وصف أسفل الصورة يسمّي المرحلة."
+        },
+        {
+          "en": "On a phone the steps stack in a column, with no pin.",
+          "ar": "على الهاتف تتراص الخطوات في عمود دون تثبيت."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "en": "Value chain",
+        "ar": "سلسلة القيمة"
+      },
+      "title": {
+        "en": "Step two: clinker.",
+        "ar": "الخطوة الثانية: الكلنكر."
+      },
+      "body": {
+        "en": "The image changes through a mask that reveals from the bottom, and the text swaps with it. This is clinker grinding in RAKEZ, with a line saying the quality of every future mix is decided here. The counter now reads \"02 / 05.\"",
+        "ar": "تتبدّل الصورة عبر قناع ينكشف من الأسفل ويتبدّل النص معها. هذا طحن الكلنكر في راكز، مع سطر يقول إن جودة كل خلطة قادمة تُحسم هنا. العدّاد يقرأ الآن \"02 / 05\"."
+      },
+      "points": [
+        {
+          "en": "The image eases from a slight zoom as it is revealed.",
+          "ar": "الصورة تستقر من تكبير طفيف أثناء انكشافها."
+        },
+        {
+          "en": "Montserrat for notes, Cormorant for the step title.",
+          "ar": "Montserrat للملاحظات وCormorant لعنوان الخطوة."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "en": "No framework",
+        "ar": "بلا إطار عمل"
+      },
+      "body": {
+        "en": "The site is HTML, CSS and one JavaScript file, with GSAP, ScrollTrigger and Lenis kept locally in a vendor folder. There is no build step, and it can be uploaded as is.",
+        "ar": "الموقع HTML وCSS وملف JavaScript واحد، مع GSAP وScrollTrigger وLenis محفوظة محلياً في مجلد vendor. لا توجد خطوة بناء ويمكن رفعه كما هو."
+      }
+    },
+    {
+      "title": {
+        "en": "Full Arabic with RTL",
+        "ar": "عربية كاملة مع RTL"
+      },
+      "body": {
+        "en": "Copy lives in a dictionary keyed by data-i18n. Switching sets the language and direction on the root element, re-measures ScrollTrigger and moves the type to Almarai.",
+        "ar": "النصوص في قاموس مفتاحه data-i18n. التبديل يضبط اللغة والاتجاه على العنصر الجذر ويعيد قياس ScrollTrigger وينقل الخط إلى Almarai."
+      }
+    },
+    {
+      "title": {
+        "en": "Pinning on desktop only",
+        "ar": "التثبيت على سطح المكتب فقط"
+      },
+      "body": {
+        "en": "The value chain pins with clip-path image masks on wide screens. Below 860 pixels it becomes a plain sequence of sections, which protects reading on a phone.",
+        "ar": "تُثبَّت سلسلة القيمة مع أقنعة صور بـ clip-path على الشاشات العريضة. تحت 860 بكسل تصبح أقساماً متتابعة عادية، وهذا يحمي القراءة على الهاتف."
+      }
+    }
+  ]
+}

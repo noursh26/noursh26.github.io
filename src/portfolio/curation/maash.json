@@ -1,0 +1,81 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-02",
+      "reason": "duplicate of desktop-03 (same About section), laptop cut off under the heading"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "duplicate of mobile-03, the 2005-2026 tag collides with the logo"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "self-rated skill bars (AutoCAD 98, SketchUp 95) are the owner's own estimates"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "self-rated skill bars are the owner's own estimates"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "Ten recent commissions with invented cities and years; filter row above a cut-off card"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "Ten recent commissions with invented cities and years"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "project cards are generated SVG illustrations with invented city, year and timber, presented as real commissions"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "project cards are generated SVG illustrations with invented city, year and timber, presented as real commissions"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "abstract tool plates with labels, no real workshop content, strip cut at both edges"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "abstract tool plates with labels, strip cut at the right edge"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "placeholder phone number +963 000 000 000, nav overlapping the workshop strip at the top"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "placeholder phone number +963 000 000 000"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[3]",
+      "text": "Projects, drawings, and workshop imagery in a responsive page.",
+      "problem": "There are no project or workshop photographs; the ten projects and the workshop plates are SVG illustrations with invented metadata",
+      "fix": {
+        "en": "Process drawings generated in code, in a responsive page.",
+        "ar": "رسومات مراحل العمل مولّدة بالكود ضمن صفحة متجاوبة."
+      }
+    },
+    {
+      "where": "projects.json solution",
+      "text": "...furniture drawings, workshop context, and contact",
+      "problem": "Workshop context is illustration only; contact carries a placeholder phone",
+      "fix": "drop workshop context"
+    },
+    {
+      "where": "projects.json flow[2]",
+      "text": "They make contact to request drawings or discuss a furniture project.",
+      "problem": "Only an email link (studio@maash.art, unverified); the phone is a 000 placeholder",
+      "fix": "keep, as an email link only"
+    },
+    {
+      "where": "hero stats on desktop-01 / mobile-01",
+      "text": "340 shop drawings, 11 ateliers, 20+ years",
+      "problem": "Nothing in the repo backs them; likely template values",
+      "fix": "confirm with the owner or hide desktop-01 and mobile-01"
+    }
+  ]
+}

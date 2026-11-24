@@ -1,13 +1,17 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { shownProjects, shownShots } from './showcase.mjs'
 const root = process.cwd(),
   dist = path.join(root, 'dist')
-const projects = JSON.parse(
-  fs.readFileSync('src/portfolio/projects.json', 'utf8'),
-)
-const shots = JSON.parse(
+const allShots = JSON.parse(
   fs.readFileSync('src/portfolio/screenshots.json', 'utf8'),
 )
+// Only products and screens that pass the showcase rules get pages and share images.
+const projects = shownProjects(
+  JSON.parse(fs.readFileSync('src/portfolio/projects.json', 'utf8')),
+  allShots,
+)
+const shots = shownShots(allShots)
 const html = fs.readFileSync(path.join(dist, 'index.html'), 'utf8')
 const origin = 'https://nourx.tech'
 const escape = (s) =>
@@ -31,7 +35,7 @@ const entries = [
     route: '/projects/',
     title: 'Projects — Nour Aldeen Shehadea',
     description:
-      'Explore 23 product stories and 490 original interface captures, with desktop and mobile demonstration data.',
+      `Explore ${projects.length} product stories and ${shots.length} original interface captures, with desktop and mobile demonstration data.`,
     image: shots[0].file,
     name: 'Projects',
   },
@@ -39,13 +43,14 @@ const entries = [
     route: `/projects/${p.id}/`,
     title: `${p.name} — Nour Aldeen Shehadea`,
     description: p.summary.en,
-    image: shots.find(
-      (s) =>
-        s.project === p.id &&
-        s.device === 'desktop' &&
-        s.file.endsWith(
-          `desktop-${String(p.presentation.desktopCover).padStart(2, '0')}.webp`,
-        ),
+    image: (
+      shots.find(
+        (s) =>
+          s.project === p.id &&
+          s.file.endsWith(
+            `desktop-${String(p.presentation.desktopCover).padStart(2, '0')}.webp`,
+          ),
+      ) || shots.find((s) => s.project === p.id)
     ).file,
     name: p.name,
     project: p,

@@ -1,0 +1,282 @@
+{
+  "facts": [
+    {
+      "value": "3",
+      "label": {
+        "ar": "أقسام في الكتالوج",
+        "en": "catalogue sections"
+      }
+    },
+    {
+      "value": "PWA",
+      "label": {
+        "ar": "قراءة دون اتصال",
+        "en": "offline reading"
+      }
+    },
+    {
+      "value": "RTL",
+      "label": {
+        "ar": "عربية بالكامل",
+        "en": "Arabic, right to left"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "فهرست AI منصة عربية للتراث الإسلامي، يستخدمها القارئ والباحث. يبدأ يومه بالبحث في الكتب والمؤلفين والرواة، ثم يضع ما يقرؤه في مكتبته الشخصية على رفوف ويتابع تقدمه في كل كتاب. وللمشرف لوحة منفصلة لإدارة الكتب والمستخدمين.",
+    "en": "Fahrast AI is an Arabic platform for Islamic heritage, used by readers and researchers. A day starts with searching books, authors and narrators, then keeping what is being read on shelves in a personal library and tracking progress in each book. Administrators have a separate panel for books and users."
+  },
+  "screens": [
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "الكتب",
+        "en": "Books"
+      },
+      "title": {
+        "ar": "مكتبة كتب تُصفّى بدقة.",
+        "en": "A book catalogue with real filters."
+      },
+      "body": {
+        "ar": "تعرض صفحة «المكتبة» بطاقات كتب مثل الرسالة للشافعي وإحياء علوم الدين للغزالي والموطأ. لكل بطاقة عدد الصفحات والتصنيف واسم المؤلف والتقييم، وأزرار للقراءة والمعاينة والتحميل للقراءة دون اتصال.",
+        "en": "The library page shows book cards such as al-Shafi'i's Risala, al-Ghazali's Ihya and the Muwatta. Each card has a page count, a classification, the author and a rating, with buttons to read, preview and download for offline reading."
+      },
+      "points": [
+        {
+          "ar": "مرشحات: اللغة والنوع والتصنيف والمذهب وعدد الصفحات.",
+          "en": "Filters: language, type, classification, madhhab and page count."
+        },
+        {
+          "ar": "مفتاح «الكتب المحملة فقط» يعرض ما يعمل بلا إنترنت.",
+          "en": "A downloaded-only switch shows what works without internet."
+        },
+        {
+          "ar": "زر القلب يضيف الكتاب إلى المفضلة.",
+          "en": "The heart button adds a book to favourites."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "المؤلفون",
+        "en": "Authors"
+      },
+      "title": {
+        "ar": "موسوعة مؤلفين بمذاهبهم وبلدانهم.",
+        "en": "An author encyclopaedia by madhhab and place."
+      },
+      "body": {
+        "ar": "صفحة «المؤلفون» تبدأ بشريط أرقام: ٢٦ مؤلفاً موثقاً، وأقدم وفاة سنة ١٧٩ هـ وأحدثها ٨٥٢ هـ، والمذهب الأكثر تمثيلاً. تحته مرشحات بالمذهب والبلد والترتيب، وبطاقات تعرض المذهب وسنة الوفاة ومكان الولادة وعدد كتب كل مؤلف.",
+        "en": "The authors page opens with a figures strip: 26 verified authors, death years from 179 to 852 AH, and the most represented madhhab. Below are filters by madhhab, country and sort order, and cards with the madhhab, death year, birthplace and each author's book count."
+      },
+      "points": [
+        {
+          "ar": "بطاقة ابن القيم تعرض دمشق و٢ كتب مرتبطة بالمؤلف.",
+          "en": "Ibn al-Qayyim's card shows Damascus and two linked books."
+        },
+        {
+          "ar": "تبديل بين عرض البطاقات وعرض القائمة.",
+          "en": "A switch between card view and list view."
+        },
+        {
+          "ar": "مرشح بنطاق سنوات الوفاة بالهجري.",
+          "en": "A filter by death-year range in the Hijri calendar."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "ar": "الرواة",
+        "en": "Narrators"
+      },
+      "title": {
+        "ar": "الرواة مع طبقاتهم ومراتبهم.",
+        "en": "Narrators with their generations and ranks."
+      },
+      "body": {
+        "ar": "صفحة «الرواة» تضيف ما يخص علم الحديث: مرشح بالمرتبة وآخر بالطبقة، وخيارات «موثّق فقط» و«نشط فقط». البطاقات تعرض الاسم الكامل والنسب والطبقة وسنة الوفاة.",
+        "en": "The narrators page adds what hadith study needs: a filter by rank and another by generation, plus trusted-only and active-only switches. Cards show the full name, lineage, generation and death year."
+      },
+      "points": [
+        {
+          "ar": "الشارة الصفراء تبيّن الطبقة، مثل صحابي أو تابعي.",
+          "en": "The yellow badge gives the generation, such as Companion or Successor."
+        },
+        {
+          "ar": "زر «إعادة تعيين» يمسح كل المرشحات دفعة واحدة.",
+          "en": "A reset button clears every filter at once."
+        },
+        {
+          "ar": "العدّاد في زاوية العنوان يعرض عدد النتائج.",
+          "en": "A counter beside the title shows the number of results."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "مكتبتي",
+        "en": "My library"
+      },
+      "title": {
+        "ar": "مكتبة شخصية تتابع تقدمك في القراءة.",
+        "en": "A personal library that tracks your reading."
+      },
+      "body": {
+        "ar": "«مكتبتي» تجمع كتب القارئ في مكان واحد: ١٤ كتاباً، منها ٤ قيد القراءة و٧ مكتملة و٦ مفضلة. كل بطاقة تعرض حالة الكتاب وشريط تقدم برقم الصفحة الحالية من مجموع الصفحات، وزر قراءة وزر مفضلة.",
+        "en": "My library gathers a reader's books in one place: 14 books, 4 in progress, 7 completed and 6 favourites. Each card shows the book's status and a progress bar with the current page out of the total, plus read and favourite buttons."
+      },
+      "points": [
+        {
+          "ar": "الشريط الجانبي يرتب الكتب حسب الحالة والرف.",
+          "en": "The sidebar sorts books by status and by shelf."
+        },
+        {
+          "ar": "مربع تحديد على كل بطاقة لنقل عدة كتب معاً.",
+          "en": "A checkbox on each card moves several books at once."
+        },
+        {
+          "ar": "أزرار لرفع كتاب أو مجلد وعرض شبكي أو قائمة.",
+          "en": "Buttons to upload a book or folder, and grid or list view."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "الرفوف",
+        "en": "Shelves"
+      },
+      "title": {
+        "ar": "رفوف تنظّم الكتب بأسماء من اختيارك.",
+        "en": "Shelves named the way you work."
+      },
+      "body": {
+        "ar": "صفحة «إدارة الرفوف» تعرض الرفوف الخمسة مع عدد كتب كل رف: الحديث الشريف ٥، والفقه المقارن ٣، والتفسير ٢. يمكن إنشاء رف جديد، ونقل الكتب المحددة إلى رف آخر، أو حذف رف دون حذف كتبه.",
+        "en": "The shelf management page lists five shelves with the number of books in each: Hadith 5, Comparative fiqh 3, Tafsir 2. A reader can create a shelf, move selected books to another, or delete a shelf without deleting its books."
+      },
+      "points": [
+        {
+          "ar": "البحث يعمل داخل الرف المحدد.",
+          "en": "Search works inside the selected shelf."
+        },
+        {
+          "ar": "كل بطاقة تعرض المؤلف ووصفاً قصيراً وزر قراءة.",
+          "en": "Each card shows the author, a short description and a read button."
+        },
+        {
+          "ar": "«كل الرفوف» يعرض الكتب الأربعة عشر جميعها.",
+          "en": "All shelves shows all fourteen books."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "phone": "mobile-09",
+      "kicker": {
+        "ar": "الملف الشخصي",
+        "en": "Profile"
+      },
+      "title": {
+        "ar": "ملف شخصي يعرّف بالباحث وقراءاته.",
+        "en": "A profile that introduces the researcher."
+      },
+      "body": {
+        "ar": "صفحة الملف الشخصي تعرض الاسم والعنوان التعريفي ونبذة عن صاحب الحساب، وتحتها أرقام: ١٤ كتاباً و٦ تظليلات و٥ علامات. تبويبات للتخصيص والنشاط والمكتبة والأمان، وزر لمعاينة الملف العام كما يراه الآخرون.",
+        "en": "The profile page shows the name, headline and a short bio, with figures below: 14 books, 6 highlights and 5 bookmarks. Tabs cover customisation, activity, library and security, and a button previews the public profile as others see it."
+      },
+      "points": [
+        {
+          "ar": "نموذج المعلومات الشخصية والاسم واسم المستخدم.",
+          "en": "A personal-information form with name and username."
+        },
+        {
+          "ar": "خيارات إظهار النشاط والمكتبة والإحصاءات للعامة.",
+          "en": "Switches to show activity, library and statistics publicly."
+        },
+        {
+          "ar": "إعدادات الأمان في تبويب مستقل.",
+          "en": "Security settings sit in their own tab."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "kicker": {
+        "ar": "الإدارة",
+        "en": "Admin"
+      },
+      "title": {
+        "ar": "لوحة تحكم لإدارة الكتب.",
+        "en": "A control panel for managing books."
+      },
+      "body": {
+        "ar": "جدول «إدارة الكتب» في لوحة المشرف يعرض العنوان والمؤلف والتصنيف والصفحات والمشاهدات والحالة، مع أزرار تعديل وحذف ونجمة للتمييز. والشريط الجانبي فيه عدّادات: ١٥ مستخدماً و٣٠ كتاباً و٢٦ مؤلفاً، وروابط الأقسام.",
+        "en": "The Books table in the administrator panel lists title, author, classification, pages, views and status, with buttons to edit, delete and star. The sidebar holds counters, 15 users, 30 books and 26 authors, and links to each section."
+      },
+      "points": [
+        {
+          "ar": "تبويبان: الكتب النشطة والكتب المحذوفة.",
+          "en": "Two tabs: active books and deleted books."
+        },
+        {
+          "ar": "الحالة «منشور» بشارة خضراء لكل كتاب.",
+          "en": "Each book carries a green Published badge."
+        },
+        {
+          "ar": "المسارات محمية بصلاحية مشرف.",
+          "en": "These routes are guarded by an admin check."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "معالجة PDF في طوابير",
+        "en": "PDF processing on queues"
+      },
+      "body": {
+        "ar": "استخراج النص من الصفحات، وتوليد صور الصفحات، وتحليل الكتب، كلها مهام Laravel تعمل في الخلفية. للنظام مديرو طوابير لويندوز ولينكس، ومعالجة متوازية للصفحات.",
+        "en": "Extracting page text, rendering page images and analysing books all run as Laravel jobs in the background. There are queue managers for Windows and Linux, and pages can be processed in parallel."
+      }
+    },
+    {
+      "title": {
+        "ar": "رصيد توكن بسجل تدقيق",
+        "en": "A token balance with a ledger"
+      },
+      "body": {
+        "ar": "كل عملية ذكاء اصطناعي لها كلفة مسجلة، وتُخصم من الرصيد في سجل منفصل. بذلك يمكن تفسير أي رقم في الرصيد، وتعديل الكلفة من لوحة الإدارة.",
+        "en": "Every AI operation has a recorded cost and is deducted in a separate ledger. Any number in a balance can be explained, and costs can be changed from the admin panel."
+      }
+    },
+    {
+      "title": {
+        "ar": "قراءة دون اتصال",
+        "en": "Reading without a connection"
+      },
+      "body": {
+        "ar": "المنصة تعمل كتطبيق PWA بـ service worker وصفحة عدم اتصال. الكتب التي حُمّلت تبقى متاحة في الكتالوج بمفتاح خاص.",
+        "en": "The platform runs as a PWA with a service worker and an offline page. Books that were downloaded stay available, and the catalogue has a switch to show only those."
+      }
+    },
+    {
+      "title": {
+        "ar": "ملفات خاصة محمية",
+        "en": "Private files stay private"
+      },
+      "body": {
+        "ar": "تنزيل ملف الكتاب يمر عبر متحكم يفحص الصلاحية: عام أم خاص، وهل المستخدم مالكه أو مشرف.",
+        "en": "A book file download goes through a controller that checks permission: public or private, and whether the user is the owner or an administrator."
+      }
+    }
+  ]
+}

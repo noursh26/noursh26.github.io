@@ -1,0 +1,92 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-02",
+      "reason": "mid-fade: manifesto words still dim, marquee band clipped at the top"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "mid-fade: manifesto words still dim, marquee band clipped at the top"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "mid-transition: two step images overlap (containers over construction), text half faded"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "text starts mid-sentence at the top edge and the image is cut at the bottom"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "stats band contradicts the page (4 companies and 3 locations vs 7 activities and 2 locations listed) and is unverifiable"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "stats band contradicts the page (4 companies and 3 locations vs 7 activities and 2 locations listed) and is unverifiable"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "duplicate of desktop-08, list cut after 3 of 7 rows"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "duplicate of mobile-08, list cut after 4 rows"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "shows 5 of the 7 activities and a Details pill on every row that does nothing"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "shows 5 of the 7 activities, the rest not revealed yet"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "news cards are dead links (href=#) and Read more does nothing; items are unbacked"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "news cards are dead links (href=#) and Read more does nothing"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "Join now and Explore products only scroll to the footer; no supplier flow and no catalogue exist"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "Join now and Explore products only scroll to the footer; no supplier flow and no catalogue exist"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[2]",
+      "text": "News and imagery that establish business context.",
+      "problem": "News cards link to # and the items are not backed by anything",
+      "fix": "remove"
+    },
+    {
+      "where": "projects.json features[3] / solution / flow[2]",
+      "text": "Two enquiry paths: supplier or buyer / separate supplier and buyer paths",
+      "problem": "Both CTA panels and the three hero cards only scroll to the footer (email and phone). There is no supplier form, catalogue or careers page",
+      "fix": {
+        "en": "Clear contact details for suppliers and buyers in the footer.",
+        "ar": "بيانات تواصل واضحة للموردين والمشترين في التذييل."
+      }
+    },
+    {
+      "where": "projects.json features[1]",
+      "text": "Presentation of trading, contracting, decor, and fit-out activities.",
+      "problem": "True but incomplete: the page lists 7 activities (also import/export, transport, clinker grinding)",
+      "fix": {
+        "en": "Seven group activities in one list, from trading to clinker grinding.",
+        "ar": "سبعة أنشطة للمجموعة في قائمة واحدة، من التجارة حتى طحن الكلنكر."
+      }
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "Visible statistics are brand content and have not been independently verified.",
+      "problem": "The stats screens are hidden; copy discusses capture content",
+      "fix": "remove"
+    }
+  ]
+}
