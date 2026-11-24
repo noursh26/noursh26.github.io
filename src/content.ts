@@ -25,8 +25,8 @@ export const deck = {
 }
 
 export const facts = [
-  { value: '23', label: 'products in the gallery' },
-  { value: '490', label: 'real screens captured' },
+  { value: '18', label: 'products in the gallery' },
+  { value: '175', label: 'real screens captured' },
   { value: '2', label: 'languages, designed together' },
   { value: '1', label: 'engineer, design to deploy' },
 ]
@@ -35,7 +35,7 @@ export const work = {
   eyebrow: 'Selected work',
   title: 'Products, not mockups.',
   lede: 'Every screen here comes from the running application with demonstration data.',
-  all: 'All 23 projects',
+  all: 'All 18 projects',
   view: 'View project',
 }
 

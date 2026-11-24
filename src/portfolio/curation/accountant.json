@@ -1,0 +1,94 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-04",
+      "reason": "sparse: two-row table, rest of the page empty, full-width stretched filters"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "sparse: one-row table, rest of the page empty, full-width stretched filter"
+    },
+    {
+      "file": "desktop-12",
+      "reason": "zeros: the 'this week' block is all 0 and the decisions table is dashes"
+    },
+    {
+      "file": "desktop-15",
+      "reason": "idle upload forms and an import history of seed-*.csv files; nothing working on screen"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "two of four visible cards read 0.00 (this month revenue and VAT)"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "journal table is cut off at the right edge"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "quotation table is cut off and filters are stretched"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "one-row contract table cut off, page mostly empty"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "viewport is only stretched filters and totals, no invoice rows"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "receipts table is cut off at the right edge, stretched date filters"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "viewport is only stretched filters and totals, no bill rows"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "custody table is cut off at the right edge"
+    },
+    {
+      "file": "mobile-12",
+      "reason": "zeros in the weekly block and truncated labels such as 'Misma...'"
+    },
+    {
+      "file": "mobile-13",
+      "reason": "reconciliation table is cut off and its invoice column reads only dashes"
+    },
+    {
+      "file": "mobile-14",
+      "reason": "review queue table is cut off with large empty rows"
+    },
+    {
+      "file": "mobile-15",
+      "reason": "idle upload forms, no data shown"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[4]; old tour desktop-15",
+      "text": "file imports (CSV import)",
+      "problem": "Source has the importer, but the only capture is an idle form with seed-*.csv history; not demonstrable",
+      "fix": "reword features[4] to 'Reconciliation and a review queue for records needing attention' (AR: مطابقة وقائمة مراجعة للسجلات التي تحتاج تدقيقاً)"
+    },
+    {
+      "where": "old tour desktop-01 body",
+      "text": "invoices the tax authority has not accepted",
+      "problem": "E-invoicing provider defaults to 'mock' (EINVOICE_PROVIDER=mock); the ETA client targets the pre-production portal",
+      "fix": "tour now says 'invoices not yet registered for e-invoicing'"
+    },
+    {
+      "where": "old tour engineering[2]",
+      "text": "semantic matcher is called only for fuzzy language questions",
+      "problem": "SEMANTIC_MATCHER defaults to a mock matcher; the real 'jev' matcher is optional",
+      "fix": "tour reworded: arithmetic stays in code, language matching sits behind an interface"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "this gallery uses a local PostgreSQL demo database",
+      "problem": "talks about the capture/demo data (SHOWCASE_RULES section 2)",
+      "fix": "remove the clause"
+    }
+  ]
+}

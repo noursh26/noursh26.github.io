@@ -1,0 +1,68 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-02",
+      "reason": "ticker band collides with the logo and Menu in the nav"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "ticker band collides with the logo and Menu in the nav"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "mid-animation: cards crowd the left half, right half empty, next section already entering"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "mid-animation: divisions caught half way along the arc, uneven layout"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "mid-fade: principle lines greyed out and washed by a transition gradient"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "mid-fade: principle lines greyed out and washed by a transition gradient"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "section seam: heavy light/dark gradient bands, dial caught between sections"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "section seam: transition gradient on top, dial cut off at the bottom"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json summary",
+      "text": "through scrolling transitions in Arabic and English",
+      "problem": "The site is English only: html lang=en, no language switch, no Arabic copy in src/content.ts",
+      "fix": {
+        "en": "A cinematic brand website presenting diagnosis, method, build, work, principles and contact through scrolling transitions.",
+        "ar": "موقع تعريفي سينمائي يعرض التشخيص والمنهج والبناء والأعمال والمبادئ والتواصل عبر انتقالات التمرير."
+      }
+    },
+    {
+      "where": "projects.json solution",
+      "text": "Both languages retain a consistent brand identity / يدعم الموقع اللغتين",
+      "problem": "English only",
+      "fix": "remove the sentence"
+    },
+    {
+      "where": "projects.json features[3]",
+      "text": "Bilingual content and responsive presentation.",
+      "problem": "Not bilingual; the responsive layout is real",
+      "fix": {
+        "en": "Responsive presentation built separately for desktop and phone.",
+        "ar": "عرض متجاوب مصمم بشكل منفصل لسطح المكتب والجوال."
+      }
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "marketing results or figures inside it are not presented here as verified measurements",
+      "problem": "Copy talks about the capture and carries disclaimers; the page already says it once",
+      "fix": "remove"
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "facts": [
+    {
+      "value": "3",
+      "label": {
+        "ar": "أدوار",
+        "en": "roles"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "ar": "لغتان",
+        "en": "languages"
+      }
+    },
+    {
+      "value": "45",
+      "label": {
+        "ar": "نموذج بيانات",
+        "en": "data models"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "هذه مساحة عمل لفريق المالية في شركة خدمات. يبدأ المحاسب من نظرة عامة على النقد والذمم، ثم يسجل البيع والشراء والقبض، ويراجع الميزانية وضريبة القيمة المضافة. وفي مسار منفصل يطابق فواتير الموردين مع تقارير التنفيذ ويرسل غير المؤكد إلى مراجع.",
+    "en": "This is a workspace for the finance team of a services company. An accountant starts from an overview of cash and balances, records sales, purchases and receipts, then checks the balance sheet and VAT. In a separate track, supplier invoices are matched against delivery reports and anything uncertain goes to a reviewer."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "kicker": {
+        "ar": "المالية",
+        "en": "Finance"
+      },
+      "title": {
+        "ar": "نظرة عامة على الوضع المالي.",
+        "en": "An overview of the financial position."
+      },
+      "body": {
+        "ar": "في الأعلى بطاقات للنقد والبنوك والذمم المدينة والذمم الدائنة وصافي ربح السنة حتى اليوم. تحتها تنبيهات بمسودات فواتير تنتظر الترحيل وفواتير لم تُسجَّل بعد في الفاتورة الإلكترونية، ثم رسم لإيراد ومصروف آخر اثني عشر شهراً وقوائم للشيكات المستحقة والعملاء المتأخرين.",
+        "en": "Cards at the top show cash and banks, receivables, payables and net profit for the year to date. Under them are flags for draft invoices waiting to post and invoices not yet registered for e-invoicing, then a twelve-month revenue and expense chart and lists of cheques due and overdue customers."
+      },
+      "points": [
+        {
+          "ar": "الذمم المدينة تعرض المتأخر منها بالأحمر.",
+          "en": "Receivables show the overdue part in red."
+        },
+        {
+          "ar": "رصيد النقد موزع على الصندوق والحساب البنكي.",
+          "en": "Cash balance split between the cash box and the bank account."
+        },
+        {
+          "ar": "شريط جانبي: مالية ومبيعات ومشتريات وضرائب.",
+          "en": "A sidebar grouped into finance, sales, purchases and tax."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "الحسابات",
+        "en": "Accounts"
+      },
+      "title": {
+        "ar": "دليل حسابات ثنائي اللغة.",
+        "en": "A bilingual chart of accounts."
+      },
+      "body": {
+        "ar": "الحسابات شجرة تتوسع وتنطوي: الأصول والخصوم وحقوق الملكية والإيرادات وتكلفة الخدمات والمصروفات. لكل حساب اسم بالإنجليزية والعربية، ويظهر رصيده بالاتجاه الطبيعي ويتجمع في الحساب الأب. أزرار توسيع الكل وطيّه ومرشح النوع تسهل التنقل.",
+        "en": "Accounts form a tree that expands and collapses: assets, liabilities, equity, revenue, cost of services and expenses. Each account has an English and an Arabic name, and its balance shows in its natural direction and rolls up into its parent. Expand-all and collapse buttons and a type filter help navigation."
+      },
+      "points": [
+        {
+          "ar": "أعمدة المدين والدائن والرصيد.",
+          "en": "Debit, credit and balance columns."
+        },
+        {
+          "ar": "بحث بالرمز أو الاسم أو دور النظام.",
+          "en": "Search by code, name or system role."
+        },
+        {
+          "ar": "زر لإضافة حساب رئيسي جديد.",
+          "en": "A button to add a top-level account."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "kicker": {
+        "ar": "القيود",
+        "en": "Journal"
+      },
+      "title": {
+        "ar": "كل ما يُرحَّل في دفتر الأستاذ.",
+        "en": "Everything that posts to the ledger."
+      },
+      "body": {
+        "ar": "جدول القيود يعرض الرقم والتاريخ والنوع والوصف والمرجع والمبلغ والحالة. النوع قد يكون دفعة أو فاتورة مبيعات أو عهدة أو سند قبض أو إشعار دائن أو قيداً يدوياً. المستندات تُرحَّل إلى هنا تلقائياً، والقيد اليدوي يُدخل من زر قيد جديد.",
+        "en": "The journal table shows number, date, type, description, reference, amount and status. A type may be a payment, a sales invoice, a custody, a receipt, a credit note or a manual entry. Documents post here automatically, and manual entries come from the new-entry button."
+      },
+      "points": [
+        {
+          "ar": "مرشحات الرقم والنوع والحالة والتاريخ.",
+          "en": "Filters for number, type, status and date."
+        },
+        {
+          "ar": "عمود مرجع يربط القيد بمستنده الأصلي.",
+          "en": "A reference column links an entry to its source document."
+        },
+        {
+          "ar": "حالة كل قيد ظاهرة، مثل مُرحَّل.",
+          "en": "Each entry shows its status, such as Posted."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "kicker": {
+        "ar": "المبيعات",
+        "en": "Sales"
+      },
+      "title": {
+        "ar": "فواتير ضريبية وإشعارات دائنة.",
+        "en": "Tax invoices and credit notes."
+      },
+      "body": {
+        "ar": "علامات تبويب للكل والمسودات وغير المدفوع والمتأخر والمدفوع والإشعارات الدائنة، وفوقها أربعة أرقام: عدد المستندات والمفوتر والمحصل والمتبقي. في الجدول ضريبة وإجمالي ومتبقٍ وحالة، مع عدد أيام التأخر، والإشعار الدائن يظهر بقيمة سالبة.",
+        "en": "Tabs cover All, Drafts, Unpaid, Overdue, Paid and Credit notes, with four totals above: documents, total invoiced, collected and outstanding. The table gives VAT, total, open amount and status with days overdue, and a credit note appears as a negative value."
+      },
+      "points": [
+        {
+          "ar": "حالات مثل مُرحَّل وغير مدفوع ومدفوع جزئياً.",
+          "en": "Statuses like Posted, Unpaid and Partly paid."
+        },
+        {
+          "ar": "مرشح لحالة الفاتورة الإلكترونية.",
+          "en": "A filter for e-invoice status."
+        },
+        {
+          "ar": "التأخر يُعرض بعدد الأيام.",
+          "en": "Lateness is shown in days."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "kicker": {
+        "ar": "المبيعات",
+        "en": "Sales"
+      },
+      "title": {
+        "ar": "سندات القبض موزعة على الفواتير.",
+        "en": "Receipts allocated to invoices."
+      },
+      "body": {
+        "ar": "جدول بالمبالغ المقبوضة من العملاء نقداً أو بشيك أو تحويلاً، مع طريقة الدفع والمبلغ وما لم يُخصص بعد والحالة. حالات الشيك تظهر بوضوح: في اليد أو مُحصَّل أو مرفوض. فوق الجدول عدد السندات وإجماليها.",
+        "en": "A table of money received from customers by cash, cheque or transfer, with method, amount, the part not yet allocated and status. Cheque states are explicit: in hand, collected or rejected. Above the table are the receipt count and the total."
+      },
+      "points": [
+        {
+          "ar": "عمود لما لم يُخصص بعد من القبض.",
+          "en": "A column for the unallocated part of each receipt."
+        },
+        {
+          "ar": "مرشحات الطريقة والتاريخ.",
+          "en": "Filters for method and date."
+        },
+        {
+          "ar": "زر تسجيل قبض جديد.",
+          "en": "A button to record a new receipt."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "kicker": {
+        "ar": "المشتريات",
+        "en": "Purchases"
+      },
+      "title": {
+        "ar": "فواتير الموردين ومقاولي الباطن.",
+        "en": "Supplier and subcontractor bills."
+      },
+      "body": {
+        "ar": "الفواتير موزعة بمركز التكلفة، وتُحتسب ضريبة المدخلات وضريبة الاستقطاع. الأرقام العلوية تعرض المفوتر والمدفوع والمتبقي. في الجدول المورد وتاريخ الاستحقاق والإجمالي والمتبقي والحالة، مع أيام التأخر وربط بأمر الشراء.",
+        "en": "Bills are split by cost centre, with input VAT and withholding tax calculated. The top figures show billed, paid and outstanding. The table lists supplier, due date, total, open amount and status, with days overdue and a link to the purchase order."
+      },
+      "points": [
+        {
+          "ar": "مرشحات المورد والحالة والدفع والتاريخ.",
+          "en": "Filters for supplier, status, payment and date."
+        },
+        {
+          "ar": "رقم أمر الشراء تحت رقم الفاتورة.",
+          "en": "The purchase order number sits under the bill number."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "kicker": {
+        "ar": "المشتريات",
+        "en": "Purchases"
+      },
+      "title": {
+        "ar": "العهد المالية وتسويتها.",
+        "en": "Petty cash and its settlement."
+      },
+      "body": {
+        "ar": "تُصرف سلفة نقدية لموظف، ثم تُسوى بإيصالات تُحمَّل على الحسابات ومراكز التكلفة. بطاقتان تعرضان رصيد العهد المفتوحة وعدد الموظفين أصحاب العهد، وتحتهما جدول العهد بالمصروف والمسوّى والمرتجع والمفتوح، ثم قائمة الموظفين.",
+        "en": "A cash advance is issued to an employee, then settled with receipts charged to accounts and cost centres. Two cards show the open custody balance and the number of employees holding custody, and under them a table gives issued, settled, returned and open amounts, then the employee list."
+      },
+      "points": [
+        {
+          "ar": "زران لإضافة موظف وصرف عهدة.",
+          "en": "Buttons to add an employee and issue a custody."
+        },
+        {
+          "ar": "مرشح لحالة العهدة.",
+          "en": "A custody status filter."
+        },
+        {
+          "ar": "كل عهدة لها غرض مكتوب.",
+          "en": "Each custody has a written purpose."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-10",
+      "phone": "mobile-10",
+      "kicker": {
+        "ar": "التقارير",
+        "en": "Reports"
+      },
+      "title": {
+        "ar": "ميزانية عمومية تتوازن أمامك.",
+        "en": "A balance sheet that visibly balances."
+      },
+      "body": {
+        "ar": "تختار تاريخاً فتعرض الشاشة الأصول المتداولة وغير المتداولة مقابل الخصوم وحقوق الملكية، بأسماء الحسابات بلغتين. فوق الجدول شريط أخضر يؤكد أن الأصول تساوي الخصوم مع حقوق الملكية. يوجد زر للطباعة.",
+        "en": "Pick a date and the screen shows current and non-current assets against liabilities and equity, with account names in two languages. A green banner above the table confirms that assets equal liabilities plus equity. There is a print button."
+      },
+      "points": [
+        {
+          "ar": "حقل تاريخ يحدد لحظة التقرير.",
+          "en": "A date field sets the report moment."
+        },
+        {
+          "ar": "إجماليات منفصلة للمتداول وغير المتداول.",
+          "en": "Separate totals for current and non-current."
+        },
+        {
+          "ar": "الأرباح الجارية تظهر ضمن حقوق الملكية.",
+          "en": "Current-year earnings sit within equity."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-11",
+      "phone": "mobile-11",
+      "kicker": {
+        "ar": "الضرائب",
+        "en": "Tax"
+      },
+      "title": {
+        "ar": "إقرار ضريبة القيمة المضافة.",
+        "en": "The VAT return."
+      },
+      "body": {
+        "ar": "تحدد الفترة فتظهر ضريبة المخرجات على المبيعات وضريبة المدخلات على المشتريات والصافي المستحق. لافتة خضراء تقول إن المستندات تطابق دفتر الأستاذ، وزر يرحّل قيد التسوية. جدولان يفصلان الضريبة حسب الرمز والنسبة.",
+        "en": "Set a period and the screen shows output VAT on sales, input VAT on purchases and the net payable. A green notice says the documents agree with the general ledger, and a button posts the settlement entry. Two tables break tax down by code and rate."
+      },
+      "points": [
+        {
+          "ar": "الفترة قابلة للتغيير.",
+          "en": "The period is adjustable."
+        },
+        {
+          "ar": "الجدولان يعرضان الرمز والنسبة ووعاء الضريبة.",
+          "en": "Both tables show code, rate and taxable base."
+        },
+        {
+          "ar": "طباعة وترحيل قيد التسوية من نفس الصفحة.",
+          "en": "Print and post the settlement from the same page."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-13",
+      "kicker": {
+        "ar": "المطابقة",
+        "en": "Reconciliation"
+      },
+      "title": {
+        "ar": "بنود التقارير في مقابل بنود الفواتير.",
+        "en": "Report items against invoice lines."
+      },
+      "body": {
+        "ar": "كل صف بند تسليم: المتوقع والمطابق والفرق وحالته، ومعه الفاتورة التي غطته. الحالات تشمل مطابق وجزئي وعدم تطابق وفاتورة ناقصة ويحتاج مراجعة، مع نسبة ثقة. فاتورتان قد تغطيان بنداً واحداً، وبند قد يتوزع على أكثر من فاتورة.",
+        "en": "Each row is a delivery item: expected, matched, difference and status, with the invoice that covered it. Statuses include matched, partial, mismatch, missing invoice and needs review, with a confidence score. Two invoices can cover one item, and one item can span several invoices."
+      },
+      "points": [
+        {
+          "ar": "المتوقع 50 والمطابق 30 يعني متبقياً 20.",
+          "en": "Expected 50 and matched 30 leaves 20 remaining."
+        },
+        {
+          "ar": "شريط ثقة بنسب مثل 97% و64%.",
+          "en": "A confidence bar with values like 97% and 64%."
+        },
+        {
+          "ar": "زر لتشغيل المطابقة من جديد.",
+          "en": "A button to run reconciliation again."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-14",
+      "kicker": {
+        "ar": "المطابقة",
+        "en": "Reconciliation"
+      },
+      "title": {
+        "ar": "قائمة المراجعة لما يحتاج إنساناً.",
+        "en": "A review queue for what needs a person."
+      },
+      "body": {
+        "ar": "تعرض القائمة المطابقات المرشحة التي لم يحسمها النظام، الأعلى نتيجة أولاً. لكل صف بند التقرير وسطر الفاتورة والكمية المقترحة ونوع المشكلة والنتيجة وتحذيرات مثل تجاوز الكمية المتبقية أو غياب رقم مرجعي مشترك.",
+        "en": "The queue lists candidate matches the system did not settle, highest score first. Each row has the report item, the invoice line, the proposed quantity, the type of issue, a score, and warnings such as exceeding the remaining quantity or a missing shared reference."
+      },
+      "points": [
+        {
+          "ar": "قرار المراجع يُسجَّل في سجل التدقيق.",
+          "en": "The reviewer's decision is written to the audit log."
+        },
+        {
+          "ar": "مرشحا المشروع والمورد.",
+          "en": "Project and supplier filters."
+        },
+        {
+          "ar": "تحذير صريح بدل رفض صامت.",
+          "en": "An explicit warning instead of a silent reject."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "كاتب واحد لدفتر الأستاذ",
+        "en": "One writer for the ledger"
+      },
+      "body": {
+        "ar": "كل مستند مالي يُرحَّل عبر LedgerService، وهو يتحقق من توازن القيد ومن أن الحسابات فعالة وقابلة للترحيل، ومن تاريخ الإقفال للفترات المغلقة.",
+        "en": "Every money-moving document posts through LedgerService, which checks that the entry balances, that accounts are active and postable, and the lock date for closed periods."
+      }
+    },
+    {
+      "title": {
+        "ar": "مبالغ دقيقة",
+        "en": "Exact money"
+      },
+      "body": {
+        "ar": "تُخزَّن المبالغ والكميات كـ DECIMAL في PostgreSQL وتُحسب بمكتبة decimal.js، وتصل إلى الواجهة نصوصاً، فلا تجري الواجهة أي عملية حسابية عليها.",
+        "en": "Money and quantities are DECIMAL in PostgreSQL and computed with decimal.js, and they reach the front end as strings, so the front end never does arithmetic on them."
+      }
+    },
+    {
+      "title": {
+        "ar": "مطابقة بطبقات قابلة للتفسير",
+        "en": "Layered, explainable matching"
+      },
+      "body": {
+        "ar": "القواعد الحتمية تعمل أولاً وتحسب الكميات والفروقات، أما مطابقة الأسماء الغامضة فتمر عبر واجهة مقارن قابلة للتبديل ولا تدخل في الحساب أبداً. كل مطابقة تُخزَّن بين بند وسطر فاتورة، فتدعم العلاقة متعدد بمتعدد.",
+        "en": "Deterministic rules run first and do all the arithmetic, while fuzzy name matching goes through a swappable matcher interface and never touches the numbers. Each match is stored between one item and one invoice line, which supports many-to-many."
+      }
+    },
+    {
+      "title": {
+        "ar": "سجل تدقيق داخل المعاملة",
+        "en": "Audit inside the transaction"
+      },
+      "body": {
+        "ar": "كل اعتماد أو رفض أو ترحيل أو إلغاء يُكتب في AuditLog ضمن المعاملة نفسها. ويعيد الحارس قراءة المستخدم من قاعدة البيانات ليطبق أدوار المدير والمحاسب والمراجع.",
+        "en": "Every approval, rejection, posting and void is written to AuditLog in the same transaction. The auth guard re-reads the user from the database to enforce the admin, accountant and reviewer roles."
+      }
+    }
+  ]
+}

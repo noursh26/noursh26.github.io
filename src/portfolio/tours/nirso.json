@@ -1,0 +1,269 @@
+{
+  "facts": [
+    {
+      "value": "5",
+      "label": {
+        "ar": "طرق لعرض المهام",
+        "en": "ways to view tasks"
+      }
+    },
+    {
+      "value": "11",
+      "label": {
+        "ar": "محفّزات أتمتة",
+        "en": "automation triggers"
+      }
+    },
+    {
+      "value": "37",
+      "label": {
+        "ar": "جدولاً في قاعدة البيانات",
+        "en": "database tables"
+      }
+    },
+    {
+      "value": "RTL",
+      "label": {
+        "ar": "واجهة عربية",
+        "en": "Arabic interface"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "NIRSO Work مساحة عمل لفريق يدير مشاريعه ومهامه. يبدأ الشخص يومه من صفحة «عملي» ليرى ما عليه اليوم وما تأخر، ثم يفتح قائمة المشروع، ويبدّل بين القائمة واللوح والتقويم حسب ما يريد قراءته. وبين ذلك يسجّل وقته ويراجع الأهداف وتوزيع العمل.",
+    "en": "NIRSO Work is a workspace for a team that manages projects and tasks. A person starts the day on My Work to see what is due and what is late, then opens a project list and switches between list, board and calendar depending on what they need to read. In between they log time and check goals and workload."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "عملي",
+        "en": "My Work"
+      },
+      "title": {
+        "ar": "يوم العمل في صفحة واحدة.",
+        "en": "The working day on one page."
+      },
+      "body": {
+        "ar": "تبدأ الصفحة بتحية باسم المستخدم وثلاث بطاقات: ما يخص اليوم، وما أُسند إليه، وما فوّضه لغيره. تحتها أقسام: الأخيرة، وجدول اليوم، والمسند إليّ مجمّعاً بحسب الحالة.",
+        "en": "The page opens with a greeting and three cards: what is due today, what is assigned to the user, and what they delegated to others. Below are sections for recent tasks, today's schedule and assigned tasks grouped by status."
+      },
+      "points": [
+        {
+          "ar": "كل مهمة لها مفتاح مثل NIR-4 ومساحتها وقائمتها.",
+          "en": "Every task has a key like NIR-4 and its space and list."
+        },
+        {
+          "ar": "المهام المنتهية تظهر مشطوبة تحت «مكتمل».",
+          "en": "Finished tasks appear struck through under Completed."
+        },
+        {
+          "ar": "بطاقة «اليوم» تعدّ المتأخرة بلون مختلف.",
+          "en": "The Today card counts overdue tasks in a different colour."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "القائمة",
+        "en": "List"
+      },
+      "title": {
+        "ar": "قائمة المشروع مجمّعة بالحالة.",
+        "en": "The project list, grouped by status."
+      },
+      "body": {
+        "ar": "قائمة «المنصّة» في مساحة «تطوير المنتج» تجمع خمس مهام تحت أربع حالات: قيد الانتظار، وجاري العمل، ومراجعة، ومكتمل. لكل مجموعة عدّاد وزر «مهمة جديدة»، ولكل مهمة مكلّف وأولوية وموعد.",
+        "en": "The Platform list in the Product development space holds five tasks under four statuses: waiting, in progress, review and done. Each group has a counter and a New task button, and each task shows an assignee, a priority and a due date."
+      },
+      "points": [
+        {
+          "ar": "الشريط العلوي يضم سبعة عروض بينها «مهامي فقط» و«المكتملة».",
+          "en": "The view bar has seven tabs, including My tasks and Completed."
+        },
+        {
+          "ar": "زر «تصفية» يضيّق المهام بحسب الحقول.",
+          "en": "The Filter button narrows tasks by field."
+        },
+        {
+          "ar": "القائمة نفسها يمكن أن تُقرأ بعرض آخر دون نسخ المهام.",
+          "en": "The same list can be read in another view, with no copies."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "اللوح",
+        "en": "Board"
+      },
+      "title": {
+        "ar": "لوح بأعمدة الحالة.",
+        "en": "A board with a column per status."
+      },
+      "body": {
+        "ar": "تظهر المهام نفسها أعمدة: «قيد الانتظار» فيه ثلاث و«جاري العمل» واحدة و«مراجعة» واحدة. يغيّر سحب البطاقة بين الأعمدة حالة المهمة.",
+        "en": "The same tasks appear as columns: waiting has three, in progress one and review one. Dragging a card from one column to another changes its status."
+      },
+      "points": [
+        {
+          "ar": "كل بطاقة تعرض المكلّفين والموعد وعلم الأولوية.",
+          "en": "Cards show assignees, due date and a priority flag."
+        },
+        {
+          "ar": "الترتيب داخل العمود يُحفظ بفهرسة كسرية.",
+          "en": "Order inside a column is kept with fractional indexing."
+        },
+        {
+          "ar": "زر «مهمة» أسفل كل عمود يضيف مهمة بحالته.",
+          "en": "A Task button under each column adds a task in that status."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "kicker": {
+        "ar": "التقويم",
+        "en": "Calendar"
+      },
+      "title": {
+        "ar": "تقويم شهري للمهام.",
+        "en": "A monthly calendar of tasks."
+      },
+      "body": {
+        "ar": "يعرض التقويم شهر أكتوبر 2026 بأسبوع يبدأ من السبت، وتظهر كل مهمة في يوم استحقاقها. اليوم الحالي (9) مدوّر بدائرة، وأزرار الأسهم تنقل بين الأشهر.",
+        "en": "The calendar shows October 2026 with the week starting on Saturday, and each task sits on its due date. Today, the 9th, is circled, and the arrow buttons move between months."
+      },
+      "points": [
+        {
+          "ar": "الأسبوع يبدأ يوم السبت، كما في المنطقة.",
+          "en": "The week starts on Saturday, as in the region."
+        },
+        {
+          "ar": "المهام تُسحب إلى يوم آخر لتغيير موعدها.",
+          "en": "Tasks can be dragged to another day to reschedule."
+        },
+        {
+          "ar": "الأيام خارج الشهر مظللة.",
+          "en": "Days outside the month are shaded."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "الجدول",
+        "en": "Table"
+      },
+      "title": {
+        "ar": "جدول بكل الحقول في أعمدة.",
+        "en": "A table with every field as a column."
+      },
+      "body": {
+        "ar": "عرض «جدول» يضع كل مهمة في سطر بأعمدة: الحالة والأولوية والبدء والاستحقاق والتقدير والنقاط والمكلفون. الحالة تتبدل من قائمة منسدلة داخل الخلية نفسها.",
+        "en": "The table view puts each task on a row with columns for status, priority, start, due date, estimate, points and assignees. Status changes from a dropdown inside the cell."
+      },
+      "points": [
+        {
+          "ar": "المهمة المتأخرة تحمل شارة حمراء «متأخرة».",
+          "en": "A late task carries a red overdue badge."
+        },
+        {
+          "ar": "المكلفون يظهرون كدوائر بأحرف أسمائهم.",
+          "en": "Assignees show as circles with their initials."
+        },
+        {
+          "ar": "الأولوية علم ملوّن، والحالة قائمة منسدلة.",
+          "en": "Priority is a coloured flag, and status is a dropdown."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-12",
+      "phone": "mobile-12",
+      "kicker": {
+        "ar": "المهمة",
+        "en": "Task"
+      },
+      "title": {
+        "ar": "تفاصيل المهمة في لوحة واحدة.",
+        "en": "A task with all its detail in one panel."
+      },
+      "body": {
+        "ar": "تفتح المهمة «إعداد بنية المشروع» برقم NIR-1 وحالة «مكتمل». تعرض اللوحة المكلّف والتواريخ والأولوية والوسوم وتتبّع الوقت والتقدير، وتحتها الوصف وإضافة حقل أو مهمة فرعية أو قائمة تحقق.",
+        "en": "The task Set up the project foundation opens as NIR-1, marked Done. The panel shows assignee, dates, priority, tags, time tracking and estimate, with the description below and options to add a field, subtask or checklist."
+      },
+      "points": [
+        {
+          "ar": "قسم «الحقول المخصصة» فيه ميزانية وجهة طالبة وتأكيد مراجعة.",
+          "en": "Custom fields include a budget, a requester and a review tick."
+        },
+        {
+          "ar": "تبويب «النشاط» يسجل من فعل ماذا ومتى.",
+          "en": "The Activity tab records who did what and when."
+        },
+        {
+          "ar": "زر «ابدأ» يشغّل مؤقّت الوقت على المهمة.",
+          "en": "The Start button runs a timer on the task."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "العزل بين المؤسسات في قاعدة البيانات",
+        "en": "Tenant isolation in the database"
+      },
+      "body": {
+        "ar": "كل جدول يحمل رقم المؤسسة، وعليه سياسة Row-Level Security في Postgres مفروضة بـ FORCE. الوصول يمر عبر دالة withOrg، وهناك اختبار يتحقق من السلوك لا من وجود السياسة فقط.",
+        "en": "Every table carries an organisation id and a Postgres row-level security policy, enforced with FORCE. Access goes through a withOrg helper, and a test checks the behaviour, not just that a policy exists."
+      }
+    },
+    {
+      "title": {
+        "ar": "تسجيل الدخول من مزوّد الهوية فقط",
+        "en": "Sign-in only through the identity provider"
+      },
+      "body": {
+        "ar": "لا يوجد تسجيل دخول محلي. يعتمد النظام على OIDC من مزوّد NIRSO، وتُشفّر توكنات الجلسة في حزمة مستقلة.",
+        "en": "There is no local login. The system relies on OIDC from NIRSO's identity provider, and session tokens are encrypted in a separate package."
+      }
+    },
+    {
+      "title": {
+        "ar": "سحب وإفلات بترتيب كسري",
+        "en": "Drag and drop with fractional ordering"
+      },
+      "body": {
+        "ar": "ترتيب المهام يُخزَّن بمفاتيح كسرية، فنقل بطاقة إلى مكان جديد يغيّر صفاً واحداً فقط ولا يعيد ترقيم القائمة.",
+        "en": "Task order is stored as fractional keys, so moving a card to a new spot updates one row and never renumbers the list."
+      }
+    },
+    {
+      "title": {
+        "ar": "أتمتة تمنع الحلقات",
+        "en": "Automations that cannot loop"
+      },
+      "body": {
+        "ar": "للمحرّك حدّ للعمق، وقاعدة تُشغَّل مرة واحدة لكل سلسلة، وتجاهل لما لا يغيّر شيئاً. فلا تستطيع قاعدتان أن تُشعلا بعضهما بلا نهاية.",
+        "en": "The engine has a depth limit, runs a rule once per chain and ignores no-change events, so two rules cannot trigger each other forever."
+      }
+    },
+    {
+      "title": {
+        "ar": "مساعد ذكاء اصطناعي بصلاحياتك أنت",
+        "en": "An AI assistant with your permissions"
+      },
+      "body": {
+        "ar": "رابط «ربط الذكاء الاصطناعي» يوصل مساعداً عبر MCP بجلسة خاصة به. يفعل ما يستطيعه المستخدم في المتصفح ولا يزيد، وتُلغى جلسته مثل أي جلسة أخرى.",
+        "en": "The Connect AI link attaches an assistant over MCP with a session of its own. It can do what the user can do in the browser and nothing more, and its session is revoked like any other."
+      }
+    }
+  ]
+}

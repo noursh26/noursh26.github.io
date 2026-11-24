@@ -1,0 +1,96 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "zeros (0.00 revenue, 0 tickets), teams with 0 members, raw English 'created' log lines"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "empty state: no tickets, all counters 0"
+    },
+    {
+      "file": "desktop-04",
+      "reason": "empty state: no installation requests, all counters 0"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "lorem ipsum maker names (voluptas, quibusdam) and random serials"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "empty state: no invoices, all counters 0"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "teams show 0 members"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "empty network centre, all metrics 0, 'start by adding a tower'"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "zeros (0 tickets), English date in the Arabic UI, 'not assigned to any team'"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "empty state: no tickets, counters 0"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "empty state: no installation requests, counters 0"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "random device names ('nam') and random serials, one row visible"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "empty state: no invoices, counters 0"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "table cut off at the left edge"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "teams show 0 members"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "empty network centre, all metrics 0"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[4]; old tour desktop-10",
+      "text": "A network overview for infrastructure context / MikroTik monitoring",
+      "problem": "RouterOS code exists but the project itself says router connections are untested, and the screen is empty",
+      "fix": "remove"
+    },
+    {
+      "where": "projects.json features[1],[2]; summary; flow[1],[2]",
+      "text": "tickets, installation follow-up, inventory, billing",
+      "problem": "Implemented in source (Livewire modules, services) but every capture is an empty state or random data; nothing demonstrable",
+      "fix": "remove, or keep only after a recapture with data"
+    },
+    {
+      "where": "projects.json features[3]",
+      "text": "teams, permissions and administrative activity records",
+      "problem": "teams show 0 members; the activity log only shows raw English 'created' lines",
+      "fix": "reword to 'Roles and permissions' and drop activity records"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "synthetic local subscribers; MikroTik connections not tested by captures",
+      "problem": "talks about demo data and capture limits",
+      "fix": "remove"
+    },
+    {
+      "where": "old tour facts",
+      "text": "30 demo subscribers",
+      "problem": "count of demo rows, not a product fact",
+      "fix": "replaced with plans and zones counts"
+    }
+  ]
+}

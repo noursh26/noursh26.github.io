@@ -4,7 +4,7 @@ import {
   Books, BookOpenText, Bookmarks, Browsers, Buildings, ChartLineUp, ChatsCircle, CircleHalf, CloudArrowUp,
   Code, Compass, Database, DeviceMobile, Devices, FlowArrow, ForkKnife, HardDrives, Kanban, Lightning,
   MagnifyingGlass, MapPin, Medal, Path, Robot, RocketLaunch, Sparkle, SquaresFour, Storefront, SwimmingPool,
-  Timer, Translate, Trophy, WifiSlash, Wrench,
+  Timer, Translate, Trophy, WifiSlash, Wrench, FolderSimple, Table, Key, WifiHigh,
 } from '@phosphor-icons/react'
 import type { IconKey } from './content'
 
@@ -17,7 +17,7 @@ const MAP: Record<IconKey, ComponentType<IconProps>> = {
   search: MagnifyingGlass, store: Storefront, fork: ForkKnife, chats: ChatsCircle, book: BookOpenText, chart: ChartLineUp,
   kanban: Kanban, timer: Timer, flow: FlowArrow, pool: SwimmingPool, path: Path, wrench: Wrench,
   books: Books, sparkle: Sparkle, bookmarks: Bookmarks, servers: HardDrives, translate: Translate, cloud: CloudArrowUp,
-  compass: Compass, code: Code,
+  compass: Compass, code: Code, folder: FolderSimple, table: Table, key: Key, wifi: WifiHigh,
 }
 
 export function Glyph({ name, className = 'glyph', ...rest }: { name: IconKey } & IconProps) {

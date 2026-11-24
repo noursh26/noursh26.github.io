@@ -1,0 +1,70 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "home hero: the four counters wrap 3+1 and leave a large empty area at the top; the page below is a plan price list (subscriptions cannot be bought)"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "upload form step one is an empty form, nothing uploaded"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "token balance and plans are display only, the Top up button has no handler, plans cannot be bought"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "home hero is a sign-in call to action with the studio button; the studio needs an AI key and the page below is the unpurchasable plan list"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "upload form step one is an empty form"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "admin table is clipped at the left edge on a phone, the pages column is cut off"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "token balance and plans are display only, non-working Top up button"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[4]",
+      "text": "Profile, subscription and platform-management flows",
+      "problem": "subscription page is display only: UserSubscriptionsPage only renders, the Top up button has no handler, users cannot buy a plan (an admin assigns plans)",
+      "fix": "EN: Profile and platform-management interfaces. AR: ملف شخصي وواجهات لإدارة المنصة."
+    },
+    {
+      "where": "projects.json summary and solution",
+      "text": "account/subscription areas",
+      "problem": "same, no working subscription flow",
+      "fix": "drop 'subscription', say 'account areas'"
+    },
+    {
+      "where": "tours/fahrast.json facts[0] (3 subscription plans)",
+      "text": "3 subscription plans",
+      "problem": "plans exist in the admin but users cannot subscribe",
+      "fix": "remove (done in tour)"
+    },
+    {
+      "where": "tours/fahrast.json upload screen",
+      "text": "upload",
+      "problem": "the upload form is implemented but its capture is an empty first step, so it is not shown",
+      "fix": "not shown; mention only if a filled and processed upload is captured"
+    },
+    {
+      "where": "content.ts panels fahrast, hero lineup, directory.config.ts fahrast",
+      "text": "desk desktop-01, mobile-01; directory desktop-01/03, mobile-01/03/06",
+      "problem": "screens are hidden",
+      "fix": "use desktop-02, desktop-04, desktop-08 and mobile-02, mobile-04"
+    },
+    {
+      "where": "content.ts panels fahrast points[1], projects.json features[3]",
+      "text": "AI research studio",
+      "problem": "code exists (ResearchStudioPage, report/summary/presentation/audio jobs) but needs a configured AI provider, no studio screen is shown and AI tasks read 0 in the demo; not verifiable end to end",
+      "fix": "keep only if a real studio output is captured, otherwise soften"
+    }
+  ]
+}

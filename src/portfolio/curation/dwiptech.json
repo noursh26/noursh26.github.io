@@ -1,0 +1,116 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "mid-fade: headline still fading in; stock photo and invented numbers (120+ projects)"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "mid-fade: headline and tagline still fading in; invented numbers"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "nav covers the top cards and the lower half repeats desktop-04"
+    },
+    {
+      "file": "desktop-04",
+      "reason": "invented impact scores (92%, 88%, 95%, 90%) on every card"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "invented impact scores on every card"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "placeholder logos Client 1 to Client 8 with invented companies"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "placeholder logos Client 1 to Client 4 with invented companies"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "stock photos and demo project descriptions with invented clients"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "stock photo and demo project text with an invented client"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "stock portrait photos for an invented team"
+    },
+    {
+      "file": "mobile-07",
+      "reason": "stock portrait photos for an invented team"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "invented testimonials with stock avatars, cards caught mid-entry"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "invented testimonials with stock avatars"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "example.com and 0000 000 contact details beside the form"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "example.com and 0000 000 contact details beside the form"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "example.com contacts and a newsletter field with no action"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "newsletter field with no action, example.com contact above"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[0]",
+      "text": "An opening that states the offer and the studio's numbers.",
+      "problem": "120+ projects, 10 years and 6 teams are seeded demo values",
+      "fix": {
+        "en": "An opening that states the offer.",
+        "ar": "افتتاحية تعرض العرض الأساسي للشركة."
+      }
+    },
+    {
+      "where": "projects.json summary and features[2]",
+      "text": "Projects, team and testimonials managed from the admin panel",
+      "problem": "The admin CRUD is real (routes/web.php) but every displayed team member, client, project and testimonial is invented",
+      "fix": {
+        "en": "Services, projects, team and testimonials are editable records in an admin panel.",
+        "ar": "الخدمات والمشاريع والفريق وآراء العملاء سجلات قابلة للتحرير من لوحة الإدارة."
+      }
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "Companies, projects and testimonials in these captures are synthetic",
+      "problem": "Copy talks about demo data, which the rules forbid",
+      "fix": "remove"
+    },
+    {
+      "where": "projects.json features[3]",
+      "text": "A contact form that lands straight in the admin inbox.",
+      "problem": "Verified end to end (POST /contact, ContactMessage::create, admin inbox). No screen shows it because the contact details beside it are example.com",
+      "fix": "keep the claim, no screen"
+    },
+    {
+      "where": "landing footer (never in copy)",
+      "text": "Footer newsletter field",
+      "problem": "The form has no action",
+      "fix": "never mention"
+    },
+    {
+      "where": "src/story/content.ts landings[dwiptech] and directory.config.ts dwiptech",
+      "text": "shot desktop-01, phone mobile-01",
+      "problem": "both are hidden now (mid-fade)",
+      "fix": "use desktop-02 and mobile-02"
+    }
+  ]
+}

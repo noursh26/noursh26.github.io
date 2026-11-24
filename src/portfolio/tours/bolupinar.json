@@ -1,0 +1,196 @@
+{
+  "facts": [
+    {
+      "value": "AR / EN",
+      "label": {
+        "en": "languages, Arabic first",
+        "ar": "اللغات، العربية أولاً"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "en": "stops on the water journey",
+        "ar": "محطات في رحلة المياه"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "en": "bottle formats",
+        "ar": "أحجام للعبوات"
+      }
+    }
+  ],
+  "intro": {
+    "en": "A fully Arabic site for a Turkish water brand sold in Kuwait. It speaks to a purchasing manager at a hotel or restaurant: where the spring is, how the water is bottled and which sizes exist. The story runs from the mountain to the table, in that order.",
+    "ar": "موقع عربي كامل لعلامة مياه تركية تُباع في الكويت. يخاطب مدير المشتريات في فندق أو مطعم: أين النبع، وكيف تُعبأ المياه، وما الأحجام المتوفرة. القصة تسير من الجبل إلى الطاولة بهذا الترتيب."
+  },
+  "screens": [
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "en": "Story",
+        "ar": "القصة"
+      },
+      "title": {
+        "en": "The photograph and the spring.",
+        "ar": "الصورة والنبع."
+      },
+      "body": {
+        "en": "A tall photograph of the mountain lake beside the headline \"From a protected natural spring, to a bottle on your table.\" Beneath the paragraph sits a short row of figures that opens with the spring's altitude of 1,300 metres.",
+        "ar": "صورة طويلة لبحيرة الجبل بجانب العنوان \"من ينبوع طبيعي محمي، إلى زجاجة على طاولتك\". تحت الفقرة صف قصير من الأرقام يبدأ بارتفاع النبع، 1,300 متر."
+      },
+      "points": [
+        {
+          "en": "The photo tilts slightly with the pointer.",
+          "ar": "الصورة تميل قليلاً مع المؤشر."
+        },
+        {
+          "en": "On a phone the figures drop under the text in a column.",
+          "ar": "على الهاتف تنزل الأرقام تحت النص في عمود."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "en": "Source",
+        "ar": "المصدر"
+      },
+      "title": {
+        "en": "At 1,300 metres.",
+        "ar": "على ارتفاع 1,300 متر."
+      },
+      "body": {
+        "en": "The background turns night blue with an illustrated mountain range and moon. The headline reads \"At 1,300 metres, where the mountain breathes.\" At the bottom the first stop begins: the Bolu Mountains, a protected area in north-west Türkiye.",
+        "ar": "تتحول الخلفية إلى أزرق ليلي مع رسم لسلسلة جبال وقمر. العنوان يقول \"على ارتفاع 1,300 متر، حيث يتنفس الجبل\". في الأسفل تبدأ المحطة الأولى: جبال بولو، منطقة محمية في شمال غرب تركيا."
+      },
+      "points": [
+        {
+          "en": "The illustration is drawn in SVG, so it stays sharp at any size.",
+          "ar": "الرسم بصيغة SVG، فيبقى حاداً بأي حجم."
+        },
+        {
+          "en": "A thin vertical line stands for the drop's path.",
+          "ar": "خط رأسي رفيع يمثل مسار القطرة."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "en": "Water journey",
+        "ar": "رحلة المياه"
+      },
+      "title": {
+        "en": "Four stops from mountain to bottle.",
+        "ar": "أربع محطات من الجبل إلى الزجاجة."
+      },
+      "body": {
+        "en": "The Bolu Mountains, the natural park, rock filtration, then bottling at the source. Each stop has a number, a title and two sentences along a numbered line. Bottling directly at the source is the conclusion: no long transport pipes and no intermediate storage.",
+        "ar": "جبال بولو، ثم المتنزه الطبيعي، ثم الترشيح الصخري، ثم التعبئة عند المنبع. لكل محطة رقم وعنوان وجملتان على خط مرقّم. التعبئة المباشرة عند المصدر هي الخاتمة: لا أنابيب نقل طويلة ولا تخزين وسيط."
+      },
+      "points": [
+        {
+          "en": "A node on the line for each stop, with one lit.",
+          "ar": "عقدة على الخط لكل محطة، وإحداها مضاءة."
+        },
+        {
+          "en": "On a phone the stops sit under the illustration in a column.",
+          "ar": "على الهاتف تأتي المحطات تحت الرسم في عمود."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "phone": "mobile-06",
+      "kicker": {
+        "en": "Products",
+        "ar": "المنتجات"
+      },
+      "title": {
+        "en": "Four bottles, one complete table.",
+        "ar": "أربع زجاجات، طاولة كاملة."
+      },
+      "body": {
+        "en": "A row of four cards: still and sparkling, in 750 and 330 ml. Each bottle is an illustration in a blue gradient with a branded label. Below each one sit its type, size and a line on use, the large size for dinner tables and the small one for a personal glass.",
+        "ar": "صف من أربع بطاقات: ساكنة وغازية، بحجمي 750 و330 مل. كل زجاجة رسم بتدرج أزرق وعليها ملصق العلامة. تحت كل واحدة نوعها وحجمها وسطر عن الاستخدام، الحجم الكبير لموائد العشاء والصغير للكأس الفردي."
+      },
+      "points": [
+        {
+          "en": "A coloured dot separates still from sparkling.",
+          "ar": "نقطة ملوّنة تفصل الساكنة عن الغازية."
+        },
+        {
+          "en": "Cards tilt slightly with the pointer.",
+          "ar": "البطاقات تميل قليلاً مع المؤشر."
+        },
+        {
+          "en": "On a phone the cards form a single column.",
+          "ar": "على الهاتف تشكّل البطاقات عموداً واحداً."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-07",
+      "kicker": {
+        "en": "Product details",
+        "ar": "تفاصيل المنتج"
+      },
+      "title": {
+        "en": "One bottle, one card.",
+        "ar": "زجاجة واحدة، بطاقة واحدة."
+      },
+      "body": {
+        "en": "On a phone each bottle gets a full card: the bottle, its size and a short line on use. A small table beneath lists the type, the origin, which is the Bolu Mountains, and the sales channel.",
+        "ar": "على الهاتف تنال كل زجاجة بطاقة كاملة: الزجاجة وحجمها وسطر قصير عن الاستخدام. جدول صغير أسفلها يذكر النوع والمنشأ، وهو جبال بولو، وقناة البيع."
+      },
+      "points": [
+        {
+          "en": "Type, origin and channel as three plain rows.",
+          "ar": "النوع والمنشأ والقناة في ثلاثة صفوف بسيطة."
+        },
+        {
+          "en": "Size is set large so it reads first.",
+          "ar": "الحجم بخط كبير ليُقرأ أولاً."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "en": "Arabic first, with real RTL",
+        "ar": "عربية أولاً مع RTL حقيقي"
+      },
+      "body": {
+        "en": "The page loads with lang=ar and dir=rtl, and a full EN and AR dictionary swaps copy through data-i18n. Inter carries the Arabic and Montserrat the Latin headings.",
+        "ar": "تُحمَّل الصفحة بـ lang=ar وdir=rtl، وقاموس EN وAR كامل يبدّل النصوص عبر data-i18n. خط Inter للعربية وMontserrat للعناوين اللاتينية."
+      }
+    },
+    {
+      "title": {
+        "en": "No animation libraries",
+        "ar": "بلا مكتبات حركة"
+      },
+      "body": {
+        "en": "Scroll reveals, counters and the hero drift all use IntersectionObserver and requestAnimationFrame in one JavaScript file. No GSAP and no build step.",
+        "ar": "كشف العناصر بالتمرير والعدّادات وانجراف الهيرو كلها تستخدم IntersectionObserver وrequestAnimationFrame في ملف JavaScript واحد. لا GSAP ولا خطوة بناء."
+      }
+    },
+    {
+      "title": {
+        "en": "Video plays only when visible",
+        "ar": "الفيديو يعمل عند ظهوره فقط"
+      },
+      "body": {
+        "en": "Videos pause when off screen and resume when they come into view, each with a poster frame. This lightens the load on phones.",
+        "ar": "تتوقف الفيديوهات عند خروجها من الشاشة وتستأنف عند ظهورها، ولكل منها صورة غلاف. هذا يخفف الحمل على الهواتف."
+      }
+    }
+  ]
+}

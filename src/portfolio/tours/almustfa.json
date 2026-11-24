@@ -1,0 +1,386 @@
+{
+  "facts": [
+    {
+      "value": "5",
+      "label": {
+        "ar": "أدوار",
+        "en": "roles"
+      }
+    },
+    {
+      "value": "69",
+      "label": {
+        "ar": "نموذج بيانات",
+        "en": "data models"
+      }
+    },
+    {
+      "value": "1",
+      "label": {
+        "ar": "شيفرة للويب وأندرويد",
+        "en": "codebase for web and Android"
+      }
+    },
+    {
+      "value": "RTL",
+      "label": {
+        "ar": "عربي بالكامل",
+        "en": "Arabic only"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "يستخدمه أساتذة الحلقات والمشرفون ومدير الدورة، ويستخدمه الطلاب لمتابعة برنامجهم. يفتح الأستاذ الحلقة من هاتفه ويسجّل التسميع والنقاط في دقائق، ثم يراجع المشرف الأرقام ويرى من يحتاج متابعة، ويفتح الطالب برنامجه اليومي ويُتمّ مهامه.",
+    "en": "Teachers, supervisors and course managers use it to run a circle, and students use it to follow their own program. A teacher opens the circle on a phone and records recitations and points in minutes. A supervisor reviews the numbers and sees who needs follow-up, and a student opens the daily program and ticks off tasks."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "الرئيسية",
+        "en": "Home"
+      },
+      "title": {
+        "ar": "شاشة الكادر الرئيسية.",
+        "en": "The staff home."
+      },
+      "body": {
+        "ar": "تفتح الرئيسية على أرقام اليوم: التسميع والحضور والنقاط ونسبة البرنامج. تحتها اختصارات إلى الإضافة السريعة وسجل النقاط والطلاب ومراجعة البرنامج، وتنبيهات مثل من لم يُسمّع منذ سبعة أيام.",
+        "en": "Home opens on today's numbers: recitations, attendance, points and program completion. Below are shortcuts to quick add, the points ledger, students and program review, plus alerts such as who has not recited in seven days."
+      },
+      "points": [
+        {
+          "ar": "ترتيب الطلاب بفلاتر: اليوم، الأسبوع، الشهر، السنة، الكل.",
+          "en": "Student ranking with day, week, month, year and all filters."
+        },
+        {
+          "ar": "بطاقة ترتيب الحلقة تقارن بالنقاط أو بالتسميع.",
+          "en": "The halaqa card compares by points or by recitations."
+        },
+        {
+          "ar": "التنبيهات قابلة للإغلاق، وتعرض خمسة أولاً ثم الباقي.",
+          "en": "Alerts can be dismissed, and show a few before the rest."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "التسجيل",
+        "en": "Recording"
+      },
+      "title": {
+        "ar": "إضافة سريعة، بضع لمسات.",
+        "en": "Quick add, in a few taps."
+      },
+      "body": {
+        "ar": "يختار الأستاذ الطلاب من الشريط العلوي، ثم يضغط بطاقة من الكتالوج فتدخل السلة. الكتالوج مقسّم إلى تسميع ونقاط وخصم وأنشطة، وكل بطاقة تُظهر قيمتها مثل +5 للمواظبة أو -5 للغياب بلا عذر. زر الحفظ يسجّل كل ما في السلة دفعة واحدة بتاريخ اليوم أو بتاريخ آخر.",
+        "en": "The teacher picks students from the strip on top, then taps cards in the catalogue to fill the basket. The catalogue is split into recitation, points, deductions and activities, and each card shows its value, such as +5 for attendance or -5 for an unexcused absence. Save records everything in the basket at once, dated today or another day."
+      },
+      "points": [
+        {
+          "ar": "مفتاح التوقع الذكي يقترح قيم التسميع من سجل كل طالب.",
+          "en": "A smart-prediction switch suggests recitation values from each student's history."
+        },
+        {
+          "ar": "أسفل الصفحة آخر الإضافات مع وقتها وأسماء الطلاب.",
+          "en": "Recent additions list the time and the students below."
+        },
+        {
+          "ar": "تعمل دون اتصال: العملية تُحفظ في الجهاز وتُرسل لاحقاً.",
+          "en": "Works offline: the write is stored on the device and sent later."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "الطلاب",
+        "en": "Students"
+      },
+      "title": {
+        "ar": "قائمة الطلاب وحالاتهم.",
+        "en": "The student list and their status."
+      },
+      "body": {
+        "ar": "جدول واحد لكل طلاب الدورة: الاسم والهاتف، والحلقة، والنقاط، وعدد التسميعات. تبدّل بين نشط ومعطّل وكل الطلاب، وتبحث بالاسم أو الهاتف. وعلى كل صف زر لعرض الطالب.",
+        "en": "One list for the whole course: name and phone, halaqa, points and recitation count. You switch between active, disabled and all, and search by name or phone. Each row opens the student."
+      },
+      "points": [
+        {
+          "ar": "تبويبات الحالة: نشط، معطّل، الكل.",
+          "en": "Status tabs: active, disabled, all."
+        },
+        {
+          "ar": "زر «طالب» في الأعلى يضيف طالباً جديداً.",
+          "en": "The Student button on top adds a new one."
+        },
+        {
+          "ar": "الصفوف تتسع للأسماء الطويلة وتقصّها بنقاط.",
+          "en": "Rows hold long names and trim them with an ellipsis."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "ar": "الطلاب",
+        "en": "Students"
+      },
+      "title": {
+        "ar": "ملف الطالب.",
+        "en": "One student's profile."
+      },
+      "body": {
+        "ar": "يجمع الملف ما يحتاجه الأستاذ عن طالب واحد: الحضور والتسميع ومجموع النقاط وما أُضيف هذا الشهر. زرّا تسميع ونقاط في أعلاه يفتحان التسجيل لهذا الطالب مباشرة. ثلاثة تبويبات: التقدّم، والسجل، والبيانات.",
+        "en": "The profile gathers what a teacher needs about one student: attendance, recitations, total points and what was added this month. Recite and Points buttons on top open recording for that student directly. Three tabs: progress, log and details."
+      },
+      "points": [
+        {
+          "ar": "خريطة المصحف بالأجزاء، وتتلوّن الأجزاء المحفوظة.",
+          "en": "A Quran map by juz, with memorised parts shaded."
+        },
+        {
+          "ar": "سطر الحلقة والحالة واسم المعلم تحت الاسم.",
+          "en": "Halaqa, status and teacher name sit under the name."
+        },
+        {
+          "ar": "زر التعديل في الزاوية يفتح بيانات الطالب.",
+          "en": "The edit button in the corner opens the student's details."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "phone": "mobile-09",
+      "kicker": {
+        "ar": "السجل",
+        "en": "Ledger"
+      },
+      "title": {
+        "ar": "سجل واحد لكل حركة.",
+        "en": "One ledger for every record."
+      },
+      "body": {
+        "ar": "السجل يعرض النقاط والأنشطة مجمّعة باليوم، وكل سطر يذكر الطالب ونوع الحركة ومن سجّلها. بطاقتان في الجانب تلخّصان مجموع النقاط وأنشطة الشهر، ومنهما رابط لترتيب النقاط والأكثر حضوراً. التبويب الأعلى ينقلك إلى سجل التسميع.",
+        "en": "The ledger shows points and activities grouped by day, and each line names the student, the kind of record and who recorded it. Two side cards sum up total points and the month's activities, with links to the points ranking and the most present. The top tab switches to the recitation log."
+      },
+      "points": [
+        {
+          "ar": "فلاتر: الكل، نقاط، أنشطة، وحسب الطالب أو الحلقة.",
+          "en": "Filters: all, points, activities, by student or halaqa."
+        },
+        {
+          "ar": "الخصم يظهر بالأحمر مثل -5 لغياب بلا عذر.",
+          "en": "Deductions show in red, such as -5 for an unexcused absence."
+        },
+        {
+          "ar": "أزرار نشاط جديد وإضافة نقاط وتقويم وبحث في رأس الصفحة.",
+          "en": "New activity, add points, calendar and search sit in the header."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "المتابعة",
+        "en": "Follow-up"
+      },
+      "title": {
+        "ar": "لوحة برنامج الطلاب للكادر.",
+        "en": "The staff program board."
+      },
+      "body": {
+        "ar": "يرى المشرف هنا من يلتزم ببرنامجه ومن ينقطع، لعدد الأيام الذي يختاره: 7 أو 14 أو 30. أربع بطاقات تلخّص نسبة الالتزام ومن يحتاج متابعة والمراجعات المعلّقة ونقاط الفترة، وتحتها صف لكل طالب بشريط يوم بيوم.",
+        "en": "Here a supervisor sees who keeps up with the program and who has dropped off, over 7, 14 or 30 days. Four cards sum up the commitment rate, who needs follow-up, pending reviews and the period's points, and below them each student gets a day-by-day strip."
+      },
+      "points": [
+        {
+          "ar": "وسوم على الصف مثل متوقف أو انقطع تتابعه أو كميات مرتفعة.",
+          "en": "Row tags such as stopped, lapsed, or high quantities."
+        },
+        {
+          "ar": "تبويبات المتابعة والمراجعات والبنود والتقارير والإحصائيات.",
+          "en": "Tabs for follow-up, reviews, items, reports and statistics."
+        },
+        {
+          "ar": "يُرتَّب الطلاب من الأقل التزاماً إلى الأعلى.",
+          "en": "Students are ordered from lowest commitment upward."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-10",
+      "kicker": {
+        "ar": "الإدارة",
+        "en": "Management"
+      },
+      "title": {
+        "ar": "لوحة الحلقات.",
+        "en": "The halaqa board."
+      },
+      "body": {
+        "ar": "مدير الدورة يرى كل حلقة كعمود فيه أساتذتها وطلابها، ويحرّك الطالب بالسحب من حلقة إلى أخرى. أعلى الصفحة عدّادات الحلقات والطلاب وغير الموزّعين وما فاق السعة. وتجمع بطاقة «غير موزّعين» من لا حلقة له، ومعهم المعلمون والمشرفون بلا حلقة.",
+        "en": "The course manager sees each halaqa as a column with its teachers and students, and moves a student between halaqas by dragging. Counters on top show halaqas, students, unassigned and over-capacity. An unassigned card gathers anyone without a halaqa, along with teachers and supervisors who have none."
+      },
+      "points": [
+        {
+          "ar": "حلقة النور تعرض 9 من 8، فتُعلَّم بأنها فوق السعة.",
+          "en": "Halaqa Al-Nour shows 9 of 8, so it is flagged over capacity."
+        },
+        {
+          "ar": "ثلاث طرق عرض: اللوحة، والقائمة، والهيكل.",
+          "en": "Three views: board, list and structure."
+        },
+        {
+          "ar": "على الهاتف يُضغط الطالب مطولاً ثم يُسحب إلى الحلقة.",
+          "en": "On a phone, long-press a student and drag to a halaqa."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "الطالب",
+        "en": "Student"
+      },
+      "title": {
+        "ar": "البرنامج اليومي للطالب.",
+        "en": "The student's daily program."
+      },
+      "body": {
+        "ar": "يفتح الطالب برنامجه فيجد مهام اليوم: أذكار المساء وقراءة الورد والاستغفار وغيرها، كل مهمة بنقاطها وتتابعها. بعضها يُتمّ بضغطة، وبعضها بعدّاد مثل الاستغفار من 100، وبعضها بوقت بداية ونهاية. أعلى الصفحة المستوى ونسبة الوصول إلى التالي وأيام التتابع.",
+        "en": "A student opens the program to find today's tasks: evening adhkar, the daily Quran reading, istighfar and others, each with its points and streak. Some finish with one tap, some use a counter such as istighfar out of 100, and some take a start and end time. The header shows the level, progress to the next one and streak days."
+      },
+      "points": [
+        {
+          "ar": "شريط الأسبوع للتنقل بين الأيام ومراجعة ما فات.",
+          "en": "A week strip moves between days to review past ones."
+        },
+        {
+          "ar": "عند نيل شارة جديدة تظهر بطاقة تهنئة تُغلق بزر متابعة.",
+          "en": "A new badge opens a celebration card, closed with Continue."
+        },
+        {
+          "ar": "المهمة الموقوفة تُقفل ولا تُحتسب.",
+          "en": "A paused task is locked and does not count."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "الطالب",
+        "en": "Student"
+      },
+      "title": {
+        "ar": "تقدّمي، نظرة على مستواي.",
+        "en": "My progress, a view of my level."
+      },
+      "body": {
+        "ar": "صفحة التقدّم تلخّص ما أنجزه الطالب: النقاط والحضور والتسميع وأطول سلسلة. شريط المستوى يوضّح كم بقي للمستوى التالي بالنقاط والصفحات، وتحته الشارات وآخر النشاط. أربعة تبويبات: نظرة عامة، القرآن، النشاط، الإنجازات.",
+        "en": "The progress page sums up what a student has done: points, attendance, recitations and longest streak. The level bar shows how much remains for the next level in points and pages, with badges and recent activity below. Four tabs: overview, Quran, activity and achievements."
+      },
+      "points": [
+        {
+          "ar": "فترات العرض: اليوم، الأسبوع، الشهر، السنة، الكل.",
+          "en": "Time ranges: day, week, month, year, all."
+        },
+        {
+          "ar": "آخر النشاط يذكر المعلم والتقدير مثل ممتاز وعدد الأخطاء.",
+          "en": "Recent activity names the teacher and the grade, with error counts."
+        },
+        {
+          "ar": "المستوى يُحسب من النقاط والصفحات معاً.",
+          "en": "The level is computed from points and pages together."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-07",
+      "kicker": {
+        "ar": "الطالب",
+        "en": "Student"
+      },
+      "title": {
+        "ar": "سباق الأسبوع.",
+        "en": "The weekly race."
+      },
+      "body": {
+        "ar": "في السباق ينافس طلاب الحلقة على نقاط الأسبوع. تُعرض المراتب الثلاث الأولى على منصة، ومن بعدها قائمة، وتُكتب مرتبة الطالب في أعلى الصفحة مثل «مرتبتك 2 من 10».",
+        "en": "In the race, students of a halaqa compete on the week's points. The top three sit on a podium with a list below, and the student's own place shows on top, such as ranked 2 of 10."
+      },
+      "points": [
+        {
+          "ar": "التبويبات على الهاتف: مهام اليوم، إنجازاتي، السباق.",
+          "en": "Phone tabs: today's tasks, achievements, race."
+        },
+        {
+          "ar": "الطالب نفسه يظهر باسم أنت على المنصة.",
+          "en": "The student appears as You on the podium."
+        },
+        {
+          "ar": "الترتيب خاص بحلقة الطالب في الدورة.",
+          "en": "Ranking is scoped to the student's own halaqa."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "تسجيل واحد لكل شاشة",
+        "en": "One enrollment per screen"
+      },
+      "body": {
+        "ar": "الشخص الواحد قد يكون أستاذاً في حلقة وطالباً في أخرى، فكل دور تسجيل مستقل في الدورة، وتُعرض الشاشة وصلاحياتها على تسجيل واحد فقط. هناك خمسة أدوار: مدير ومشرف ومعلم ومساعد وطالب، ولا يوسّع دور صلاحيات دور آخر.",
+        "en": "A person can teach in one halaqa and study in another, so each role is its own enrollment in a course, and a screen renders against exactly one. There are five roles: manager, supervisor, teacher, assistant and student, and one role never widens another's permissions."
+      }
+    },
+    {
+      "title": {
+        "ar": "طابور دون اتصال",
+        "en": "An offline outbox"
+      },
+      "body": {
+        "ar": "حين ينقطع الاتصال تُحفظ العمليات في IndexedDB وتُعاد حين يعود. كل إضافة نقاط تأخذ معرّفاً فريداً مرة واحدة، فلا يُنشأ سجل مكرّر إن أُعيد الإرسال.",
+        "en": "When the connection drops, writes are stored in IndexedDB and replayed when it returns. Each point award gets a unique id once, so a retry never creates a second row."
+      }
+    },
+    {
+      "title": {
+        "ar": "حدود النقاط في الخادم",
+        "en": "Point limits on the server"
+      },
+      "body": {
+        "ar": "لكل دورة حدّ يومي للإضافة وآخر للخصم، وتُرفض النقاط التي تتجاوزه. ومركز سلامة البيانات يفحص قواعد مثل تجاوز الحد اليومي ويُبلغ عنها.",
+        "en": "Each course has a daily add limit and a deduct limit, and points beyond them are refused. A data-integrity center scans rules such as an exceeded daily limit and reports them."
+      }
+    },
+    {
+      "title": {
+        "ar": "الخادم يحدّد التنقل والقواعد",
+        "en": "The server owns navigation and rules"
+      },
+      "body": {
+        "ar": "شجرة التنقل والأدوار والميزات تأتي من واجهة Laravel، ولا يكرّر العميل منطقها. لذلك يتصرف تطبيق الويب ونسخة أندرويد بالطريقة نفسها.",
+        "en": "The navigation tree, roles and feature flags come from the Laravel API, and the client does not duplicate their logic. That keeps the web app and the Android build behaving the same."
+      }
+    },
+    {
+      "title": {
+        "ar": "ويب وأندرويد من شيفرة واحدة",
+        "en": "Web and Android from one codebase"
+      },
+      "body": {
+        "ar": "واجهة React 19 بـ Tailwind 4 وTanStack Query بذاكرة محفوظة، تُغلَّف بـ Capacitor لنسخة أندرويد، وتُعرض من اليمين إلى اليسار بوضعين فاتح وداكن. اتصال أندرويد عبر HTTPS فقط.",
+        "en": "A React 19 client with Tailwind 4 and a persisted TanStack Query cache, wrapped with Capacitor for Android, rendered right to left in light and dark modes. The Android build talks to the API over HTTPS only."
+      }
+    }
+  ]
+}

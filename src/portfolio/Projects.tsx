@@ -1,17 +1,19 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
+import { ArrowDown, Check } from '@phosphor-icons/react'
 import { useLang } from '../i18n'
-import {
-  categories,
-  projects,
-  projectHref,
-  projectShots,
-  projectCover,
-} from './data'
-import type { Project, Shot } from './types'
+import { categories, projects, projectHref, projectShots, projectCover } from './data'
+import type { Project, Shot, Tour } from './types'
 import { SiteHeader } from '../components/SiteHeader'
 import { SiteFooter } from '../components/SiteFooter'
+import { stories } from './directory.config'
+import { getShot, Handset, label, tintProps, Window } from './frames'
+import { tourOf } from './tours'
+import { roleSets } from './roles'
+import { useCaseMotion } from './useCaseMotion'
 import './projects.css'
+import './directory.css'
+import './case.css'
 
 function accentInk(hex: string) {
   const channels = hex
@@ -68,182 +70,10 @@ function usePageMeta(title: string, description: string) {
   }, [title, description])
 }
 
-function ProjectPreview({
-  project,
-  eager = false,
-}: {
-  project: Project
-  eager?: boolean
-}) {
+function Gallery({ project, phoneOnly = false }: { project: Project; phoneOnly?: boolean }) {
   const { lang } = useLang()
-  const cover = projectCover(project)
-  const phone = projectCover(project, 'mobile')
-  return (
-    <article
-      className="project-preview"
-      style={
-        {
-          '--project-bg': project.palette.background,
-          '--project-fg': project.palette.foreground,
-          '--project-accent': project.palette.accent,
-        } as CSSProperties
-      }
-    >
-      <a href={projectHref(project.id)} className="project-preview__link">
-        <div
-          className={`project-preview__media project-preview__media--${project.layout}`}
-        >
-          {cover && (
-            <img
-              src={cover.file}
-              alt={`${project.name} — ${lang === 'ar' ? cover.label : cover.labelEn}`}
-              width={cover.width}
-              height={cover.height}
-              loading={eager ? 'eager' : 'lazy'}
-              decoding="async"
-            />
-          )}
-          {phone && (
-            <img
-              className="project-preview__phone"
-              src={phone.thumbnail}
-              alt=""
-              width={phone.width}
-              height={phone.height}
-              loading="lazy"
-              decoding="async"
-            />
-          )}
-        </div>
-        <div className="project-preview__copy">
-          <h2><bdi>{project.name}</bdi></h2>
-          <p>{project.summary[lang]}</p>
-          <span className="project-preview__open">
-            {lang === 'ar' ? 'تفاصيل المشروع' : 'Explore project'}
-            <Arrow />
-          </span>
-        </div>
-      </a>
-    </article>
-  )
-}
-
-export function ProjectsDirectory() {
-  const { lang } = useLang()
-  const [category, setCategory] = useState('all')
-  const [query, setQuery] = useState('')
-  const term = query.trim().toLocaleLowerCase()
-  const filtered = projects.filter(
-    (p) =>
-      (category === 'all' || p.category === category) &&
-      `${p.name} ${p.summary.ar} ${p.summary.en} ${p.stack.join(' ')}`
-        .toLocaleLowerCase()
-        .includes(term),
-  )
-  usePageMeta(
-    lang === 'ar' ? 'المشاريع' : 'Projects',
-    lang === 'ar'
-      ? 'مشاريع نور الدين شحادة: تفاصيل المنتجات، البنية التقنية، وشاشات فعلية ببيانات تجريبية.'
-      : 'Nour Aldeen’s projects: product stories, architecture, and actual interface captures with demo data.',
-  )
-  return (
-    <div className="projects-site">
-      <a className="skip-link" href="#projects-main">
-        {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
-      </a>
-      <SiteHeader page="projects" />
-      <main id="projects-main">
-        <section className="projects-intro">
-          <h1>{lang === 'ar' ? 'كل المشاريع.' : 'All projects.'}</h1>
-          <p>
-            {lang === 'ar'
-              ? 'من أنظمة الأعمال إلى تطبيقات الحياة اليومية. استكشف الفكرة، التفاصيل، والشاشات الفعلية لكل مشروع.'
-              : 'From business systems to everyday apps. Explore the thinking, the details, and the actual screens behind each project.'}
-          </p>
-        </section>
-        <section
-          className="project-index"
-          aria-label={lang === 'ar' ? 'معرض المشاريع' : 'Project directory'}
-        >
-          <div className="project-index__tools">
-            <label className="project-search">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle
-                  cx="10.5"
-                  cy="10.5"
-                  r="6.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                />
-                <path d="m16 16 4 4" stroke="currentColor" strokeWidth="1.5" />
-              </svg>
-              <span className="sr-only">
-                {lang === 'ar' ? 'ابحث عن مشروع' : 'Search projects'}
-              </span>
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder={
-                  lang === 'ar' ? 'ابحث عن مشروع' : 'Search projects'
-                }
-              />
-            </label>
-            <div
-              className="project-filters"
-              aria-label={lang === 'ar' ? 'مجال المشروع' : 'Project category'}
-            >
-              {categories.map((c) => (
-                <button
-                  key={c.id}
-                  aria-pressed={category === c.id}
-                  onClick={() => setCategory(c.id)}
-                >
-                  {c.label[lang]}
-                </button>
-              ))}
-            </div>
-          </div>
-          <p className="project-results" role="status" aria-live="polite">
-            {lang === 'ar'
-              ? `${filtered.length} مشروع`
-              : `${filtered.length} projects`}
-          </p>
-          {filtered.length ? (
-            <div className="project-index__grid">
-              {filtered.map((p, i) => (
-                <ProjectPreview key={p.id} project={p} eager={i < 2} />
-              ))}
-            </div>
-          ) : (
-            <div className="project-empty">
-              <h2>
-                {lang === 'ar'
-                  ? 'لا يوجد مشروع بهذا البحث.'
-                  : 'No projects match your search.'}
-              </h2>
-              <button
-                onClick={() => {
-                  setQuery('')
-                  setCategory('all')
-                }}
-              >
-                {lang === 'ar' ? 'عرض كل المشاريع' : 'Show all projects'}
-              </button>
-            </div>
-          )}
-        </section>
-      </main>
-      <ProjectCta />
-      <SiteFooter />
-    </div>
-  )
-}
-
-function Gallery({ project }: { project: Project }) {
-  const { lang } = useLang()
-  const all = projectShots(project.id)
-  const [device, setDevice] = useState<'desktop' | 'mobile'>('desktop')
+  const all = projectShots(project.id).filter((s) => !phoneOnly || s.device === 'mobile')
+  const [device, setDevice] = useState<'desktop' | 'mobile'>(phoneOnly ? 'mobile' : 'desktop')
   const [index, setIndex] = useState(0)
   const dialog = useRef<HTMLDialogElement>(null)
   const trigger = useRef<HTMLElement | null>(null)
@@ -272,11 +102,11 @@ function Gallery({ project }: { project: Project }) {
     <section className="case-gallery" id="screens">
       <div className="case-gallery__heading">
         <div>
-          <h2>{lang === 'ar' ? 'داخل المشروع.' : 'Inside the product.'}</h2>
+          <h2>{lang === 'ar' ? 'انظر عن قرب.' : 'Look closer.'}</h2>
           <p>
             {lang === 'ar'
-              ? 'شاشات فعلية ببيانات تجريبية.'
-              : 'Actual interfaces. Demonstration data.'}
+              ? 'اختر أي شاشة وافتحها بحجمها الكامل. كلها واجهات فعلية ببيانات تجريبية.'
+              : 'Pick any screen and open it full size. All are actual interfaces with demonstration data.'}
           </p>
         </div>
         <div
@@ -284,7 +114,7 @@ function Gallery({ project }: { project: Project }) {
           role="tablist"
           aria-label={lang === 'ar' ? 'نوع الجهاز' : 'Device type'}
         >
-          {(['desktop', 'mobile'] as const).map((d) => (
+          {(phoneOnly ? (['mobile'] as const) : (['desktop', 'mobile'] as const)).map((d) => (
             <button
               id={`tab-${d}`}
               key={d}
@@ -463,14 +293,100 @@ function Gallery({ project }: { project: Project }) {
   )
 }
 
+type T = { ar: string; en: string }
+const t = (en: string, ar: string): T => ({ en, ar })
+const caseCopy = {
+  skip: t('Skip to content', 'انتقل إلى المحتوى'),
+  contents: t('Project contents', 'محتويات المشروع'),
+  all: t('All projects', 'كل المشاريع'),
+  overview: t('Overview', 'الفكرة'),
+  tour: t('Tour', 'الجولة'),
+  hood: t('Under the hood', 'من الداخل'),
+  screens: t('Screens', 'الشاشات'),
+  takeTour: t('Take the tour', 'ابدأ الجولة'),
+  flagship: t('Flagship · my biggest project', 'المشروع الأكبر'),
+  inProgress: t('In progress · side project', 'قيد التنفيذ · مشروع جانبي'),
+  demo: t('Actual interface · demo data', 'واجهة فعلية · بيانات تجريبية'),
+  problem: t('The problem', 'المشكلة'),
+  answer: t('The answer', 'الحل'),
+  day: t('How it is used', 'كيف يُستخدم'),
+  tourTitle: t('A walk through every screen.', 'جولة في كل شاشة.'),
+  tourLede: t(
+    'Scroll slowly. Each screen comes up as you read what it does.',
+    'مرّر على مهل. تظهر كل شاشة وأنت تقرأ ما تفعله.',
+  ),
+  hoodTitle: t('How it is built.', 'كيف بُني.'),
+  railTitle: t('Every screen, desktop and phone.', 'كل الشاشات، على الكمبيوتر والجوال.'),
+  next: t('Next project', 'المشروع التالي'),
+  of: t('of', 'من'),
+}
+
+type Step = Tour['screens'][number]
+
+/** Desktop and phone screens stacked in their frames; the motion hook shows them in turn. */
+function TourStage({ project, steps }: { project: Project; steps: Step[] }) {
+  const host = stories[project.id]?.host || project.id
+  const hasDesk = steps.some((s) => s.desk)
+  const img = (name: string | undefined, i: number, kind: string) => {
+    const shot = name ? getShot(project.id, name) : undefined
+    if (!shot) return null
+    return (
+      <img
+        key={`${kind}-${i}`}
+        className={`tshot ${i === 0 ? 'is-shown' : ''}`}
+        data-step={i}
+        src={shot.file}
+        alt=""
+        width={shot.width}
+        height={shot.height}
+        loading={i < 2 ? 'eager' : 'lazy'}
+        decoding="async"
+      />
+    )
+  }
+  return (
+    <div className={`ctour__stage ${hasDesk ? '' : 'is-phones'}`} aria-hidden="true">
+      <div className="ctour__devices">
+        {hasDesk && <Window host={host} className="ctour__desk">{steps.map((s, i) => img(s.desk, i, 'd'))}</Window>}
+        {steps.some((s) => s.phone) && (
+          <Handset className="ctour__phone">{steps.map((s, i) => img(s.phone, i, 'p'))}</Handset>
+        )}
+      </div>
+      <p className="ctour__count" dir="ltr">
+        <b data-count>01</b> / {String(steps.length).padStart(2, '0')}
+      </p>
+    </div>
+  )
+}
+
+function StepMedia({ project, step, lang }: { project: Project; step: Step; lang: 'ar' | 'en' }) {
+  const d = step.desk ? getShot(project.id, step.desk) : undefined
+  const m = step.phone ? getShot(project.id, step.phone) : undefined
+  return (
+    <div className={`tstep__media ${d ? '' : 'is-phone'}`}>
+      {d && (
+        <Window host={stories[project.id]?.host || project.id}>
+          <img className="dscreen is-first" src={d.file} alt={label(d, lang)} width={d.width} height={d.height} loading="lazy" decoding="async" />
+        </Window>
+      )}
+      {m && (
+        <Handset className="tstep__phone">
+          <img src={m.file} alt={d ? '' : label(m, lang)} width={m.width} height={m.height} loading="lazy" decoding="async" />
+        </Handset>
+      )}
+    </div>
+  )
+}
+
 export function ProjectCase({ id }: { id: string }) {
   const { lang } = useLang()
   const project = projects.find((p) => p.id === id)
+  const scope = useRef<HTMLDivElement>(null)
   usePageMeta(
-    project?.name ||
-      (lang === 'ar' ? 'المشروع غير موجود' : 'Project not found'),
+    project?.name || (lang === 'ar' ? 'المشروع غير موجود' : 'Project not found'),
     project?.summary[lang] || '',
   )
+  useCaseMotion(scope, lang)
   if (!project)
     return (
       <div className="projects-site">
@@ -483,198 +399,256 @@ export function ProjectCase({ id }: { id: string }) {
           </a>
         </main>
         <ProjectCta />
-      <SiteFooter />
+        <SiteFooter />
       </div>
     )
+
+  const tour = tourOf(project)
+  const steps = tour.screens
   const shots = projectShots(id)
-  const desktop = projectCover(project)
-  const mobile = projectCover(project, 'mobile')
+  const desk = steps.every((s) => !s.desk) ? undefined : projectCover(project)
+  const phone = projectCover(project, 'mobile')
+  const host = stories[id]?.host || id
   const next = projects[(projects.indexOf(project) + 1) % projects.length]
+  const nextDesk = projectCover(next)
+  const nextPhone = projectCover(next, 'mobile')
+  const kind = categories.find((c) => c.id === project.category)?.label
+  const eyebrow =
+    project.tier === 'flagship' ? caseCopy.flagship[lang] : kind?.[lang]
+  const roles = roleSets[id]
+  const phoneOnly = steps.every((s) => !s.desk)
+  const flankName = project.tier === 'flagship' ? stories[id]?.phone.find((n) => n !== phone?.file.match(/mobile-\d+/)?.[0]) : undefined
+  const flankPhone = flankName ? getShot(id, flankName) : undefined
+  const rows = [shots.filter((s) => s.device === 'desktop' && !phoneOnly), shots.filter((s) => s.device === 'mobile')].filter((r) => r.length >= 4)
+
   return (
     <div
-      className={`projects-site case-page case-page--${project.layout} case-page--${id} composition-${project.presentation.composition} rhythm-${project.presentation.rhythm}`}
+      ref={scope}
+      className={`projects-site case-page case ${project.theme === 'dark' ? 'case-page--dark' : ''} case--${project.tier}`}
       style={
         {
           '--project-bg': project.palette.background,
           '--project-fg': project.palette.foreground,
           '--project-accent': project.palette.accent,
           '--accent-ink': accentInk(project.palette.accent),
-          '--case-radius': `${project.presentation.radius}px`,
-          '--case-tilt': `${project.presentation.tilt}deg`,
         } as CSSProperties
       }
     >
-      <a className="skip-link" href="#case-main">
-        {lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}
-      </a>
+      <a className="skip-link" href="#case-main">{caseCopy.skip[lang]}</a>
       <SiteHeader page="case" />
-      <nav
-        className="case-nav"
-        aria-label={lang === 'ar' ? 'محتويات المشروع' : 'Project contents'}
-      >
+      <nav className="case-nav" aria-label={caseCopy.contents[lang]}>
         <strong><bdi>{project.name}</bdi></strong>
         <div>
-          <a href="#overview">{lang === 'ar' ? 'الفكرة' : 'Overview'}</a>
-          <a href="#screens">{lang === 'ar' ? 'الشاشات' : 'Screens'}</a>
-          <a href="#details">{lang === 'ar' ? 'التفاصيل' : 'Details'}</a>
+          <a href="#overview" data-nav="overview">{caseCopy.overview[lang]}</a>
+          <a href="#tour" data-nav="tour">{caseCopy.tour[lang]}</a>
+          <a href="#details" data-nav="details">{caseCopy.hood[lang]}</a>
+          <a href="#screens" data-nav="screens">{caseCopy.screens[lang]}</a>
         </div>
       </nav>
-      <main id="case-main">
-        <section className="case-hero">
-          <div className="case-hero__copy">
-            <a className="case-hero__back" href="/projects/">
+      <main id="case-main" key={lang}>
+        {/* 1. Hero: the product in its own colours; the window opens as you scroll. */}
+        <section className="chero" {...tintProps(project)}>
+          <div className="chero__copy">
+            <a className="chero__back" href="/projects/" data-rise>
               <Arrow back />
-              {lang === 'ar' ? 'كل المشاريع' : 'All projects'}
+              {caseCopy.all[lang]}
             </a>
-            <p className="case-product-name">
-              <bdi>{project.name}</bdi>
+            <p className="chero__eyebrow" data-rise>
+              <bdi className="chero__name">{project.name}</bdi>
+              {eyebrow && <span>{eyebrow}</span>}
+              {project.status === 'in-progress' && <span className="case-status">{caseCopy.inProgress[lang]}</span>}
             </p>
-            <h1>{project.headline[lang]}</h1>
-            <p>{project.summary[lang]}</p>
-            <a className="case-hero__cta" href="#screens">
-              {lang === 'ar' ? 'استكشف الشاشات' : 'Explore the screens'}
-              <Arrow />
-            </a>
-            <p className="case-hero__stack" dir="ltr">
-              {project.stack.slice(0, 3).join(' · ')}
-            </p>
+            <h1 data-split>{project.headline[lang]}</h1>
+            <p className="chero__lede" data-rise>{project.summary[lang]}</p>
+            <div className="chero__actions" data-rise>
+              <a className="chero__cta" href="#tour">
+                {caseCopy.takeTour[lang]}
+                <ArrowDown size={16} weight="bold" />
+              </a>
+              <p className="chero__stack" dir="ltr">{project.stack.slice(0, 4).join(' · ')}</p>
+            </div>
           </div>
-          <div className="case-hero__media">
-            {desktop && (
-              <img
-                className="case-hero__desktop"
-                src={desktop.file}
-                alt={`${project.name} — ${lang === 'ar' ? desktop.label : desktop.labelEn}`}
-                width={desktop.width}
-                height={desktop.height}
-                fetchPriority="high"
-              />
+          <div className={`chero__stage ${desk ? '' : 'is-phones'}`}>
+            {desk && (
+              <Window host={host} className="chero__desk">
+                <img
+                  className="dscreen is-first"
+                  src={desk.file}
+                  alt={`${project.name}, ${label(desk, lang)}`}
+                  width={desk.width}
+                  height={desk.height}
+                  fetchPriority="high"
+                />
+              </Window>
             )}
-            {mobile && (
-              <img
-                className="case-hero__mobile"
-                src={mobile.file}
-                alt={`${project.name} — ${lang === 'ar' ? mobile.label : mobile.labelEn}`}
-                width={mobile.width}
-                height={mobile.height}
-              />
+            {flankPhone && (
+              <Handset className="chero__phone chero__phone--start">
+                <img src={flankPhone.file} alt="" width={flankPhone.width} height={flankPhone.height} />
+              </Handset>
             )}
-            <p>
-              {lang === 'ar'
-                ? 'واجهة فعلية · بيانات تجريبية'
-                : 'Actual interface · Demo data'}
-            </p>
+            {phone && (
+              <Handset className="chero__phone">
+                <img src={phone.file} alt={desk ? '' : `${project.name}, ${label(phone, lang)}`} width={phone.width} height={phone.height} />
+              </Handset>
+            )}
+            <p className="chero__note">{caseCopy.demo[lang]}</p>
           </div>
         </section>
-        <section className="case-overview" id="overview">
-          <div>
-            <span className="case-section-no">01</span>
-            <h2>
-              {lang === 'ar' ? 'المشكلة التي يحلها.' : 'The problem it solves.'}
-            </h2>
-            <p>{project.problem[lang]}</p>
-            <p>{project.solution[lang]}</p>
+
+        {/* 2. What it is, in a few facts and one statement that reads itself in. */}
+        <section className="cintro" id="overview">
+          {tour.facts.length > 0 && (
+            <ul className="cfacts">
+              {tour.facts.map((f) => (
+                <li key={f.label.en}>
+                  <b dir="auto">{f.value}</b>
+                  <span>{f.label[lang]}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="cintro__kicker">{caseCopy.problem[lang]}</p>
+          <p className="cintro__statement" data-read>{project.problem[lang]}</p>
+          <div className="cintro__cols">
+            <div data-rise-scroll>
+              <p className="cintro__kicker">{caseCopy.answer[lang]}</p>
+              <p className="cintro__body">{tour.intro[lang]}</p>
+              <p className="cintro__body">{project.solution[lang]}</p>
+            </div>
+            <div data-rise-scroll>
+              <p className="cintro__kicker">{caseCopy.day[lang]}</p>
+              <ol className="cflow">
+                {project.flow.map((f, i) => (
+                  <li key={f.en}>
+                    <span dir="ltr">{String(i + 1).padStart(2, '0')}</span>
+                    <p>{f[lang]}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
           </div>
-          <div>
-            <span className="case-section-no">02</span>
-            <h2>
-              {lang === 'ar'
-                ? 'كيف تعمل التجربة.'
-                : 'How the experience works.'}
-            </h2>
-            <ol className="case-flow">
-              {project.flow.map((step, i) => (
-                <li key={step.en}>
-                  <span>{String(i + 1).padStart(2, '0')}</span>
-                  <p>{step[lang]}</p>
+        </section>
+
+        {roles && (
+          <section className="croles" aria-labelledby="croles-title">
+            <header className="croles__head">
+              <h2 id="croles-title" data-split>{roles.title[lang]}</h2>
+              <p data-rise-scroll>{roles.lede[lang]}</p>
+            </header>
+            <ol className="croles__list">
+              {roles.roles.map((r) => {
+                const shot = getShot(id, r.phone)
+                return (
+                  <li key={r.phone} className="crole">
+                    <Handset className="crole__phone">
+                      {shot && <img src={shot.file} alt={label(shot, lang)} width={shot.width} height={shot.height} loading="lazy" decoding="async" />}
+                    </Handset>
+                    <div className="crole__copy">
+                      <p className="crole__who">{r.who[lang]}</p>
+                      <h3>{r.title[lang]}</h3>
+                      <p>{r.body[lang]}</p>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </section>
+        )}
+
+        {/* 3. The tour: one step per screen, the devices stay put and change with you. */}
+        <section className="ctour" id="tour" aria-labelledby="ctour-title">
+          <header className="ctour__head">
+            <h2 id="ctour-title" data-split>{caseCopy.tourTitle[lang]}</h2>
+            <p data-rise-scroll>{caseCopy.tourLede[lang]}</p>
+          </header>
+          <div className="ctour__body">
+            <TourStage project={project} steps={steps} />
+            <ol className="ctour__steps">
+              {steps.map((s, i) => (
+                <li key={i} className={`tstep ${i === 0 ? 'is-on' : ''}`} data-tstep={i}>
+                  <StepMedia project={project} step={s} lang={lang} />
+                  <div className="tstep__copy">
+                    <p className="tstep__kicker">
+                      <span dir="ltr">{String(i + 1).padStart(2, '0')}</span>
+                      {s.kicker[lang]}
+                    </p>
+                    <h3>{s.title[lang]}</h3>
+                    <p className="tstep__body">{s.body[lang]}</p>
+                    {s.points.length > 0 && (
+                      <ul className="tstep__points">
+                        {s.points.map((pt) => (
+                          <li key={pt.en}>
+                            <Check size={16} weight="bold" aria-hidden="true" />
+                            <span>{pt[lang]}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </li>
               ))}
             </ol>
           </div>
         </section>
-        <section
-          className="case-story"
-          aria-label={
-            lang === 'ar' ? 'مسار الاستخدام بالصور' : 'A visual product journey'
-          }
-        >
-          {project.flow.map((flow, i) => {
-            const shot = shots.filter(
-              (s) =>
-                s.device ===
-                (project.layout === 'mobile' ? 'mobile' : 'desktop'),
-            )[[1, 3, 7][i]]
-            return (
-              <figure key={flow.en}>
-                {shot && (
-                  <img
-                    src={shot.file}
-                    alt={lang === 'ar' ? shot.label : shot.labelEn}
-                    width={shot.width}
-                    height={shot.height}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                )}
-                <figcaption>
-                  <span>0{i + 1}</span>
-                  <p>{shot && (lang === 'ar' ? shot.label : shot.labelEn)}</p>
-                </figcaption>
-              </figure>
-            )
-          })}
-        </section>
-        <Gallery project={project} />
-        <section className="case-details" id="details">
-          <div className="case-details__intro">
-            <span className="case-section-no">03</span>
-            <h2>
-              {lang === 'ar'
-                ? 'التفاصيل التي تصنع الفرق.'
-                : 'The details that matter.'}
-            </h2>
+
+        {/* 4. Every screen at once, drifting past as you scroll. */}
+        {rows.length > 0 && <section className="crail" aria-label={caseCopy.railTitle[lang]}>
+          <h2 className="crail__title" data-split>{caseCopy.railTitle[lang]}</h2>
+          {rows.map((row, r) => (
+            <div key={r} className={`crail__row ${row[0].device === 'mobile' ? 'is-phones' : ''}`} data-row={r} aria-hidden="true">
+              {[...row, ...row.slice(0, 3)].map((s, i) => (
+                <img key={`${s.file}-${i}`} src={s.thumbnail} alt="" width={s.width} height={s.height} loading="lazy" decoding="async" />
+              ))}
+            </div>
+          ))}
+        </section>}
+
+        {/* 5. Under the hood. */}
+        <section className="chood" id="details" aria-labelledby="chood-title">
+          <div className="chood__intro">
+            <h2 id="chood-title" data-split>{caseCopy.hoodTitle[lang]}</h2>
             <p>{project.challenge[lang]}</p>
+            <div className="case-stack" dir="ltr">
+              {project.stack.map((s) => <span key={s}>{s}</span>)}
+            </div>
           </div>
-          <ul className="case-features">
-            {project.features.map((f, i) => (
-              <li key={f.en}>
-                <span>{String(i + 1).padStart(2, '0')}</span>
-                <p>{f[lang]}</p>
+          <ol className="chood__notes">
+            {tour.engineering.map((n, i) => (
+              <li key={n.title.en} data-note>
+                <span dir="ltr">{String(i + 1).padStart(2, '0')}</span>
+                <h3>{n.title[lang]}</h3>
+                <p>{n.body[lang]}</p>
               </li>
             ))}
-          </ul>
+          </ol>
         </section>
-        <section className="case-architecture">
-          <h2>
-            {lang === 'ar'
-              ? 'بنية تستوعب التعقيد.'
-              : 'Built to handle the complexity.'}
-          </h2>
-          <div className="case-stack" dir="ltr">
-            {project.stack.map((s) => (
-              <span key={s}>{s}</span>
-            ))}
-          </div>
-          <p>
-            {lang === 'ar'
-              ? 'تمت مراجعة وصف المشروع من مستودعاته. لقطات المعرض من الواجهة الأصلية ضمن بيئة عرض محلية.'
-              : 'This project story was checked against its repositories. Gallery images show the original interfaces in a local demonstration environment.'}
-          </p>
-        </section>
-        <nav
-          className="case-next"
-          aria-label={lang === 'ar' ? 'المشاريع الأخرى' : 'More projects'}
-        >
-          <a href="/projects/">
-            <Arrow back />
-            {lang === 'ar' ? 'كل المشاريع' : 'All projects'}
-          </a>
-          <a href={projectHref(next.id)}>
-            <span>
-              {lang === 'ar' ? 'المشروع التالي' : 'Next project'}
+
+        <Gallery project={project} phoneOnly={phoneOnly} />
+
+        {/* 6. The next story, in its own colours. */}
+        <nav className="cnext" aria-label={caseCopy.next[lang]}>
+          <a href={projectHref(next.id)} className="cnext__card" {...tintProps(next)}>
+            <span className="cnext__copy">
+              <span className="cnext__label">{caseCopy.next[lang]}</span>
               <strong><bdi>{next.name}</bdi></strong>
+              <span className="cnext__headline">{next.headline[lang]}</span>
+              <span className="cnext__go"><Arrow /></span>
             </span>
-            <Arrow />
+            <span className="cnext__media" aria-hidden="true">
+              {nextDesk ? (
+                <Window host={stories[next.id]?.host || next.id}>
+                  <img className="dscreen is-first" src={nextDesk.thumbnail} alt="" width={nextDesk.width} height={nextDesk.height} loading="lazy" />
+                </Window>
+              ) : nextPhone ? (
+                <Handset>
+                  <img src={nextPhone.thumbnail} alt="" width={nextPhone.width} height={nextPhone.height} loading="lazy" />
+                </Handset>
+              ) : null}
+            </span>
+          </a>
+          <a className="cnext__all" href="/projects/">
+            <Arrow back />
+            {caseCopy.all[lang]}
           </a>
         </nav>
       </main>

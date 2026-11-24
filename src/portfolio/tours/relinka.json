@@ -1,0 +1,288 @@
+{
+  "facts": [
+    {
+      "value": "AES-256",
+      "label": {
+        "ar": "تشفير الملفات",
+        "en": "file encryption"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ar": "أدوار داخل المساحة",
+        "en": "workspace roles"
+      }
+    },
+    {
+      "value": "RTL",
+      "label": {
+        "ar": "واجهة عربية كاملة",
+        "en": "Arabic interface"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "Relinka أرشيف مستندات لشركة تتراكم عندها العقود والتقارير وملفات المشاريع. يبدأ الفريق من ملفاتي كما يفعل في أي مساحة تخزين، ويعود إلى الأخيرة والمميّزة بنجمة حين يريد استكمال ما توقف عنده، ويجد ما شاركه زملاؤه في مشارَك معي وما حُذف بالخطأ في سلة المحذوفات. ويبحث في نصوص الملفات برقم مرجعي، ويربط أدوات خارجية بمفاتيح API من الإعدادات. الواجهة عربية من اليمين إلى اليسار، وتعمل على الحاسوب والهاتف.",
+    "en": "Relinka is a document archive for a company whose contracts, reports and project files keep piling up. The team starts in My Files, goes back to Recent and Starred to pick up where it left off, finds what colleagues handed over in Shared with me, and recovers anything deleted by mistake from Trash. It searches file text by reference number and connects outside tools with API keys from Settings. The interface is Arabic, right to left, on desktop and phone."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "الملفات",
+        "en": "Files"
+      },
+      "title": {
+        "ar": "ملفاتي، بمجلداتها وملفاتها.",
+        "en": "My Files, with folders and documents."
+      },
+      "body": {
+        "ar": "تعرض الشاشة ثمانية مجلدات هي العقود والمالية والمشاريع والمبيعات والموارد البشرية والتقارير والمراسلات والشؤون القانونية، وبجانبها ملف دليل السياسات في جدول فيه المالك وآخر تعديل وحجم الملف. فوق الجدول بطاقات مقترحة بصور مصغّرة للملفات التي فُتحت مؤخراً. في الأسفل شريط التخزين: 13.4 م.ب مستخدمة في 39 ملفاً.",
+        "en": "The screen lists eight folders, Contracts, Finance, Projects, Sales, HR, Reports, Correspondence and Legal, plus the policy handbook in a table with owner, last modified and size. Above the table sit suggestion cards with thumbnails of recently opened files. The storage meter at the bottom reads 13.4 MB across 39 files."
+      },
+      "points": [
+        {
+          "ar": "نجمة على كل صف لتمييز العناصر المهمة",
+          "en": "A star on every row to mark what matters"
+        },
+        {
+          "ar": "بحث داخل المجلد الحالي بجانب البحث العام",
+          "en": "A folder-level search beside the global one"
+        },
+        {
+          "ar": "على الهاتف تتحول القائمة الجانبية إلى شريط سفلي",
+          "en": "On the phone the sidebar becomes a bottom tab bar"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "مجلد جديد",
+        "en": "New folder"
+      },
+      "title": {
+        "ar": "إنشاء مجلد من القائمة.",
+        "en": "Create a folder from the New menu."
+      },
+      "body": {
+        "ar": "زر جديد يفتح نافذة صغيرة باسم المجلد وزرّي إنشاء وإلغاء. المجلد يُنشأ داخل المكان الذي يقف فيه المستخدم، وتبقى القائمة خلف النافذة كما هي. على الهاتف تحتل النافذة وسط الشاشة.",
+        "en": "The New button opens a small dialog with a folder name and Create and Cancel buttons. The folder is created in the place the user is standing, and the list stays visible behind the dialog. On the phone the dialog sits in the middle of the screen."
+      },
+      "points": [
+        {
+          "ar": "الاسم يُتحقق منه قبل الإنشاء",
+          "en": "The name is validated before it is created"
+        },
+        {
+          "ar": "المجلد الجديد يظهر مباشرة في القائمة",
+          "en": "The new folder appears in the list right away"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "الوصول السريع",
+        "en": "Quick access"
+      },
+      "title": {
+        "ar": "الأخيرة: ما فتحته مؤخراً.",
+        "en": "Recent: what you opened lately."
+      },
+      "body": {
+        "ar": "قائمة بأحدث أحد عشر ملفاً فتحها المستخدم، من عقد توريد حديد التسليح إلى كشف الرواتب وجدول الكميات. كل صف يحمل الاسم وآخر تعديل والحجم ونجمة، ولملفات PDF صورة مصغّرة من صفحتها الأولى. الهدف أن يعود من توقف عند ملف قبل ساعات إلى مكانه دون أن يمر بالمجلدات.",
+        "en": "A list of the eleven files the user opened most recently, from the rebar supply contract to the payroll sheet and the bill of quantities. Each row carries name, last modified, size and a star, and PDFs show a thumbnail of their first page. The point is to let someone who stopped at a file a few hours ago return to it without walking the folder tree."
+      },
+      "points": [
+        {
+          "ar": "النجمة تعمل من هنا كما تعمل في ملفاتي",
+          "en": "Starring works here exactly as in My Files"
+        },
+        {
+          "ar": "أيقونة الساعة في رأس الصفحة تعرّف العرض",
+          "en": "A clock icon in the header marks the view"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "ar": "المهمّ",
+        "en": "Important"
+      },
+      "title": {
+        "ar": "المميّزة بنجمة: مجلدات وملفات في مكان واحد.",
+        "en": "Starred: folders and files in one place."
+      },
+      "body": {
+        "ar": "تجمع الصفحة ما ميّزه المستخدم بنجمة: مجلدا العقود وبرج الياسمين وثمانية ملفات، منها الميزانية المعتمدة وجدول الكميات وترخيص البناء. المجلدات تأتي أولاً ثم الملفات، ولكل صف تاريخ آخر تعديل وحجم.",
+        "en": "The page gathers what the user starred: the Contracts and Jasmine Tower folders and eight files, including the approved budget, the bill of quantities and the building permit. Folders come first, then files, and each row shows last modified and size."
+      },
+      "points": [
+        {
+          "ar": "النجمة خاصة بكل مستخدم ولا يراها غيره",
+          "en": "Stars are per user and invisible to others"
+        },
+        {
+          "ar": "إلغاء النجمة يزيل الصف من الصفحة",
+          "en": "Removing a star takes the row off this page"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "التعاون",
+        "en": "Collaboration"
+      },
+      "title": {
+        "ar": "مشارَك معي: ما سلّمه الزملاء.",
+        "en": "Shared with me: what colleagues handed over."
+      },
+      "body": {
+        "ar": "تسع مشاركات من خالد العمر وسارة يوسف وماهر الخطيب وعمر الشامي، كل منها بصلاحية تحرير أو تعليق أو عرض وبتاريخ المشاركة. بينها عقد توريد الإسمنت ومجلد مجمع الورود في اللاذقية وتقرير التدفقات النقدية. النقر على ملف يفتحه، وعلى مجلد يفتح محتواه.",
+        "en": "Nine shares from Khaled Al-Omar, Sara Youssef, Maher Al-Khatib and Omar Al-Shami, each with an edit, comment or view role and the date it was shared. They include the cement supply contract, the Rose Complex folder in Latakia and the cash-flow report. Clicking a file opens it, and clicking a folder opens its contents."
+      },
+      "points": [
+        {
+          "ar": "الصلاحيات الثلاث: تحرير وتعليق وعرض",
+          "en": "Three share roles: edit, comment, view"
+        },
+        {
+          "ar": "صاحب الملف أو مشرف المساحة وحده يشاركه",
+          "en": "Only a file's owner or a workspace admin can share it"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "kicker": {
+        "ar": "الأمان",
+        "en": "Safety"
+      },
+      "title": {
+        "ar": "سلة المحذوفات، والاستعادة بنقرة.",
+        "en": "Trash, with one-click restore."
+      },
+      "body": {
+        "ar": "المحذوف لا يختفي: مجلد مسودات قديمة ومعه محتوياته، وعدة ملفات مكررة أو منتهية الصلاحية، كلها في السلة مع تاريخ الحذف والحجم. بجانب كل صف زر استعادة وأيقونة حذف أحمر للإزالة النهائية، وهي ظاهرة للمالك والمشرف فقط. مسار التنقل في الأعلى يوضح أنك داخل الأرشيف.",
+        "en": "Deleted items do not vanish. A folder of old drafts, with its contents, and several duplicate or expired files sit in Trash with deletion date and size. Each row has a Restore button and a red delete icon for permanent removal, shown to owners and admins only. A breadcrumb at the top shows you are inside the archive."
+      },
+      "points": [
+        {
+          "ar": "حذف المجلد يحمل معه محتوياته ويُكتب «ومحتوياته»",
+          "en": "Deleting a folder takes its contents and says so on the row"
+        },
+        {
+          "ar": "الاستعادة والحذف النهائي زران منفصلان",
+          "en": "Restore and permanent delete are separate controls"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "phone": "mobile-07",
+      "kicker": {
+        "ar": "البحث",
+        "en": "Search"
+      },
+      "title": {
+        "ar": "البحث برقم مرجعي في نصوص الملفات.",
+        "en": "Search file text by reference number."
+      },
+      "body": {
+        "ar": "كتابة CT-2026-014 تنتج ثلاث نتائج: فاتورة المعادن الشامية، وعقد توريد حديد التسليح، ورسالة بشأن تأخر الشحنة. يعرض الشريط في الأعلى أن الاستعلام بدا رقماً مرجعياً فاختير البحث الحرفي، ومدته 4 ميلي ثانية. كل نتيجة تحمل اسم الملف ورقم الصفحة وشارة «مطابقة حرفية» ومقطعاً من النص.",
+        "en": "Typing CT-2026-014 returns three results: the Al-Shamiya Metals invoice, the rebar supply contract and a letter about the late shipment. The banner shows that the query looked like a reference number, so literal search was chosen, and that it took 4 ms. Each result carries the file name, page number, a Literal match badge and a passage of text."
+      },
+      "points": [
+        {
+          "ar": "أزرار لاختيار طريقة البحث يدوياً",
+          "en": "Buttons to pick the search method by hand"
+        },
+        {
+          "ar": "كل نتيجة تذكر كيف وُجدت",
+          "en": "Every result says how it was found"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "phone": "mobile-09",
+      "kicker": {
+        "ar": "الإعدادات",
+        "en": "Settings"
+      },
+      "title": {
+        "ar": "مفاتيح API لربط أدوات خارجية.",
+        "en": "API keys for connecting outside tools."
+      },
+      "body": {
+        "ar": "تعرض الصفحة أربعة مفاتيح مربوطة بمساحة العمل: اثنان فعّالان وواحد منتهٍ وواحد ملغى، لكل منها بادئة المفتاح وصلاحياته وآخر استخدام وتاريخ الانتهاء واسم من أنشأه. زر مفتاح جديد يفتح نموذج الإنشاء، وأيقونة الحذف الحمراء تلغي المفتاح فوراً.",
+        "en": "The page lists four keys tied to the workspace: two active, one expired and one revoked, each with its key prefix, scopes, last use, expiry date and creator. The New key button opens the creation form, and the red icon revokes a key immediately."
+      },
+      "points": [
+        {
+          "ar": "المفتاح السري يظهر مرة واحدة عند الإنشاء",
+          "en": "The secret is shown once, when the key is created"
+        },
+        {
+          "ar": "يُخزَّن في القاعدة تجزئة المفتاح فقط",
+          "en": "Only a hash of the key is stored"
+        },
+        {
+          "ar": "أقصى دور للمفتاح عضو، فلا مفاتيح للمشرف أو المالك",
+          "en": "A key can be at most a member, never admin or owner"
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "ملفات مشفّرة بمفتاح لكل ملف",
+        "en": "Files encrypted with a per-file key"
+      },
+      "body": {
+        "ar": "الملفات تُخزَّن بـ AES-256-GCM وفق تشفير مظروف: مفتاح لكل ملف يُغلَّف بمفتاح رئيسي. القراءة الجزئية ممكنة عبر AES-CTR دون فك الملف كله.",
+        "en": "Files are stored with AES-256-GCM using envelope encryption: each file has its own key, wrapped by a master key. Range reads work through AES-CTR without decrypting the whole file."
+      }
+    },
+    {
+      "title": {
+        "ar": "عزل المساحات على مستوى قاعدة البيانات",
+        "en": "Tenant isolation in the database"
+      },
+      "body": {
+        "ar": "كل شركة مساحة مستقلة، والعزل مدعوم بسياسات أمان الصفوف (RLS) في PostgreSQL مع أدوار داخلية أربعة: مالك ومشرف وعضو ومشاهد، وأدوار منصة منفصلة.",
+        "en": "Each company is its own tenant, and isolation is backed by PostgreSQL row-level security, with four in-workspace roles (owner, admin, member, viewer) and separate platform roles."
+      }
+    },
+    {
+      "title": {
+        "ar": "حذف على مرحلتين",
+        "en": "Two-step deletion"
+      },
+      "body": {
+        "ar": "الحذف الأول ينقل المستند أو المجلد إلى السلة ويمكن التراجع عنه، والحذف النهائي إجراء منفصل. حذف المجلد يحمل معه كل ما بداخله، واستعادته تعيده كما كان.",
+        "en": "The first delete moves a document or folder to Trash and can be undone; permanent delete is a separate action. Deleting a folder takes everything inside it, and restoring brings it back as it was."
+      }
+    },
+    {
+      "title": {
+        "ar": "خط معالجة بإعادة محاولة",
+        "en": "A processing pipeline that retries"
+      },
+      "body": {
+        "ar": "المعالجة تعمل داخل الـ API أو في عامل منفصل عبر BullMQ بحسب PIPELINE_MODE. دورة استعادة تعيد المهام المتأخرة وتحرر ما ماتت عمليتها.",
+        "en": "Processing runs inside the API or in a separate BullMQ worker, depending on PIPELINE_MODE. A recovery loop requeues overdue jobs and frees those whose process died."
+      }
+    }
+  ]
+}

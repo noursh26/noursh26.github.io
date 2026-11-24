@@ -1,0 +1,24 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-05",
+      "reason": "raw English 'low/normal/high/urgent' priority labels in an Arabic UI (the table prints the stored value)"
+    },
+    {
+      "file": "mobile-05",
+      "reason": "raw English priority labels on the phone cards"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "status column prints raw English 'posted' in an Arabic UI"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features and summary",
+      "text": "subscribers, installations, maintenance, inventory, expenses, journals, assets, HR",
+      "problem": "All implemented in fox-api (routes, controllers, models). Only the captures are filler; no claim needs removing",
+      "fix": "keep; the screens were recaptured with varied seeded data"
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "facts": [
+    {
+      "value": "4",
+      "label": {
+        "ar": "صلاحيات للفريق",
+        "en": "team roles"
+      }
+    },
+    {
+      "value": "1536",
+      "label": {
+        "ar": "بُعد متجهات المعرفة",
+        "en": "vector dimensions for knowledge"
+      }
+    },
+    {
+      "value": "RTL",
+      "label": {
+        "ar": "واجهة عربية كاملة",
+        "en": "Arabic interface"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "Estratijiya AI منصة لشركة تتلقى أسئلة عملائها عبر أداة المحادثة في الموقع وتيليجرام وماسنجر. يجيب الوكيل أولاً من قاعدة معرفة الشركة، ويحوّل المحادثة إلى موظف حين يحتاج الأمر إنساناً. كل شركة تعمل داخل مساحة مستقلة بصلاحيات للفريق، والواجهة عربية من اليمين إلى اليسار.",
+    "en": "Estratijiya AI is for a company that receives customer questions through a website chat widget, Telegram and Messenger. An agent answers first, from the company's own knowledge base, and hands the conversation to a person when it needs one. Each company works inside its own tenant, with team roles, and the interface is Arabic, right to left."
+  },
+  "screens": [
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "المحادثات",
+        "en": "Conversations"
+      },
+      "title": {
+        "ar": "محادثة العميل وملفه في صفحة واحدة.",
+        "en": "A conversation and its customer in one page."
+      },
+      "body": {
+        "ar": "تعرض الصفحة الرسائل بالترتيب مع علامة على ما أجاب عنه الوكيل وما كتبه موظف. إلى جانبها ملف العميل: الهاتف والقناة وتقييم الاستقصاء والوسوم والملخص. في هذه المحادثة حوّل الوكيل الطلب إلى مشرف، وأجاب موظف باسمه.",
+        "en": "The page lists the messages in order and marks which came from the agent and which from a person. Beside it sits the customer profile: phone, channel, lead score, tags and summary. Here the agent escalated the request and a staff member replied under their own name."
+      },
+      "points": [
+        {
+          "ar": "حالة المحادثة: نشطة أو محوّلة أو مغلقة.",
+          "en": "Status: active, escalated or closed."
+        },
+        {
+          "ar": "زر للعودة إلى الوكيل بعد أن ينهي الموظف.",
+          "en": "A button hands the chat back to the agent."
+        },
+        {
+          "ar": "شارة تبيّن أن الرد استند إلى قاعدة المعرفة.",
+          "en": "A badge shows when a reply drew on the knowledge base."
+        },
+        {
+          "ar": "تعيين المحادثة لموظف من القائمة.",
+          "en": "Assign the conversation to a team member."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "kicker": {
+        "ar": "العملاء",
+        "en": "Customers"
+      },
+      "title": {
+        "ar": "قائمة العملاء مع تقييم الاهتمام.",
+        "en": "Customers ranked by interest."
+      },
+      "body": {
+        "ar": "كل من راسل الشركة يظهر هنا بالاسم والهاتف والبريد والقناة ونوع الاستقصاء ووسومه. شريط التقييم من ١ إلى ١٠ يقسّم العملاء إلى ساخن ودافئ وبارد، وفوقه بحث وفلتر للقناة والنوع.",
+        "en": "Everyone who has written to the company appears with name, phone, email, channel, inquiry type and tags. A score from 1 to 10 splits customers into hot, warm and cold, with search and filters for channel and type above."
+      },
+      "points": [
+        {
+          "ar": "عدّادات الساخن والدافئ والبارد تعمل كفلاتر.",
+          "en": "The hot, warm and cold counters work as filters."
+        },
+        {
+          "ar": "وسوم قابلة للتعديل من الصف نفسه.",
+          "en": "Tags are editable from the row."
+        },
+        {
+          "ar": "ترتيب بالاسم أو التقييم أو آخر ظهور.",
+          "en": "Sort by name, score or last seen."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "الوكيل",
+        "en": "Agent"
+      },
+      "title": {
+        "ar": "تعليمات الوكيل ومكتبة المعرفة.",
+        "en": "The agent prompt and the knowledge library."
+      },
+      "body": {
+        "ar": "في أعلى الصفحة نص التعليمات الذي يحدد نبرة الوكيل وقواعده، مع زر لإعادته إلى النسخة الأصلية. تحته إحصاءات المكتبة وقائمة المستندات: الملف والحالة وعدد المقاطع والرموز ومن رفعه.",
+        "en": "At the top is the prompt that sets the agent voice and rules, with a button to restore the original. Below are library stats and the document list: file, status, chunk count, tokens and who uploaded it. On the phone, the page opens on the prompt."
+      },
+      "points": [
+        {
+          "ar": "ملفات PDF وDOCX وTXT وMD وروابط صفحات.",
+          "en": "PDF, DOCX, TXT, MD files and page URLs."
+        },
+        {
+          "ar": "عدد المقاطع والرموز لكل مستند.",
+          "en": "Chunk and token counts per document."
+        },
+        {
+          "ar": "التخزين المستخدم من الحد المسموح.",
+          "en": "Storage used against the plan limit."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "الفريق",
+        "en": "Team"
+      },
+      "title": {
+        "ar": "أعضاء الفريق وصلاحياتهم.",
+        "en": "Team members and their roles."
+      },
+      "body": {
+        "ar": "تعرض الصفحة الأعضاء النشطين وحالة كل منهم والدعوات المعلّقة. يغيّر المالك صلاحية أي عضو من القائمة، ويشرح دليل الصلاحيات في الأسفل ما يستطيعه المالك والمشرف والمشغّل والمشاهد.",
+        "en": "The page lists active members with their presence and the pending invitations. The owner changes any role from the dropdown, and a guide at the bottom explains what an owner, admin, operator and viewer can do."
+      },
+      "points": [
+        {
+          "ar": "دعوة عضو بالبريد والاسم والصلاحية.",
+          "en": "Invite by email, name and role."
+        },
+        {
+          "ar": "أربع صلاحيات بحدود واضحة.",
+          "en": "Four roles with clear limits."
+        },
+        {
+          "ar": "حذف عضو أو إلغاء دعوة.",
+          "en": "Remove a member or cancel an invite."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-10",
+      "phone": "mobile-10",
+      "kicker": {
+        "ar": "الاستهلاك",
+        "en": "Usage"
+      },
+      "title": {
+        "ar": "كلفة الذكاء الاصطناعي لكل مساحة.",
+        "en": "AI cost for each tenant."
+      },
+      "body": {
+        "ar": "تجمع الصفحة سجل الاستهلاك: الإجمالي هذا الشهر مقابل الشهر الماضي، والكلفة حسب المصدر، والإنفاق اليومي لآخر ٣٠ يوماً. تحتها عدد المحادثات والرسائل ومتوسط الكلفة لكل محادثة.",
+        "en": "The page rolls up the usage log: this month against last month, cost by source, and daily spend for the last 30 days. Below are conversation and message counts and the average cost per conversation."
+      },
+      "points": [
+        {
+          "ar": "فصل الدردشة عن التضمين والصوت.",
+          "en": "Chat, embeddings and voice are split."
+        },
+        {
+          "ar": "نسبة استعمال قاعدة المعرفة.",
+          "en": "How often replies used the knowledge base."
+        },
+        {
+          "ar": "متوسط الكلفة لكل محادثة.",
+          "en": "Average cost per conversation."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "كل مؤسسة مساحة مستقلة",
+        "en": "Every company is its own tenant"
+      },
+      "body": {
+        "ar": "الهوية والتعليمات والمعرفة والقنوات والنسخ الاحتياطي مرتبطة بمساحة مؤسسة، وبأربع صلاحيات داخلها: مالك ومشرف ومشغّل ومشاهد. أداة الموقع تتعرف على المساحة من معرّف في كود التضمين.",
+        "en": "Branding, prompt, knowledge, channels and backups all belong to a tenant, with four roles inside it: owner, admin, operator and viewer. The website widget finds its workspace from an id in the embed snippet."
+      }
+    },
+    {
+      "title": {
+        "ar": "استرجاع من المعرفة بـ pgvector",
+        "en": "Retrieval from knowledge with pgvector"
+      },
+      "body": {
+        "ar": "المستندات تُقطَّع وتُخزَّن كمتجهات في PostgreSQL، ويقرأ الوكيل المقاطع الأقرب لسؤال العميل قبل أن يجيب.",
+        "en": "Documents are chunked and stored as vectors in PostgreSQL, and the agent reads the chunks closest to the customer's question before it answers."
+      }
+    },
+    {
+      "title": {
+        "ar": "تحويل المحادثة إلى موظف",
+        "en": "Hand-off to a person"
+      },
+      "body": {
+        "ar": "حين يحتاج العميل إنساناً يصعّد الوكيل المحادثة ويُرسل إشعاراً للفريق، ويمكن للموظف استلامها من الصندوق. أداة حالة الطلب لا تختلق بيانات، وتعيد أنها غير مضبوطة حتى يربط العميل مصدراً حقيقياً.",
+        "en": "When a customer needs a person, the agent escalates the conversation and notifies the team, and an operator can take it over from the inbox. The order-status tool never invents data: it reports itself as not configured until a real source is connected."
+      }
+    },
+    {
+      "title": {
+        "ar": "ضبط التكلفة في الرد نفسه",
+        "en": "Cost control inside the reply path"
+      },
+      "body": {
+        "ar": "جزء التعليمات الثابت يُخزَّن مؤقتاً مع Anthropic لتخفيض كلفة الطلبات المتكررة، وتُسجَّل كل مكالمة في سجل استهلاك لكل مساحة.",
+        "en": "The static part of the prompt is cached with Anthropic to cut the cost of repeated calls, and every call is logged to a per-tenant usage table."
+      }
+    },
+    {
+      "title": {
+        "ar": "نسخ احتياطي واستعادة لكل مساحة",
+        "en": "Per-tenant backup and restore"
+      },
+      "body": {
+        "ar": "نسخ يومية وأسبوعية وشهرية للتعليمات والإعدادات والمعرفة والمحادثات، مع بصمة SHA-256 لكل ملف. الاستعادة تأخذ نسخة قبلية وتطبّق داخل معاملة واحدة.",
+        "en": "Daily, weekly and monthly backups of prompt, settings, knowledge and conversations, with a SHA-256 hash per file. Restore takes a pre-restore backup and applies inside one transaction."
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "facts": [
+    {
+      "value": "6",
+      "label": {
+        "ar": "أدوار",
+        "en": "roles"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ar": "خطوات لتصميم المسبح",
+        "en": "steps to design a pool"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "ar": "لغتان",
+        "en": "languages"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "يستخدم العميل بوابة LEGO Designs ليصمّم مسبحه ويطلب صيانته ويشتري تجهيزاته من مكان واحد. في يوم عادي يفتح الصفحة الرئيسية، يرى أين وصل مشروعه، ثم يرسل طلباً جديداً أو يتابع طلباً قديماً. أما الفريق، فيستقبل كل ذلك من لوحة إدارة واحدة.",
+    "en": "A customer uses the LEGO Designs portal to design a pool, book maintenance and buy equipment in one place. On a typical day they open the home page, see where their project stands, then send a new request or follow an old one. The team receives all of it in a single management console."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "الرئيسية",
+        "en": "Home"
+      },
+      "title": {
+        "ar": "كل ما يخصّك في صفحة واحدة.",
+        "en": "Everything open, on one page."
+      },
+      "body": {
+        "ar": "تبدأ الصفحة بتحية باسم العميل وشريط ينبّه إلى تاريخ انتهاء الضمان. تحته بطاقة المشروع الجاري بمراحله، ثم قائمة بآخر الطلبات من عناية وزيارات ومتجر واستشارات.",
+        "en": "The page opens with a greeting by name and a banner that shows when the warranty ends. Below it sit the active project card with its stages, then a list of the latest requests: care package, inspection visit, store order and consultation."
+      },
+      "points": [
+        {
+          "ar": "بطاقة المشروع تعرض «اكتملت 3 من 7 مراحل» وتكلفة تقديرية.",
+          "en": "The project card reads 3 of 7 stages done, with a price."
+        },
+        {
+          "ar": "لكل طلب حالة ورقم مرجعي وآخر تحديث.",
+          "en": "Each request has a status, a reference number and a last update."
+        },
+        {
+          "ar": "الشريط العلوي يضم الإشعارات والسلة والوضع الداكن وتبديل اللغة.",
+          "en": "The top bar holds notifications, cart, dark mode and a language switch."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "الإلهام",
+        "en": "Inspiration"
+      },
+      "title": {
+        "ar": "معرض أعمال يُفلتر بنوع المسبح.",
+        "en": "A portfolio you filter by pool type."
+      },
+      "body": {
+        "ar": "صفحة «مشاريعنا» تعرض صور مساحات منفّذة في شبكة. تُصفّى الصور بأزرار مثل Organic Lagoon وFamily Rectangular وDesert Retreat وBeach Entry، ولكل صورة قلب لإضافتها إلى المفضلة.",
+        "en": "The projects page shows photos of finished spaces in a grid. Chips such as Organic Lagoon, Family Rectangular, Desert Retreat and Beach Entry narrow the list, and each photo has a heart to save it."
+      },
+      "points": [
+        {
+          "ar": "الأزرار العلوية تتحرك أفقياً على الشاشات الضيقة.",
+          "en": "The filter chips scroll sideways on narrow screens."
+        },
+        {
+          "ar": "المفضلة تُحفظ في الحساب وتظهر لاحقاً في صفحة خاصة.",
+          "en": "Favourites are kept on the account and get their own page."
+        },
+        {
+          "ar": "كل بطاقة تحمل اسم التصميم ونوعه فوق الصورة.",
+          "en": "Each card carries the design name and its type over the photo."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "الاشتراكات",
+        "en": "Plans"
+      },
+      "title": {
+        "ar": "ثلاث باقات عناية شهرية.",
+        "en": "Three monthly care plans."
+      },
+      "body": {
+        "ar": "تعرض الصفحة باقات العناية الأساسية بـ 490 درهماً، والعناية المتكاملة بـ 890، والكونسيرج المميز بـ 1,590، كلها شهرياً. باقة العميل الحالية مميزة بإطار وزر «باقتك الحالية».",
+        "en": "The page lists Basic care at 490 AED, Complete care at 890 and Premium concierge at 1,590, all monthly. The customer's current plan is outlined and marked with a Your current plan button."
+      },
+      "points": [
+        {
+          "ar": "تحت كل باقة قائمة مزايا: زيارات وأولوية طوارئ وخصم على المتجر.",
+          "en": "Each plan lists perks: visits, emergency priority, store discounts."
+        },
+        {
+          "ar": "بطاقة «حالة العضوية» في الأعلى توضح وضع الاشتراك.",
+          "en": "A membership status card at the top shows where the account stands."
+        },
+        {
+          "ar": "الأسعار قادمة من بيانات يضعها المالك، لا من الواجهة.",
+          "en": "Prices come from data the owner sets, not from the interface."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-08",
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "المتابعة",
+        "en": "Tracking"
+      },
+      "title": {
+        "ar": "كل طلب وحالته في قائمة واحدة.",
+        "en": "Every request and its state in one list."
+      },
+      "body": {
+        "ar": "صفحة «طلباتي» تجمع المسابح وعروض الأسعار والزيارات والصيانة والمتجر. لكل طلب شريط تقدم صغير وتاريخ آخر تحديث، وتصفية بأزرار: الكل، قيد التنفيذ، مكتملة، وغيرها.",
+        "en": "My requests gathers pools, quotes, visits, maintenance and store orders. Each one has a small progress track and a last-updated date, and chips filter by All, In progress, Completed and more."
+      },
+      "points": [
+        {
+          "ar": "الطلب المسلّم يظهر بلون أخف ومرحلة «تم التسليم».",
+          "en": "A delivered request is dimmed and marked Delivered."
+        },
+        {
+          "ar": "المراسلات مع الفريق تتبع كل طلب في صفحته.",
+          "en": "Messages with the team live on each request's own page."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "السعر من الخادم فقط",
+        "en": "The server owns the price"
+      },
+      "body": {
+        "ar": "يُحسب سعر المسبح في الخلفية من بطاقة الأسعار والإضافات والضريبة التي يحددها المالك. إذا نقص رقم، لا يصبح العرض قابلاً للدفع ويُذكر السبب بدل التخمين.",
+        "en": "The pool price is computed on the backend from the owner's rate card, add-ons and VAT. If a number is missing, the quote is not payable and says why, instead of guessing."
+      }
+    },
+    {
+      "title": {
+        "ar": "ستة أدوار وصلاحيات",
+        "en": "Six roles, checked on every request"
+      },
+      "body": {
+        "ar": "المالك والمدير والمبيعات والإنتاج ومشرف الميدان والعميل. تعيد لوحة الإدارة التحقق من الدور في كل طلب، ويُمنع الموظفون من صفحات العميل.",
+        "en": "Owner, admin, sales, production, field supervisor and customer. The console rechecks the role on every request, and staff are kept out of the customer routes."
+      }
+    },
+    {
+      "title": {
+        "ar": "عربي وإنجليزي من اليوم الأول",
+        "en": "Arabic and English from the start"
+      },
+      "body": {
+        "ar": "الواجهة تعمل من اليمين إلى اليسار، وتُحفظ لغة المستخدم في حسابه. تطبيق Flutter يستعمل ملفي ترجمة ARB، والويب يستعمل ملفات ar وen في Laravel.",
+        "en": "The interface runs right to left and the user's language is saved on the account. The Flutter app uses ARB files and the web side uses Laravel's ar and en language files."
+      }
+    },
+    {
+      "title": {
+        "ar": "تطبيق وويب على واجهة واحدة",
+        "en": "One API under the app and the web"
+      },
+      "body": {
+        "ar": "يتصل تطبيق Flutter بواجهة Laravel عبر Sanctum، وتصل الإشعارات إلى الهاتف عبر Firebase، وتوضع الإشعارات الطويلة في طابور. التطبيق يتحقق من وجود إصدار جديد قبل الاستخدام.",
+        "en": "The Flutter app talks to Laravel through Sanctum, push messages reach the phone through Firebase, and notifications run on a queue. The app also checks for a newer release on launch."
+      }
+    },
+    {
+      "title": {
+        "ar": "الدفع تتولاه الإدارة",
+        "en": "Payment is handled by the team"
+      },
+      "body": {
+        "ar": "يسجّل التطبيق خيار الدفع الذي يفضّله العميل مع الطلب فقط. بعد الطلب يتواصل الفريق مع العميل ويعلّم الطلب مدفوعاً من لوحة التحكم.",
+        "en": "The app only stores the payment option the customer prefers with the order. After the order, the team contacts the customer and marks it paid in the control panel."
+      }
+    }
+  ]
+}

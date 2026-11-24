@@ -1,0 +1,363 @@
+{
+  "facts": [
+    {
+      "value": "2",
+      "label": {
+        "ar": "عملتان بحسابين منفصلين",
+        "en": "currencies, kept apart"
+      }
+    },
+    {
+      "value": "قيد مزدوج",
+      "label": {
+        "ar": "دفتر أستاذ خلف كل رقم",
+        "en": "double-entry ledger behind every figure"
+      }
+    },
+    {
+      "value": "PWA",
+      "label": {
+        "ar": "وتغليف Android عبر Capacitor",
+        "en": "with an Android build through Capacitor"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ar": "مجموعات في القائمة الجانبية",
+        "en": "menu groups"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "FoxTech منظومة تشغيل ومحاسبة لشركة إنترنت هوائي صغيرة. يستقبل الفريق مشتركاً جديداً، ويرسل فنياً للتركيب، ويتابع طلبات الصيانة ومخزون القطع، ثم يرى في لوحة واحدة كم ربحت الشركة فعلاً وكم تملك. الواجهة عربية بالكامل، وتعمل على الحاسوب وعلى الهاتف.",
+    "en": "FoxTech is an operations and accounting system for a small wireless-internet company. The team signs up a subscriber, sends a technician to install, follows maintenance requests and parts stock, then sees on one board how much the company earned and what it holds. The interface is fully Arabic, on desktop and phone."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "ar": "لوحة التحكم",
+        "en": "Dashboard"
+      },
+      "title": {
+        "ar": "كيف طلع الربح، خطوة بخطوة.",
+        "en": "How the profit came about, step by step."
+      },
+      "body": {
+        "ar": "اللوحة تبدأ بسلسلة حسابية بالليرة السورية. على عرض «هذا العام»: ما بعناه 62,884,000، ناقص كلفة ما بعناه 33,910,732، فمجمل الربح 28,973,268، ناقص مصاريف التشغيل 24,388,636، فصافي الربح 4,584,632. تحتها أرصدة لا تدخل في الربح: السيولة والمستحق عند المشتركين وقيمة المخزون وقيمة الأجهزة والأصول.",
+        "en": "The board opens with a chain of arithmetic in Syrian pounds. On the \"this year\" view: sales 62,884,000, minus cost of what was sold 33,910,732, giving gross profit 28,973,268, minus operating expenses 24,388,636, giving net profit 4,584,632. Below are balances that do not count as profit: available cash, amounts due from subscribers, stock value, and equipment and assets."
+      },
+      "points": [
+        {
+          "ar": "المسحوبات الشخصية تظهر منفصلة: تنقص السيولة ولا تنقص الربح",
+          "en": "Owner draws appear separately: they cut cash, not profit"
+        },
+        {
+          "ar": "مرشح الفترة في الأعلى (هذا الشهر، الشهر الماضي، هذا العام)، وتاريخ آخر مزامنة بجانبه",
+          "en": "A period filter on top (this month, last month, this year), with the last sync time beside it"
+        },
+        {
+          "ar": "مخططان: ما بعناه وما صرفناه، وتكوين صافي الربح",
+          "en": "Two charts: what we sold against what we spent, and what makes up net profit"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "المشتركون",
+        "en": "Subscribers"
+      },
+      "title": {
+        "ar": "دليل المشتركين وملف كل مشترك.",
+        "en": "The subscriber directory and a profile for each one."
+      },
+      "body": {
+        "ar": "جدول المشتركين يعرض الاسم واسم الشبكة والهاتف والعنوان والباقة والرصيد وموعد الاستحقاق وحالة التركيب وآخر دفعة. فوقه بطاقات: المشتركون الفعالون والمتأخرون بالدفع والذمم بالليرة وبالدولار وطلبات الصيانة المفتوحة. هنا الجدول مصفّى على «عليه رصيد»، وفي ملف المشترك المفتوح زرّا القبض والصيانة.",
+        "en": "The table lists name and network login, phone, address, plan, balance and due date, installation state and last payment. Cards above count active and late subscribers, receivables in pounds and dollars, and open maintenance requests. Here the table is filtered to \"has a balance\", and the open profile carries the collect and maintenance buttons."
+      },
+      "points": [
+        {
+          "ar": "مرشحات للحالة والباقة والرصيد، وبحث بالاسم أو الهاتف أو اسم الشبكة",
+          "en": "Filters for status, plan and balance, and search by name, phone or network login"
+        },
+        {
+          "ar": "ملف جانبي بالملخص والفواتير والقطع والقبوض والصيانة",
+          "en": "A side profile with summary, invoices, parts, receipts and maintenance"
+        },
+        {
+          "ar": "طلب تسجيل PDF يطبعه الفني ليوقّعه المشترك",
+          "en": "A registration request PDF the technician prints for the subscriber to sign"
+        },
+        {
+          "ar": "على الهاتف تظهر كل بطاقة بالباقة والرصيد وحالة التركيب",
+          "en": "On the phone each card shows plan, balance and installation state"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "ar": "الاشتراكات والتحصيل",
+        "en": "Subscriptions and collections"
+      },
+      "title": {
+        "ar": "الفواتير والدفعات في جدول واحد.",
+        "en": "Invoices and payments in one table."
+      },
+      "body": {
+        "ar": "الجدول يرتب الفواتير من الأحدث، بالرقم والمشترك والإجمالي والمدفوع وتاريخ الاستحقاق والحالة. الحالة إما مدفوعة أو صادرة أو جزئية، وعلى كل سطر زر إدارة وزر المستندات.",
+        "en": "The table orders invoices from the newest, with number, subscriber, total, amount paid, due date and status. Status is paid, issued or partial, and each row has a manage button and a documents button."
+      },
+      "points": [
+        {
+          "ar": "فاتورة اشتراك لشهر أو أكثر، وتظهر فترة الخدمة في بنودها",
+          "en": "A subscription invoice covers one month or more, with the service period in its lines"
+        },
+        {
+          "ar": "القبض الجزئي يبقي الفاتورة جزئية حتى يُسدَّد الباقي",
+          "en": "A partial receipt keeps the invoice partial until the rest is paid"
+        },
+        {
+          "ar": "تصدير كل الصفحات إلى CSV",
+          "en": "Export every page to CSV"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "ar": "التركيبات",
+        "en": "Installations"
+      },
+      "title": {
+        "ar": "قائمة انتظار التركيب بحسب الموعد.",
+        "en": "The installation queue, ordered by appointment."
+      },
+      "body": {
+        "ar": "الأعمال المفتوحة تظهر أولاً بحسب موعدها، ثم المنتهية. لكل سطر رقم ومشترك وهاتف وعنوان وفني وأجور وموعد وحالة: مجدول أو قيد التنفيذ أو مكتمل. أزرار السطر المفتوح: إكمال، موعد أو فني، إلغاء.",
+        "en": "Open jobs come first by appointment, then finished ones. Each row has number, subscriber, phone, address, technician, fee, appointment and status: scheduled, in progress or completed. The buttons on an open row are complete, change appointment or technician, and cancel."
+      },
+      "points": [
+        {
+          "ar": "الدفع وقطع المخزون يُسجَّلان عند إكمال التركيب",
+          "en": "Payment and stock parts are recorded when the installation is completed"
+        },
+        {
+          "ar": "تغيير الفني أو الموعد من الزر نفسه",
+          "en": "Technician or appointment is changed from the same button"
+        },
+        {
+          "ar": "الإلغاء يطلب سبباً ويبقى في السجل",
+          "en": "Cancelling asks for a reason and stays on record"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-06",
+      "phone": "mobile-06",
+      "kicker": {
+        "ar": "المخزون",
+        "en": "Inventory"
+      },
+      "title": {
+        "ar": "الرصيد الفعلي والكلفة الوسطية لكل مستودع.",
+        "en": "Actual stock and average cost in every warehouse."
+      },
+      "body": {
+        "ar": "كل صنف يظهر برمزه واسمه وتوزيع كميته على المستودعات الثلاثة وإجماليه ووحدته ومتوسط كلفته. أعلى الصفحة تبويبات: الرصيد الحالي، حركة المخزون، التحويلات، التسويات، الأرقام التسلسلية.",
+        "en": "Each item shows its code, name, quantity split across the three warehouses, total, unit and average cost. Tabs on top lead to current stock, movements, transfers, count adjustments and serial numbers."
+      },
+      "points": [
+        {
+          "ar": "زر تحويل أو تسوية للنقل بين المستودعات وللجرد",
+          "en": "A transfer or adjustment button for moving stock and for counts"
+        },
+        {
+          "ar": "الكلفة الوسطية تتغير مع كل شراء جديد",
+          "en": "Average cost changes with each new purchase"
+        },
+        {
+          "ar": "إيقاف الصنف يخفيه من العمليات الجديدة ويبقي رصيده",
+          "en": "Deactivating an item hides it from new operations and keeps its balance"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-07",
+      "phone": "mobile-07",
+      "kicker": {
+        "ar": "المصاريف",
+        "en": "Expenses"
+      },
+      "title": {
+        "ar": "المصاريف اليومية ومصدر دفعها.",
+        "en": "Daily expenses and where they were paid from."
+      },
+      "body": {
+        "ar": "جدول بالرقم والتاريخ والبيان والجهة والمبلغ والحالة، من إيجار المقر وأجور الخط إلى الوقود والضيافة. تصنيف مسحوبات المالك يظهر هنا أيضاً، لكنه لا يدخل في الربح على اللوحة.",
+        "en": "A table with number, date, description, vendor, amount and status, from rent and line fees to fuel and hospitality. The owner-draw category also appears here, but it does not count as profit on the dashboard."
+      },
+      "points": [
+        {
+          "ar": "كل مصروف يُسجَّل من صندوق أو بنك فيقيَّد في السجل المالي",
+          "en": "Each expense is paid from cash or bank and posts to the ledger"
+        },
+        {
+          "ar": "إلغاء مصروف يصنع قيداً عكسياً ولا يحذفه",
+          "en": "Cancelling an expense creates a reversing entry instead of deleting it"
+        },
+        {
+          "ar": "زر المستندات لإرفاق الفاتورة",
+          "en": "A documents button for attaching the receipt"
+        }
+      ]
+    },
+    {
+      "phone": "mobile-08",
+      "kicker": {
+        "ar": "السجلات المالية",
+        "en": "Journal records"
+      },
+      "title": {
+        "ar": "كل عملية مالية بقيدها.",
+        "en": "Every financial operation, with its entry."
+      },
+      "body": {
+        "ar": "على الهاتف تظهر السجلات بطاقات: رقم القيد والتاريخ والبيان والمبلغ والجهة، من سندات القبض وإصدار الفواتير إلى المصاريف وكلفة القطع. التصحيح يكون بقيد عكسي يظهر في السجل لا بحذف.",
+        "en": "On the phone the records are cards: entry number, date, description, amount and counterparty, from receipts and invoice issues to expenses and parts cost. A correction is a reversing entry that stays in the record, not a deletion."
+      },
+      "points": [
+        {
+          "ar": "قيد يدوي للعمليات التي لا يولدها النظام",
+          "en": "A manual entry for operations the system does not generate"
+        },
+        {
+          "ar": "اسم المشترك أو المورد ظاهر في عمود الجهة",
+          "en": "The subscriber or supplier name shows in the counterparty field"
+        },
+        {
+          "ar": "تصدير كل الصفحات إلى CSV",
+          "en": "Export every page to CSV"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "phone": "mobile-09",
+      "kicker": {
+        "ar": "الأجهزة والأصول",
+        "en": "Assets"
+      },
+      "title": {
+        "ar": "ما تملكه الشركة وقيمته بعد الإهلاك.",
+        "en": "What the company owns, and its value after depreciation."
+      },
+      "body": {
+        "ar": "الأصول مرتبة بالرقم مع كلفة الاقتناء ومجمع الإهلاك والحالة، من السيارة والبرج إلى المولدة وجهاز القياس والحاسوب. زر إهلاك أو استبعاد على كل أصل يرحّل القيد المناسب.",
+        "en": "Assets are listed by number with acquisition cost, accumulated depreciation and status, from the vehicle and tower to the generator, a measuring device and a laptop. A depreciate or dispose button on each asset posts the matching entry."
+      },
+      "points": [
+        {
+          "ar": "الإهلاك الشهري يرحَّل بقيد ويظهر مجمعه في الجدول",
+          "en": "Monthly depreciation posts an entry and its total shows in the table"
+        },
+        {
+          "ar": "الاستبعاد يسجّل الربح أو الخسارة والمتحصل",
+          "en": "Disposal records the gain or loss and the proceeds"
+        },
+        {
+          "ar": "قيمة الأصول بعد الإهلاك تظهر في لوحة التحكم",
+          "en": "Asset value after depreciation appears on the dashboard"
+        }
+      ]
+    },
+    {
+      "desk": "desktop-10",
+      "phone": "mobile-10",
+      "kicker": {
+        "ar": "الموارد البشرية",
+        "en": "People records"
+      },
+      "title": {
+        "ar": "ملفات الموظفين وعقودهم.",
+        "en": "Employee files and contracts."
+      },
+      "body": {
+        "ar": "ثمانية موظفين بالرقم والاسم والمسمى وتاريخ التعيين والراتب الأساسي والحالة. تبويبات أعلى الصفحة تنقل إلى الحضور والإجازات والرواتب، وعلى كل سطر تعديل وإنهاء خدمة وحذف.",
+        "en": "Eight employees with number, name, job title, hire date, base salary and status. Tabs on top lead to attendance, leave and payroll, and each row has edit, end service and delete."
+      },
+      "points": [
+        {
+          "ar": "الفني يربط بحساب مستخدم فيُسند إليه التركيب والصيانة",
+          "en": "A technician linked to a user account can be assigned installations and maintenance"
+        },
+        {
+          "ar": "الراتب يُدفع عبر مسير يمر بمسودة واعتماد ودفع",
+          "en": "Salary goes through a payroll run: draft, approval, payment"
+        },
+        {
+          "ar": "من له سجل في حركة لا يُحذف، ويُنهى عمله بدل ذلك",
+          "en": "Anyone with history is not deleted; service is ended instead"
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "دفتر أستاذ مزدوج القيد خلف كل رقم",
+        "en": "A double-entry ledger behind every number"
+      },
+      "body": {
+        "ar": "كل رقم مالي في لوحة التحكم مصدره دفتر الأستاذ. كل عملية مخزون أو قبض أو صرف تُنفَّذ مع قيدها في معاملة قاعدة بيانات واحدة.",
+        "en": "Every financial figure on the dashboard comes from the ledger. Each stock, receipt or payment operation runs with its journal entry in a single database transaction."
+      }
+    },
+    {
+      "title": {
+        "ar": "عملتان لا تُجمعان في رقم واحد",
+        "en": "Two currencies, never added together"
+      },
+      "body": {
+        "ar": "الليرة السورية والدولار لكل منهما رصيده، والقيد يتوازن داخل كل عملة. يُحفظ سعر الصرف مع العملية لحظة حدوثها ولا يُعاد حسابه.",
+        "en": "The Syrian pound and the dollar each keep their own balance, and entries balance within each currency. The exchange rate is stored with the operation when it happens and is never recomputed."
+      }
+    },
+    {
+      "title": {
+        "ar": "حذف لتصحيح الخطأ فقط",
+        "en": "Deletion only for corrections"
+      },
+      "body": {
+        "ar": "ما دخل في حركة أو مستند أو قيد يُرفض حذفه برسالة تشرح السبب، والبديل التعطيل. القيود المرحّلة لا تُحذف.",
+        "en": "Anything that appears in a movement, document or entry cannot be deleted, and the refusal explains why. The alternative is to deactivate. Posted entries are never deleted."
+      }
+    },
+    {
+      "title": {
+        "ar": "سجل لكل تعديل",
+        "en": "An audit trail for every change"
+      },
+      "body": {
+        "ar": "كل طلب API يغيّر البيانات يسجّل الموظف والوقت والمسار وعنوان IP والحقول المتغيرة بعد إخفاء الأسرار.",
+        "en": "Every API request that changes data records the employee, time, route, IP address and changed fields, with secrets masked."
+      }
+    },
+    {
+      "title": {
+        "ar": "PWA تعمل كتطبيق Android",
+        "en": "A PWA that also ships as Android"
+      },
+      "body": {
+        "ar": "الواجهة React وVite وتعمل كتطبيق ويب تقدمي، ومهيأة للتغليف عبر Capacitor. الخادم Laravel، ويحفظ التطبيق آخر لقطة ناجحة للوحة لكل مستخدم.",
+        "en": "The front end is React and Vite, run as a progressive web app and set up for Capacitor packaging. The server is Laravel, and the app keeps the last successful dashboard snapshot per user."
+      }
+    }
+  ]
+}

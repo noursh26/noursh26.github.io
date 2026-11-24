@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import App from './App'
 
-const Directory = lazy(() => import('./portfolio/Projects').then(m => ({ default: m.ProjectsDirectory })))
+const Directory = lazy(() => import('./portfolio/Directory').then(m => ({ default: m.ProjectsDirectory })))
 const Case = lazy(() => import('./portfolio/Projects').then(m => ({ default: m.ProjectCase })))
 
 export default function Router() {

@@ -97,18 +97,26 @@ export function useStoryMotion(scope: RefObject<HTMLElement | null>, lang: strin
             })
           })
 
-          /* 5. The flagship on a big screen arrives once. */
+          /* 5. The flagship on a big screen opens from a smaller frame as you scroll to it,
+                the screen inside settling from a slight zoom (inset reveal). */
           const desk = one('.flag__desk')
           if (desk) {
-            gsap.from(desk, {
-              y: 90,
-              scale: 0.95,
-              autoAlpha: 0,
-              duration: 1.3,
-              ease: 'expo.out',
-              scrollTrigger: { trigger: desk, start: 'top 85%', once: true },
-            })
+            const reveal = { trigger: desk, start: 'top 92%', end: 'top 38%', scrub: true }
+            gsap.fromTo(
+              desk,
+              { clipPath: 'inset(10% 9% 10% 9% round 28px)', y: 60 },
+              { clipPath: 'inset(0% 0% 0% 0% round 12px)', y: 0, ease: 'none', scrollTrigger: reveal },
+            )
+            gsap.fromTo(desk.querySelector('img'), { scale: 1.14 }, { scale: 1, ease: 'none', scrollTrigger: reveal })
           }
+
+          /* 5b. Each panel's screen settles inside its window as the panel arrives. */
+          q('.panel__desk img').forEach((img) =>
+            gsap.fromTo(img, { scale: 1.1 }, {
+              scale: 1, ease: 'none',
+              scrollTrigger: { trigger: img.closest('.panel') ?? img, start: 'top bottom', end: 'top 20%', scrub: true },
+            }),
+          )
 
           /* 6. Product panels stack: the one underneath recedes as the next slides over it. */
           if (wide && tall) {
@@ -171,6 +179,33 @@ export function useStoryMotion(scope: RefObject<HTMLElement | null>, lang: strin
               }),
             )
           }
+
+          /* 9. The About intro reads itself in: words go from faint to full as you scroll. */
+          const intro = one('.story__intro')
+          if (intro) {
+            intro.classList.add('is-reading')
+            cleanups.push(() => intro.classList.remove('is-reading'))
+            SplitText.create(intro, {
+              type: 'words',
+              autoSplit: true,
+              onSplit: (self) =>
+                gsap.fromTo(self.words, { opacity: 0.18 }, {
+                  opacity: 1, ease: 'none', stagger: 0.1,
+                  scrollTrigger: { trigger: intro, start: 'top 82%', end: 'bottom 48%', scrub: true },
+                }),
+            })
+          }
+
+          /* 10. Capability cards and process steps arrive in a short cascade, once. */
+          ;['.cap', '.step'].forEach((sel) => {
+            const els = q(sel)
+            gsap.set(els, { y: 28, autoAlpha: 0 })
+            ScrollTrigger.batch(els, {
+              start: 'top 88%',
+              once: true,
+              onEnter: (batch) => gsap.to(batch, { y: 0, autoAlpha: 1, duration: 0.9, ease: 'expo.out', stagger: 0.07 }),
+            })
+          })
 
           return () => cleanups.forEach((c) => c())
         },

@@ -1,0 +1,179 @@
+{
+  "facts": [
+    {
+      "value": "5",
+      "label": {
+        "en": "stages, image to panel",
+        "ar": "مراحل، من الصورة إلى اللوح"
+      }
+    },
+    {
+      "value": "2",
+      "label": {
+        "en": "languages, EN and AR",
+        "ar": "لغتان، إنجليزية وعربية"
+      }
+    },
+    {
+      "value": "3",
+      "label": {
+        "en": "drawing tools named",
+        "ar": "أدوات رسم مذكورة"
+      }
+    }
+  ],
+  "intro": {
+    "en": "A personal page for Mohammad Anwar Shehadae, a furniture and joinery draftsman. It is written for a designer or workshop owner who wants to know how a photo or sketch becomes a drawing a carpenter can cut without guessing. The design reads like a drafting sheet, with a grid ground, serif type and visible dimensions.",
+    "ar": "صفحة شخصية لمحمد أنور شحادة، مخطِّط أثاث ونجارة. كُتبت لمصمم أو صاحب ورشة يريد أن يعرف كيف تتحول صورة أو رسم إلى مخطط يقطعه النجار دون تخمين. التصميم يشبه لوحة رسم هندسي، بخلفية شبكية وخط بزوائد وأبعاد ظاهرة."
+  },
+  "screens": [
+    {
+      "desk": "desktop-01",
+      "phone": "mobile-01",
+      "kicker": {
+        "en": "Opening",
+        "ar": "المشهد الأول"
+      },
+      "title": {
+        "en": "Drawing what hands can build.",
+        "ar": "نرسم ما تستطيع الأيدي بناءه."
+      },
+      "body": {
+        "en": "A large Cormorant headline with one italic phrase, and above it a line that fixes place and date: a workshop drafting studio, coordinates, Al-Qutayfah near Damascus. A short caption says the practice turns furniture into measured, build-ready blueprints.",
+        "ar": "عنوان كبير بخط Cormorant مع عبارة مائلة واحدة، وفوقه سطر يحدد المكان والتاريخ: مكتب رسم للورش، وإحداثيات، والقطيفة قرب دمشق. وصف قصير يقول إن العمل يحوّل الأثاث إلى مخططات مقاسة جاهزة للتنفيذ."
+      },
+      "points": [
+        {
+          "en": "An SVG cabinet changes from photo to blueprint as you scroll.",
+          "ar": "خزانة SVG تتحول من صورة إلى مخطط أثناء التمرير."
+        },
+        {
+          "en": "Small mono labels such as PH.01 and a 1:20 scale.",
+          "ar": "تسميات صغيرة أحادية العرض مثل PH.01 ومقياس 1:20."
+        },
+        {
+          "en": "An EN / Arabic switch at the top right.",
+          "ar": "مبدّل EN / عربي في أعلى اليمين."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-03",
+      "phone": "mobile-03",
+      "kicker": {
+        "en": "About",
+        "ar": "نبذة"
+      },
+      "title": {
+        "en": "Quiet work, and a ledger of facts.",
+        "ar": "عمل هادئ وجدول حقائق."
+      },
+      "body": {
+        "en": "The AutoCAD laptop sits beside two paragraphs: cutting maps that waste less board, and joinery chosen for how the wood moves in ten years. Under them a small ledger lists location, software (AutoCAD, SketchUp, Layout), specialism and languages.",
+        "ar": "حاسوب AutoCAD بجانب فقرتين: خرائط قص تهدر ألواحاً أقل، ونجارة تُختار بحسب حركة الخشب بعد عشر سنوات. تحتهما جدول صغير يذكر المكان والبرامج (AutoCAD وSketchUp وLayout) والتخصص واللغات."
+      },
+      "points": [
+        {
+          "en": "A key and value table with hairline rules.",
+          "ar": "جدول مفتاح وقيمة بخطوط رفيعة."
+        },
+        {
+          "en": "On a phone a name tag with birth year sits on the image.",
+          "ar": "على الهاتف تظهر بطاقة اسم مع سنة الميلاد فوق الصورة."
+        },
+        {
+          "en": "The blue italic word marks the idea in every heading.",
+          "ar": "الكلمة المائلة الزرقاء تحدد الفكرة في كل عنوان."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "phone": "mobile-04",
+      "kicker": {
+        "en": "Process",
+        "ar": "المنهج"
+      },
+      "title": {
+        "en": "From a reference image to a panel for the saw.",
+        "ar": "من صورة مرجعية إلى لوح للمنشار."
+      },
+      "body": {
+        "en": "Section 02 shows five stages in a pinned scene. The big 01 is the reference: a photograph or room studied for proportion, volume and material. On the right is the wooden desk the example starts from. The scene moves to the next stage as you scroll.",
+        "ar": "القسم 02 يعرض خمس مراحل في مشهد مثبّت. الرقم الكبير 01 هو المرجع: صورة أو غرفة تُدرس نسبتها وحجمها ومادتها. على اليمين المكتب الخشبي الذي يبدأ منه المثال. ينتقل المشهد إلى المرحلة التالية مع التمرير."
+      },
+      "points": [
+        {
+          "en": "The big numeral changes per stage, 01 to 05.",
+          "ar": "الرقم الكبير يتغير مع كل مرحلة، من 01 إلى 05."
+        },
+        {
+          "en": "The scene stays pinned for about six screens of scroll.",
+          "ar": "يبقى المشهد مثبّتاً لنحو ست شاشات من التمرير."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "phone": "mobile-05",
+      "kicker": {
+        "en": "Process",
+        "ar": "المنهج"
+      },
+      "title": {
+        "en": "Stage three: orthographic drafting.",
+        "ar": "المرحلة الثالثة: الرسم الإسقاطي."
+      },
+      "body": {
+        "en": "An AutoCAD drawing with a front elevation and a top plan at 1:20, with dimensions and a title block in the corner. The text says every member is dimensioned and every hardware reservation shown, so the carpenter never has to guess. Three of five dots are filled beneath it.",
+        "ar": "رسم AutoCAD بواجهة أمامية ومسقط علوي بمقياس 1:20، مع الأبعاد ولوحة العنوان في الزاوية. النص يقول إن كل قطعة مقاسة وكل موضع للإكسسوار مبيّن، فلا يحتاج النجار إلى التخمين. ثلاث نقاط من خمس ممتلئة تحته."
+      },
+      "points": [
+        {
+          "en": "Each stage's drawing is generated in code as SVG.",
+          "ar": "رسم كل مرحلة مولّد بالكود بصيغة SVG."
+        },
+        {
+          "en": "Dots move from active to done as you scroll.",
+          "ar": "النقاط تنتقل من نشطة إلى مكتملة مع التمرير."
+        },
+        {
+          "en": "Other stages: SketchUp, a cut map, joinery at 1:1.",
+          "ar": "مراحل أخرى: SketchUp وخريطة قص ونجارة بمقياس 1:1."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "en": "No framework and no build step",
+        "ar": "بلا إطار عمل ولا خطوة بناء"
+      },
+      "body": {
+        "en": "The site is HTML, two CSS files and a few JavaScript files. Sections are rendered from one copy object, so the whole page swaps between Arabic and English with no reload.",
+        "ar": "الموقع HTML وملفا CSS وبضعة ملفات JavaScript. تُرسم الأقسام من كائن نصوص واحد، فتتبدّل الصفحة كلها بين العربية والإنجليزية دون إعادة تحميل."
+      }
+    },
+    {
+      "title": {
+        "en": "Process drawings generated in code",
+        "ar": "رسومات المنهج مولّدة بالكود"
+      },
+      "body": {
+        "en": "The opening cabinet and every process stage is an SVG function that takes a progress value and returns the drawing.",
+        "ar": "الخزانة الافتتاحية وكل مرحلة من المنهج دالة SVG تأخذ قيمة تقدّم وتعيد الرسم."
+      }
+    },
+    {
+      "title": {
+        "en": "A scroll-driven story",
+        "ar": "قصة يقودها التمرير"
+      },
+      "body": {
+        "en": "The process section uses a sticky element inside a long track and works out the stage from the track's position. The opening animates the cabinet from photo to blueprint the same way.",
+        "ar": "قسم المنهج يستخدم عنصراً لاصقاً داخل مسار طويل ويحسب المرحلة من موضع المسار. الافتتاحية تحرّك الخزانة من صورة إلى مخطط بالطريقة نفسها."
+      }
+    }
+  ]
+}

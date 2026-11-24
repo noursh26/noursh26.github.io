@@ -1,0 +1,106 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-02",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-04",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-05",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "phone-only product: the desktop capture is the phone UI stretched"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "next-prayer card is a blank loading shimmer and the line says the location is not set"
+    },
+    {
+      "file": "mobile-03",
+      "reason": "placeholder question text (sample question 1/2/3) in the rulings list"
+    },
+    {
+      "file": "mobile-04",
+      "reason": "empty state: location not set, no times shown"
+    },
+    {
+      "file": "mobile-06",
+      "reason": "map area is grey with no tiles and the list holds placeholder mosque names"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "duplicate of mobile-07: same dhikr layout for the evening group"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "placeholder ruling text and a demonstration-data evidence section"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[3]; summary; solution; flow[2]",
+      "text": "nearby mosques / mosque interface",
+      "problem": "The map is Google Maps with no API key in AndroidManifest.xml, so it renders grey; the capture shows placeholder mosque names. Not a working end-to-end feature.",
+      "fix": "remove the mosques mention (EN: drop 'nearby mosques'; AR: drop the nearby-mosques phrase)"
+    },
+    {
+      "where": "projects.json features[2]; summary; solution; flow[2]",
+      "text": "reading lists, search and text detail",
+      "problem": "The rulings content is only placeholder 'sample question' text and demo evidence; no real content to show.",
+      "fix": "remove, or reword the product as dhikr and prayer times only"
+    },
+    {
+      "where": "projects.json features[0]",
+      "text": "A home interface for schedules and the next prayer",
+      "problem": "The next-prayer card is a loading shimmer in the capture and the timetable screen is an empty state (location not set); times come from the backend API.",
+      "fix": "reword to what is shown: location picker and on-device calculation (EN: 'Prayer times for a chosen city, calculated on the device when offline'; AR: مواقيت لمدينة مختارة تُحسب على الجهاز عند انقطاع الاتصال)"
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "Captures use demonstration times and locations; sample questions identify themselves as demonstration data",
+      "problem": "Talks about demo data and capture limits (SHOWCASE_RULES section 2)",
+      "fix": "remove the sentence"
+    },
+    {
+      "where": "tours/arkani.json engineering (old)",
+      "text": "with an Android alarm manager alongside",
+      "problem": "android_alarm_manager_plus is in pubspec but never used in lib/",
+      "fix": "removed from tour"
+    },
+    {
+      "where": "tours/arkani.json engineering (old)",
+      "text": "shows a banner when the connection drops",
+      "problem": "OfflineBanner widget exists but is not used anywhere",
+      "fix": "removed from tour"
+    }
+  ]
+}

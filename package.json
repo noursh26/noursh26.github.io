@@ -7,7 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build && node scripts/prepare-project-routes.mjs",
     "preview": "vite preview --host 0.0.0.0",
-    "check:gallery": "node scripts/check-gallery.mjs"
+    "check:gallery": "node scripts/check-gallery.mjs && node scripts/check-tours.mjs"
   },
   "dependencies": {
     "@fontsource-variable/geist": "5.3.0",

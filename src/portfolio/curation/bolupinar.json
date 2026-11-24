@@ -1,0 +1,86 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-01",
+      "reason": "mid-animation: headline half faded and hero image blurred"
+    },
+    {
+      "file": "mobile-01",
+      "reason": "mid-animation: headline half faded, hero blurred, word band clipped at the bottom"
+    },
+    {
+      "file": "desktop-02",
+      "reason": "mostly empty frame, word band clipped at the top under the nav"
+    },
+    {
+      "file": "mobile-02",
+      "reason": "mostly empty frame, word band clipped under the nav"
+    },
+    {
+      "file": "desktop-06",
+      "reason": "duplicate of desktop-07, bottle cards cut at the bottom"
+    },
+    {
+      "file": "desktop-08",
+      "reason": "unsupported figures and badges (HACCP, EU certified, 48h source to table, five stars) not in the project brief"
+    },
+    {
+      "file": "mobile-08",
+      "reason": "unsupported figures (48h source to table, 100% natural) not in the project brief"
+    },
+    {
+      "file": "desktop-09",
+      "reason": "Learn more on every card does nothing; claims exclusive five-star hotel contracts"
+    },
+    {
+      "file": "mobile-09",
+      "reason": "Learn more on every card does nothing; claims exclusive five-star hotel contracts"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "contact form is front end only (onsubmit preventDefault, fake sent state) and the email is info@estratijiya.com, another company"
+    },
+    {
+      "file": "mobile-10",
+      "reason": "contact form is front end only and the email is info@estratijiya.com, another company"
+    }
+  ],
+  "claims": [
+    {
+      "where": "projects.json features[3]",
+      "text": "A sample-request form and a clear business enquiry path.",
+      "problem": "The form posts nowhere (onsubmit preventDefault, then a fake confirmation). The contact email is info@estratijiya.com",
+      "fix": {
+        "en": "A hospitality-focused contact block with phone and WhatsApp.",
+        "ar": "قسم تواصل موجّه للضيافة مع الهاتف وواتساب."
+      }
+    },
+    {
+      "where": "projects.json summary / solution / flow[2] / challenge",
+      "text": "sample-request form / ينتقل إلى طلب عينة / enquiry usable on mobile",
+      "problem": "There is no working form",
+      "fix": "remove the form wording and end the flow on phone or WhatsApp contact"
+    },
+    {
+      "where": "projects.json features[2]",
+      "text": "A dedicated section for restaurant, hotel, and hospitality purchasing.",
+      "problem": "The section exists but its Learn more links are dead and it claims exclusive five-star contracts",
+      "fix": {
+        "en": "A section addressed to hotels, restaurants, cafes and distributors.",
+        "ar": "قسم موجّه للفنادق والمطاعم والكافيهات والموزعين."
+      }
+    },
+    {
+      "where": "projects.json challenge",
+      "text": "Numbers and certifications visible in the source site are presentation content",
+      "problem": "HACCP, EU certified, 48h and five-star figures are not in context.md; only the 1,300 m altitude is",
+      "fix": "remove the sentence and keep only the 1,300 m altitude"
+    },
+    {
+      "where": "src/story/content.ts landings[bolupinar] and directory.config.ts bolupinar",
+      "text": "shot desktop-01, phone mobile-01",
+      "problem": "both are hidden now (mid-animation)",
+      "fix": "use desktop-03 and mobile-03"
+    }
+  ]
+}

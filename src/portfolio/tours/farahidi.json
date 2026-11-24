@@ -1,0 +1,237 @@
+{
+  "facts": [
+    {
+      "value": "4",
+      "label": {
+        "ar": "أدوار",
+        "en": "roles"
+      }
+    },
+    {
+      "value": "5",
+      "label": {
+        "ar": "مستويات للمحتوى",
+        "en": "content levels"
+      }
+    },
+    {
+      "value": "15",
+      "label": {
+        "ar": "موارد إدارية",
+        "en": "admin resources"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "هذه لوحة إدارة منصة تعليمية عربية يستخدمها المدير والمشرفون. تُبنى فيها المواد من القسم إلى الوحدة إلى الدرس، وتُتابَع الاختبارات والواجبات وحسابات الطلاب. اللوحة داكنة وعربية بالكامل.",
+    "en": "This is the admin panel of an Arabic education platform, used by the admin and supervisors. They build subjects down to sections, units and lessons, and follow quizzes, assignments and student accounts. The panel is dark and fully Arabic."
+  },
+  "screens": [
+    {
+      "desk": "desktop-06",
+      "kicker": {
+        "ar": "المحتوى",
+        "en": "Content"
+      },
+      "title": {
+        "ar": "المواد حسب المسار.",
+        "en": "Subjects, grouped by track."
+      },
+      "body": {
+        "ar": "جدول المواد يعرض الكورس والعنوان وحالة النشاط والترتيب. تظهر هنا مواد التاسع والبكالوريا بفرعيها، مثل الرياضيات والعلوم العامة والفيزياء والكيمياء. في كل صف عرض وتعديل وتعطيل.",
+        "en": "The subject table lists course, title, active state and order. Ninth grade and both baccalaureate streams appear, with subjects such as mathematics, general science, physics and chemistry. Each row has view, edit and disable."
+      },
+      "points": [
+        {
+          "ar": "عمود الكورس يربط المادة بمسارها.",
+          "en": "The course column ties a subject to its track."
+        },
+        {
+          "ar": "زر تعطيل لإخفاء المادة دون حذفها.",
+          "en": "A disable button hides a subject without deleting it."
+        },
+        {
+          "ar": "زر إضافة مادة في أعلى الصفحة.",
+          "en": "An add-subject button sits at the top."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-10",
+      "kicker": {
+        "ar": "المحتوى",
+        "en": "Content"
+      },
+      "title": {
+        "ar": "الأقسام داخل كل مادة.",
+        "en": "Sections inside each subject."
+      },
+      "body": {
+        "ar": "كل مادة تنقسم إلى أقسام، مثل الجبر والهندسة للرياضيات، والنحو والأدب للغة العربية. الجدول يعرض المادة والعنوان والترتيب مع عرض وتعديل ونسخ في كل صف.",
+        "en": "Each subject splits into sections, such as algebra and geometry for mathematics, or grammar and literature for Arabic. The table shows subject, title and order, with view, edit and copy on every row."
+      },
+      "points": [
+        {
+          "ar": "نسخ القسم من صفه مباشرة.",
+          "en": "Copy a section from its own row."
+        },
+        {
+          "ar": "ترتيب يدوي للأقسام.",
+          "en": "A manual order for sections."
+        },
+        {
+          "ar": "بحث نصي في الجدول.",
+          "en": "Text search over the table."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-04",
+      "kicker": {
+        "ar": "الدروس",
+        "en": "Lessons"
+      },
+      "title": {
+        "ar": "الدروس مع الإتاحة والمعاينة المجانية.",
+        "en": "Lessons with availability and free preview."
+      },
+      "body": {
+        "ar": "كل درس يظهر بوحدته وعنوانه وعلامة المعاينة المجانية وتاريخ الإتاحة وموعد التسليم والترتيب. في الصف إجراء لتفعيل المعاينة المجانية أو إلغائها. الدرس يرتبط بفيديو وملفات وواجبات.",
+        "en": "Each lesson shows its unit, title, a free-preview flag, availability date, delivery date and order. A row action turns the free preview on or off. A lesson links to a video, files and assignments."
+      },
+      "points": [
+        {
+          "ar": "المعاينة المجانية تُدار لكل درس.",
+          "en": "Free preview is controlled per lesson."
+        },
+        {
+          "ar": "تاريخ إتاحة يؤجل ظهور الدرس.",
+          "en": "An availability date delays when a lesson appears."
+        },
+        {
+          "ar": "عمود الوحدة يربط الدرس بمكانه.",
+          "en": "A unit column ties the lesson to its place."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-09",
+      "kicker": {
+        "ar": "الواجبات",
+        "en": "Assignments"
+      },
+      "title": {
+        "ar": "الواجبات مرتبطة بالدروس.",
+        "en": "Assignments tied to lessons."
+      },
+      "body": {
+        "ar": "جدول الواجبات فيه العنوان والدرس المرتبط وآخر موعد للتسليم. كل واجب يخص درساً واحداً، ويمكن ربطه باختبار أسئلة. عرض وتعديل ونسخ في كل صف.",
+        "en": "The assignment table lists title, linked lesson and delivery deadline. Each assignment belongs to one lesson and can link to a quiz as its question set. View, edit and copy are on each row."
+      },
+      "points": [
+        {
+          "ar": "عمود الدرس يوضح مصدر الواجب.",
+          "en": "The lesson column shows where an assignment lives."
+        },
+        {
+          "ar": "آخر موعد للتسليم لكل واجب.",
+          "en": "A delivery deadline on each assignment."
+        },
+        {
+          "ar": "نسخ واجب لإعادة استخدامه.",
+          "en": "Copy an assignment to reuse it."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-05",
+      "kicker": {
+        "ar": "التقييم",
+        "en": "Assessment"
+      },
+      "title": {
+        "ar": "اختبارات بنوعين.",
+        "en": "Quizzes of two kinds."
+      },
+      "body": {
+        "ar": "جدول الاختبارات فيه العنوان والنوع والنطاق والمعرّف وإمكانية الإعادة. النوع إما آلي يصحح تلقائياً، أو مقالي يصححه مشرف. كل اختبار يحتوي أسئلة بنقاط وترتيب.",
+        "en": "The quiz table lists title, kind, scope, ID and whether a retry is allowed. A quiz is either automatic and graded by the system, or written and graded by a supervisor. Each quiz holds questions with points and an order."
+      },
+      "points": [
+        {
+          "ar": "عمود قابل للتكرار بعلامة صح أو خطأ.",
+          "en": "A retry-allowed column with a tick or a cross."
+        },
+        {
+          "ar": "زر لتفعيل التكرار أو إلغائه من الصف.",
+          "en": "A row button turns retries on or off."
+        },
+        {
+          "ar": "أزرار عرض وتعديل ونسخ.",
+          "en": "View, edit and copy actions."
+        }
+      ]
+    },
+    {
+      "desk": "desktop-02",
+      "kicker": {
+        "ar": "الطلاب",
+        "en": "Students"
+      },
+      "title": {
+        "ar": "حسابات الطلاب وإدارتها.",
+        "en": "Student accounts and their management."
+      },
+      "body": {
+        "ar": "جدول الطلاب فيه الاسم والهاتف والمسار وتأكيد الهاتف والحالة وتاريخ التسجيل. إجراءات الصف تشمل التعليق والاستعادة وإعادة تعيين الجهاز وتغيير المسار وإرسال إشعار.",
+        "en": "The student table lists name, phone, track, phone confirmation, status and sign-up date. Row actions cover suspend, restore, device reset, track change and sending a notification."
+      },
+      "points": [
+        {
+          "ar": "إعادة تعيين الجهاز عند نقل الحساب.",
+          "en": "Device reset when an account moves phones."
+        },
+        {
+          "ar": "حالة نشط أو معلّق لكل طالب.",
+          "en": "An active or suspended state per student."
+        },
+        {
+          "ar": "تغيير مسار الطالب من الصف.",
+          "en": "Change a student's track from the row."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "جهاز واحد لكل حساب",
+        "en": "One device per account"
+      },
+      "body": {
+        "ar": "بعد رمز التحقق يُربط الحساب بجهاز، ويحصل التطبيق على رمز Sanctum. من يدخل من جهاز آخر يتلقى خطأ 423 حتى يطلب نقل الجهاز.",
+        "en": "After the OTP, the account is bound to one device and the app receives a Sanctum token. Signing in from another device returns a 423 error until a device transfer is requested."
+      }
+    },
+    {
+      "title": {
+        "ar": "تصحيح لا يعتمد على الواجهة",
+        "en": "Grading that does not trust the UI"
+      },
+      "body": {
+        "ar": "خدمة تصحيح الاختبارات الكتابية تتحقق من نطاق المشرف عند التنفيذ تحت قفل وصف داخل معاملة. فلا يكون تصفية الواجهة هي الحاجز الأمني.",
+        "en": "The written-quiz grading service re-checks the supervisor's subject scope at execution time, under a row lock in a transaction. Filtering in the UI is never the security boundary."
+      }
+    },
+    {
+      "title": {
+        "ar": "فيديو على R2 واشتراكات تنتهي",
+        "en": "Video on R2 and subscriptions that expire"
+      },
+      "body": {
+        "ar": "تُرفع الفيديوهات إلى Cloudflare R2 عبر خدمة مخصصة، ويشغّل أمر مجدول إنهاء الاشتراكات التي انتهت مدتها. لوحتان منفصلتان للمدير والمشرف تفصلان الأدوار.",
+        "en": "Videos upload to Cloudflare R2 through a dedicated service, and a scheduled command expires subscriptions past their term. Separate panels for admin and supervisor keep the roles apart."
+      }
+    }
+  ]
+}

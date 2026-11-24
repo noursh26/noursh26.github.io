@@ -1,0 +1,181 @@
+{
+  "facts": [
+    {
+      "value": "4",
+      "label": {
+        "ar": "تبويبات سفلية",
+        "en": "bottom tabs"
+      }
+    },
+    {
+      "value": "4",
+      "label": {
+        "ar": "مجموعات أذكار",
+        "en": "dhikr groups"
+      }
+    },
+    {
+      "value": "5",
+      "label": {
+        "ar": "صلوات في الشريط",
+        "en": "daily prayers shown"
+      }
+    }
+  ],
+  "intro": {
+    "ar": "أركاني تطبيق عربي للجوال، يختار فيه المستخدم مدينته ليرى الصلاة القادمة، ثم يقرأ الأذكار ويعد التسبيح. كل ما فيه يعمل بيد واحدة من شريط تنقل سفلي.",
+    "en": "Arkani is an Arabic phone app. A user picks a city to see the next prayer, then reads dhikr and counts tasbih. It all works one-handed from a bottom bar."
+  },
+  "screens": [
+    {
+      "phone": "mobile-05",
+      "kicker": {
+        "ar": "الموقع",
+        "en": "Location"
+      },
+      "title": {
+        "ar": "اختيار المدينة أو استخدام الموقع الحالي.",
+        "en": "Pick a city or use the current location."
+      },
+      "body": {
+        "ar": "في الأعلى مربع بحث عن مدينة أو منطقة، وتحته زر استخدام الموقع الحالي، ثم قائمة اقتراحات فيها مكة المكرمة والمدينة المنورة والقاهرة والرياض ودبي والدوحة وعمّان والقدس. لكل مدينة اسم الدولة تحتها.",
+        "en": "A search box for a city or area sits at the top, with a use-my-current-location button under it, then a suggestions list: Makkah, Madinah, Cairo, Riyadh, Dubai, Doha, Amman and Jerusalem. Each city shows its country underneath."
+      },
+      "points": [
+        {
+          "ar": "بحث نصي بالمدينة أو المنطقة.",
+          "en": "A text search by city or area."
+        },
+        {
+          "ar": "زر الموقع الحالي يعتمد على GPS الجهاز.",
+          "en": "The current-location button uses the device GPS."
+        },
+        {
+          "ar": "المدينة المختارة تُحفظ على الجهاز.",
+          "en": "The chosen city is saved on the device."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-10",
+      "kicker": {
+        "ar": "الأذان",
+        "en": "Adhan"
+      },
+      "title": {
+        "ar": "ورقة معلومات لكل صلاة.",
+        "en": "An information sheet for each prayer."
+      },
+      "body": {
+        "ar": "حين يفتح المستخدم بطاقة الأذان تصعد ورقة من أسفل الشاشة تحمل اسم الصلاة وقائمة بأذكار ما بعد الأذان. الورقة تُغلق بزر في أعلاها أو بسحبها لأسفل، وتبقى الرئيسية ظاهرة خلفها.",
+        "en": "Opening the adhan card raises a sheet from the bottom with the prayer name and a list of what is said after the call to prayer. It closes with the button at its top or by dragging it down, and the home screen stays visible behind it."
+      },
+      "points": [
+        {
+          "ar": "أذكار ما بعد الأذان مرقمة.",
+          "en": "The post-adhan phrases are numbered."
+        },
+        {
+          "ar": "زر إغلاق ومقبض سحب في الأعلى.",
+          "en": "A close button and a drag handle at the top."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-02",
+      "kicker": {
+        "ar": "الأذكار",
+        "en": "Dhikr"
+      },
+      "title": {
+        "ar": "أذكار مصنفة في أربع مجموعات.",
+        "en": "Dhikr in four groups."
+      },
+      "body": {
+        "ar": "تعرض الشاشة أربع بطاقات: أذكار الصباح، وأذكار المساء، وأذكار النوم، وأذكار الصلاة. على كل بطاقة أيقونة واسم وعدد الأذكار.",
+        "en": "The screen shows four cards: morning dhikr, evening dhikr, sleep dhikr and prayer dhikr. Each card has an icon, a name and the number of items."
+      },
+      "points": [
+        {
+          "ar": "بطاقة لكل مجموعة مع عدد أذكارها.",
+          "en": "A card per group with its item count."
+        },
+        {
+          "ar": "التبويب الحالي مظلل في الشريط السفلي.",
+          "en": "The current tab is highlighted in the bottom bar."
+        }
+      ]
+    },
+    {
+      "phone": "mobile-07",
+      "kicker": {
+        "ar": "الأذكار",
+        "en": "Dhikr"
+      },
+      "title": {
+        "ar": "أذكار الصباح والمساء مع عداد لكل ذكر.",
+        "en": "Morning and evening dhikr with a counter on each item."
+      },
+      "body": {
+        "ar": "كل ذكر في بطاقة: رقمه، وعدد مرات التكرار المطلوب مثل ×33، ثم النص بالتشكيل. زر تسبيح يزيد العداد، ويعرض الشريط حول الزر التقدم مثل 0 / 33. المجموعات كلها بالتصميم نفسه، فيتعلم المستخدم الشاشة مرة واحدة. في الترويسة زر لتغيير حجم الخط.",
+        "en": "Each dhikr sits in a card: its number, the repeat count such as ×33, then the fully vowelled text. A tasbih button raises the counter, and the strip beside it shows progress such as 0 / 33. Every group uses the same layout, so a user learns the screen once. A text-size button sits in the header."
+      },
+      "points": [
+        {
+          "ar": "زر تسبيح وعداد تقدم 0 / 33.",
+          "en": "A tasbih button and a 0 / 33 progress counter."
+        },
+        {
+          "ar": "النص مشكول لسهولة القراءة.",
+          "en": "The text is vowelled for easy reading."
+        },
+        {
+          "ar": "زر حجم الخط في الترويسة.",
+          "en": "A text-size button in the header."
+        }
+      ]
+    }
+  ],
+  "engineering": [
+    {
+      "title": {
+        "ar": "مواقيت من API وحساب محلي احتياطي",
+        "en": "Times from an API, with a local fallback"
+      },
+      "body": {
+        "ar": "إن تعذر الوصول إلى الخادم يحسب التطبيق المواقيت على الجهاز بمكتبة adhan وطريقة رابطة العالم الإسلامي.",
+        "en": "If the server is unreachable, the app calculates prayer times on the device with the adhan library and the Muslim World League method."
+      }
+    },
+    {
+      "title": {
+        "ar": "تخزين محلي بـ Hive",
+        "en": "Local storage with Hive"
+      },
+      "body": {
+        "ar": "يحفظ التطبيق الموقع المختار وآخر مواقيت وقائمة الأذكار في صناديق Hive لتعمل دون اتصال. ويُحفظ حجم الخط ضمن حد أدنى وأعلى، ويتغير بخطوات ثابتة.",
+        "en": "The app keeps the chosen location, the latest times and the dhikr list in Hive boxes so they work offline. The text size is saved too, within a minimum and maximum, adjusted in steps."
+      }
+    },
+    {
+      "title": {
+        "ar": "تنبيهات تتبع المنطقة الزمنية",
+        "en": "Alerts that follow the time zone"
+      },
+      "body": {
+        "ar": "تُجدول تنبيهات الصلاة محلياً بمنطقة زمنية صحيحة عبر flutter_local_notifications.",
+        "en": "Prayer alerts are scheduled locally with a proper time zone through flutter_local_notifications."
+      }
+    },
+    {
+      "title": {
+        "ar": "Riverpod و GoRouter",
+        "en": "Riverpod and GoRouter"
+      },
+      "body": {
+        "ar": "تُقسَّم الشاشات إلى ميزات مستقلة لكل منها مزودات حالة وكيانات freezed، ويدير GoRouter التنقل بين التبويبات الأربعة. الواجهة عربية بالكامل ومن اليمين إلى اليسار.",
+        "en": "Screens are split into independent features, each with state providers and freezed entities, and GoRouter handles the four tabs. The interface is fully Arabic and right-to-left."
+      }
+    }
+  ]
+}

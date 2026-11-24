@@ -1,0 +1,46 @@
+{
+  "exclude": [
+    {
+      "file": "desktop-02",
+      "reason": "empty basket with a 'tap a card to add' prompt; floating save bar covers cards and sidebar"
+    },
+    {
+      "file": "desktop-03",
+      "reason": "contact column shows placeholder example.invalid emails; table cut at the bottom"
+    },
+    {
+      "file": "desktop-07",
+      "reason": "captured mid-scroll: top row of badges is cut off and it repeats the daily program page; the race is shown properly on the phone"
+    },
+    {
+      "file": "desktop-10",
+      "reason": "board scrolls off the frame: the third halaqa column is clipped and the new-halaqa button is covered by the bell"
+    }
+  ],
+  "claims": [
+    {
+      "where": "tours/almustfa.json facts[1]",
+      "text": "71 data models",
+      "problem": "app/Models holds 69 model classes (71 files include 2 helper files)",
+      "fix": "use 69 (done in tour)"
+    },
+    {
+      "where": "content.ts flagship.facts[3]",
+      "text": "Each organisation's data kept apart",
+      "problem": "isolation is per course through enrollments (EnsureCurrentEnrollment middleware, isolation tests); there is no organisation entity",
+      "fix": "EN: Each course's data kept apart. AR: بيانات كل دورة معزولة عن غيرها"
+    },
+    {
+      "where": "content.ts flagship.facts[0] and flagship.intro",
+      "text": "Works offline, syncs later; supervisors see the whole picture even without a connection",
+      "problem": "true for writes (IndexedDB outbox for points, recitations and program quests) and for cached reads (persisted query cache); not every action can be queued",
+      "fix": "keep; optionally say 'records offline, syncs later'"
+    },
+    {
+      "where": "content.ts flagship.steps[3] (mobile-05)",
+      "text": "Seven days in a row earns a badge",
+      "problem": "badge is configurable per course; screen is a celebration modal over a dimmed page (kept, but borderline)",
+      "fix": "keep or swap for mobile-06"
+    }
+  ]
+}
